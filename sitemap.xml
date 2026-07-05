@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://japanese-n3.don266874.workers.dev/</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://japanese-n3.don266874.workers.dev/about.html</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://japanese-n3.don266874.workers.dev/privacy.html</loc>
+        <priority>0.1</priority>
+    </url>
+    <url>
+        <loc>https://japanese-n3.don266874.workers.dev/posts/n3-grammar-kiru-guide.html</loc>
+        <priority>0.8</priority>
+    </url>
+</urlset>
