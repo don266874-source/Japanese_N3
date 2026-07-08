@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================================================= -->
+    <!-- 1. [ 核心配置区 ]：SEO 流量拦截网（每期必改） -->
+    <!-- ======================================================= -->
+    <title>Ep 2: どのくらい勉強していますか？ | Nihongo con Teppei Shadowing Tool & Transcript</title>
+    <meta name="description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 2 (どのくらい勉強していますか？). Master duration counters and practice perfect pronunciation.">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #111; margin-bottom: 5px; font-size: 1.8rem; letter-spacing: -0.5px;}
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 0; margin-bottom: 20px;}
+        
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; transition: background 0.2s;}
+        nav a:hover { background: #f0f6ff; text-decoration: none; }
+        nav a.current { background: #f0f6ff; color: #111; }
+        
+        .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
+        
+        /* 极简 YouTube 播放器外壳 */
+        .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
+        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        .controls { display: flex; gap: 10px; }
+        button { background: #f6f8fa; color: #333; border: 1px solid #d0d7de; padding: 6px 12px; border-radius: 6px; cursor: pointer; transition: 0.2s; font-size: 0.9rem;}
+        button:hover { background: #f3f4f6; border-color: #9ca3af; }
+        button.active { background: #1f6feb; color: white; border-color: #1f6feb;}
+        
+        .shadow-line { padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        .shadow-line:hover { background: #f6f8fa; }
+        .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; }
+        
+        .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
+        .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
+        .grammar-item { margin-bottom: 15px; }
+        .grammar-title { color: #0066cc; font-weight: bold; }
+        footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+
+   </style>
+</head>
+<body>
+    <!-- 全站闭环 Header 导航系统 -->
+    <header>
+        <h1>The Shadowing Geek</h1>
+        <p class="subtitle">A fellow learner's interactive tools for shadowing real-world audio, decoding native speed, and mastering JLPT grammar.</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shadowing/">🎧 Shadowing Lab</a>
+            <a href="/posts/">📚 Grammar Notes</a>
+            <a href="/about.html">About Me</a>
+        </nav>
+    </header>
+    
+   <main>
+    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
+    <h1>Nihongo con Teppei (Beginner) - Ep 2: どのくらい勉強していますか？</h1>
+    
+    <!-- 注入新灵魂的 Learner's Note -->
+    <div class="learners-note">
+        <strong>Felix's Learner Note:</strong><br>
+        Episode 2 focuses on duration and time counters — one of the trickiest areas for self-learners! Teppei loops through "how long have you been studying?" in multiple ways, hammering the 〜ヶ月 (months) counter pattern. The real learning here is catching the subtle distinction between 7ヶ月 (months) and 7階 (floors) — they sound nearly identical, but native speakers navigate this effortlessly. Click any line to loop and train your ear to spot these micro-distinctions at native speed!
+    </div>
+
+    <!-- YouTube API 容器 -->
+    <div class="audio-player">
+        <div class="yt-container">
+            <div id="youtube-player"></div>
+        </div>
+    </div>
+
+    <div id="subtitle-container"></div>
+
+    <div class="grammar-section">
+        <h2>📚 Grammar Breakdown</h2>
+        <!-- ==================== HTML 语法解析区域 ==================== -->
+        <div class="grammar-item">
+            <span class="grammar-title">1. ～間 (～かん) / ～ヶ月 (～かげつ)</span><br>
+            <strong>Meaning:</strong> Duration / span of time. ～間 marks "during the period of ~"; ～ヶ月 is the counter for months.<br>
+            <strong>In Text:</strong> 例えば1年間1年間日本語を勉強していますか / 3か月4か月5か月6か月 / 12ヶ月は1年ですね (Twelve months = one year, remember?).<br>
+            <strong>Note:</strong> N5/N4 territory but the trap Teppei explicitly flags in this episode is real: 7ヶ月 (months) vs. 7階 (building floors). Both read しち/なな + か but mean totally different things. Listeners auto-generate the wrong one from context alone. Self-learners often drop the 間 entirely (✓ 1年日本語を勉強している — also natural) but should keep it when stressing a *measured* duration. Months 1, 2, 3 are 一ヶ月・二ヶ月・三ヶ月 — note the irregular readings, not いちがつ-style month names.
+        </div>
+        
+        <br>
+        
+        <div class="grammar-item">
+            <span class="grammar-title">2. ～ぐらい / ～くらい (～ぐらい / ～くらい)</span><br>
+            <strong>Meaning:</strong> About; approximately; around (used for quantity, duration, degree).<br>
+            <strong>In Text:</strong> 皆さんはどのぐらいいい日本語勉強してますか / ねっどのくら熱湯のくらいの時間 (So, about how much time roughly).<br>
+            <strong>Note:</strong> N5. Teppei leans on this pattern repeatedly because it's the single most-used hedge in spoken Japanese for "give me a rough number" questions. Common error: writing it as ✗ どの位 (using the kanji 位) when the spoken form is almost always hiragana. Also watch out — ぐらい and くらい are interchangeable in speech, but ぐらい feels a touch more colloquial and is what Teppei uses across this whole episode.
+        </div>
+
+        <br>
+
+        <div class="grammar-item">
+            <span class="grammar-title">3. ～でしょうか (～でしょうか)</span><br>
+            <strong>Meaning:</strong> A softened, slightly tentative version of ～ですか — "I wonder…?" or polite inference.<br>
+            <strong>In Text:</strong> 日本語今鉄平フォービギナーズですね / どっちがいいかな — the particle pattern landing on かな/でしょうか lights up throughout Teppei's thinking-out-loud stretches.<br>
+            <strong>Note:</strong> N4 in formal tests but functionally N3-level politeness nuance. ～でしょうか isn't a pure question — it carries the speaker's uncertainty, making it the go-to softening device when you don't want to sound like you're interrogating someone. Mistake to avoid: stacking it with a question mark and rising intonation when you actually mean a real question (use ～ですか there). Teppei uses かな for self-talk; でしょう / でしょうか when projecting the question outward — useful to mimic when shadowing.
+        </div>
+
+        <br>
+
+        <div class="grammar-item">
+            <span class="grammar-title">4. ～てみてください (～てみてください)</span><br>
+            <strong>Meaning:</strong> "Try doing ~" / "Give ~ a try, please." ～てみる = to try something out to see how it goes; combined with ～てください it becomes a friendly request.<br>
+            <strong>In Text:</strong> わからないときは何度も何度もリピートして弾いてみてください (When you can't follow it, just keep replaying it over and over — give playing it again a try).<br>
+            <strong>Note:</strong> N4. The ～てみる verb is one of the highest-frequency "attempt/try" patterns in spoken Japanese and a huge gap between textbook learners (who memorize it as a one-line grammar rule) and fluent speakers (for whom it's a near-instinctual softener). Watch: it doesn't mean "try and maybe fail" the way the English "try to" implies effort/effort-with-uncertainty — it means "give it a shot and see how it feels." When shadowing this episode, imitate Teppei's 弾いてみてください cadence so the pattern stops feeling translated.
+        </div>
+
+        <br>
+
+        <div class="grammar-item">
+            <span class="grammar-title">5. ～も (～も) — repeated for emphasis</span><br>
+            <strong>Meaning:</strong> The particle も ("also / even / as much as") stacked multiple times in a row to amplify repetition or quantity.<br>
+            <strong>In Text:</strong> 何度も何度もリピートして / 何回も何回も (over and over and over).<br>
+            <strong>Note:</strong> N5-level particle, but its *tripled* deployment is a distinctly native-rhythm feature textbooks rarely flag. 何度も何度も isn't just "many times" — it's a performative cue: the speaker is acting out the repetition in the language itself. This is exactly the kind of intonation-cadence pattern you can only pick up via shadowing. Self-learners tend to use 何度も once and move on; native speakers loop the construction to *embody* the iteration. Copy Teppei's maxing here and your output rhythm tightens instantly.
+        </div>
+    </div>
+   </main>
+    <footer>
+        <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // ==========================================
+        // 核心配置区：以后每次只需要修改这三个变量！
+        // ==========================================
+        const ytVideoId = "FGX5AfwTS38"; // 请替换为 EP2 的 YouTube 视频 ID
+        const subtitleData = [
+    { start: 1.76, end: 4.61, ja: "日本語コーン", en: "Nihongo con—" },
+    { start: 4.61, end: 7.08, ja: "鉄平", en: "Teppei." },
+    { start: 7.08, end: 9.88, ja: "日本語学習者の皆さんを", en: "To everyone studying Japanese—" },
+    { start: 9.88, end: 14.85, ja: "いつも応援するポートキャストーン", en: "the podcast that always cheers you on." },
+    { start: 14.85, end: 16.20, ja: "表わっ", en: "Right, let's get into it—" },
+    { start: 16.20, end: 18.48, ja: "どのくらい", en: "How much / how long—" },
+    { start: 18.48, end: 19.42, ja: "言語", en: "language—" },
+    { start: 19.42, end: 22.22, ja: "勉強してますかについて", en: "about how long you've been studying." },
+    { start: 22.22, end: 25.43, ja: "[音楽]", en: "[Music]" },
+    { start: 25.60, end: 28.43, ja: "はいはい始まりました", en: "All right, here we go." },
+    { start: 28.43, end: 33.39, ja: "日本語今鉄平フォービギナーズですね", en: "This is Nihongo con Teppei for Beginners, right?" },
+    { start: 33.39, end: 37.42, ja: "皆さん元気ですか", en: "How's everyone doing?" },
+    { start: 37.42, end: 43.19, ja: "日本語コンテって装備", en: "Nihongo con Teppei for Beginners is probably best." },
+    { start: 43.19, end: 45.18, ja: "そうしますはい", en: "Let's go with that. All right." },
+    { start: 45.18, end: 48.87, ja: "それでは今日も始まります", en: "So, let's get started for today too." },
+    { start: 48.87, end: 50.77, ja: "yeah", en: "Yeah." },
+    { start: 50.77, end: 56.23, ja: "どのくらい皆さんがどのくらい日本語を勉強しているか", en: "How long — how long have you all been studying Japanese?" },
+    { start: 56.23, end: 59.24, ja: "今日は聞きたいと思います", en: "That's what I'd like to ask today." },
+    { start: 59.24, end: 62.59, ja: "それでは始めます", en: "Let's begin." },
+    { start: 69.42, end: 74.77, ja: "皆さんはどのぐらいいい日本語勉強してますか", en: "About how long have you been studying Japanese?" },
+    { start: 74.77, end: 78.64, ja: "どのくらい日本語を勉強してますかどのくらい", en: "How long have you been studying Japanese — how long?" },
+    { start: 78.64, end: 83.25, ja: "どの位の期間日本語を勉強していますか", en: "For what period of time have you been studying Japanese?" },
+    { start: 83.25, end: 90.09, ja: "例えば1年間1年間日本語を勉強していますか", en: "Like, have you been studying for one year — one year?" },
+    { start: 90.09, end: 92.82, ja: "それとも2年間", en: "Or two years?" },
+    { start: 92.82, end: 97.64, ja: "日本語を勉強していますかそれとも3年間", en: "Have you been studying Japanese? Or three years?" },
+    { start: 97.64, end: 100.89, ja: "日本語を勉強していますかうん", en: "Have you been studying Japanese? Mm-hm." },
+    { start: 100.89, end: 102.10, ja: "それとも", en: "Or maybe—" },
+    { start: 102.10, end: 105.31, ja: "1ヶ月ね1ヶ月間", en: "one month — one month?" },
+    { start: 105.31, end: 110.47, ja: "元日だけ果実だけ勉強してますかそれとも2ヶ月", en: "Have you only been at it for a month? Or two months?" },
+    { start: 110.47, end: 111.18, ja: "ね", en: "Right?" },
+    { start: 111.18, end: 113.44, ja: "短いですね2ヶ月", en: "Two months is short, isn't it." },
+    { start: 113.44, end: 118.81, ja: "3か月4か月5か月6か月", en: "Three months, four months, five months, six months—" },
+    { start: 118.81, end: 125.62, ja: "7ヶ月8ヶ月9ヶ月ねヶ月じゃないですよ9ヶ月", en: "Seven months, eight months, nine months — not 階 (floors), OK? — nine months." },
+    { start: 125.62, end: 132.76, ja: "7階7階です7ヶ月ですね7じゃないですよ7ヶ月8ヶ月9ヶ月10ヶ月", en: "Seven — seven *floors*, you mean? — no, seven *months* (ヶ月), got it? seven months, eight, nine, ten." },
+    { start: 132.76, end: 136.47, ja: "11ヶ月12ヶ月", en: "Eleven months, twelve months." },
+    { start: 136.76, end: 139.66, ja: "12ヶ月は1年ですね", en: "Twelve months is one year, right?" },
+    { start: 139.66, end: 143.83, ja: "1年間日本語を勉強していますね", en: "So you've been studying Japanese for a year." },
+    { start: 143.83, end: 147.49, ja: "皆さんはどのぐらい日本語を勉強していますか", en: "How long have you all been studying Japanese?" },
+    { start: 147.49, end: 151.15, ja: "ねっどのくら熱湯のくらいの時間", en: "So — how much time, roughly," },
+    { start: 151.15, end: 153.78, ja: "日本語を勉強してますかうん", en: "have you been putting into Japanese? Mm." },
+    { start: 153.78, end: 158.17, ja: "日本語の勉強は楽しいですか", en: "Is studying Japanese fun for you?" },
+    { start: 158.17, end: 166.90, ja: "僕は楽しいですよ僕は楽しいですよ僕は楽しいです皆さんは楽しいですか", en: "It's fun for me — yeah, it's fun — I enjoy it. Is it fun for you?" },
+    { start: 166.90, end: 172.79, ja: "日本語の勉強が好きですか勉強が好きですか", en: "Do you like studying Japanese? Do you like studying?" },
+    { start: 172.79, end: 176.38, ja: "今日も少し勉強しましたね", en: "You got a little studying in today too, right?" },
+    { start: 176.38, end: 181.75, ja: "わからないときは何度も何度もリピートして弾いてみてください", en: "When you don't catch something, just hit replay over and over and try playing it again." },
+    { start: 181.75, end: 183.89, ja: "何回も何回も", en: "Again and again." },
+    { start: 183.89, end: 187.52, ja: "日本語今鉄平を聞いてください", en: "Please keep listening to Nihongo con Teppei." },
+    { start: 214.60, end: 217.95, ja: "それではまた皆さんまた明日", en: "All right then — see you all again tomorrow." },
+    { start: 217.95, end: 223.99, ja: "ばいばいばいばい", en: "bye-bye, bye-bye." },
+    { start: 223.99, end: 226.41, ja: "またねー", en: "See you later." }
+        ];
+        // ==========================================
+
+        const pageId = "teppei-ep2"; 
+        let currentLineIndex = -1;
+        let loopMode = 'none';
+        let player;
+
+        function setLoopMode(mode) {
+            loopMode = mode;
+            document.getElementById('btn-loop-none').classList.remove('active');
+            document.getElementById('btn-loop-single').classList.remove('active');
+            document.getElementById(`btn-loop-${mode}`).classList.add('active');
+        }
+
+        // 异步加载 YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 
+                    'playsinline': 1, 
+                    'controls': 1
+                },
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            renderSubtitles();
+            // 启动高频监控器（替代 audio.addEventListener）
+            setInterval(monitorPlayback, 100);
+            
+            // 断点续读
+            const lastRead = localStorage.getItem(`last-read-${pageId}`);
+            if (lastRead !== null) {
+                const targetLine = document.getElementById(`line-${lastRead}`);
+                if (targetLine) {
+                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetLine.classList.add('active');
+                }
+            }
+        }
+
+        function renderSubtitles() {
+            const container = document.getElementById('subtitle-container');
+            subtitleData.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = 'shadow-line';
+                div.id = `line-${index}`;
+                div.innerHTML = `<div class="ja-text">${line.ja}</div><div class="en-text">${line.en}</div>`;
+                
+                div.onclick = () => {
+                    currentLineIndex = index;
+                    player.seekTo(line.start, true);
+                    player.playVideo();
+                    localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                container.appendChild(div);
+            });
+        }
+
+        function monitorPlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); // 1 = PLAYING, 2 = PAUSED
+
+            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+            
+            if (activeIndex !== -1) {
+                currentLineIndex = activeIndex;
+                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                activeElement.classList.add('active');
+                // 焦点追踪：仅在视频播放时将当前高亮行滚动到屏幕中央
+                // 如果视频暂停，用户可以自由滚动而不会被强制拉回
+                if (playerState === 1) {
+                    activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+
+            // 单句循环控制
+            if (loopMode === 'single' && currentLineIndex !== -1) {
+                const currentLineData = subtitleData[currentLineIndex];
+                if (currentTime >= currentLineData.end) {
+                    player.seekTo(currentLineData.start, true);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

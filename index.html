@@ -32,6 +32,75 @@
         .post-meta { font-size: 0.85rem; color: #666; margin-bottom: 8px; }
         
         footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+    
+/* ====== 像素级紧凑优化样式 ====== */
+.hero-clean-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem 1.5rem; /* 大幅缩小上下内边距，从 2.5rem 降到 1.5rem */
+    margin: 1.5rem 0; /* 压缩外部间距 */
+    text-align: left;
+}
+
+.hero-clean-badge {
+    display: inline-block;
+    color: #e53e3e;
+    font-size: 0.8rem; /* 稍微缩小字号 */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.4rem; /* 砍掉一半的下边距，让标题立刻贴上来 */
+}
+
+.hero-clean-title {
+    color: #1a202c;
+    font-size: 1.8rem; /* 稍微收敛字号，避免压迫感 */
+    font-weight: 800;
+    line-height: 1.25;
+    margin-top: 0; /* 强行清空可能存在的上边距 */
+    margin-bottom: 0.8rem; /* 缩减与正文的距离 */
+}
+
+.hero-clean-subtitle {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem; /* 缩减正文与按钮的距离 */
+}
+
+/* 按钮保持精致 */
+.hero-btn {
+    display: inline-block;
+    background: #0066cc;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 0.6rem 1.2rem; /* 优化按钮内边距，更显干练 */
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 102, 204, 0.1);
+    transition: all 0.2s ease;
+}
+
+.hero-btn:hover {
+    background: #0052a3;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .hero-clean-container {
+        padding: 1.2rem 1rem;
+        margin: 1rem 0;
+    }
+    .hero-clean-title {
+        font-size: 1.5rem;
+    }
+    .hero-btn {
+        display: block;
+        text-align: center;
+    }
+}
+    
     </style>
 </head>
 <body>
@@ -46,7 +115,17 @@
             <a href="/about.html">About Me</a>
         </nav>
     </header>
-
+    <!-- ================= 首页 Hero 巨幕 无缝缝合版 ================= -->
+    <section class="hero-clean-container">
+        <div class="hero-clean-badge">🔥 THE INTERMEDIATE BREAKTHROUGH</div>
+        <h2 class="hero-clean-title">From Zero to Fluent Japanese in 1 Year: My Hardcore Shadowing Experiment</h2>
+        <p class="hero-clean-subtitle">
+            A year ago, I moved to Tokyo with zero Japanese. Textbooks failed my speech, but 2 hours of daily shadowing saved it. Now back in China, I'm maintaining native-level fluency from my desk. No gimmicks, no toxic positivity—just the raw evidence and the exact tools I used to break the plateau.
+        </p>
+        <div class="hero-clean-cta">
+            <a href="/does-shadowing-work.html" class="hero-btn">Read My Story & Proof →</a>
+        </div>
+    </section>
     <main>
         <!-- 第一板块：引流主力（跟读实验室） -->
         <h2>🔥 Latest Shadowing Episodes</h2>

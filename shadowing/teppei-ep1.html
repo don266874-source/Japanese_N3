@@ -57,7 +57,7 @@
     
    <main>
     <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
-    <h1>Nihongo con Teppei (Beginner) - Ep 1: 元気ですか？</h1>
+    <h1>Nihongo con Teppei (Beginner) - Ep1: 元気ですか？</h1>
     
     <!-- 注入新灵魂的 Learner's Note -->
     <div class="learners-note">
@@ -115,6 +115,7 @@
         // 核心配置区：以后每次只需要修改这三个变量！
         // ==========================================
         const ytVideoId = "drTGtJEvRCA"; // 例如: "dQw4w9WgXcQ"
+          const pageId = "courage-ep1"; 
         const subtitleData = [
           { start: 1.04, end: 3.03, ja: "日本語", en: "Japanese" },
           { start: 3.03, end: 4.39, ja: "コーン", en: "Teppei" },
@@ -191,7 +192,6 @@
         // ==========================================
 
       
-        const pageId = "courage-ep1"; 
         let currentLineIndex = -1;
         let loopMode = 'none';
         let player;
@@ -261,13 +261,20 @@
         function monitorPlayback() {
             if (!player || typeof player.getCurrentTime !== 'function') return;
             const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); // 1 = PLAYING, 2 = PAUSED
 
             let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
             
             if (activeIndex !== -1) {
                 currentLineIndex = activeIndex;
                 document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
-                document.getElementById(`line-${activeIndex}`).classList.add('active');
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                activeElement.classList.add('active');
+                // 焦点追踪：仅在视频播放时将当前高亮行滚动到屏幕中央
+                // 如果视频暂停，用户可以自由滚动而不会被强制拉回
+                if (playerState === 1) {
+                    activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             }
 
             // 单句循环控制

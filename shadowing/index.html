@@ -24,7 +24,96 @@
         .resource-list a:hover { color: #0066cc; }
         .date-badge { font-size: 0.8rem; color: #888; margin-left: 10px; font-weight: normal;}
          footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+/* ====== Shadowing Lab 顶部指南区专属样式 ====== */
+.lab-guides-section {
+    background: #ffffff;
+    border: 1px solid #e2e8f0; /* 精致的淡灰色外框 */
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem; /* 与下方的 Audio Library 保持完美的呼吸间距 */
+}
 
+.lab-guides-badge {
+    color: #e53e3e;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.8rem;
+}
+
+.lab-guides-grid {
+    display: flex;
+    gap: 1rem;
+}
+
+.lab-guide-card {
+    flex: 1;
+    background: #f7fafc; /* 极其轻微的灰色底，突出它是一个可点击的卡片 */
+    border: 1px solid #edf2f7;
+    border-radius: 6px;
+    padding: 1rem;
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+}
+
+.lab-guide-card:hover {
+    border-color: #0066cc; /* 悬浮时变成和你导航栏一致的蓝色 */
+    background: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 102, 204, 0.05);
+}
+
+.guide-card-title {
+    color: #0066cc; /* 蓝色链接色，完美契合你原本的站点风格 */
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+}
+
+.guide-card-desc {
+    color: #4a5568;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* 移动端自动变成上下两行排列，防止拥挤 */
+@media (max-width: 768px) {
+    .lab-guides-grid {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+.lab-guides-badge {
+    color: #e53e3e;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem; /* 压缩下边距 */
+}
+
+/* 新增：引导文案的紧凑样式 */
+.lab-guides-welcome {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 1rem; /* 让文字和下方的卡片保持舒适的紧凑距离 */
+}
+
+/* 新增：故事链接的亮眼蓝色高亮 */
+.inline-story-link {
+    color: #0066cc !important;
+    font-weight: 700;
+    text-decoration: underline !important;
+    margin-left: 0.2rem;
+}
+
+.inline-story-link:hover {
+    color: #0052a3 !important;
+}
     </style>
 </head>
 <body>
@@ -41,6 +130,26 @@
     </header>
 
     <main>
+<!-- ================= 黄金位置：跟读技能指南快选区（全量升级版） ================= -->
+     <!-- <section class="lab-guides-section">
+        <div class="lab-guides-badge">🔥 NEW TO SHADOWING? START HERE FIRST</div>
+        
+       
+        <p class="lab-guides-welcome">
+          引入你的灵魂故事引流文案  Before you practice, read Felix's 1-year transformation story from Tokyo to Jingdezhen, and discover the scientific proof of why this method will break your speaking plateau. 
+        </p>
+        
+        <div class="lab-guides-grid">
+            <a href="/guides/how-to-do-japanese-shadowing.html" class="lab-guide-card">
+                <span class="guide-card-title">1. How to Shadow Correctly (The 4-Step Routine) &rarr;</span>
+                <span class="guide-card-desc">Master the exact audio-looping and mouth-coordination habits I used to train fluency without burning out.</span>
+            </a>
+            <a href="/guides/why-shadowing-is-the-best-method.html" class="lab-guide-card">
+                <span class="guide-card-title">2. Why Shadowing Beats Textbooks & Tutors (The Science) &rarr;</span>
+                <span class="guide-card-desc">A deep dive into cognitive load and why practicing alone at your desk creates faster speaking reflexes.</span>
+            </a>
+        </div>
+    </section>  -->
         <h2>🎧 Shadowing Lab: Audio Library</h2>
         <p>Drop the boring textbooks. Here is my growing collection of real-world Japanese audio, pre-sliced with dual-language transcripts for intense shadowing practice.</p>
 
@@ -48,7 +157,11 @@
         <h3>🎙️ Nihongo con Teppei (Beginner Series)</h3>
         <ul class="resource-list">
             <li>
-                <a href="/shadowing/teppei-ep1.html">Ep 1: 元気ですか？ (How are you?) - Greetings & Basics</a>
+                <a href="/shadowing/teppei-ep1.html">Ep1: 元気ですか？(How are you?)</a>
+                <span class="date-badge">Added: July 2026</span>
+            </li>
+            <li>
+                <a href="/shadowing/teppei-ep2.html">Ep2: どのくらい勉強していますか？(How much are you studying?)</a>
                 <span class="date-badge">Added: July 2026</span>
             </li>
             <!-- 明天更新第2期，就直接在这里加一行 -->

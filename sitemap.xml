@@ -32,6 +32,11 @@
     </url>
     
     <url>
+        <loc>https://shadowgeek.net/shadowing/teppei-ep2.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://shadowgeek.net/posts/n3-plateau-trap.html</loc>
         <priority>0.8</priority>
     </url>
@@ -40,5 +45,10 @@
         <loc>https://shadowgeek.net/posts/n3-grammar-kiru-guide.html</loc>
         <priority>0.8</priority>
     </url>
-
+    
+     <url>
+        <loc>https://shadowgeek.net/does-shadowing-work.html</loc>
+        <priority>0.8</priority>
+     </url>
+    
 </urlset>
