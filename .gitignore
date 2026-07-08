@@ -4,7 +4,6 @@ npm-debug.log
 yarn-error.log
 pnpm-debug.log
 google3d5bd755197ed500.html
-wrangler.toml
 
 # Wrangler & Build
 .wrangler/
