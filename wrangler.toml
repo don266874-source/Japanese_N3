@@ -1,4 +1,4 @@
 name = "japanese-n3"
 compatibility_date = "2026-07-08"
 pages_build_output_dir = "Japanese_N3"
-
+directory = "./Japanese_N3"
