@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================================================= -->
+    <!-- 1. [ 核心配置区 ]：SEO 流量拦截网（每期必改） -->
+    <!-- ======================================================= -->
+    <title>Ep3: どこに住んでいますか？ | Nihongo con Teppei Shadowing Tool & Transcript</title>
+    <meta name="description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 3 (どこに住んでいますか？). Master duration counters and practice perfect pronunciation.">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #111; margin-bottom: 5px; font-size: 1.8rem; letter-spacing: -0.5px;}
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 0; margin-bottom: 20px;}
+        
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; transition: background 0.2s;}
+        nav a:hover { background: #f0f6ff; text-decoration: none; }
+        nav a.current { background: #f0f6ff; color: #111; }
+        
+        .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
+        
+        /* 极简 YouTube 播放器外壳 */
+        .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
+        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        .controls { display: flex; gap: 10px; }
+        button { background: #f6f8fa; color: #333; border: 1px solid #d0d7de; padding: 6px 12px; border-radius: 6px; cursor: pointer; transition: 0.2s; font-size: 0.9rem;}
+        button:hover { background: #f3f4f6; border-color: #9ca3af; }
+        button.active { background: #1f6feb; color: white; border-color: #1f6feb;}
+        
+        .shadow-line { padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        .shadow-line:hover { background: #f6f8fa; }
+        .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; }
+        
+        .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
+        .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
+        .grammar-item { margin-bottom: 15px; }
+        .grammar-title { color: #0066cc; font-weight: bold; }
+        footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+
+   </style>
+</head>
+<body>
+    <!-- 全站闭环 Header 导航系统 -->
+    <header>
+        <h1>The Shadowing Geek</h1>
+        <p class="subtitle">A fellow learner's interactive tools for shadowing real-world audio, decoding native speed, and mastering JLPT grammar.</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shadowing/">🎧 Shadowing Lab</a>
+            <a href="/posts/">📚 Grammar Notes</a>
+            <a href="/about.html">About Me</a>
+        </nav>
+    </header>
+    
+   <main>
+    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
+    <h1>Nihongo con Teppei (Beginner) - Ep3: どこに住んでいますか？</h1>
+    
+    <!-- 注入新灵魂的 Learner's Note -->
+    <div class="learners-note">
+        <strong>Felix's Learner Note:</strong>
+     <p> When I was living in Tokyo, the question that caught me off guard most often wasn't "what's your job?" or "what did you do this weekend?" — it was "where do you live?" Not because the words were hard, but because the answer came at me in a rapid-fire list of cities, countries, and particles that my textbook had never strung together at native speed. I'd learned に and で as separate grammar points. Nobody warned me that real speakers would rattle off "ロサンゼルスに住んでいます / 日本に住んでいますか" in a single breath and expect me to keep up.
+    </p> 
+<p>        For a self-learner with no Japanese neighbors, this is the closest thing to drilling with a native speaker who actually waits for your answer. Shadowing this loop until the に住んでいます pattern becomes automatic will do more for your spoken reflexes than memorizing particle charts. The episode also sneaks in high-value N3 grammar — もしかすると (perhaps), 〜かな (I wonder), 〜とか (among other things) — all embedded in natural, unscripted speech. Run it until Teppei's city list stops sounding like a geography quiz and starts sounding like a conversation you can actually join.
+</p>
+</div>   
+        <!-- YouTube API 容器 -->
+    <div class="audio-player">
+        <div class="yt-container">
+            <div id="youtube-player"></div>
+        </div>
+    </div>
+
+    <div id="subtitle-container"></div>
+
+    <div class="grammar-section">
+        <h2>📚 Grammar Breakdown</h2>
+        <!-- ==================== HTML 语法解析区域 ==================== -->
+        <div class="grammar-item">
+            <span class="grammar-title">1. ～に住んでいます (～にすんでいます)</span><br>
+            <strong>Meaning:</strong> To live in/at (a place). The particle に marks the location where the state of living continues.<br>
+            <strong>In Text:</strong> 僕は東京に住んでいます / ロンドンに住んでいますか / 日本に住んでいますか / 沖縄に住んでいます (I live in Tokyo / Do you live in London? / Do you live in Japan? / I live in Okinawa).<br>
+            <strong>Note:</strong> N5 core pattern, but Teppei's episode reveals why learners still stumble: native speakers chain it with city names at speed, and the particle に gets swallowed in connected speech. Self-learners often confuse に (state/location of existence) with で (location of action) — 住む takes に because living is a *state*, not an action. Shadow this episode until に住んでいます becomes a single rhythmic unit, not three separate words.
+        </div>
+        <div class="tip-box">
+            <strong>Why "どこに住んでいますか" is a Major Trap for Beginners</strong><br>
+            "どこに住んでいますか" (Where do you live?) is actually one of the most common grammar traps for Japanese learners! Beginners almost always make two specific mistakes because of how they think in English.Here are the two classic mistakes and why they happen:<br>
+            <br><strong>Mistake 1: </strong> Using the particle "で" instead of "に" ❌
+            <ul>
+                <li><strong>What beginners say: どこに住みますか。</strong></li>
+                <li><strong>Why they make this mistake:</strong> Early on, students learn that "で" is the particle for action locations (e.g., "どこで食べますか / Where do you eat?"). Naturally, they think "living" is an action, so they reflexively use "で".</li>
+                <li><strong>The correct logic:</strong> I Japanese, "住む (to live)" is not treated as a temporary action, but as a state of continuous existence. For places where someone or something permanently exists or stays, Japanese grammar strictly requires the particle "に".</li>
+            </ul>
+           <strong>Mistake 2: </strong> Saying "住みますか" instead of "住んでいますか" ❌
+          <ul>
+                <li><strong>What beginners say: どこに住みますか。</strong></li>
+                <li><strong>Why they make this mistake:</strong> Beginners are used to using the simple "~ます" form for current habits or general truths (like "日本語を勉強します / I study Japanese").</li>
+                <li><strong>The correct logic:</strong> If you say どこに住みますか, it actually means "Where are you going to move/live?" (talking about future plans). To ask where someone is currently settled down, you must use the "〜ています" form because it shows an ongoing, continuous state.</li>
+            </ul>
+        </div>
+
+        
+        <br>
+
+        <div class="grammar-item">
+            <span class="grammar-title">2. ～かな / ～ですかね</span><br>
+            <strong>Meaning:</strong> "I wonder…?" / "…, I suppose?" — a softening particle that turns a direct question into a musing, making it sound less interrogative and more conversational.<br>
+            <strong>In Text:</strong> 香港に住んでますかね / 日本のどこに住んでいますかね / 沖縄,沖縄いいですね (Do you live in Hong Kong, I wonder? / Where in Japan do you live, I suppose? / Okinawa — that's nice, isn't it).<br>
+            <strong>Note:</strong> N4. かな is self-directed wondering ("I wonder if…"); ですかね projects that wondering outward with politeness. Teppei uses both constantly — かな when thinking out loud, ですかね when gently prompting the listener. Common mistake: learners use かな with superiors (too casual) or avoid it entirely and sound robotic. For self-learners, mastering かな/ですかね is the difference between "textbook robot" and "actual human."
+        </div>
+
+        <br>
+
+        <div class="grammar-item">
+            <span class="grammar-title">3. ～もしかすると / ～もしかしたら</span><br>
+            <strong>Meaning:</strong> Perhaps / maybe / possibly — introduces a speculation or guess the speaker isn't certain about.<br>
+            <strong>In Text:</strong> ロシアですかもしかしたら / もしかすると日本に住んでいますか (Russia, perhaps? / Perhaps you live in Japan?).<br>
+            <strong>Note:</strong> N3. Both もしかすると and もしかしたら are interchangeable; もしかしたra is slightly more colloquial. The key nuance: the speaker is *guessing*, not stating a fact. Learners often overuse たぶん (probably) when もしかすると is more appropriate — たぶん = high confidence guess; もしかすると = low confidence / just occurred to me. Teppei uses it to keep the question open-ended rather than demanding a specific answer.
+        </div>
+
+        <br>
+
+        <div class="grammar-item">
+            <span class="grammar-title">4. ～とか</span><br>
+            <strong>Meaning:</strong> "Such as / among other things / or something like that" — a casual listing particle that gives examples without exhausting the list.<br>
+            <strong>In Text:</strong> ね都市（とし）とか町同じ意味ですねとし町 / ロサンジェルスとねいうよくねっ (Cities (toshi) and towns — same meaning, right? / Los Angeles and so on, you know).<br>
+            <strong>Note:</strong> N4. とか is the single most common listing particle in spoken Japanese and the one textbooks under-teach. It implies "here are some examples, but there are more" — perfect for when you can't name everything. Learners tend to overuse や (and) in speech when とか sounds more natural and conversational. Teppei's とか usage is textbook native rhythm: drop it in, keep moving, don't over-explain.
+        </div>
+
+        <br>
+
+        <div class="grammar-item">
+            <span class="grammar-title">5. ～てみたい</span><br>
+            <strong>Meaning:</strong> "I want to try doing ~" — combines ～てみる (to try doing) with ～たい (want to) to express a desire to attempt something.<br>
+            <strong>In Text:</strong> 今日はそれについて聞いてみたいと思います (Today I'd like to try asking about that / I want to give asking about that a try).<br>
+            <strong>Note:</strong> N4. ～てみたい is softer and more exploratory than just ～たい — it carries the nuance of "I want to see what happens if I do this." Teppei uses 聞いてみたいと思います to frame the whole episode as an experiment: "Let's try asking this and see what comes back." Self-learners often skip the みたい layer and say 聞きたいです — grammatically fine, but missing the native speaker's instinct to soften intentions with "try."
+        </div>
+        
+    </div>
+    
+   </main>
+    <footer>
+        <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // ==========================================
+        // 核心配置区：以后每次只需要修改这三个变量！
+        // ==========================================
+        const ytVideoId = "3UzJKnssuEM"; // 请替换为 EP2 的 YouTube 视频 ID
+        const pageId = "teppei-ep3"; 
+        const subtitleData = [
+    { start: 1.28, end: 6.56, ja: "日本語鉄平", en: "Nihongo con Teppei." },
+    { start: 6.58, end: 14.59, ja: "日本語学習者の皆さんをいつも応援するpodcast", en: "The podcast that always cheers on everyone studying Japanese." },
+    { start: 14.63, end: 19.69, ja: "今日はどこに住んでいますか", en: "Today — where do you live?" },
+    { start: 19.69, end: 22.03, ja: "にっついて", en: "(playful greeting)" },
+    { start: 25.75, end: 27.97, ja: "はいみなさん", en: "All right, everyone—" },
+    { start: 27.97, end: 30.68, ja: "おはようございます", en: "Good morning." },
+    { start: 30.68, end: 32.50, ja: "元気ですか", en: "How are you doing?" },
+    { start: 32.50, end: 34.35, ja: "僕は元気ですよ", en: "I'm doing great." },
+    { start: 36.03, end: 39.01, ja: "みなさんの住んでいる", en: "The place where you all live—" },
+    { start: 39.01, end: 44.18, ja: "区に住んでいる場所はどこですか", en: "where is the place you're living in?" },
+    { start: 44.18, end: 49.13, ja: "今日はそれについて聞いてみたいと思います", en: "That's what I'd like to ask about today." },
+    { start: 49.13, end: 52.73, ja: "みなさんはどこに住んでますか", en: "Where do you all live?" },
+    { start: 52.73, end: 56.36, ja: "どこに住んでいますか", en: "Where do you live?" },
+    { start: 56.36, end: 60.63, ja: "僕は東京に住んでいます", en: "I live in Tokyo." },
+    { start: 60.63, end: 64.91, ja: "僕は日本に住んでいます", en: "I live in Japan." },
+    { start: 64.91, end: 70.95, ja: "僕は日本に住んでいます,僕は東京に住んでいますねっ", en: "I live in Japan — I live in Tokyo, right." },
+    { start: 70.95, end: 73.79, ja: "みなさんはどこに住んでいますか", en: "Where do you all live?" },
+    { start: 73.79, end: 80.06, ja: "今どこに住んでいますか,ロンドンですか,皆さんはロンドンに住んでいますか", en: "Where do you live now — London? Do you live in London?" },
+    { start: 80.06, end: 82.39, ja: "どこに住んでいますか", en: "Where do you live?" },
+    { start: 82.39, end: 87.64, ja: "ロサンジェルスロサンゼルスですね日本語の発音ですからね", en: "Los Angeles — Los Angeles, right? That's the Japanese pronunciation." },
+    { start: 87.64, end: 90.42, ja: "ロサンゼルスに住んでいます", en: "I live in Los Angeles." },
+    { start: 90.42, end: 94.42, ja: "ニューヨークに住んでいます", en: "I live in New York." },
+    { start: 94.42, end: 98.29, ja: "オーストラリアのシドニーに住んでいます", en: "I live in Sydney, Australia." },
+    { start: 98.29, end: 102.19, ja: "オーストラリアのメルボルンに住んでいます", en: "I live in Melbourne, Australia." },
+    { start: 102.19, end: 105.76, ja: "オーストラリアのパースに住んでいます", en: "I live in Perth, Australia." },
+    { start: 105.76, end: 106.81, ja: "ねっ", en: "Right?" },
+    { start: 106.81, end: 113.08, ja: "ニュージーランドのウィントンに住んでいますどこに住んでいますか", en: "I live in Wellington, New Zealand. Where do you live?" },
+    { start: 113.08, end: 117.76, ja: "香港に住んでますかね香港に住んでいますか", en: "Do you live in Hong Kong, I wonder? Do you live in Hong Kong?" },
+    { start: 117.76, end: 121.24, ja: "それともシンガポールに住んでいますか", en: "Or do you live in Singapore?" },
+    { start: 121.24, end: 124.48, ja: "それとも平均に住んでいますか", en: "Or do you live in... hmm, somewhere else?" },
+    { start: 124.48, end: 127.99, ja: "ソウルに住んでいますかどこに住んでますか", en: "Do you live in Seoul? Where do you live?" },
+    { start: 127.99, end: 128.63, ja: "ストック", en: "Stock—" },
+    { start: 128.63, end: 133.25, ja: "ホルムに住んでいますかバルセロナに住んでいますか", en: "holm? Do you live in Stockholm? Or Barcelona?" },
+    { start: 133.25, end: 136.74, ja: "みなさんはどこに住んでいますかうん", en: "Where do you all live? Mm." },
+    { start: 136.74, end: 142.51, ja: "それともみなさんどこに住めますか日本に住んでいますかもしかすると日本に住んでいますか", en: "Or — where could you live? Do you live in Japan? Perhaps you live in Japan?" },
+    { start: 142.51, end: 148.33, ja: "日本のどこに住んでいますかね日本のどこに住んでいますか", en: "Where in Japan do you live, I wonder? Where in Japan do you live?" },
+    { start: 148.33, end: 151.66, ja: "大阪ですか大阪に住んでいますか", en: "Osaka? Do you live in Osaka?" },
+    { start: 151.66, end: 158.47, ja: "京都ですか京都に住んでいますか福岡福岡ですか鹿児島", en: "Kyoto? Do you live in Kyoto? Fukuoka? Fukuoka? Kagoshima?" },
+    { start: 158.47, end: 162.50, ja: "どこに住んでますか皆さん北海道", en: "Where do you live — Hokkaido?" },
+    { start: 163.19, end: 166.37, ja: "沖縄,沖縄いいですね", en: "Okinawa — Okinawa's nice, isn't it." },
+    { start: 166.37, end: 168.29, ja: "ね沖縄いいですね", en: "Right, Okinawa's nice." },
+    { start: 168.29, end: 170.12, ja: "沖縄いいですよね", en: "Okinawa's lovely, isn't it." },
+    { start: 170.12, end: 173.36, ja: "ハワイかなとハ倍もいいですね", en: "Maybe Hawaii — Hawaii's nice too." },
+    { start: 173.36, end: 175.73, ja: "かわいいですねパンケーキ食べたい", en: "That sounds lovely — I want pancakes." },
+    { start: 177.08, end: 179.94, ja: "ハワイイあんぱんちーて食べたいですね", en: "Hawaii — I'd love to eat anpan there." },
+    { start: 179.94, end: 185.57, ja: "皆さん今どこに住んでいますか,ロシアですかもしかしたら", en: "Where do you all live now? Russia, perhaps?" },
+    { start: 185.57, end: 188.68, ja: "ロシアに住んでいますか", en: "Do you live in Russia?" },
+    { start: 189.06, end: 190.27, ja: "ポーランド", en: "Poland—" },
+    { start: 190.27, end: 191.98, ja: "ポーランドする", en: "Poland, right." },
+    { start: 191.98, end: 194.02, ja: "どこにに住んでいますか", en: "Where do you live?" },
+    { start: 194.02, end: 195.68, ja: "アフリカですか", en: "Africa?" },
+    { start: 195.68, end: 200.72, ja: "アフリカ住んでいますかどこに住んでいますかまあアフリカかもいろいろありますよね", en: "Do you live in Africa? Where do you live? Well, maybe Africa — there are all sorts of places, right?" },
+    { start: 200.72, end: 204.89, ja: "色んな国がありますね,そしていろんな街", en: "There are all kinds of countries, and all kinds of cities." },
+    { start: 204.89, end: 209.81, ja: "ね都市（とし）とか町同じ意味ですねとし町", en: "Cities (toshi) and towns — same meaning, right? Toshi, machi." },
+    { start: 209.81, end: 212.73, ja: "ロサンジェルスとねいうよくねっ", en: "Los Angeles and so on — you know." },
+    { start: 212.73, end: 215.71, ja: "いろいろな街がありますね", en: "There are all sorts of cities." },
+    { start: 215.71, end: 220.08, ja: "今日は皆さんがどこに住んでいるか聞いてみました", en: "Today I tried asking where you all live." },
+    { start: 220.08, end: 228.29, ja: "それではまた明日チャオチャオまたねーまたねバイバイバイバイバイバイさようなら", en: "Well then — see you tomorrow! Ciao ciao, see you, bye-bye-bye-bye-bye-bye, goodbye." }
+];
+        // ==========================================
+
+        let currentLineIndex = -1;
+        let loopMode = 'none';
+        let player;
+
+        function setLoopMode(mode) {
+            loopMode = mode;
+            document.getElementById('btn-loop-none').classList.remove('active');
+            document.getElementById('btn-loop-single').classList.remove('active');
+            document.getElementById(`btn-loop-${mode}`).classList.add('active');
+        }
+
+        // 异步加载 YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 
+                    'playsinline': 1, 
+                    'controls': 1
+                },
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            renderSubtitles();
+            // 启动高频监控器（替代 audio.addEventListener）
+            setInterval(monitorPlayback, 100);
+            
+            // 断点续读
+            const lastRead = localStorage.getItem(`last-read-${pageId}`);
+            if (lastRead !== null) {
+                const targetLine = document.getElementById(`line-${lastRead}`);
+                if (targetLine) {
+                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetLine.classList.add('active');
+                }
+            }
+        }
+
+        function renderSubtitles() {
+            const container = document.getElementById('subtitle-container');
+            subtitleData.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = 'shadow-line';
+                div.id = `line-${index}`;
+                div.innerHTML = `<div class="ja-text">${line.ja}</div><div class="en-text">${line.en}</div>`;
+                
+                div.onclick = () => {
+                    currentLineIndex = index;
+                    player.seekTo(line.start, true);
+                    player.playVideo();
+                    localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                container.appendChild(div);
+            });
+        }
+
+        function monitorPlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); // 1 = PLAYING, 2 = PAUSED
+
+            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+            
+            if (activeIndex !== -1) {
+                currentLineIndex = activeIndex;
+                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                activeElement.classList.add('active');
+                // 焦点追踪：仅在视频播放时将当前高亮行滚动到屏幕中央
+                // 如果视频暂停，用户可以自由滚动而不会被强制拉回
+                if (playerState === 1) {
+                    activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+
+            // 单句循环控制
+            if (loopMode === 'single' && currentLineIndex !== -1) {
+                const currentLineData = subtitleData[currentLineIndex];
+                if (currentTime >= currentLineData.end) {
+                    player.seekTo(currentLineData.start, true);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

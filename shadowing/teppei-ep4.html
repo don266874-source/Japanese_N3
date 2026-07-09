@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================================================= -->
+    <!-- 1. [ 核心配置区 ]：SEO 流量拦截网（每期必改） -->
+    <!-- ======================================================= -->
+    <title>Ep4: 何時ですか？| Nihongo con Teppei Shadowing Tool & Transcript</title>
+    <meta name="description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 4 (何時ですか？). Master duration counters and practice perfect pronunciation.">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #111; margin-bottom: 5px; font-size: 1.8rem; letter-spacing: -0.5px;}
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 0; margin-bottom: 20px;}
+        
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; transition: background 0.2s;}
+        nav a:hover { background: #f0f6ff; text-decoration: none; }
+        nav a.current { background: #f0f6ff; color: #111; }
+        
+        .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
+        
+        /* 极简 YouTube 播放器外壳 */
+        .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
+        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        .controls { display: flex; gap: 10px; }
+        button { background: #f6f8fa; color: #333; border: 1px solid #d0d7de; padding: 6px 12px; border-radius: 6px; cursor: pointer; transition: 0.2s; font-size: 0.9rem;}
+        button:hover { background: #f3f4f6; border-color: #9ca3af; }
+        button.active { background: #1f6feb; color: white; border-color: #1f6feb;}
+        
+        .shadow-line { padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        .shadow-line:hover { background: #f6f8fa; }
+        .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; }
+        
+        .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
+        .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
+        .grammar-item { margin-bottom: 15px; }
+        .grammar-title { color: #0066cc; font-weight: bold; }
+        footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+
+   </style>
+</head>
+<body>
+    <!-- 全站闭环 Header 导航系统 -->
+    <header>
+        <h1>The Shadowing Geek</h1>
+        <p class="subtitle">A fellow learner's interactive tools for shadowing real-world audio, decoding native speed, and mastering JLPT grammar.</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shadowing/">🎧 Shadowing Lab</a>
+            <a href="/posts/">📚 Grammar Notes</a>
+            <a href="/about.html">About Me</a>
+        </nav>
+    </header>
+    
+   <main>
+    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
+    <h1>Nihongo con Teppei (Beginner) - Ep4: 何時ですか？</h1>
+    
+    <!-- 注入新灵魂的 Learner's Note -->
+    <div class="learners-note">
+        <strong>Felix's Learner Note:</strong>
+     <p> 
+      Teppei nails exactly this gap in Episode 4. He doesn't just teach you the clock — he takes you through the full daily cycle: 朝の7時、朝の8時、昼の12時、昼の3時、夕方の5時、夕方の6時、夜の7時、夜中の12時 — all spoken at natural pace, "朝ですか、朝。昼ですか、昼。それとも夜ですか" — This material is gold for shadowing: you're not memorizing numbers, you're absorbing the conversational reflex.
+    </p> 
+    <p>       
+        Shadow this until your mouth forms 昼、夕方、夜中 without translating. That's the level where time questions stop being a quiz and start being a conversation.
+    </p>
+</div>   
+        <!-- YouTube API 容器 -->
+    <div class="audio-player">
+        <div class="yt-container">
+            <div id="youtube-player"></div>
+        </div>
+    </div>
+
+    <div id="subtitle-container"></div>
+
+    <div class="grammar-section">
+        <h2>📚 Grammar Breakdown</h2>
+        <!-- ==================== HTML 语法解析区域 ==================== -->
+        <div class="grammar-item">
+    <span class="grammar-title">1. ～時（～じ）—— 時刻表現</span><br>
+    <strong>Meaning:</strong> Hour / o'clock. Number + 時 forms a clock time. Extended with の for descriptive time-of-day phrases: 朝の7時、昼の3時、夜の8時、夜中の12時.<br>
+    <strong>In Text:</strong> 今3時ですね / 朝の7時ですか / 昼の12時1時 / 夕方の5時夕方の6時 / 夜の7時8時 / 夜中の12時 (It's 3 o'clock / Is it 7 AM? / 12 and 1 PM / 5 and 6 in the evening / 7 and 8 at night / 12 midnight).<br>
+    <strong>Note:</strong> N5 core. The trap Teppei exposes: Japanese speakers don't just say the number — they pick a time-of-day qualifier (朝/昼/夕方/夜/夜中) to disambiguate. Textbooks teach 7時, but a native says 朝の7時 vs 夜の7時 to avoid confusion. Self-learners who skip the qualifier sound like train station announcements. Shadow Teppei's 朝の～/昼の～ rhythm until it's automatic.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">2. ～について</span><br>
+    <strong>Meaning:</strong> About / regarding ~. Marks the topic that the verb (talk, think, ask, write) concerns. Noun + について + verb of contemplation/communication.<br>
+    <strong>In Text:</strong> 今日何時ですかにっついて / について話します / 今何時ですかについて聞いてみました (Today, about "what time is it" / I'll talk about ~ / I tried asking about "what time is it").<br>
+    <strong>Note:</strong> N4. について is the go-to marker when introducing what an episode/speech/essay is about. Learners often confuse it with に関して (more formal, N3) — in speech, について is overwhelmingly preferred. The casual contraction っついて that Teppei uses in the intro is spoken-only — never write it that way, but shadow it so you recognize it in the wild.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">3. ～ていきましょう / ～てみました（～ていく・～てみる）</span><br>
+    <strong>Meaning:</strong> ～ていく = continue doing / proceed doing (directional away from speaker); ～てみる = try doing (exploratory). Both in volitional / past tense here.<br>
+    <strong>In Text:</strong> 勉強していきましょう (Let's keep studying and move forward) / 聞いてみました (I tried asking).<br>
+    <strong>Note:</strong> N4. ～ていく carries the nuance of momentum moving forward into the future — 勉強していきましょう = "let's study and keep going," not just "let's study." ～てみる frames an action as an experiment — 聞いてみました = "I gave asking a try / I tried to see what would happen if I asked." Learners drop the いく/みる and lose the nuance: 勉強しましょう is a plain suggestion; 勉強していきましょう is a rallying cry.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">4. ～というわけで</span><br>
+    <strong>Meaning:</strong> "So / for that reason / with that being the case" — wraps up the preceding explanation and transitions to the conclusion. Spoken-equivalent of したがって or それゆえ.<br>
+    <strong>In Text:</strong> というわけで今日は今何時ねっ今何時ですかについて聞いてみました (So that's it for today — I tried asking "what time is it now?").<br>
+    <strong>Note:</strong> N3. This is the connective tissue of conversational wrap-ups. というわけで is Teppei's go-to closer — it signals "I've finished my main point, now I'm signing off." Self-learners tend to use だから (too abrupt) or ので (too robotic) in this slot. というわけで strikes the exact register for podcast/YouTube endings — conversational, conclusive, polite without stiffness.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">5. ～でしょうか（でしょう + か）</span><br>
+    <strong>Meaning:</strong> "I wonder ~?" / polite softened question. Combines the conjectural でしょう (probably) with the question particle か, producing a tone that's gentler than a straight ですか.<br>
+    <strong>In Text:</strong> 皆さんは今何時ですかね / 何時ですかね (I wonder what time it is for you all / What time is it, I wonder?).<br>
+    <strong>Note:</strong> N4. ですか = direct question; でしょうか = musing, leaving space for the listener. Teppei's whole episode runs on でしょうか / ですかね — he's not interrogating, he's wondering aloud with the audience. Self-learners who only use ですか sound like interviewers; those who master でしょうか sound like conversationalists. The intonation lift on でしょうか is softer — shadow it so you can tell the difference by ear.
+</div>
+        
+    </div>
+    
+   </main>
+    <footer>
+        <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // ==========================================
+        // 核心配置区：以后每次只需要修改这三个变量！
+        // ==========================================
+        const ytVideoId = "e652Gs53vPE"; // 请替换为 EP4 的 YouTube 视频 ID
+        const pageId = "teppei-ep4"; 
+        const subtitleData = [
+    { start: 1.88, end: 7.02, ja: "日本語コーン鉄平", en: "Nihongo con Teppei." },
+    { start: 7.17, end: 12.42, ja: "日本語学習者の皆さんをいつも応援する", en: "Always cheering on all you Japanese learners." },
+    { start: 12.42, end: 15.24, ja: "podcast", en: "Podcast." },
+    { start: 15.24, end: 17.00, ja: "今日は", en: "Today's topic—" },
+    { start: 17.00, end: 19.50, ja: "何時ですか", en: "What time is it?" },
+    { start: 19.50, end: 22.03, ja: "にっついて", en: "—let's talk about that." },
+    { start: 26.40, end: 29.60, ja: "皆さん元気ですか", en: "How is everyone doing?" },
+    { start: 29.60, end: 32.92, ja: "僕は元気ですよ", en: "I'm doing great." },
+    { start: 32.92, end: 39.06, ja: "元気が一番ですね元気が一番大事ですね", en: "Energy is number one — energy is the most important thing." },
+    { start: 39.06, end: 42.83, ja: "色々なことが大事ですね", en: "Lots of things are important, right." },
+    { start: 42.83, end: 48.05, ja: "第二大切たいせつなことはたくさんあります", en: "There are plenty of second-most-important things too." },
+    { start: 48.05, end: 51.56, ja: "元気とかない元気は大事ですよ", en: "Without energy — well, energy really does matter." },
+    { start: 51.56, end: 54.71, ja: "あとお金お金も大事ですね", en: "And money — money matters too, right." },
+    { start: 54.71, end: 56.29, ja: "お金", en: "Money." },
+    { start: 56.29, end: 57.62, ja: "金を大事です", en: "Money is important." },
+    { start: 57.62, end: 59.23, ja: "あと家族", en: "And family." },
+    { start: 59.23, end: 61.17, ja: "家族も大臣", en: "Family matters too." },
+    { start: 61.17, end: 64.35, ja: "でも元気なのは大事ですよやっぱりね", en: "But being energetic is important after all, you know." },
+    { start: 64.35, end: 68.18, ja: "今日も頑張って元気に日本語を", en: "Let's keep our energy up and study Japanese again today." },
+    { start: 68.18, end: 72.52, ja: "勉強していきましょう勉強しましょう", en: "Let's study — let's get to it." },
+    { start: 72.52, end: 73.88, ja: "今日は", en: "Today—" },
+    { start: 73.88, end: 76.71, ja: "今何時ですか", en: "What time is it now?" },
+    { start: 76.71, end: 79.37, ja: "について話します", en: "I'll talk about that." },
+    { start: 79.37, end: 82.39, ja: "今何時ですか", en: "What time is it now?" },
+    { start: 82.39, end: 85.90, ja: "東京はですね僕は東京に住んでいます", en: "Tokyo — well, I live in Tokyo." },
+    { start: 85.90, end: 88.35, ja: "僕は東京に住んでいます", en: "I live in Tokyo." },
+    { start: 88.35, end: 91.03, ja: "で東京は今", en: "So in Tokyo right now it's—" },
+    { start: 91.03, end: 94.27, ja: "えっとね今日今ですね今3時ですね", en: "Let's see, today — right now — it's 3 o'clock." },
+    { start: 94.27, end: 95.41, ja: "03:00", en: "Three o'clock." },
+    { start: 95.41, end: 97.11, ja: "昼の3時", en: "Three in the afternoon." },
+    { start: 97.11, end: 101.55, ja: "昼の3時です5個3時午後さん", en: "It's 3 PM — three in the afternoon, PM." },
+    { start: 101.55, end: 104.13, ja: "昼の3期", en: "Three in the afternoon." },
+    { start: 104.13, end: 107.79, ja: "皆さんは今何時ですかね男児ですか", en: "What time is it for you all? Is it morning?" },
+    { start: 107.79, end: 110.42, ja: "朝ですか朝", en: "Morning? Morning." },
+    { start: 110.42, end: 112.94, ja: "昼ですか昼", en: "Afternoon? Afternoon." },
+    { start: 112.94, end: 118.94, ja: "それとも夜ですか夜朝の7時ですか", en: "Or evening? Evening. Is it 7 AM?" },
+    { start: 118.94, end: 126.51, ja: "朝の8時ですか朝の9時10時11時", en: "8 AM? 9 AM, 10, 11—" },
+    { start: 126.51, end: 131.16, ja: "あと昼ですね昼の12時1時", en: "Then noon — 12 PM, 1 PM—" },
+    { start: 131.16, end: 134.58, ja: "昼の1時昼の2時昼の3時", en: "1 PM, 2 PM, 3 PM." },
+    { start: 134.58, end: 138.96, ja: "昼の4時昼の誤字昼の6時", en: "4 PM, 5 PM, 6 PM." },
+    { start: 138.96, end: 143.28, ja: "昼じゃないな6時は6時", en: "Wait, not afternoon — 6 o'clock is 6 o'clock." },
+    { start: 143.28, end: 146.58, ja: "6時は夕方ですね夕方", en: "6 o'clock is evening — evening." },
+    { start: 146.58, end: 149.79, ja: "夕方の5時夕方の6時", en: "5 in the evening, 6 in the evening." },
+    { start: 149.79, end: 155.58, ja: "夕方って言いますね夕方夕方はマーリーズにみたいな感じかな", en: "We say 夕方 — evening. Evening is kind of like 'late afternoon,' I suppose." },
+    { start: 155.58, end: 163.27, ja: "夕方そして7時夜の7時8時夜の8時9時夜の9時", en: "Evening, and then 7 PM — 7 at night, 8 PM, 8 at night, 9, 9 at night." },
+    { start: 163.27, end: 163.99, ja: "ええええええ", en: "Uh, um..." },
+    { start: 163.99, end: 168.45, ja: "10時夜の10時夜の11時", en: "10 PM, 10 at night, 11 at night." },
+    { start: 168.45, end: 176.41, ja: "12時はね夜中ですね夜中寝みってないです夜中の12時", en: "12 o'clock — that's the middle of the night. Middle of the night — 12 midnight." },
+    { start: 176.41, end: 179.37, ja: "そしてその後", en: "And after that—" },
+    { start: 180.09, end: 185.79, ja: "もう寝る時間ですね寝てくださいねやすみおやすみは消せ", en: "It's bedtime. Please go to sleep — good night, sleep tight." },
+    { start: 185.79, end: 188.18, ja: "というわけで今日は", en: "So that's it for today." },
+    { start: 188.18, end: 193.92, ja: "今何時ねっ今何時ですかについて聞いてみました", en: "I tried asking about — what time is it now? What time is it?" },
+    { start: 193.92, end: 197.38, ja: "僕は今東京ですね東京今", en: "I'm in Tokyo right now — Tokyo, right now." },
+    { start: 197.38, end: 200.15, ja: "午後3時昼の", en: "3 PM — in the afternoon." },
+    { start: 200.15, end: 200.93, ja: "たんです", en: "Three o'clock." },
+    { start: 200.93, end: 205.34, ja: "みなさんの住んでいる町みなさんの住んでいる国", en: "The town you live in, the country you live in—" },
+    { start: 205.34, end: 211.24, ja: "今何時ですかアメリカは今何時ですかニューヨークは今何時ですか", en: "What time is it? What time is it in America? What time is it in New York?" },
+    { start: 211.24, end: 218.28, ja: "ロサンジェルスは今何時ですかメキシコは今何時ですかブラジルは今何時ですか", en: "What time is it in Los Angeles? In Mexico? In Brazil?" },
+    { start: 218.43, end: 220.77, ja: "ハワイは今何時ですか", en: "What time is it in Hawaii?" },
+    { start: 220.77, end: 225.14, ja: "今何時ですかどこにいますか皆さどこですか今", en: "What time is it? Where are you? Where is everyone right now?" },
+    { start: 225.14, end: 229.48, ja: "それではまた明日バイバーイっちゃうちゃおう", en: "See you tomorrow — bye-bye! Ciao ciao!" }
+];
+
+
+        // ==========================================
+
+        let currentLineIndex = -1;
+        let loopMode = 'none';
+        let player;
+
+        function setLoopMode(mode) {
+            loopMode = mode;
+            document.getElementById('btn-loop-none').classList.remove('active');
+            document.getElementById('btn-loop-single').classList.remove('active');
+            document.getElementById(`btn-loop-${mode}`).classList.add('active');
+        }
+
+        // 异步加载 YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 
+                    'playsinline': 1, 
+                    'controls': 1
+                },
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            renderSubtitles();
+            // 启动高频监控器（替代 audio.addEventListener）
+            setInterval(monitorPlayback, 100);
+            
+            // 断点续读
+            const lastRead = localStorage.getItem(`last-read-${pageId}`);
+            if (lastRead !== null) {
+                const targetLine = document.getElementById(`line-${lastRead}`);
+                if (targetLine) {
+                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetLine.classList.add('active');
+                }
+            }
+        }
+
+        function renderSubtitles() {
+            const container = document.getElementById('subtitle-container');
+            subtitleData.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = 'shadow-line';
+                div.id = `line-${index}`;
+                div.innerHTML = `<div class="ja-text">${line.ja}</div><div class="en-text">${line.en}</div>`;
+                
+                div.onclick = () => {
+                    currentLineIndex = index;
+                    player.seekTo(line.start, true);
+                    player.playVideo();
+                    localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                container.appendChild(div);
+            });
+        }
+
+        function monitorPlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); // 1 = PLAYING, 2 = PAUSED
+
+            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+            
+            if (activeIndex !== -1) {
+                currentLineIndex = activeIndex;
+                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                activeElement.classList.add('active');
+                // 焦点追踪：仅在视频播放时将当前高亮行滚动到屏幕中央
+                // 如果视频暂停，用户可以自由滚动而不会被强制拉回
+                if (playerState === 1) {
+                    activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+
+            // 单句循环控制
+            if (loopMode === 'single' && currentLineIndex !== -1) {
+                const currentLineData = subtitleData[currentLineIndex];
+                if (currentTime >= currentLineData.end) {
+                    player.seekTo(currentLineData.start, true);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
