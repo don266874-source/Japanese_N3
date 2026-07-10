@@ -58,6 +58,8 @@
       ]
     }
     </script>
+   
+
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
         header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
@@ -70,27 +72,112 @@
         
         .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
         
-        /* 极简 YouTube 播放器外壳 */
         .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
         .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
-        .controls { display: flex; gap: 10px; }
-        button { background: #f6f8fa; color: #333; border: 1px solid #d0d7de; padding: 6px 12px; border-radius: 6px; cursor: pointer; transition: 0.2s; font-size: 0.9rem;}
-        button:hover { background: #f3f4f6; border-color: #9ca3af; }
-        button.active { background: #1f6feb; color: white; border-color: #1f6feb;}
         
-        .shadow-line { padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        /* 改造跟读行布局：支持左右分栏 */
+        .shadow-line { display: flex; justify-content: space-between; align-items: center; padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
         .shadow-line:hover { background: #f6f8fa; }
         .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
-        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
-        .en-text { font-size: 0.95rem; color: #666; }
         
+        .text-content { flex-grow: 1; padding-right: 15px; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; transition: opacity 0.3s; }
+        .en-text.hidden { opacity: 0; user-select: none; }
+        
+        /* 交互按钮组 */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+
         .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
         .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
         .grammar-item { margin-bottom: 15px; }
         .grammar-title { color: #0066cc; font-weight: bold; }
         footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+    
+        /* 录音隐私提示条 */
+        .privacy-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #f6f8fa;
+            color: #57606a;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px dashed #d0d7de;
+        }
+        .privacy-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #57606a;
+        }
+        /* 交互操作提示条 */
+        .interaction-hint {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #034694;
+            background-color: #f0f6ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px dashed #b6d4fe;
+            font-weight: 500;
+        }
+    /* 全局字幕控制栏 */
+        .global-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #f9fbfc;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eaeaea;
+            font-size: 0.75rem;
+        }
+        .control-label {
+            font-weight: bold;
+            color: #333;
+        }
+        .toggle-group {
+            display: flex;
+            gap: 15px;
+        }
+        .toggle-group label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            user-select: none;
+        }
 
-   </style>
+        /* 全局隐藏逻辑（通过父级 Class 控制） */
+        #subtitle-container.hide-ja .ja-text { display: none; }
+        #subtitle-container.hide-en .en-text { display: none; }
+        
+        /* 优化后的操作按钮（去掉惊悚眼球） */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(207, 34, 46, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0); }
+        }
+    </style>
+
+
+
 </head>
 <body>
     <!-- 全站闭环 Header 导航系统 -->
@@ -115,16 +202,36 @@
      <p> When I was living in Tokyo, the question that caught me off guard most often wasn't "what's your job?" or "what did you do this weekend?" — it was "where do you live?" Not because the words were hard, but because the answer came at me in a rapid-fire list of cities, countries, and particles that my textbook had never strung together at native speed. I'd learned に and で as separate grammar points. Nobody warned me that real speakers would rattle off "ロサンゼルスに住んでいます / 日本に住んでいますか" in a single breath and expect me to keep up.
     </p> 
 <p>        For a self-learner with no Japanese neighbors, this is the closest thing to drilling with a native speaker who actually waits for your answer. Shadowing this loop until the に住んでいます pattern becomes automatic will do more for your spoken reflexes than memorizing particle charts. The episode also sneaks in high-value N3 grammar — もしかすると (perhaps), 〜かな (I wonder), 〜とか (among other things) — all embedded in natural, unscripted speech. Run it until Teppei's city list stops sounding like a geography quiz and starts sounding like a conversation you can actually join.
-</p>
 </div>   
         <!-- YouTube API 容器 -->
-    <div class="audio-player">
+        <div class="audio-player">
         <div class="yt-container">
             <div id="youtube-player"></div>
+    </div>
+
+ <div class="global-controls">
+            <span class="control-label">Display:</span>
+            <div class="toggle-group">
+                <label>
+                    <input type="checkbox" id="toggle-ja" checked onchange="toggleSubtitles('ja')">
+                    Japanese
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-en" checked onchange="toggleSubtitles('en')">
+                    English
+                </label>
+            </div>
         </div>
     </div>
 
-    <div id="subtitle-container"></div>
+    <div class="privacy-badge">
+            <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            <span><strong>Privacy First:</strong> Your mic audio is processed locally on your device. We never upload or save your voice. Recordings vanish when you close the tab.</span>
+     </div>
+    <div class="interaction-hint">
+        💡 <strong>Pro Tip:</strong> Click any sentence to jump and play. Double-click to pause the audio.
+    </div>
+    
 
     <div class="grammar-section">
         <h2>📚 Grammar Breakdown</h2>
@@ -267,14 +374,13 @@
         let loopMode = 'none';
         let player;
 
-        function setLoopMode(mode) {
-            loopMode = mode;
-            document.getElementById('btn-loop-none').classList.remove('active');
-            document.getElementById('btn-loop-single').classList.remove('active');
-            document.getElementById(`btn-loop-${mode}`).classList.add('active');
-        }
+           // 录音相关全局变量
+        let mediaRecorder;
+        let audioChunks = [];
+        let userAudioBlobs = {}; // 存储每句的录音数据
+        let currentRecordingIndex = -1;
 
-        // 异步加载 YouTube Iframe API
+        // 加载 YouTube Iframe API
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -285,22 +391,15 @@
                 height: '80',
                 width: '100%',
                 videoId: ytVideoId,
-                playerVars: { 
-                    'playsinline': 1, 
-                    'controls': 1
-                },
-                events: {
-                    'onReady': onPlayerReady
-                }
+                playerVars: { 'playsinline': 1, 'controls': 1 },
+                events: { 'onReady': onPlayerReady }
             });
         }
 
         function onPlayerReady(event) {
             renderSubtitles();
-            // 启动高频监控器（替代 audio.addEventListener）
             setInterval(monitorPlayback, 100);
             
-            // 断点续读
             const lastRead = localStorage.getItem(`last-read-${pageId}`);
             if (lastRead !== null) {
                 const targetLine = document.getElementById(`line-${lastRead}`);
@@ -317,22 +416,107 @@
                 const div = document.createElement('div');
                 div.className = 'shadow-line';
                 div.id = `line-${index}`;
-                div.innerHTML = `<div class="ja-text">${line.ja}</div><div class="en-text">${line.en}</div>`;
                 
-                div.onclick = () => {
+                // HTML 结构：左侧文本，右侧按钮组
+                div.innerHTML = `
+                    <div class="text-content">
+                        <div class="ja-text">${line.ja}</div>
+                        <div class="en-text" id="en-${index}">${line.en}</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn record-btn" id="record-btn-${index}" onclick="toggleRecord(event, ${index})" title="Hold or Click to Record">🎙️</button>
+                        <button class="action-btn play-btn" id="play-btn-${index}" onclick="playUserRecord(event, ${index})" style="display:none;" title="Play your recording">▶️</button>
+                    </div>
+                `;
+                
+                div.onclick = (e) => {
+                    // 如果点击的是按钮，不触发视频跳转
+                    if (e.target.closest('.action-btn')) return;
                     currentLineIndex = index;
                     player.seekTo(line.start, true);
                     player.playVideo();
                     localStorage.setItem(`last-read-${pageId}`, index);
                 };
+                // 双击：紧急暂停 (极客新增)
+                div.ondblclick = (e) => {
+                    if (e.target.closest('.action-btn')) return;
+                    player.pauseVideo();
+                };
                 container.appendChild(div);
             });
+        }
+      
+        // 全局控制字幕显示/隐藏逻辑
+        function toggleSubtitles(lang) {
+            const container = document.getElementById('subtitle-container');
+            const checkbox = document.getElementById(`toggle-${lang}`);
+            
+            if (checkbox.checked) {
+                container.classList.remove(`hide-${lang}`);
+            } else {
+                container.classList.add(`hide-${lang}`);
+            }
+        }   
+        // 功能 2：录音系统逻辑
+        async function toggleRecord(event, index) {
+            event.stopPropagation();
+            const recordBtn = document.getElementById(`record-btn-${index}`);
+            const playBtn = document.getElementById(`play-btn-${index}`);
+
+            if (currentRecordingIndex === index) {
+                // 停止录音
+                mediaRecorder.stop();
+                recordBtn.classList.remove('recording');
+                currentRecordingIndex = -1;
+                return;
+            }
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    userAudioBlobs[index] = URL.createObjectURL(audioBlob);
+                    playBtn.style.display = 'block'; // 显示播放按钮
+                    playBtn.classList.add('has-audio');
+                    
+                    // 释放麦克风轨道资源
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+                currentRecordingIndex = index;
+                recordBtn.classList.add('recording');
+                
+                // 自动暂停原声音频，以免录进去
+                player.pauseVideo();
+
+            } catch (err) {
+                alert("Permission denied or microphone not found. Please allow microphone access.");
+                console.error(err);
+            }
+        }
+
+        // 功能 3：播放用户的录音
+        function playUserRecord(event, index) {
+            event.stopPropagation();
+            if (userAudioBlobs[index]) {
+                player.pauseVideo(); // 暂停 YouTube
+                const audio = new Audio(userAudioBlobs[index]);
+                audio.play();
+            }
         }
 
         function monitorPlayback() {
             if (!player || typeof player.getCurrentTime !== 'function') return;
             const currentTime = player.getCurrentTime();
-            const playerState = player.getPlayerState(); // 1 = PLAYING, 2 = PAUSED
+            const playerState = player.getPlayerState(); 
 
             let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
             
@@ -340,19 +524,11 @@
                 currentLineIndex = activeIndex;
                 document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
                 const activeElement = document.getElementById(`line-${activeIndex}`);
-                activeElement.classList.add('active');
-                // 焦点追踪：仅在视频播放时将当前高亮行滚动到屏幕中央
-                // 如果视频暂停，用户可以自由滚动而不会被强制拉回
-                if (playerState === 1) {
-                    activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            }
-
-            // 单句循环控制
-            if (loopMode === 'single' && currentLineIndex !== -1) {
-                const currentLineData = subtitleData[currentLineIndex];
-                if (currentTime >= currentLineData.end) {
-                    player.seekTo(currentLineData.start, true);
+                if (activeElement) {
+                    activeElement.classList.add('active');
+                    if (playerState === 1) {
+                        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
                 }
             }
         }

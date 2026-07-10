@@ -17,7 +17,7 @@
     <meta property="og:url" content="https://shadowgeek.net/shadowing/teppei-ep1.html">
     <meta property="og:title" content="Ep1: 元気ですか？ | Nihongo con Teppei Shadowing Tool & Transcript">
     <meta property="og:description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 1 (元気ですか？). Perfect your Japanese muscle memory now.">
-    <meta property="og:image" content="https://shadowgeek.net/images/sakura.webp">
+    <meta property="og:image" content="https://shadowgeek.net/images/og-default.webp">
     <meta property="article:published_time" content="2026-07-09T00:00:00+08:00">
     <meta property="article:modified_time" content="2026-07-09T00:00:00+08:00">
     <meta property="article:author" content="Felix">
@@ -30,7 +30,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ep1: 元気ですか？ | Nihongo con Teppei Shadowing Tool">
     <meta name="twitter:description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 1 (元気ですか？). Perfect your Japanese muscle memory now.">
-    <meta name="twitter:image" content="https://shadowgeek.net/images/sakura.webp">
+    <meta name="twitter:image" content="https://shadowgeek.net/images/og-default.webp">
 
     <!-- Structured Data: Article + BreadcrumbList -->
     <script type="application/ld+json">
@@ -39,7 +39,7 @@
       "@type": "Article",
       "headline": "Ep1: 元気ですか？ | Nihongo con Teppei Shadowing Tool & Transcript",
       "description": "Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 1 (元気ですか？). Perfect your Japanese muscle memory now.",
-      "image": "https://shadowgeek.net/images/sakura.webp",
+      "image": "https://shadowgeek.net/images/og-default.webp",
       "datePublished": "2026-07-09",
       "dateModified": "2026-07-09",
       "author": {
@@ -137,13 +137,25 @@
             font-size: 0.85rem;
             padding: 8px 12px;
             border-radius: 6px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             border: 1px dashed #d0d7de;
         }
         .privacy-badge svg {
             width: 16px;
             height: 16px;
             fill: #57606a;
+        }
+        /* 交互操作提示条 */
+        .interaction-hint {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #034694;
+            background-color: #f0f6ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px dashed #b6d4fe;
+            font-weight: 500;
         }
     /* 全局字幕控制栏 */
         .global-controls {
@@ -253,13 +265,14 @@
             <button id="btn-loop-none" class="active" onclick="setLoopMode('none')">No Loop</button>
             <button id="btn-loop-single" onclick="setLoopMode('single')">🔂 Single Loop</button>
         </div> -->
-    </div>
+   
 
     <div class="audio-player">
         <div class="yt-container">
             <div id="youtube-player"></div>
-        </div>
-        <div class="global-controls">
+    </div>
+
+ <div class="global-controls">
             <span class="control-label">Display:</span>
             <div class="toggle-group">
                 <label>
@@ -275,9 +288,13 @@
     </div>
 
     <div class="privacy-badge">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
             <span><strong>Privacy First:</strong> Your mic audio is processed locally on your device. We never upload or save your voice. Recordings vanish when you close the tab.</span>
-        </div>
+     </div>
+    <div class="interaction-hint">
+        💡 <strong>Pro Tip:</strong> Click any sentence to jump and play. Double-click to pause the audio.
+    </div>
+
     <div id="subtitle-container"></div>
 
 
@@ -309,6 +326,7 @@
         <strong>Note:</strong> N4 grammar. ～ていく emphasizes continuation into the future or movement away from the current state. ～てくる emphasizes a change that has been building up to now. Beginners often overuse ～てくる when they mean ～ていく. A good rule of thumb: if you're talking about a future trajectory (これから), use ～ていく; if you're talking about a result that has arrived at the present, use ～てくる.
     </div>
     </div>
+
    </main>
     <footer>
         <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
@@ -461,6 +479,11 @@
                     player.seekTo(line.start, true);
                     player.playVideo();
                     localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                // 双击：紧急暂停 (极客新增)
+                div.ondblclick = (e) => {
+                    if (e.target.closest('.action-btn')) return;
+                    player.pauseVideo();
                 };
                 container.appendChild(div);
             });
