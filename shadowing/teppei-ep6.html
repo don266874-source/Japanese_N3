@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================================================= -->
+    <!-- 1. [ 核心配置区 ]：SEO 流量拦截网（每期必改） -->
+    <!-- ======================================================= -->
+    <title>Ep4: 何時ですか？| Nihongo con Teppei Shadowing Tool & Transcript</title>
+    <meta name="description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 6 (学校に行っていますか？). Master duration counters and practice perfect pronunciation.">
+    <link rel="canonical" href="https://shadowgeek.net/shadowing/teppei-ep6.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="The Shadowing Geek">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://shadowgeek.net/shadowing/teppei-ep6.html">
+    <meta property="og:title" content="Ep6: 学校に行っていますか？ | Nihongo con Teppei Shadowing Tool & Transcript">
+    <meta property="og:description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 6 (学校に行っていますか？). Master duration counters and practice perfect pronunciation.">
+    <meta property="og:image" content="https://shadowgeek.net/images/og-default.webp">
+    <meta property="article:published_time" content="2026-07-11T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-07-11T00:00:00+08:00">
+    <meta property="article:author" content="Felix">
+    <meta property="article:section" content="Shadowing Lab">
+    <meta property="article:tag" content="Teppei">
+    <meta property="article:tag" content="shadowing">
+    <meta property="article:tag" content="time expressions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ep5: 学校に行っていますか？| Nihongo con Teppei Shadowing Tool">
+    <meta name="twitter:description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 5. Practice time expressions at native speed.">
+    <meta name="twitter:image" content="https://shadowgeek.net/images/og-default.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ep5: 学校に行っていますか？| Nihongo con Teppei Shadowing Tool & Transcript",
+      "description": "Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 5 (ひらがな、カタカナ、漢字について). Master duration counters and practice perfect pronunciation.",
+      "image": "https://shadowgeek.net/images/og-default.webp",
+      "datePublished": "2026-07-11",
+      "dateModified": "2026-07-11",
+      "author": {"@type": "Person", "name": "Felix", "url": "https://shadowgeek.net/about.html"},
+      "publisher": {"@type": "Organization", "name": "The Shadowing Geek", "logo": {"@type": "ImageObject", "url": "https://shadowgeek.net/images/og-default.webp"}},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://shadowgeek.net/shadowing/teppei-ep6.html"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shadowgeek.net/"},
+        {"@type": "ListItem", "position": 2, "name": "Shadowing Lab", "item": "https://shadowgeek.net/shadowing/"},
+        {"@type": "ListItem", "position": 3, "name": "Ep6: 学校に行っていますか？", "item": "https://shadowgeek.net/shadowing/teppei-ep6.html"}
+      ]
+    }
+    </script>
+<style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #111; margin-bottom: 5px; font-size: 1.8rem; letter-spacing: -0.5px;}
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 0; margin-bottom: 20px;}
+        
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; transition: background 0.2s;}
+        nav a:hover { background: #f0f6ff; text-decoration: none; }
+        nav a.current { background: #f0f6ff; color: #111; }
+        
+        .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
+        
+        .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
+        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        
+        /* 改造跟读行布局：支持左右分栏 */
+        .shadow-line { display: flex; justify-content: space-between; align-items: center; padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        .shadow-line:hover { background: #f6f8fa; }
+        .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+        
+        .text-content { flex-grow: 1; padding-right: 15px; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; transition: opacity 0.3s; }
+        .en-text.hidden { opacity: 0; user-select: none; }
+        
+        /* 交互按钮组 */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+
+        .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
+        .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
+        .grammar-item { margin-bottom: 15px; }
+        .grammar-title { color: #0066cc; font-weight: bold; }
+        footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+    
+        /* 录音隐私提示条 */
+        .privacy-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #f6f8fa;
+            color: #57606a;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px dashed #d0d7de;
+        }
+        .privacy-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #57606a;
+        }
+        /* 交互操作提示条 */
+        .interaction-hint {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #034694;
+            background-color: #f0f6ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px dashed #b6d4fe;
+            font-weight: 500;
+        }
+    /* 全局字幕控制栏 */
+        .global-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #f9fbfc;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eaeaea;
+            font-size: 0.75rem;
+        }
+        .control-label {
+            font-weight: bold;
+            color: #333;
+        }
+        .toggle-group {
+            display: flex;
+            gap: 15px;
+        }
+        .toggle-group label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            user-select: none;
+        }
+
+        /* 全局隐藏逻辑（通过父级 Class 控制） */
+        #subtitle-container.hide-ja .ja-text { display: none; }
+        #subtitle-container.hide-en .en-text { display: none; }
+        
+        /* 优化后的操作按钮（去掉惊悚眼球） */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(207, 34, 46, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 全站闭环 Header 导航系统 -->
+    <header>
+        <p class="logo" style="color:#111;margin-bottom:5px;font-size:1.8rem;letter-spacing:-0.5px;font-weight:bold;">The Shadowing Geek</p>
+        <p class="subtitle">A fellow learner's interactive tools for shadowing real-world audio, decoding native speed, and mastering JLPT grammar.</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shadowing/">🎧 Shadowing Lab</a>
+            <a href="/posts/">📚 Grammar Notes</a>
+            <a href="/about.html">About Me</a>
+        </nav>
+    </header>
+    
+   <main>
+    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
+    <h1>Nihongo con Teppei (Beginner) - Ep6: 学校に行っていますか？</h1>
+    
+    <!-- 注入新灵魂的 Learner's Note -->
+    <div class="learners-note">
+        <strong>Felix's Learner Note:</strong>
+ <p>Almost every Japanese self-learner eventually hits the exact same wall — and it has nothing to do with grammar or vocabulary. It's the question of <em>how</em> you're learning. Are you in a classroom with a real teacher, or are you alone in your room at midnight with a podcast and a textbook? Both paths work, but they produce completely different kinds of proficiency, and most learners quietly worry they've picked the wrong one. Teppei opens this episode by asking the question nobody else asks out loud: "学校に行っていますか?" — are you going to a school? And then the follow-up that stings a little: "それとも一人で、自分で日本語を勉強してますか?" Or are you studying on your own?</p>
+<p>This episode is valuable precisely because Teppei doesn't take sides. He unpacks both routes honestly — a Japanese teacher at a school named Suzuki, Satō, Tanaka, Hashimoto, Takahashi, versus the self-study stack of podcast, YouTube, apps — and then lands on a point that should put every self-learner's anxiety to rest: the daily ritual matters more than the method. "毎日毎日聞いて、少しずつ日本語がわかるようになります、話せるようになります" — listen every single day, and little by little, Japanese will start to make sense, and you'll start to <em>speak</em> it. That's the whole thesis of the Nihongo con Teppei project, distilled into two lines of casual podcast speech.</p>
+<p>So why shadow this episode specifically? Because it's meta-commentary on the exact thing you are doing right now — solo listening, daily repetition, absorbing rhythm instead of cramming rules. The grammar Teppei uses here is also the high-frequency stuff of daily routine: ～に行っていますか (are you going to ~), ～で勉強しています (studying by means of ~), ようになります (reach the point where you can ~). These are the patterns you need to explain your own learning journey <em>in Japanese</em> to a Japanese speaker. Shadow this, and the next time someone asks "どうやって勉強してるの?" the answer stops being "uh, podcast?" and starts being a sentence you actually know how to finish.</p>
+
+</div>   
+ 
+
+    <div class="audio-player">
+        <div class="yt-container">
+            <div id="youtube-player"></div>
+    </div>
+
+ <div class="global-controls">
+            <span class="control-label">Display:</span>
+            <div class="toggle-group">
+                <label>
+                    <input type="checkbox" id="toggle-ja" checked onchange="toggleSubtitles('ja')">
+                    Japanese
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-en" checked onchange="toggleSubtitles('en')">
+                    English
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-badge">
+            <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            <span><strong>Privacy First:</strong> Your mic audio is processed locally on your device. We never upload or save your voice. Recordings vanish when you close the tab.</span>
+     </div>
+    <div class="interaction-hint">
+        💡 <strong>Pro Tip:</strong> Click any sentence to jump and play. Double-click to pause the audio.
+    </div>
+
+    <div id="subtitle-container"></div>
+
+
+
+    <div class="grammar-section">
+        <h2>📚 Grammar Breakdown</h2>
+        <!-- ==================== HTML 语法解析区域 ==================== -->
+     <div class="grammar-item">
+    <span class="grammar-title">1. ～に行っています（～に + 行く + ている）</span><br>
+    <strong>Meaning:</strong> "(Subject) is going to ~ (habitual or current)." The destination particle に marks where one goes; the ～ている form marks ongoing or habitual action — "are you currently in the habit of going to ~?"<br>
+    <strong>In Text:</strong> 学校に行っていますか / 日本語の学校に行ってますか (Are you going to school? / Are you going to a Japanese language school?).<br>
+    <strong>Note:</strong> N5. This is one of the highest-frequency patterns in early learning, and Teppei exposes a nuance most learners miss: 学校に行っていますか isn't "are you going to school <em>right now</em>?" — it's "are you <em>enrolled in</em> / attending a school (as a general state)?" The ～ている here is an <em>ongoing state</em> (継続), not a one-time action in progress. Self-learners often confuse 学校に行きますか (Do you go to school / will you go?) with 学校に行っていますか (Are you currently attending school?) — and the difference matters in real conversation.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">2. ～で勉強しています / ～を使って（手段・道具表現）</span><br>
+    <strong>Meaning:</strong> "Studying <em>by means of</em> ~" / "Using ~." The particle で marks the means, tool, or medium — podcast, YouTube, apps, a school. ～を使って (using ~) extends this into active, agent-driven tool use.<br>
+    <strong>In Text:</strong> 皆さんは勉強学校でしていますか / podcast を使って / youtube を使って / 哀悼気を使ってね (Are you studying at a school — / using podcasts / using YouTube / using the app, right?).<br>
+    <strong>Note:</strong> N5. This is how Japanese speakers express <em>method and medium</em> — and the pattern Teppei uses here is exactly the one you'll need to explain your own learning setup. The contrast structure 学校で vs 自分で vs podcastを使って is a complete sentence template for describing how you study. Shadow the whole block — "～で / 一人で / ～を使って" — as one rhythmic unit. Most learners stop at the textbook で (by means of) and never pick up the spoken ～を使って alternative, which is actually more common in real conversation.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">3. ～それとも（対立選択）</span><br>
+    <strong>Meaning:</strong> "Or (else) / alternatively" — connectors that present a contrasting second option between two mutually exclusive choices. Spoken counterpart of または; appears in either/or questions.<br>
+    <strong>In Text:</strong> それとも一人で、自分で日本語を勉強してますか (Or on your own — are you studying Japanese by yourself?).<br>
+    <strong>Note:</strong> N4. それとも only connects two <em>questions</em>, not two statements — a rule textbooks under-teach. Compare: コーヒーそれとも紅茶？ (Coffee or tea?) works; *行きますそれとも行きません is wrong (use ～か、～ないか). Teppei uses it perfectly: 学校ですか (first question choice) それとも一人で自習 (second question choice) — both branches end in question form. Self-learners tend to overuse または (formal) or か (lazy) where それとも is the natural fit in speech.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">4. ～ようになります（～になる + 可能の変化）</span><br>
+    <strong>Meaning:</strong> "Reach the point where you can ~" / "come to be able to ~." Combines a verb potential form (潜在形) + よう + になる (to become) — describes a gradual change of state culminating in a new ability.<br>
+    <strong>In Text:</strong> 聞いて少しずつ日本語がわかるようになります / 話せるようになります (Listen, and little by little you'll come to understand Japanese / you'll come to be able to speak it).<br>
+    <strong>Note:</strong> N4. This is one of the most motivational (and one of the most underused) grammar points in Japanese. ～ようになります expresses <em>gradual acquisition</em> — the exact thing a learner is doing every day. Self-learners often say 日本語がわかる (I understand Japanese — as if it's a current fact) when they mean 日本語がわかるようになります (I'm getting to the point where I understand Japanese). The nuance is huge: ようになります implies a journey, a process, a before-and-after. Teppei uses it twice back-to-back — わかるようになります / 話せるようになります — to describe exactly the progress arc the listener is on. Shadow this structure and you'll be able to describe <em>any</em> skill development naturally, not just language.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">5. ～てください・～てね・～ていきましょう（依頼・励まし）</span><br>
+    <strong>Meaning:</strong> Three polite-encouragement forms on a spectrum: ～てください (formal "please do"), ～てね (soft spoken "won't you ~?"), ～ていきましょう (let's keep doing — continuing action). All in the て-form family, all requests or suggestions, but register and nuance differ.<br>
+    <strong>In Text:</strong> 知らない人は調べてくださいね / 調べてください / 毎日築けてくださいね / 頑張ってね / 頑張っていきましょう (If you don't know, please look it up / Please look it up / Please keep at it every day / Do your best, right? / Let's keep going).<br>
+    <strong>Note:</strong> N5. Teppei cycles through all three in one episode — and the register ladder is exactly what learners should absorb. てください is the baseline polite request (good for strangers, superiors). てね is its warm, friend-tier equivalent (good for classmates, study buddies). ていきましょう is the rallying form ("let's keep going") — perfect for closing a podcast, a speech, a study-log entry. Self-learners who only know てください sound stiff when encouraging peers; those who master てね sound like an actual friend. Shadow the full range and you'll have the right register for every listener.
+</div>
+
+    </div>
+    
+   </main>
+    <footer>
+        <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // ==========================================
+        // 核心配置区：以后每次只需要修改这三个变量！
+        // ==========================================
+        const ytVideoId = "POwu38YJMz8"; // 请替换为 EP4 的 YouTube 视频 ID
+        const pageId = "teppei-ep6"; 
+        const subtitleData = [
+    { start: 1.92, end: 7.33, ja: "日本語コーンTeppei", en: "Nihongo con Teppei" },
+    { start: 7.33, end: 12.44, ja: "日本語学習者の皆さんいつも応援する", en: "Always cheering on all of you studying Japanese." },
+    { start: 12.44, end: 15.61, ja: "podcast", en: "Podcast" },
+    { start: 15.62, end: 17.26, ja: "今日は", en: "Today" },
+    { start: 17.26, end: 20.91, ja: "学校に行っていますか", en: "are you going to school?" },
+    { start: 20.91, end: 24.66, ja: "にっついて", en: "Let's talk about that" },
+    { start: 25.70, end: 26.81, ja: "はい", en: "All right." },
+    { start: 26.81, end: 30.90, ja: "今日は皆さん元気ですか", en: "How is everyone doing today?" },
+    { start: 30.90, end: 34.04, ja: "僕は元気ですよ", en: "I'm doing great." },
+    { start: 34.04, end: 37.77, ja: "今日本はですね東京は", en: "Right now in Japan — in Tokyo—", },
+    { start: 37.77, end: 41.08, ja: "昼の11時です", en: "it's 11 AM." },
+    { start: 41.08, end: 43.04, ja: "昼の11です", en: "11 in the daytime." },
+    { start: 43.04, end: 46.58, ja: "皆さんは今何時ですか明日ですか", en: "What time is it for you? Morning?" },
+    { start: 46.58, end: 49.98, ja: "昼ですか夜ですか", en: "Afternoon? Evening?" },
+    { start: 49.98, end: 54.54, ja: "いつこのポッドキャストを聞いていますか", en: "Are you listening to the podcast right now?" },
+    { start: 54.54, end: 55.70, ja: "えっ", en: "Oh—" },
+    { start: 55.70, end: 58.21, ja: "今何時ですか", en: "What time is it?" },
+    { start: 58.36, end: 63.23, ja: "今日は学校に行っていますか", en: "Today's topic: are you going to school?" },
+    { start: 63.23, end: 65.02, ja: "について", en: "About that—" },
+    { start: 65.02, end: 68.62, ja: "聞きたいと思います", en: "I'd like to ask about that." },
+    { start: 68.62, end: 70.38, ja: "皆さんは", en: "Are you all—" },
+    { start: 70.38, end: 73.82, ja: "学校に行っていますか", en: "going to a school?" },
+    { start: 73.82, end: 78.17, ja: "日本語の学校に行ってますか", en: "Going to a Japanese language school?" },
+    { start: 78.17, end: 80.78, ja: "日本語の学校", en: "A Japanese school—" },
+    { start: 80.78, end: 84.65, ja: "先生が日本人の先生がいますか", en: "Do you have a teacher — a Japanese teacher?" },
+    { start: 84.65, end: 94.76, ja: "日本語の先生日本人の日本語の先生に日本語習ってますか", en: "Are you learning Japanese from a Japanese teacher?" },
+    { start: 94.76, end: 99.85, ja: "皆さんは勉強を学校でしていますか", en: "Are you all studying at a school studying?" },
+    { start: 99.85, end: 106.37, ja: "それとも一人で自分で日本語を勉強してますか", en: "Or on your own studying Japanese by yourself?" },
+    { start: 106.37, end: 108.83, ja: "podcast を使って", en: "Using podcasts," },
+    { start: 108.83, end: 116.77, ja: "youtube を使ってWaniKaniを使ってitalkiを使って", en: "using YouTube, using WaniKani and italki" },
+    { start: 116.77, end: 118.01, ja: "ねっ", en: "right?" },
+    { start: 118.01, end: 119.28, ja: "一人で", en: "On your own—" },
+    { start: 119.28, end: 123.68, ja: "勉強していますか自分で勉強していますか", en: "are you studying? Studying on your own?" },
+    { start: 123.68, end: 125.31, ja: "italkiは", en: "italki" },
+    { start: 125.31, end: 127.08, ja: "先生がいますね", en: "there's a teacher, right." },
+    { start: 127.08, end: 131.67, ja: "僕はitalkiで日本語を教えています", en: "I teach Japanese on the italki." },
+    { start: 131.67, end: 132.55, ja: "ん", en: "Mm." },
+    { start: 132.55, end: 136.03, ja: "僕はitalkiで日本語を教えています", en: "I teach Japanese on the italki." },
+    { start: 136.03, end: 139.60, ja: "知らない人は調べてくださいね", en: "If you don't know it, go look it up." },
+    { start: 139.60, end: 143.05, ja: "italkiドとこんだったかな", en: "Was it—that app name? Hmm." },
+    { start: 143.05, end: 146.38, ja: "ふふ忘れた google でitalkiですね", en: "Haha, I forgot. Just Google it, that's fine." },
+    { start: 146.38, end: 150.56, ja: "調べてください皆さん学校に行っていますか", en: "Please look it up. So — do you go to school?" },
+    { start: 150.56, end: 154.25, ja: "皆さんの日本語の先生は", en: "Your Japanese teacher—" },
+    { start: 154.25, end: 157.68, ja: "日本語の先生の名前は何ですか", en: "What's your Japanese teacher's name?" },
+    { start: 157.68, end: 161.33, ja: "皆さんの日本語の先生の名前は何ですか", en: "What's the name of your Japanese teacher?" },
+    { start: 161.33, end: 163.49, ja: "鈴木先生ですか", en: "Suzuki-sensei?" },
+    { start: 163.49, end: 165.67, ja: "佐藤先生ですか", en: "Satō-sensei?" },
+    { start: 165.67, end: 168.90, ja: "田中先生ですか", en: "Tanaka-sensei?" },
+    { start: 168.97, end: 173.45, ja: "橋本先生ですか高橋先生ですか", en: "Hashimoto-sensei? Takahashi-sensei?" },
+    { start: 173.45, end: 176.20, ja: "僕は鉄平先生ですね", en: "Me — I'm Teppei-sensei." },
+    { start: 176.20, end: 182.96, ja: "僕は皆さんの日本語の先生ですね鉄平先生", en: "I'm your Japanese teacher — Teppei-sensei." },
+    { start: 182.96, end: 184.63, ja: "鉄平先生好きですか", en: "Do you like Teppei-sensei?" },
+    { start: 186.11, end: 192.38, ja: "僕のこと好きですか好きだったら毎日", en: "Do you like me? If you do, then every day—" },
+    { start: 192.38, end: 193.29, ja: "このっ", en: "this—" },
+    { start: 193.29, end: 198.02, ja: "日本語Teppeiよね podcast を聞いてください", en: "listen to this Japanese podcast every day." },
+    { start: 198.02, end: 202.67, ja: "そして一緒に日本語を勉強しましょうね", en: "And let's study Japanese together." },
+    { start: 205.24, end: 207.29, ja: "毎日毎日", en: "every day, every day," },
+    { start: 207.29, end: 211.25, ja: "聞いて少しずつ日本語がわかるようになります", en: "listen, and little by little Japanese will start to make sense." },
+    { start: 211.25, end: 213.47, ja: "話せるようになります", en: "You'll be able to speak it." },
+    { start: 213.47, end: 216.75, ja: "だから毎日続けてくださいね", en: "So please keep at it every day." },
+    { start: 216.75, end: 219.54, ja: "ストップしないように頑張ってね", en: "Don't stop — keep going." },
+    { start: 219.54, end: 226.91, ja: "頑張っていきましょうそれではまたチャオチャオ明日ためがまたねまたねまたねー", en: "Let's keep it up. Well then — ciao ciao, see you tomorrow, bye-bye!" }
+];
+
+
+        // ==========================================
+
+      
+      let currentLineIndex = -1;
+        let loopMode = 'none';
+        let player;
+        
+        // 录音相关全局变量
+        let mediaRecorder;
+        let audioChunks = [];
+        let userAudioBlobs = {}; // 存储每句的录音数据
+        let currentRecordingIndex = -1;
+
+        // 加载 YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 'playsinline': 1, 'controls': 1 },
+                events: { 'onReady': onPlayerReady }
+            });
+        }
+
+        function onPlayerReady(event) {
+            renderSubtitles();
+            setInterval(monitorPlayback, 100);
+            
+            const lastRead = localStorage.getItem(`last-read-${pageId}`);
+            if (lastRead !== null) {
+                const targetLine = document.getElementById(`line-${lastRead}`);
+                if (targetLine) {
+                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetLine.classList.add('active');
+                }
+            }
+        }
+
+        function renderSubtitles() {
+            const container = document.getElementById('subtitle-container');
+            subtitleData.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = 'shadow-line';
+                div.id = `line-${index}`;
+                
+                // HTML 结构：左侧文本，右侧按钮组
+                div.innerHTML = `
+                    <div class="text-content">
+                        <div class="ja-text">${line.ja}</div>
+                        <div class="en-text" id="en-${index}">${line.en}</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn record-btn" id="record-btn-${index}" onclick="toggleRecord(event, ${index})" title="Hold or Click to Record">🎙️</button>
+                        <button class="action-btn play-btn" id="play-btn-${index}" onclick="playUserRecord(event, ${index})" style="display:none;" title="Play your recording">▶️</button>
+                    </div>
+                `;
+                
+                div.onclick = (e) => {
+                    // 如果点击的是按钮，不触发视频跳转
+                    if (e.target.closest('.action-btn')) return;
+                    currentLineIndex = index;
+                    player.seekTo(line.start, true);
+                    player.playVideo();
+                    localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                // 双击：紧急暂停 (极客新增)
+                div.ondblclick = (e) => {
+                    if (e.target.closest('.action-btn')) return;
+                    player.pauseVideo();
+                };
+                container.appendChild(div);
+            });
+        }
+      
+        // 全局控制字幕显示/隐藏逻辑
+        function toggleSubtitles(lang) {
+            const container = document.getElementById('subtitle-container');
+            const checkbox = document.getElementById(`toggle-${lang}`);
+            
+            if (checkbox.checked) {
+                container.classList.remove(`hide-${lang}`);
+            } else {
+                container.classList.add(`hide-${lang}`);
+            }
+        }   
+        // 功能 2：录音系统逻辑
+        async function toggleRecord(event, index) {
+            event.stopPropagation();
+            const recordBtn = document.getElementById(`record-btn-${index}`);
+            const playBtn = document.getElementById(`play-btn-${index}`);
+
+            if (currentRecordingIndex === index) {
+                // 停止录音
+                mediaRecorder.stop();
+                recordBtn.classList.remove('recording');
+                currentRecordingIndex = -1;
+                return;
+            }
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    userAudioBlobs[index] = URL.createObjectURL(audioBlob);
+                    playBtn.style.display = 'block'; // 显示播放按钮
+                    playBtn.classList.add('has-audio');
+                    
+                    // 释放麦克风轨道资源
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+                currentRecordingIndex = index;
+                recordBtn.classList.add('recording');
+                
+                // 自动暂停原声音频，以免录进去
+                player.pauseVideo();
+
+            } catch (err) {
+                alert("Permission denied or microphone not found. Please allow microphone access.");
+                console.error(err);
+            }
+        }
+
+        // 功能 3：播放用户的录音
+        function playUserRecord(event, index) {
+            event.stopPropagation();
+            if (userAudioBlobs[index]) {
+                player.pauseVideo(); // 暂停 YouTube
+                const audio = new Audio(userAudioBlobs[index]);
+                audio.play();
+            }
+        }
+
+        function monitorPlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); 
+
+            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+            
+            if (activeIndex !== -1) {
+                currentLineIndex = activeIndex;
+                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                if (activeElement) {
+                    activeElement.classList.add('active');
+                    if (playerState === 1) {
+                        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

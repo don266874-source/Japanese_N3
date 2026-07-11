@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================================================= -->
+    <!-- 1. [ 核心配置区 ]：SEO 流量拦截网（每期必改） -->
+    <!-- ======================================================= -->
+    <title>Ep4: 何時ですか？| Nihongo con Teppei Shadowing Tool & Transcript</title>
+    <meta name="description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 5 (ひらがな、カタカナ、漢字について). Master duration counters and practice perfect pronunciation.">
+    <link rel="canonical" href="https://shadowgeek.net/shadowing/teppei-ep5.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="The Shadowing Geek">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://shadowgeek.net/shadowing/teppei-ep5.html">
+    <meta property="og:title" content="Ep5: ひらがな、カタカナ、漢字について | Nihongo con Teppei Shadowing Tool & Transcript">
+    <meta property="og:description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 5 (ひらがな、カタカナ、漢字について). Master duration counters and practice perfect pronunciation.">
+    <meta property="og:image" content="https://shadowgeek.net/images/og-default.webp">
+    <meta property="article:published_time" content="2026-07-11T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-07-11T00:00:00+08:00">
+    <meta property="article:author" content="Felix">
+    <meta property="article:section" content="Shadowing Lab">
+    <meta property="article:tag" content="Teppei">
+    <meta property="article:tag" content="shadowing">
+    <meta property="article:tag" content="time expressions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ep5: ひらがな、カタカナ、漢字について | Nihongo con Teppei Shadowing Tool">
+    <meta name="twitter:description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 5. Practice time expressions at native speed.">
+    <meta name="twitter:image" content="https://shadowgeek.net/images/og-default.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ep5: ひらがな、カタカナ、漢字について| Nihongo con Teppei Shadowing Tool & Transcript",
+      "description": "Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 5 (ひらがな、カタカナ、漢字について). Master duration counters and practice perfect pronunciation.",
+      "image": "https://shadowgeek.net/images/og-default.webp",
+      "datePublished": "2026-07-11",
+      "dateModified": "2026-07-11",
+      "author": {"@type": "Person", "name": "Felix", "url": "https://shadowgeek.net/about.html"},
+      "publisher": {"@type": "Organization", "name": "The Shadowing Geek", "logo": {"@type": "ImageObject", "url": "https://shadowgeek.net/images/og-default.webp"}},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://shadowgeek.net/shadowing/teppei-ep5.html"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shadowgeek.net/"},
+        {"@type": "ListItem", "position": 2, "name": "Shadowing Lab", "item": "https://shadowgeek.net/shadowing/"},
+        {"@type": "ListItem", "position": 3, "name": "Ep5: ひらがな、カタカナ、漢字について", "item": "https://shadowgeek.net/shadowing/teppei-ep5.html"}
+      ]
+    }
+    </script>
+<style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #111; margin-bottom: 5px; font-size: 1.8rem; letter-spacing: -0.5px;}
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 0; margin-bottom: 20px;}
+        
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; transition: background 0.2s;}
+        nav a:hover { background: #f0f6ff; text-decoration: none; }
+        nav a.current { background: #f0f6ff; color: #111; }
+        
+        .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
+        
+        .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
+        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        
+        /* 改造跟读行布局：支持左右分栏 */
+        .shadow-line { display: flex; justify-content: space-between; align-items: center; padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        .shadow-line:hover { background: #f6f8fa; }
+        .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+        
+        .text-content { flex-grow: 1; padding-right: 15px; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; transition: opacity 0.3s; }
+        .en-text.hidden { opacity: 0; user-select: none; }
+        
+        /* 交互按钮组 */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+
+        .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
+        .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
+        .grammar-item { margin-bottom: 15px; }
+        .grammar-title { color: #0066cc; font-weight: bold; }
+        footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+    
+        /* 录音隐私提示条 */
+        .privacy-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #f6f8fa;
+            color: #57606a;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px dashed #d0d7de;
+        }
+        .privacy-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #57606a;
+        }
+        /* 交互操作提示条 */
+        .interaction-hint {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #034694;
+            background-color: #f0f6ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px dashed #b6d4fe;
+            font-weight: 500;
+        }
+    /* 全局字幕控制栏 */
+        .global-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #f9fbfc;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eaeaea;
+            font-size: 0.75rem;
+        }
+        .control-label {
+            font-weight: bold;
+            color: #333;
+        }
+        .toggle-group {
+            display: flex;
+            gap: 15px;
+        }
+        .toggle-group label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            user-select: none;
+        }
+
+        /* 全局隐藏逻辑（通过父级 Class 控制） */
+        #subtitle-container.hide-ja .ja-text { display: none; }
+        #subtitle-container.hide-en .en-text { display: none; }
+        
+        /* 优化后的操作按钮（去掉惊悚眼球） */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(207, 34, 46, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 全站闭环 Header 导航系统 -->
+    <header>
+        <p class="logo" style="color:#111;margin-bottom:5px;font-size:1.8rem;letter-spacing:-0.5px;font-weight:bold;">The Shadowing Geek</p>
+        <p class="subtitle">A fellow learner's interactive tools for shadowing real-world audio, decoding native speed, and mastering JLPT grammar.</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shadowing/">🎧 Shadowing Lab</a>
+            <a href="/posts/">📚 Grammar Notes</a>
+            <a href="/about.html">About Me</a>
+        </nav>
+    </header>
+    
+   <main>
+    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
+    <h1>Nihongo con Teppei (Beginner) - Ep5: ひらがな、カタカナ、漢字について</h1>
+    
+    <!-- 注入新灵魂的 Learner's Note -->
+    <div class="learners-note">
+        <strong>Felix's Learner Note:</strong>
+    <p>Teppei walks through ひらがな、カタカナ、漢字 in sequence — honest about which one is "まあまあ" (manageable), which is "ちょっと難しい" (a little tough), and which is just flat-out "難しい" (hard). He doesn't sugarcoat the kanji problem: "漢字はねぇ、たくさんあります、たくさんありすぎて覚えていない" — there are so many he can't even remember them all. For any learner who has ever stared at a newspaper and felt their brain glitch, that admission alone is worth the listen. He also names the elephant in the room: if you already read Chinese, kanji is basically a head start, and that's "ちょっとずるい" — a little bit unfair. The jealousy is real, and Teppei voices it for everyone who doesn't have that advantage.</p>
+<p>So why shadow this episode specifically? Because the script vocabulary — ひらがな、カタカナ、漢字、簡単、難しい、覚える、ずるい、ジェラシー — is the exact language you will use every time you discuss your own learning progress, in Japanese, with a Japanese speaker. These are not textbook words you'll forget after the quiz. They are the words that come up in conversation the moment someone asks "how's your Japanese going?" Shadow this until the answer rolls off your tongue instead of freezing in your throat.</p>
+</div>   
+ 
+
+    <div class="audio-player">
+        <div class="yt-container">
+            <div id="youtube-player"></div>
+    </div>
+
+ <div class="global-controls">
+            <span class="control-label">Display:</span>
+            <div class="toggle-group">
+                <label>
+                    <input type="checkbox" id="toggle-ja" checked onchange="toggleSubtitles('ja')">
+                    Japanese
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-en" checked onchange="toggleSubtitles('en')">
+                    English
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-badge">
+            <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            <span><strong>Privacy First:</strong> Your mic audio is processed locally on your device. We never upload or save your voice. Recordings vanish when you close the tab.</span>
+     </div>
+    <div class="interaction-hint">
+        💡 <strong>Pro Tip:</strong> Click any sentence to jump and play. Double-click to pause the audio.
+    </div>
+
+    <div id="subtitle-container"></div>
+
+
+
+    <div class="grammar-section">
+        <h2>📚 Grammar Breakdown</h2>
+        <!-- ==================== HTML 语法解析区域 ==================== -->
+       <div class="grammar-item">
+    <span class="grammar-title">1. ～はわかりますか / ～は難しいです（～は + adjective）</span><br>
+    <strong>Meaning:</strong> "Do you understand ~?" / "~ is [adjective]." The topic marker は isolates the subject for discussion — here, each script (ひらがな/カタカナ/漢字) becomes the topic, and the speaker rates it.<br>
+    <strong>In Text:</strong> ひらがなはわかりますか / カタカナはわかりますか / 感じわかりますか / 漢字は難しいですね / ひらがなはまあまあですね / カタカナはねちょっと難しい (Do you know hiragana? / Do you know katakana? / Do you know kanji? / Kanji is hard / Hiragana is so-so / Katakana is a little tough).<br>
+    <strong>Note:</strong> N5. The は-topic pattern is the single most-used structure in this episode — Teppei builds the entire script discussion around it. Self-learners often default to が when asking questions, but in conversation は is far more natural for introducing what you want to talk about. Shadow this structure until "～はどうですか" rolls off your tongue without thinking.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">2. ～すぎて～ない（～すぎる + て-form + negative）</span><br>
+    <strong>Meaning:</strong> "So ~ that I can't…" — すぎる (too much) in て-form chains into a negative result. Expresses that the degree of something exceeds what the speaker can handle.<br>
+    <strong>In Text:</strong> ちょっとたくさんありすぎて覚えてない (There are so many I can't memorize them all).<br>
+    <strong>Note:</strong> N4. すぎる attaches to the stem of verbs and i-adjectives: 難しすぎる (too difficult), 食べすぎた (ate too much). The て-form chain すぎて～ない is the spoken pattern for "too X to Y" — more natural in conversation than the literal textbook すぎて～できない. Teppei's line is a perfect shadow target: the rhythm (ありすぎて → 覚えてない) is exactly how a native speaker complains about volume. Self-learners tend to say 多すぎて覚えられません — fine, but stiff. ありすぎて覚えてない is the real thing.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">3. ～てください（て-form + ください）</span><br>
+    <strong>Meaning:</strong> "Please do ~" — polite request / encouragement. Verb in て-form + ください softens a command into a suggestion the listener can accept or decline.<br>
+    <strong>In Text:</strong> 頑張って覚えてください (Please do your best to memorize them).<br>
+    <strong>Note:</strong> N5. This is the standard polite request pattern, but the nuance here is softer than it looks. Teppei isn't ordering the listener — he's <em>encouraging</em> them. 頑張ってください is closer to "keep at it!" than "do it." Self-learners often overuse て-form commands (頑張って！) and sound too direct with strangers, or overuse 〜ていただけませんか and sound overly formal. 〜てください is the middle ground — warm, polite, supportive. Shadow this exact line and you'll have a ready-made encouragement phrase for any study-buddy conversation.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">4. ～どのくらい（期間）</span><br>
+    <strong>Meaning:</strong> "How long / how much?" — asks about duration, amount, or degree. Combines with time words (期間、年、ヶ月) to ask "how long have you been doing ~?"<br>
+    <strong>In Text:</strong> みなさん日本語どのくらい勉強していますかね / どのくらいの期間1年ですか2年ですか (How long have you all been studying Japanese? / How long — one year, two years?).<br>
+    <strong>Note:</strong> N4. どのくらい is the spoken workhorse for "how long" — more common in conversation than the textbook-formal どれくらい or どの位. Self-learners often freeze when asked this question because they learned "how long" as どのくらい but never heard it in a rapid-fire follow-up like 1年ですか2年ですか. Teppei's pattern — question, then immediate guess range — is exactly how Japanese speakers keep conversations going. Shadow the whole two-line block until "どのくらい〜？〜ですか〜ですか" feels like one rhythmic unit.
+</div>
+
+        
+    </div>
+    
+   </main>
+    <footer>
+        <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // ==========================================
+        // 核心配置区：以后每次只需要修改这三个变量！
+        // ==========================================
+        const ytVideoId = "m1LWkpPct2Y"; // 请替换为 EP4 的 YouTube 视频 ID
+        const pageId = "teppei-ep5"; 
+const subtitleData = [
+    { start: 2.10, end: 7.20, ja: "日本語コーンTeppei", en: "Nihongo con Teppei." },
+    { start: 7.20, end: 12.15, ja: "日本語学習者の皆さんをいつも応援する", en: "Always cheering on all of you studying Japanese." },
+    { start: 12.15, end: 14.92, ja: "podcast ん", en: "Podcast." },
+    { start: 14.92, end: 16.19, ja: "今日は", en: "Today—" },
+    { start: 16.19, end: 17.73, ja: "ひらがな", en: "Hiragana," },
+    { start: 17.73, end: 19.53, ja: "カタカナ", en: "Katakana," },
+    { start: 19.53, end: 22.03, ja: "漢字について", en: "and kanji about those." },
+    { start: 25.84, end: 27.22, ja: "はい", en: "All right." },
+    { start: 27.22, end: 29.59, ja: "おはようございます", en: "Good morning." },
+    { start: 29.59, end: 32.23, ja: "皆さん元気ですか", en: "How is everyone doing?" },
+    { start: 32.23, end: 33.56, ja: "僕は", en: "Me, I'm" },
+    { start: 33.56, end: 35.63, ja: "元気ですよ", en: "doing great." },
+    { start: 35.63, end: 41.33, ja: "今東京は朝の10時です", en: "Right now it's 10 AM in Tokyo." },
+    { start: 41.33, end: 46.01, ja: "朝,朝の10時です,午前10時です", en: "It's 10 AM — good morning." },
+    { start: 46.01, end: 49.87, ja: "僕は今東京に住んでいます", en: "I live in Tokyo right now." },
+    { start: 49.87, end: 54.55, ja: "皆さんは今どこに住んでいますか,大阪ですか", en: "Where do you all live right now? Osaka?" },
+    { start: 54.55, end: 59.10, ja: "どこですか大阪弁わかりますか", en: "Where? Do you know Osaka dialect?" },
+    { start: 59.10, end: 65.10, ja: "なんだよねーねなんでやねんっていうのは大阪弁ですね", en: "You know — \"nande yanen\" means \"why on earth,\" and that's Osaka dialect." },
+    { start: 65.10, end: 67.46, ja: "大阪弁関西弁", en: "Osaka dialect — Kansai dialect." },
+    { start: 67.46, end: 68.95, ja: "なんでやねん", en: "\"Nande yanen.\"" },
+    { start: 68.95, end: 73.87, ja: "どうしてってことですねどうしてなのは意味だよね", en: "It means \"why\" — that's what it means." },
+    { start: 73.87, end: 75.98, ja: "なんでやねんって言いますね", en: "People say \"nande yanen.\"" },
+    { start: 75.98, end: 81.02, ja: "それが大阪弁ね大阪大やれるといいですね", en: "That's Osaka dialect. Would be nice if you could try speaking it." },
+    { start: 81.02, end: 83.78, ja: "はいみなさん元気ですか", en: "So — how is everyone?" },
+    { start: 83.78, end: 88.27, ja: "みなさん日本語どのくらい勉強していますかね", en: "How long have you all been studying Japanese?" },
+    { start: 88.27, end: 92.26, ja: "どのくらいの期間1年ですか2年ですか", en: "How long — one year? Two years?" },
+    { start: 92.26, end: 93.27, ja: "ん", en: "Mm." },
+    { start: 93.27, end: 96.51, ja: "ひらがなはわかりますか,ひらがな", en: "Do you know hiragana? Hiragana." },
+    { start: 96.51, end: 99.63, ja: "ねひらがなわかりますか", en: "Right — do you know hiragana?" },
+    { start: 99.63, end: 103.59, ja: "カタカナはわかりますか,カタカナ", en: "Do you know katakana? Katakana." },
+    { start: 103.59, end: 106.24, ja: "カタカナわかりますか", en: "Do you know katakana?" },
+    { start: 106.24, end: 108.95, ja: "漢字わかりますか", en: "Do you know kanji?" },
+    { start: 108.95, end: 116.15, ja: "漢字は少しわかりますか,少しだけ,ちょっとだけねちょっとだけですね", en: "Do you know a little kanji? Just a bit? Just a little — yeah, just a little." },
+    { start: 116.15, end: 120.43, ja: "漢字は難しいですね,漢字は難しい", en: "Kanji is tough, isn't it. Kanji is hard." },
+    { start: 120.43, end: 125.05, ja: "漢字はねぇたくさんありますたくさんの感じがあります", en: "There are a lot of kanji — there are tons of them." },
+    { start: 125.05, end: 132.32, ja: "たくさんの漢字じいくつありますか漢字は漢字はねぇ", en: "How many kanji are there? Kanji, well—" },
+    { start: 132.32, end: 139.28, ja: "たくさんありますたくさんありますねちょっとたくさんありすぎて覚えてない", en: "There are a lot — tons. So many I can't even remember them all." },
+    { start: 139.28, end: 141.91, ja: "何個あるか分からない", en: "I don't even know how many there are." },
+    { start: 141.91, end: 143.63, ja: "大変ですね", en: "That's rough." },
+    { start: 143.63, end: 148.61, ja: "漢字の勉強は本当に大変ですね", en: "Studying kanji is genuinely tough." },
+    { start: 148.61, end: 154.46, ja: "ひらがなはまあまあですねまあまあまあですね", en: "Hiragana is so-so — manageable, yeah." },
+    { start: 154.46, end: 158.70, ja: "まあ簡単ですね簡単優しい", en: "Pretty easy — easy, simple." },
+    { start: 158.70, end: 165.01, ja: "カタカナはねちょっと難しいけど", en: "Katakana is a little tricky but manageable." },
+    { start: 165.01, end: 171.82, ja: "ねぇまあまあですよねまあまあでも漢字は難しいですね", en: "It's so-so, right? So-so. But kanji — kanji is hard." },
+    { start: 171.82, end: 173.57, ja: "あでも", en: "Oh, but—" },
+    { start: 173.57, end: 177.89, ja: "もし皆さんが中国語が分かる人", en: "If any of you understand Chinese—" },
+    { start: 177.89, end: 179.57, ja: "中国人と", en: "People from China," },
+    { start: 179.57, end: 180.64, ja: "ん", en: "and—" },
+    { start: 180.64, end: 183.91, ja: "台湾とシンガポールの人", en: "Taiwan, and Singapore —" },
+    { start: 183.91, end: 186.51, ja: "中国語が分かる人は", en: "those of you who understand Chinese," },
+    { start: 186.51, end: 190.85, ja: "漢字は簡単ですねちょっとずるいですね", en: "kanji is easy, right? That's a bit unfair." },
+    { start: 190.85, end: 194.30, ja: "ちょっとあのあの他の人はね", en: "The rest of us are like—" },
+    { start: 194.30, end: 198.00, ja: "ずるいってなりますねズってどういうことなぁ", en: "\"That's cheating!\" What's that about, right?" },
+    { start: 198.00, end: 199.47, ja: "なんか", en: "Like..." },
+    { start: 199.47, end: 204.84, ja: "ちょっと ジェラシ ですねジェラシージェラシーを漢字ますよまあでもしょう", en: "A little jealous. I feel the jealousy. Well, but what can you do." },
+    { start: 204.84, end: 206.37, ja: "がねえんラッキーですよ", en: "Well — they're lucky." },
+    { start: 206.37, end: 210.24, ja: "中国人中国語が分かる人ラッキーですね", en: "People who understand Chinese — they're lucky, right?" },
+    { start: 210.24, end: 213.22, ja: "日本語簡単ですねえっ", en: "Japanese is easy for them, right?" },
+    { start: 213.22, end: 218.68, ja: "漢字はね簡単ですねねまぁひらがなカタカナ漢字", en: "Kanji is easy for them. Anyway — hiragana, katakana, kanji —" },
+    { start: 218.68, end: 225.58, ja: "すべて大事ですすべて全部大事です,頑張って覚えてくださいそれではまた皆さん", en: "all of them matter. All of them are important. Do your best to memorize them. So with that — see you all." }
+];
+
+
+        // ==========================================
+
+      
+      let currentLineIndex = -1;
+        let loopMode = 'none';
+        let player;
+        
+        // 录音相关全局变量
+        let mediaRecorder;
+        let audioChunks = [];
+        let userAudioBlobs = {}; // 存储每句的录音数据
+        let currentRecordingIndex = -1;
+
+        // 加载 YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 'playsinline': 1, 'controls': 1 },
+                events: { 'onReady': onPlayerReady }
+            });
+        }
+
+        function onPlayerReady(event) {
+            renderSubtitles();
+            setInterval(monitorPlayback, 100);
+            
+            const lastRead = localStorage.getItem(`last-read-${pageId}`);
+            if (lastRead !== null) {
+                const targetLine = document.getElementById(`line-${lastRead}`);
+                if (targetLine) {
+                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetLine.classList.add('active');
+                }
+            }
+        }
+
+        function renderSubtitles() {
+            const container = document.getElementById('subtitle-container');
+            subtitleData.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = 'shadow-line';
+                div.id = `line-${index}`;
+                
+                // HTML 结构：左侧文本，右侧按钮组
+                div.innerHTML = `
+                    <div class="text-content">
+                        <div class="ja-text">${line.ja}</div>
+                        <div class="en-text" id="en-${index}">${line.en}</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn record-btn" id="record-btn-${index}" onclick="toggleRecord(event, ${index})" title="Hold or Click to Record">🎙️</button>
+                        <button class="action-btn play-btn" id="play-btn-${index}" onclick="playUserRecord(event, ${index})" style="display:none;" title="Play your recording">▶️</button>
+                    </div>
+                `;
+                
+                div.onclick = (e) => {
+                    // 如果点击的是按钮，不触发视频跳转
+                    if (e.target.closest('.action-btn')) return;
+                    currentLineIndex = index;
+                    player.seekTo(line.start, true);
+                    player.playVideo();
+                    localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                // 双击：紧急暂停 (极客新增)
+                div.ondblclick = (e) => {
+                    if (e.target.closest('.action-btn')) return;
+                    player.pauseVideo();
+                };
+                container.appendChild(div);
+            });
+        }
+      
+        // 全局控制字幕显示/隐藏逻辑
+        function toggleSubtitles(lang) {
+            const container = document.getElementById('subtitle-container');
+            const checkbox = document.getElementById(`toggle-${lang}`);
+            
+            if (checkbox.checked) {
+                container.classList.remove(`hide-${lang}`);
+            } else {
+                container.classList.add(`hide-${lang}`);
+            }
+        }   
+        // 功能 2：录音系统逻辑
+        async function toggleRecord(event, index) {
+            event.stopPropagation();
+            const recordBtn = document.getElementById(`record-btn-${index}`);
+            const playBtn = document.getElementById(`play-btn-${index}`);
+
+            if (currentRecordingIndex === index) {
+                // 停止录音
+                mediaRecorder.stop();
+                recordBtn.classList.remove('recording');
+                currentRecordingIndex = -1;
+                return;
+            }
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    userAudioBlobs[index] = URL.createObjectURL(audioBlob);
+                    playBtn.style.display = 'block'; // 显示播放按钮
+                    playBtn.classList.add('has-audio');
+                    
+                    // 释放麦克风轨道资源
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+                currentRecordingIndex = index;
+                recordBtn.classList.add('recording');
+                
+                // 自动暂停原声音频，以免录进去
+                player.pauseVideo();
+
+            } catch (err) {
+                alert("Permission denied or microphone not found. Please allow microphone access.");
+                console.error(err);
+            }
+        }
+
+        // 功能 3：播放用户的录音
+        function playUserRecord(event, index) {
+            event.stopPropagation();
+            if (userAudioBlobs[index]) {
+                player.pauseVideo(); // 暂停 YouTube
+                const audio = new Audio(userAudioBlobs[index]);
+                audio.play();
+            }
+        }
+
+        function monitorPlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); 
+
+            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+            
+            if (activeIndex !== -1) {
+                currentLineIndex = activeIndex;
+                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                if (activeElement) {
+                    activeElement.classList.add('active');
+                    if (playerState === 1) {
+                        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
