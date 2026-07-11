@@ -76,6 +76,19 @@
     </url>
 
     <url>
+        <loc>https://shadowgeek.net/shadowing/nij-ep1.html</loc>
+        <lastmod>2026-07-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shadowgeek.net/shadowing/nij-ep2.html</loc>
+        <lastmod>2026-07-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://shadowgeek.net/posts/n3-plateau-trap.html</loc>
         <lastmod>2026-07-09</lastmod>
         <changefreq>monthly</changefreq>
