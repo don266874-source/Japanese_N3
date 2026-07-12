@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================================================= -->
+    <!-- 1. [ 核心配置区 ]：SEO 流量拦截网（每期必改） -->
+    <!-- ======================================================= -->
+    <title>Ep3: Curry🍛| Nihongo con Teppei Shadowing Tool & Transcript</title>
+    <meta name="description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 3 (Cooking Curry). Master duration counters and practice perfect pronunciation.">
+    <link rel="canonical" href="https://shadowgeek.net/shadowing/nij-ep3.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="The Shadowing Geek">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://shadowgeek.net/shadowing/nij-ep3.html">
+    <meta property="og:title" content="Ep2: Unboxing New Earphones | Nihongo con Teppei Shadowing Tool & Transcript">
+    <meta property="og:description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 2 (Unboxing New Earphones). Master duration counters and practice perfect pronunciation.">
+    <meta property="og:image" content="https://shadowgeek.net/images/og-default.webp">
+    <meta property="article:published_time" content="2026-07-12T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-07-12T00:00:00+08:00">
+    <meta property="article:author" content="Felix">
+    <meta property="article:section" content="Shadowing Lab">
+    <meta property="article:tag" content="Teppei">
+    <meta property="article:tag" content="shadowing">
+    <meta property="article:tag" content="time expressions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ep3: Curry🍛| Nihongo con Teppei Shadowing Tool">
+    <meta name="twitter:description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 3.Curry🍛.">
+    <meta name="twitter:image" content="https://shadowgeek.net/images/og-default.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ep3: Curry| Nihongo con Teppei Shadowing Tool & Transcript",
+      "description": "Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 3 (Curry🍛). Master duration counters and practice perfect pronunciation.",
+      "image": "https://shadowgeek.net/images/og-default.webp",
+      "datePublished": "2026-07-11",
+      "dateModified": "2026-07-11",
+      "author": {"@type": "Person", "name": "Felix", "url": "https://shadowgeek.net/about.html"},
+      "publisher": {"@type": "Organization", "name": "The Shadowing Geek", "logo": {"@type": "ImageObject", "url": "https://shadowgeek.net/images/og-default.webp"}},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://shadowgeek.net/shadowing/nij-ep3.html"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shadowgeek.net/"},
+        {"@type": "ListItem", "position": 2, "name": "Shadowing Lab", "item": "https://shadowgeek.net/shadowing/"},
+        {"@type": "ListItem", "position": 3, "name": "Ep2: Unboxing New Earphones", "item": "https://shadowgeek.net/shadowing/nij-ep3.html"}
+      ]
+    }
+    </script>
+<style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #111; margin-bottom: 5px; font-size: 1.8rem; letter-spacing: -0.5px;}
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 0; margin-bottom: 20px;}
+        
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; transition: background 0.2s;}
+        nav a:hover { background: #f0f6ff; text-decoration: none; }
+        nav a.current { background: #f0f6ff; color: #111; }
+        
+        .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
+        
+        .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
+        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        
+        /* 改造跟读行布局：支持左右分栏 */
+        .shadow-line { display: flex; justify-content: space-between; align-items: center; padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        .shadow-line:hover { background: #f6f8fa; }
+        .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+        
+        .text-content { flex-grow: 1; padding-right: 15px; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; transition: opacity 0.3s; }
+        .en-text.hidden { opacity: 0; user-select: none; }
+        
+        /* 交互按钮组 */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+
+        .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
+        .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
+        .grammar-item { margin-bottom: 15px; }
+        .grammar-title { color: #0066cc; font-weight: bold; }
+        footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+    
+        /* 录音隐私提示条 */
+        .privacy-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #f6f8fa;
+            color: #57606a;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px dashed #d0d7de;
+        }
+        .privacy-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #57606a;
+        }
+        /* 交互操作提示条 */
+        .interaction-hint {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #034694;
+            background-color: #f0f6ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px dashed #b6d4fe;
+            font-weight: 500;
+        }
+    /* 全局字幕控制栏 */
+        .global-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #f9fbfc;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eaeaea;
+            font-size: 0.75rem;
+        }
+        .control-label {
+            font-weight: bold;
+            color: #333;
+        }
+        .toggle-group {
+            display: flex;
+            gap: 15px;
+        }
+        .toggle-group label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            user-select: none;
+        }
+
+        /* 全局隐藏逻辑（通过父级 Class 控制） */
+        #subtitle-container.hide-ja .ja-text { display: none; }
+        #subtitle-container.hide-en .en-text { display: none; }
+        
+        /* 优化后的操作按钮（去掉惊悚眼球） */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(207, 34, 46, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 全站闭环 Header 导航系统 -->
+    <header>
+        <p class="logo" style="color:#111;margin-bottom:5px;font-size:1.8rem;letter-spacing:-0.5px;font-weight:bold;">The Shadowing Geek</p>
+        <p class="subtitle">A fellow learner's interactive tools for shadowing real-world audio, decoding native speed, and mastering JLPT grammar.</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shadowing/">🎧 Shadowing Lab</a>
+            <a href="/posts/">📚 Grammar Notes</a>
+            <a href="/about.html">About Me</a>
+        </nav>
+    </header>
+    
+   <main>
+    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
+    <h1>Natural Japanese (Beginner) - Ep3: Curry🍛</h1>
+    
+    <!-- 注入新灵魂的 Learner's Note -->
+    <div class="learners-note">
+        <strong>Felix's Learner Note:</strong>
+ <p>What makes this material unusually good for shadowing is the <em>repetition loop</em>. Seika narrates the same sequence — 作りました, 食べました, 美味しかったです, 大変でした — three times over: once forward as it happens, once as photos, once as a recap. Self-learners need exactly this. Spoken Japanese is not a list of distinct sentences; it's the same handful of patterns looping with small substitutions, and the only way to acquire that rhythm is to shadow a native speaker who is herself <em>looping</em>. Seika does this naturally, and the result is that anyone who shadows twenty minutes of her voice will end up owning the Japanese for "I made it, I ate it, it was good, it was tough" — the skeleton of every food and life story you'll ever tell.</p>
+<p>Pay attention to three things while shadowing. First, the necessity structure: 一人で食べなければいけません — "I have to eat it alone." The ～なければいけません form is self-learners' single most underused tool for describing obligation softly and naturally. Second, the discovery ～たら: 「いただきます」と言ったら猫が来ました — "the moment I said 'thanks for the food,' the cat showed up." The ～たら of "X happened, and then to my surprise Y" is the structure for every anecdote you'll ever tell in Japanese. Third, the noun-phrase emphasis: 一人で全部食べるのは大変でした — "eating it all by myself was tough." The ～のは construction lets you make a verb phrase the topic — and this is how Japanese speakers actually comment on their own actions. Shadow the whole episode once and you'll have the Japanese for cooking, eating, suffering through leftovers, and laughing at yourself about it — four skills every learner eventually needs out loud.</p>
+
+
+</div>   
+ 
+
+    <div class="audio-player">
+        <div class="yt-container">
+            <div id="youtube-player"></div>
+    </div>
+
+ <div class="global-controls">
+            <span class="control-label">Display:</span>
+            <div class="toggle-group">
+                <label>
+                    <input type="checkbox" id="toggle-ja" checked onchange="toggleSubtitles('ja')">
+                    Japanese
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-en" checked onchange="toggleSubtitles('en')">
+                    English
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-badge">
+            <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            <span><strong>Privacy First:</strong> Your mic audio is processed locally on your device. We never upload or save your voice. Recordings vanish when you close the tab.</span>
+     </div>
+    <div class="interaction-hint">
+        💡 <strong>Pro Tip:</strong> Click any sentence to jump and play. Double-click to pause the audio.
+    </div>
+
+    <div id="subtitle-container"></div>
+
+
+
+    <div class="grammar-section">
+        <h2>📚 Grammar Breakdown</h2>
+        <!-- ==================== HTML 语法解析区域 ==================== -->
+<div class="grammar-item">
+    <span class="grammar-title">1. ～なければいけません（義務・必然）</span><br>
+    <strong>Meaning:</strong> "Have to ~ / must ~." Negative conditional な ければ (if not) + いけません (won't do / is no good) — describes an obligation, something the speaker must do.<br>
+    <strong>In Text:</strong> このカレー全部、私が一人で食べなければいけません (I have to eat all of this curry, all by myself).<br>
+    <strong>Note:</strong> N4. This is the single most underused structure among self-learners who need to describe obligation in spoken Japanese. Compare the formal しなければなりません of textbooks ("must do") with the conversational しなければいけません of real speech — Seika uses いけません, the everyday register, not なりません. The nuance here is critical: she's not saying she <em>wants</em> to eat the curry alone, she's saying she <em>has to</em> eat it alone — because her husband won't and her cat can't. The なければ form is the engine of Japanese obligation language; once you own it, you can talk about everything from "I have to study Japanese" to "I have to call my mom" without sounding like a textbook. Shadow this one sentence; the pattern 〇〇を一人で食べなければいけません is a fixed chunk you can reuse for any "I have to ~ alone" scenario.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">2. ～ていました（描写・状態の持続）</span><br>
+    <strong>Meaning:</strong> "Was ~ing / kept ~ing." Verb て-form + いました (past progressive / state-duration) — describes an ongoing past state, often used for narration of background action.<br>
+    <strong>In Text:</strong> ぐつぐつぐつぐつ煮込んでいます / テーブルの上でもまだぐつぐつ言っています / ぐつぐつぐつぐつ言っていましたね (it's simmering and simmering and simmering / even on the table it's still bubbling and making noise / it was going bub-bub-bub-bub, wasn't it).<br>
+    <strong>Note:</strong> N4. The ています / ていました pair is how Japanese narrates ongoing background action — exactly the register of a cooking video. Onomatopoeia gets glued to the verb with て: ぐつぐつ煮込んでいます literally "it's simmer-simmer-simmering." Self-learners often incorrectly use the past tense 煮込みました ("it simmered") when the visual scene is clearly ongoing; the mistake flattens the description. Notice also how Seika switches mid-narrative from present observation (ぐつぐつ言っています) to retrospective narration in the recap (ぐつぐつ言っていましたね) — same verb, same scene, different temporal stance, exactly as native speakers do when recounting something they just showed you. Shadow the onomatopoeia + ています chunk as a unit; it's how Japanese speakers describe anything alive and in motion.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">3. ～たら（発見・「～した時、～が起きた」）</span><br>
+    <strong>Meaning:</strong> "When ~ happened, ~ happened (to my surprise / as it turned out)." The past-tense たら form marks either a temporal trigger or an unexpected discovery — "the moment X happened, I found that Y."<br>
+    <strong>In Text:</strong> 「いただきます」と言ったら猫が来ました (the moment I said "let's eat," the cat showed up); パソコンでカレーの写真を見ていたら「カレーが食べたい！」カレーが食べたくなりました (I was looking at curry photos on my computer and — "I want to eat curry!" — I wanted to eat curry).<br>
+    <strong>Note:</strong> N4. This is the structure every Japanese anecdote is built on. Textbook usually drills たら as simple past conditional ("if you do X, then Y"), but in speech the most common use is the <em>discovery</em> たら: you did X, and then unexpectedly Y came into the picture. Seika uses it twice in this short episode — once for the cat suddenly appearing, once for her own craving suddenly arising. The key tell: the second clause is almost always something the speaker didn't plan or expect. Compare 保証書を見たら壊れた (if I look at the warranty, it breaks — meaningless) vs パソコンでカレーの写真を見ていたらカレーが食べたくなりました (I was looking at curry photos, and then — oh — I wanted curry — natural). Self-learners who can use たら this way unlock the ability to tell stories in Japanese instead of reporting facts.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">4. ～のは（名詞化・話題の強調）</span><br>
+    <strong>Meaning:</strong> "Doing ~ is (something)." Verb (short form) + の + は turns an action phrase into a noun phrase, then marks it as the topic — lets you make a <em>comment</em> about doing X.<br>
+    <strong>In Text:</strong> 一人で全部食べるのは大変でした (eating it all by myself was tough); 一人で全部食べるのはちょっと、ちょっと大変でした (eating it all by myself was a little, a little tough).<br>
+    <strong>Note:</strong> N4. The の nominalizer is the structure textbook courses drill least and native speakers use most. Compare: 一人で食べました、大変でした ("I ate alone, it was tough" — comma splice, two flat statements) vs 一人で食べるのは大変でした ("Eating alone — that was tough" — the action itself is the topic, the tough-ness is the comment). Seika uses this construction <em>twice</em> in close succession — the repeat itself does thework of emphasis. Self-learners tend to render their own actions as "I did X, X was adjective" instead of "Doing X was adjective" — the second is how Japanese speakers actually center their own actions for comment. Shadow 「〇〇するのは形容詞でした」as a fixed template; it's how you describe your own experience as a topic instead of as a sequence of flat events.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">5. ～ていません / 好きじゃありません（否定状態・「～ない」の丁寧形）</span><br>
+    <strong>Meaning:</strong> "Doesn't ~ / is not ~" — the polite negative of state verbs and な-adjectives. Negative of ます (ます → ません) for verb states; negative of です (です → じゃありません / ではありません) for な-adjective and noun predicates.<br>
+    <strong>In Text:</strong> 夫はカレーは食べません / 好きじゃありません / でも猫は食べられません / できません (My husband doesn't eat curry / he doesn't like it / but the cat can't eat it / it's not an option for the cat).<br>
+    <strong>Note:</strong> N5→N4. The negative is the single most underperformed area for English-speaking self-learners, because English "do + not" and Japanese verb-negative conjugation are structurally different. Seika's husband sequence is the whole grammar in miniature: 夫は食べません (verb-negative — "doesn't eat") → 好きじゃありません (な-adjective negative — "is not liked"). Same content complement ("curry"), two different negative constructions, mirroring the difference between action negation and property negation. Also note the affection-pressure sequence for the cat: 猫は食べられません (potential negative — "can't eat" — physical impossibility) vs できません (general potential — "can't / not an option"). Shadow all four sentences together; they're a complete set: <em>not doing, not liking, not being able to, not being possible</em> — the entire Japanese negative kit in one episode.
+</div>
+
+
+    </div>
+    
+   </main>
+    <footer>
+        <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // ==========================================
+        // 核心配置区：以后每次只需要修改这三个变量！
+        // ==========================================
+        const ytVideoId = "h8aHI9R4p0I"; // 请替换为 EP4 的 YouTube 视频 ID
+        const pageId = "nij-ep3"; 
+
+const subtitleData = [
+    { start: 11.00, end: 46.00, ja: "カレーです。 これも、これも、これも、これも、全部カレーです。 カレーの写真を見ています。 美味しそうです。 これは私のカレーです。 私が作りました。", en: "It's curry. This one, this one, this one, this one — they're all curry. I'm looking at photos of curry. It looks delicious. This is my curry. I made it." },
+    { start: 46.00, end: 79.00, ja: "私が作ったカレーです。 中に肉と野菜はほうれん草と玉ねぎがあります。 肉とほうれん草と玉ねぎのカレーです。 カレーをたくさん作りました。 そして毎日毎日毎日カレーを食べました。 これは鍋です。", en: "It's the curry I made. Inside there's meat, and for vegetables — spinach and onion. A curry of meat, spinach, and onion. I made a lot of curry. And every day, every day, every day, I ate curry. This is the pot." },
+    { start: 79.00, end: 135.00, ja: "でも鍋の中にまだこんなにカレーがあります。 私の家族は私と猫と夫です。 私はカレーが好きですが、夫はカレーは食べません。好きじゃありません。 それで、このカレー全部、私が一人で食べなければいけません。 今日のスペシャルカレーは、カレーの上に、これはチーズ、チーズハンバーグと、あとベーコンをトッピングしました。 ボリュームがあります。", en: "But inside the pot there's still this much curry. My family is me, the cat, and my husband. I like curry, but my husband doesn't eat curry. He doesn't like it. So — I have to eat all of this curry, by myself. Today's special curry — on top of the curry, this is cheese — I topped it with a cheese-stuffed hamburger patty, and also bacon. It's filling." },
+    { start: 135.00, end: 164.00, ja: "ボリュームがあります。 ボリュームがあります。 ボリュームがあります。 これもボリュームがあります。 そして私のカレーもボリュームがあります。 今日の晩御飯は本当はハンバーガーです。ベーコンバーガーです。", en: "It's filling. It's filling. It's filling. This one is filling too. And my curry is also filling. Today's dinner was actually a hamburger. A bacon burger." },
+    { start: 164.00, end: 210.00, ja: "私はチーズハンバーグベーコンカレーです。 そして次の日も...。今日のお昼はカレーうどんです。 いただきます。 こんな感じです。皆さん、実はこれ、うどんじゃありません。 スパゲッティなんです。 そしてまた次の日も...。", en: "Mine was the cheese-stuffed-hamburger-patty bacon curry. And then the next day, too... Today's lunch is curry udon. Let's eat. This is what it's like. Everyone — actually, this isn't udon. It's spaghetti. And then again the next day..." },
+    { start: 210.00, end: 241.00, ja: "今日のお昼もカレーうどんです。 ぐつぐつぐつぐつ煮込んでいます。 とても熱々のカレーうどんが食べられると思います。 楽しみです。 テーブルの上でもまだぐつぐつ言っています。 おいしそう。いただきます。", en: "Today's lunch is also curry udon. It's bubbling and bubbling and bubbling, simmering away. I think I'll be able to eat a really piping-hot curry udon. I'm looking forward to it. Even on the table it's still bubbling and making noise. Looks delicious. Let's eat." },
+    { start: 241.00, end: 270.00, ja: "「いただきます」と言ったら猫が来ました。 そして、テーブルの上のカレーうどんを見ています。 猫ちゃん、一緒に食べませんか？ 食べない？ うん？行ってしまいました。 鍋にたくさんカレーを作って...これは普通のカレー。", en: "The moment I said \"let's eat,\" the cat showed up. And it's looking at the curry udon on the table. Kitty, won't you eat with me? You won't? Hmm? It walked away. I made a lot of curry in the pot... this is the regular curry." },
+    { start: 270.00, end: 295.00, ja: "毎日毎日カレーを食べました。 それからトッピングもしました。 アレンジもしました。 このアレンジしたカレーも美味しかったです。 そして、トッピングしたカレーも美味しかったです。 普通のカレーももちろん美味しかったです。", en: "Every day, every day, I ate curry. I also added toppings. I also did variations. This variation curry was also delicious. And the topped curry was also delicious. The regular curry was, of course, also delicious." },
+    { start: 295.00, end: 338.00, ja: "でも、一人で全部食べるのは大変でした。 今日のお話です。 今日のお話はこんなお話でした。 パソコンでカレーの写真を見ていたら「カレーが食べたい！」カレーが食べたくなりました。 それで...それで、これは鍋。鍋です。 鍋にたくさんカレーを作りました。", en: "But eating it all by myself was tough. That's today's story. Today's story was this kind of story. I was looking at curry photos on my computer and — \"I want to eat curry!\" — I wanted to eat curry. So... so, this is the pot. The pot. I made a lot of curry in the pot." },
+    { start: 338.00, end: 377.00, ja: "肉とほうれん草と玉ねぎのカレーです。 たくさん作りました。 でも...でも、私の家族は１人、２人、３人。３人です。 私と猫と夫です。 私はカレーが好きです。 食べたいです。食べたい食べたい！", en: "A curry of meat, spinach, and onion. I made a lot. But... but, my family is one person, two people, three people — three people. Me, the cat, and my husband. I like curry. I want to eat it. I want to eat it, I want to eat it!" },
+    { start: 377.00, end: 405.00, ja: "でも猫は食べられません。 できません。 そして夫はカレーがうーん...嫌いです。 好きじゃありません。 ですから「食べたくない」と言いました。 「食べたくない」と言いました。", en: "But the cat can't eat it. It's not an option for the cat. And my husband, with curry, goes \"hmmmm\"... he hates it. He doesn't like it. So he said, \"I don't want to eat it.\" He said, \"I don't want to eat it.\"" },
+    { start: 405.00, end: 449.00, ja: "ですから...ですから、このカレー、私が全部一人で食べました。 いぇーい！ これは普通のカレーです。 普通のカレーもたくさん食べました。 そしてこれ、これはトッピング、トッピングのカレーです。 トッピングは、えっと...これはベーコンとチーズとハンバーグです。", en: "So... so, this curry, I ate all of it by myself. Yay! This is the regular curry. I ate a lot of the regular curry too. And this — this is the topping curry, the topped curry. The toppings are, um... this is bacon, cheese, and hamburger patty." },
+    { start: 449.00, end: 470.00, ja: "ボリュームがありましたね。 トッピングのカレーも食べました。 それからアレンジ。 アレンジしたカレーも食べました。 このカレーうどん。 これ、カレーうどんでした。", en: "It was filling, wasn't it. I ate the topped curry too. And then the variations. I ate the variation curry too. This curry udon. This was curry udon." },
+    { start: 470.00, end: 504.00, ja: "このカレーうどんは熱々、熱い熱い。 熱々で、ぐつぐつぐつぐつ言っていましたね。 普通のカレーもトッピングしたカレーもアレンジしたカレーも、全部美味しかったです。 全部美味しかったです。 でも全部一人で食べるのはちょっと、ちょっと大変でした。 ちょっと大変でした。", en: "This curry udon was piping hot — hot, hot. Piping hot, and it was going bub-bub-bub-bub. The regular curry, the topped curry, the variation curry — everything was delicious. Everything was delicious. But eating it all by myself was a little, a little tough. A little tough." },
+    { start: 504.00, end: 506.00, ja: "今日はそんなお話でした。 皆さん、またね！ありがとうございます。 バイバイ！", en: "Today's story was that kind of story. Everyone — bye! Thank you. Bye-bye!" }
+];
+        // ==========================================
+
+      
+      let currentLineIndex = -1;
+        let loopMode = 'none';
+        let player;
+        
+        // 录音相关全局变量
+        let mediaRecorder;
+        let audioChunks = [];
+        let userAudioBlobs = {}; // 存储每句的录音数据
+        let currentRecordingIndex = -1;
+
+        // 加载 YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 'playsinline': 1, 'controls': 1 },
+                events: { 'onReady': onPlayerReady }
+            });
+        }
+
+        function onPlayerReady(event) {
+            renderSubtitles();
+            setInterval(monitorPlayback, 100);
+            
+            const lastRead = localStorage.getItem(`last-read-${pageId}`);
+            if (lastRead !== null) {
+                const targetLine = document.getElementById(`line-${lastRead}`);
+                if (targetLine) {
+                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetLine.classList.add('active');
+                }
+            }
+        }
+
+        function renderSubtitles() {
+            const container = document.getElementById('subtitle-container');
+            subtitleData.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = 'shadow-line';
+                div.id = `line-${index}`;
+                
+                // HTML 结构：左侧文本，右侧按钮组
+                div.innerHTML = `
+                    <div class="text-content">
+                        <div class="ja-text">${line.ja}</div>
+                        <div class="en-text" id="en-${index}">${line.en}</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn record-btn" id="record-btn-${index}" onclick="toggleRecord(event, ${index})" title="Hold or Click to Record">🎙️</button>
+                        <button class="action-btn play-btn" id="play-btn-${index}" onclick="playUserRecord(event, ${index})" style="display:none;" title="Play your recording">▶️</button>
+                    </div>
+                `;
+                
+                div.onclick = (e) => {
+                    // 如果点击的是按钮，不触发视频跳转
+                    if (e.target.closest('.action-btn')) return;
+                    currentLineIndex = index;
+                    player.seekTo(line.start, true);
+                    player.playVideo();
+                    localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                // 双击：紧急暂停 (极客新增)
+                div.ondblclick = (e) => {
+                    if (e.target.closest('.action-btn')) return;
+                    player.pauseVideo();
+                };
+                container.appendChild(div);
+            });
+        }
+      
+        // 全局控制字幕显示/隐藏逻辑
+        function toggleSubtitles(lang) {
+            const container = document.getElementById('subtitle-container');
+            const checkbox = document.getElementById(`toggle-${lang}`);
+            
+            if (checkbox.checked) {
+                container.classList.remove(`hide-${lang}`);
+            } else {
+                container.classList.add(`hide-${lang}`);
+            }
+        }   
+        // 功能 2：录音系统逻辑
+        async function toggleRecord(event, index) {
+            event.stopPropagation();
+            const recordBtn = document.getElementById(`record-btn-${index}`);
+            const playBtn = document.getElementById(`play-btn-${index}`);
+
+            if (currentRecordingIndex === index) {
+                // 停止录音
+                mediaRecorder.stop();
+                recordBtn.classList.remove('recording');
+                currentRecordingIndex = -1;
+                return;
+            }
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    userAudioBlobs[index] = URL.createObjectURL(audioBlob);
+                    playBtn.style.display = 'block'; // 显示播放按钮
+                    playBtn.classList.add('has-audio');
+                    
+                    // 释放麦克风轨道资源
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+                currentRecordingIndex = index;
+                recordBtn.classList.add('recording');
+                
+                // 自动暂停原声音频，以免录进去
+                player.pauseVideo();
+
+            } catch (err) {
+                alert("Permission denied or microphone not found. Please allow microphone access.");
+                console.error(err);
+            }
+        }
+
+        // 功能 3：播放用户的录音
+        function playUserRecord(event, index) {
+            event.stopPropagation();
+            if (userAudioBlobs[index]) {
+                player.pauseVideo(); // 暂停 YouTube
+                const audio = new Audio(userAudioBlobs[index]);
+                audio.play();
+            }
+        }
+
+        function monitorPlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); 
+
+            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+            
+            if (activeIndex !== -1) {
+                currentLineIndex = activeIndex;
+                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                if (activeElement) {
+                    activeElement.classList.add('active');
+                    if (playerState === 1) {
+                        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

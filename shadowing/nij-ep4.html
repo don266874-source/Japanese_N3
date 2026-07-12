@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================================================= -->
+    <!-- 1. [ 核心配置区 ]：SEO 流量拦截网（每期必改） -->
+    <!-- ======================================================= -->
+    <title>Ep4: Conversation at the Hospital | Nihongo con Teppei Shadowing Tool & Transcript</title>
+    <meta name="description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 4 (Conversation at the Hospital). Master duration counters and practice perfect pronunciation.">
+    <link rel="canonical" href="https://shadowgeek.net/shadowing/nij-ep4.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="The Shadowing Geek">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://shadowgeek.net/shadowing/nij-ep4.html">
+    <meta property="og:title" content="Ep4: Conversation at the Hospital | Nihongo con Teppei Shadowing Tool & Transcript">
+    <meta property="og:description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 4 (Conversation at the Hospital). Master duration counters and practice perfect pronunciation.">
+    <meta property="og:image" content="https://shadowgeek.net/images/og-default.webp">
+    <meta property="article:published_time" content="2026-07-12T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-07-12T00:00:00+08:00">
+    <meta property="article:author" content="Felix">
+    <meta property="article:section" content="Shadowing Lab">
+    <meta property="article:tag" content="Teppei">
+    <meta property="article:tag" content="shadowing">
+    <meta property="article:tag" content="time expressions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ep4: Conversation at the Hospital| Nihongo con Teppei Shadowing Tool">
+    <meta name="twitter:description" content="Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 4 Conversation at the Hospital. Master duration counters and practice perfect pronunciation.">
+    <meta name="twitter:image" content="https://shadowgeek.net/images/og-default.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ep4: Conversation at the Hospital| Nihongo con Teppei Shadowing Tool & Transcript",
+      "description": "Interactive transcript and single-line looping tool for Nihongo con Teppei Beginner Episode 4 (Conversation at the Hospital). Master duration counters and practice perfect pronunciation.",
+      "image": "https://shadowgeek.net/images/og-default.webp",
+      "datePublished": "2026-07-12",
+      "dateModified": "2026-07-12",
+      "author": {"@type": "Person", "name": "Felix", "url": "https://shadowgeek.net/about.html"},
+      "publisher": {"@type": "Organization", "name": "The Shadowing Geek", "logo": {"@type": "ImageObject", "url": "https://shadowgeek.net/images/og-default.webp"}},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://shadowgeek.net/shadowing/nij-ep4.html"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shadowgeek.net/"},
+        {"@type": "ListItem", "position": 2, "name": "Shadowing Lab", "item": "https://shadowgeek.net/shadowing/"},
+        {"@type": "ListItem", "position": 3, "name": "Ep2: Unboxing New Earphones", "item": "https://shadowgeek.net/shadowing/nij-ep4.html"}
+      ]
+    }
+    </script>
+<style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #111; margin-bottom: 5px; font-size: 1.8rem; letter-spacing: -0.5px;}
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 0; margin-bottom: 20px;}
+        
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; transition: background 0.2s;}
+        nav a:hover { background: #f0f6ff; text-decoration: none; }
+        nav a.current { background: #f0f6ff; color: #111; }
+        
+        .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
+        
+        .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
+        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        
+        /* 改造跟读行布局：支持左右分栏 */
+        .shadow-line { display: flex; justify-content: space-between; align-items: center; padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        .shadow-line:hover { background: #f6f8fa; }
+        .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+        
+        .text-content { flex-grow: 1; padding-right: 15px; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; transition: opacity 0.3s; }
+        .en-text.hidden { opacity: 0; user-select: none; }
+        
+        /* 交互按钮组 */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+
+        .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
+        .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
+        .grammar-item { margin-bottom: 15px; }
+        .grammar-title { color: #0066cc; font-weight: bold; }
+        footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+    
+        /* 录音隐私提示条 */
+        .privacy-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #f6f8fa;
+            color: #57606a;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px dashed #d0d7de;
+        }
+        .privacy-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #57606a;
+        }
+        /* 交互操作提示条 */
+        .interaction-hint {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #034694;
+            background-color: #f0f6ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px dashed #b6d4fe;
+            font-weight: 500;
+        }
+    /* 全局字幕控制栏 */
+        .global-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #f9fbfc;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eaeaea;
+            font-size: 0.75rem;
+        }
+        .control-label {
+            font-weight: bold;
+            color: #333;
+        }
+        .toggle-group {
+            display: flex;
+            gap: 15px;
+        }
+        .toggle-group label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            user-select: none;
+        }
+
+        /* 全局隐藏逻辑（通过父级 Class 控制） */
+        #subtitle-container.hide-ja .ja-text { display: none; }
+        #subtitle-container.hide-en .en-text { display: none; }
+        
+        /* 优化后的操作按钮（去掉惊悚眼球） */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(207, 34, 46, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 全站闭环 Header 导航系统 -->
+    <header>
+        <p class="logo" style="color:#111;margin-bottom:5px;font-size:1.8rem;letter-spacing:-0.5px;font-weight:bold;">The Shadowing Geek</p>
+        <p class="subtitle">A fellow learner's interactive tools for shadowing real-world audio, decoding native speed, and mastering JLPT grammar.</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shadowing/">🎧 Shadowing Lab</a>
+            <a href="/posts/">📚 Grammar Notes</a>
+            <a href="/about.html">About Me</a>
+        </nav>
+    </header>
+    
+   <main>
+    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
+    <h1>Natural Japanese (Beginner) - Ep4:  Conversation at the Hospital</h1>
+    
+    <!-- 注入新灵魂的 Learner's Note -->
+    <div class="learners-note">
+        <strong>Felix's Learner Note:</strong>
+<p>What makes this material unusually good for shadowing is that it's <em>functional spoken Japanese in a high-stakes register</em>. Nobody goes to a clinic for fun. When you're there, you need to be precise, you need to be polite, and you need to understand what's said back to you. Seika walks through the entire visit — symptom self-check at home, greeting the reception, answering どうされましたか, describing pain type by type, taking the prescription, picking up the medicine at the pharmacy, and confirming dosing for morning-noon-evening-after-meal vs before-meal. It's the complete loop. And the language is the exact register Japanese clinicians use: そうなんですね, それは辛いですね, お間違いないですか — every phrase a small empathy deposit that you, the patient, are supposed to receive and recognize.</p>
+<p>Pay attention to three things while shadowing. First, the conjecture ~かもしれません: 熱があるのかもしれない / 薬がもらえるかもしれない / エアコンをつけて寝たので喉が乾燥したのかもしれません — the "maybe" structure that lets you hypothesize causes and outcomes gently, the spine of every diagnostic conversation. Second, the done-it-to-myself ~てしまう: 風邪を引いてしまいました / 夏風邪を引いてしまったんですね — regret baked into the verb, the natural register for "I caught a cold (and I'd rather not have)." Third, the manner-question どのように痛いですか — "how does it hurt?" — and its onomatopoeic answers ズキズキ / ヒリヒリ. Self-learners who can describe pain in Japanese are rare; shadow this whole episode once and you won't be one of them.</p>
+
+
+</div>   
+ 
+
+    <div class="audio-player">
+        <div class="yt-container">
+            <div id="youtube-player"></div>
+    </div>
+
+ <div class="global-controls">
+            <span class="control-label">Display:</span>
+            <div class="toggle-group">
+                <label>
+                    <input type="checkbox" id="toggle-ja" checked onchange="toggleSubtitles('ja')">
+                    Japanese
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-en" checked onchange="toggleSubtitles('en')">
+                    English
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-badge">
+            <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            <span><strong>Privacy First:</strong> Your mic audio is processed locally on your device. We never upload or save your voice. Recordings vanish when you close the tab.</span>
+     </div>
+    <div class="interaction-hint">
+        💡 <strong>Pro Tip:</strong> Click any sentence to jump and play. Double-click to pause the audio.
+    </div>
+
+    <div id="subtitle-container"></div>
+
+
+
+    <div class="grammar-section">
+        <h2>📚 Grammar Breakdown</h2>
+        <!-- ==================== HTML 语法解析区域 ==================== -->
+<div class="grammar-item">
+    <span class="grammar-title">1. ～かもしれません（推量・可能性）</span><br>
+    <strong>Meaning:</strong> "Maybe ~ / might ~." Plain form of verb/い-adjective, or な-adjective stem / noun + かもしれません — marks a conjecture or possibility, softer than でしょう and more honestly uncertain.<br>
+    <strong>In Text:</strong> 熱があるのかもしれないなあ (I might have a fever) / 薬がもらえるかもしれない (I might be able to get medicine) / エアコンをつけて寝たので喉が乾燥したのかもしれません (I slept with the AC on, so my throat might have dried out) / そうかもしれませんね (that might be the case).<br>
+    <strong>Note:</strong> N4. This is the single most useful "maybe" structure in spoken Japanese, and self-learners underuse it badly because 〜でしょう ("probably") feels more polished. The difference is honesty: でしょうか / かもしれません is "I genuinely don't know, but maybe," while でしょう is "I'm fairly confident." A doctor saying そうかもしれませんね is being deliberately non-committal — the diagnosis isn't locked in. Notice Seika uses it <em>four times</em> in 30 seconds across the hypothetical-fever / maybe-medicine / maybe-AC / doctor-responding sequence. The ～かもしれません form is the engine of every medical conversation: doctors propose causes, patients propose explanations, both sides hedge. Self-learners who can't hedge sound overconfident; those who pick up かもしれません sound like a person reasoning out loud — exactly the register clinical dialogue runs on. Shadow 「〇〇のかもしれません / 〇〇かもしれませんね」 as a fixed chunk; it's how Japanese speakers say "maybe" without losing face.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">2. ～てしまう / ～てしまいました（完了・不可逆・残念）</span><br>
+    <strong>Meaning:</strong> "Ended up doing ~ / did ~ (with a sting of regret or accident)." Verb て-form + しまう (literally "to put away / finish") — marks completion, and in most spoken contexts carries a tone of "I did it, and now it's done, and I'd rather not."<br>
+    <strong>In Text:</strong> 風邪を引いてしまいました (I caught a cold) / 今日は夏風邪を引いてしまったんですね (so you've come down with a summer cold, huh). 風邪引いちゃったんだ (I caught a cold — the contracted ちゃった form, spoken to oneself).<br>
+    <strong>Note:</strong> N4. The same てしまう pattern as in the unboxing episode, but here the register is medical — a doctor-patient exchange where てしまう does the emotional work of saying "I got sick and I didn't mean to." Compare: 風邪を引きました (I caught a cold — flat report) vs 風邪を引いてしまいました (I caught a cold — and it's a little unfortunate that I did). Doctors tend to mirror the patient's てしまう back at them: 今日は夏風邪を引いてしまったんですね — the doctor isn't saying the patient did anything wrong, but is acknowledging the regret,embedding sympathetic tone into the verb itself. Also notice the spoken contracted form 風邪引いちゃったんだ that Seika uses while talking to herself at home before going to the clinic — the exact register you use when nobody else is listening. Three forms, one function: polite (引いてしまいました), plain (引いてしまった), contracted (引いちゃった). Self-learners who learn only てしまいました from textbooks miss the ちゃった form every Japanese person actually uses in self-talk.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">3. ～か／～か（選択疑問・二者択一）</span><br>
+    <strong>Meaning:</strong> "Is it A, or is it B?" — two questions joined by か, presenting the listener with a binary choice.<br>
+    <strong>In Text:</strong> ズキズキしますか？ それともヒリヒリしますか？ (Does it throb? Or does it sting?); 普通に呼吸をしていて大丈夫ですか？ / はい、大丈夫ですよ (Are you OK breathing normally? / Yes, fine).<br>
+    <strong>Note:</strong> N5→N4. This is diagnostic-question bread and butter. Notice the それとも ("or rather") that links the two pain-type options — それとも picks between exactly two alternatives, doesn't extend to a third. Self-learners often confuse か / か ("or") with そりとも ("or rather") and あるいは ("alternatively"); the doctor's それとも ヒリヒリしますか is the right word because the choice is binary and the doctor wants the patient to commit to one type. Also note ズキズキ / ヒリヒリ — two onomatopoeia for two different pain types: ズキズキ is the throb of a headache or toothache, ヒリヒリ is the sting of a burn or a dried-out throat. English doesn't have a clean translation; the onomatopoeia <em>is</em> the diagnosis. Shadow the ズキズキしますか / それとも ヒリヒリしますか pair as a unit; it's how Japanese clinicians narrow a symptom by asking the patient to choose between vividly imagined sensations.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">4. ～てみよう（試行の意志・「～してみよう」）</span><br>
+    <strong>Meaning:</strong> "Let me try doing ~ / let's try doing ~." Volitional form of みる (to try) attached to verb て-form — marks an attempt the speaker is committing to, often as self-talk or a soft proposal.<br>
+    <strong>In Text:</strong> 体温計で熱を測ってみよう (Let me try measuring my temperature with the thermometer) / 熱を測ってみよう (Let me try taking my temperature) / 病院に行ってみよう (Let me try going to the hospital).<br>
+    <strong>Note:</strong> N4. The volitional てみよう is the spoken-Japanese register for self-directed trial. Compare: 熱を測ります ("I'll measure my temperature" — decisive, final tone) vs 熱を測ってみよう ("Let me try measuring my temperature" — exploring, the outcome not yet known). Seika uses it three times in the first two minutes — 体温計で熱を測ってみよう, 熱を測ってみよう (repeated for rhythm), 病院に行ってみよう — each one the same grammatical move: I'm going to try X and see what happens. This is exactly the register you want when you're uncertain whether your action will work — going to the doctor when you don't know if they can help, taking medicine when you don't know if it'll fix you. Self-learners who only know てみます ("I will try") sound polite but stiff; those who pick up てみよう sound like a person quietly making up their mind. Shadow all three sentences; they're a template for any "I'll try X and see" action in Japanese daily life.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">5. ～てくださいね / ～てください（依頼の丁寧さの差）</span><br>
+    <strong>Meaning:</strong> "Please do ~." Verb て-form + ください — the soft imperative. Adding ね ("please, OK?") makes it warmer and more caring; dropping ね makes it a clean professional request.<br>
+    <strong>In Text:</strong> 今日は家で安静にしていてください (Please rest quietly at home today) / 水をたくさん飲んでくださいね (Please drink a lot of water, OK?) / 処方箋を薬局に持って行ってくださいね (Please take the prescription to the pharmacy) / 食べられるものは食べてくださいね (Please eat whatever you can eat, OK?) / なるべく水で飲んでください (Please take it with water as much as possible) / 皆さんも風邪には気をつけてくださいね (Everyone, please be careful about catching a cold, too).<br>
+    <strong>Note:</strong> N5. This is the easiest grammar on paper and the hardest to use naturally in real Japanese. The difference between 家で安静にしていてください and 水をたくさん飲んでくださいね is small in form but huge in tone — the first is a doctor's instruction (firm, professional), the second is caring advice (warm, repeated as if to a child). Seika uses てくださいね six times in the second half of the episode, almost every time with ね — because the doctor is giving <em>caring</em> advice, not just instructions. Self-learners who only learn てください sound clipped and officious in Japanese ("Drink water. Do this. Take this.") ; those who pick up てくださいね sound like a person who cares whether you do it. The ね is the particle of warmth. Shadow the six てください / てくださいね lines as a set; you'll hear the difference between "instruction Japanese" and "caring-Japanese Japanese" without anyone explaining it to you.
+</div>
+
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">5. ～ていません / 好きじゃありません（否定状態・「～ない」の丁寧形）</span><br>
+    <strong>Meaning:</strong> "Doesn't ~ / is not ~" — the polite negative of state verbs and な-adjectives. Negative of ます (ます → ません) for verb states; negative of です (です → じゃありません / ではありません) for な-adjective and noun predicates.<br>
+    <strong>In Text:</strong> 夫はカレーは食べません / 好きじゃありません / でも猫は食べられません / できません (My husband doesn't eat curry / he doesn't like it / but the cat can't eat it / it's not an option for the cat).<br>
+    <strong>Note:</strong> N5→N4. The negative is the single most underperformed area for English-speaking self-learners, because English "do + not" and Japanese verb-negative conjugation are structurally different. Seika's husband sequence is the whole grammar in miniature: 夫は食べません (verb-negative — "doesn't eat") → 好きじゃありません (な-adjective negative — "is not liked"). Same content complement ("curry"), two different negative constructions, mirroring the difference between action negation and property negation. Also note the affection-pressure sequence for the cat: 猫は食べられません (potential negative — "can't eat" — physical impossibility) vs できません (general potential — "can't / not an option"). Shadow all four sentences together; they're a complete set: <em>not doing, not liking, not being able to, not being possible</em> — the entire Japanese negative kit in one episode.
+</div>
+
+
+    </div>
+    
+   </main>
+    <footer>
+        <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // ==========================================
+        // 核心配置区：以后每次只需要修改这三个变量！
+        // ==========================================
+        const ytVideoId = "96mV35SXCys"; // 请替换为 EP4 的 YouTube 视频 ID
+        const pageId = "nij-ep4"; 
+
+const subtitleData = [
+    { start: 0.00, end: 45.00, ja: "今日はなんだか頭が痛いなあ。 それに、なんだか寒いなあ。 上着を着よう。 まだ寒いなあ。 でも、今日の気温は３０度もある。 夏で３０度もあるのに、寒い。", en: "Today my head kind of hurts. And I'm kind of cold. Let me put a jacket on. Still cold. But today's temperature is 30 degrees. It's 30 degrees in summer and yet I'm cold." },
+    { start: 45.00, end: 80.00, ja: "熱があるのかもしれないなあ。 体温計で熱を測ってみよう。 熱を測ってみよう。 熱がある。 ３９度の熱がある。 風邪引いちゃったんだ。", en: "I might have a fever. Let me try measuring it with the thermometer. Let me take my temperature. I have a fever. A fever of 39 degrees. I caught a cold." },
+    { start: 80.00, end: 108.00, ja: "咳が出るな。 喉も痛いなあ。 病院に行ってみよう。 薬がもらえるかもしれない。 はい、こんにちは。 今日はどうされましたか？", en: "I have a cough. My throat also hurts. Let me try going to the hospital. I might be able to get medicine. Hi, hello. What brings you in today?" },
+    { start: 108.00, end: 130.00, ja: "風邪を引いてしまいました。 熱があります。 そうなんですね。 熱は何度ありますか？ 朝測ったら３９度ありました。 高いですね。", en: "I caught a cold. I have a fever. Oh, I see. How many degrees is your fever? I measured it this morning and it was 39. That's high." },
+    { start: 130.00, end: 158.00, ja: "症状をもっと詳しく教えてくれますか？ 頭が痛いです。 この辺がズキズキ痛いです。 それは辛いですね。 他には？ 咳がちょっと出ます。", en: "Could you tell me more about your symptoms in detail? My head hurts. Around here it throbs. That sounds rough. Anything else? I have a little bit of a cough." },
+    { start: 158.00, end: 192.00, ja: "喉も痛いです。 喉はどのように痛いですか？ ズキズキしますか？ それともヒリヒリしますか？ ヒリヒリします。 エアコンをつけて寝たので、喉が乾燥したのかもしれません。", en: "My throat also hurts. How does your throat hurt? Does it throb? Or does it sting? It stings. I slept with the air conditioner on, so my throat might have dried out." },
+    { start: 192.00, end: 225.00, ja: "そうかもしれませんね。 お腹は痛いですか？ お腹は痛くないです。 頭と喉だけ、痛いです。 では、食あたりではなさそうですね。 悪い食べ物を食べたわけではないですね。", en: "That might be the case. Does your stomach hurt? My stomach doesn't hurt. Only my head and throat hurt. In that case, it doesn't seem to be food poisoning. So you didn't eat anything bad." },
+    { start: 225.00, end: 260.00, ja: "悪い食べ物は食べてないと思います。 では、胸の音を聞きますね。 呼吸の音が大丈夫か見ます。 聴診器を胸に当てます。 ちょっと冷たいかもしれません。 分かりました。", en: "I don't think I ate anything bad. Alright then, I'm going to listen to your chest. I'll check if your breathing sounds OK. I'll put the stethoscope on your chest. It might be a little cold. OK." },
+    { start: 260.00, end: 283.00, ja: "普通に呼吸をしていて大丈夫ですか？ はい、大丈夫ですよ。 ふんふんふん。 はい、終わりました。 異常はないですね。 変なところはないですよ。", en: "Can you just breathe normally? Yes, that's fine. Mm-hm, mm-hm, mm-hm. OK, all done. Nothing abnormal. There's nothing strange." },
+    { start: 283.00, end: 311.00, ja: "そうですか。 どうして熱が出たんでしょうか。 きっと風邪ですね。 夏風邪だと思います。 今日は家で安静にしていてください。 家でゆっくりしていてください。", en: "I see. I wonder why the fever came on. It's surely a cold. I think it's a summer cold. Please rest quietly at home today. Please take it easy at home." },
+    { start: 311.00, end: 347.00, ja: "水をたくさん飲んでくださいね。 それから、栄養も摂りましょう。 果物とかご飯とかスープとか、食べられるものを食べてくださいね。 あんまり食欲はありません。 食べ物を食べたくありません。 食べられるものは食べてくださいね。", en: "Please drink a lot of water. And let's make sure you get nutrition too. Fruit, rice, soup — please eat whatever you can eat. I don't have much of an appetite. I don't want to eat food. Please eat whatever you can eat." },
+    { start: 347.00, end: 379.00, ja: "食べると元気になりますから。 お薬も出しておきますね。 処方箋も出します。 処方箋は、薬の名前を書いた紙です。 処方箋を薬局に持って行ってくださいね。 薬局で薬を出してくれます。", en: "Because eating will help you get your strength back. I'll also prescribe you some medicine. I'll write a prescription too. A prescription is a paper with the medicine names written on it. Please take the prescription to the pharmacy. The pharmacy will dispense the medicine for you." },
+    { start: 379.00, end: 410.00, ja: "分かりました。 お願いします。 かしこまりました。 今日は夏風邪を引いてしまったんですね。 はい、そうです。 喉の痛みと頭痛があるということで、お間違いないですか？", en: "OK. Thank you. Certainly. So you've caught a summer cold today. Yes, that's right. You have a sore throat and a headache — is that correct?" },
+    { start: 410.00, end: 445.00, ja: "はい、ありがとうございます。 かしこまりました。 では、お薬のご用意をしますので、少々お待ちください。 お待たせいたしました。 こちらのお薬を、朝、昼、晩の食後に飲んでくださいね。 ご飯を食べた後に飲んでください。", en: "Yes, thank you. Certainly. Then, I'll get your medicine ready, so please wait a moment. Thank you for waiting. Please take this medicine after meals — morning, noon, and evening. Take it after you eat." },
+    { start: 445.00, end: 484.00, ja: "それからこっちのお薬は食前に飲んでください。 ご飯を食べる前に飲んでください。 分かりました。 どうやって飲めばいいですか？ 薬を口に入れて、水と一緒に飲んでください。 なるべく水で飲んでください。", en: "And this medicine here, please take before meals. Take it before you eat. OK. How should I take it? Put the medicine in your mouth and take it together with water. Please take it with water as much as possible." },
+    { start: 484.00, end: 502.00, ja: "分かりました。 ジュースじゃなくて、水で飲みますね。 はい、お願いします。 何か質問はありますか？ 大丈夫そうですか？ はい、大丈夫です。", en: "OK. Not juice — I'll take it with water. Yes, please. Do you have any questions? Does everything seem OK? Yes, I'm OK." },
+    { start: 502.00, end: 504.00, ja: "ありがとうございます。 薬を飲んで寝たら、元気になったぞ！ ああ、よかった。 皆さんも風邪には気をつけてくださいね。 またね！", en: "Thank you. I took the medicine, slept, and — I'm better now! Oh, thank goodness. Everyone, please be careful about catching a cold. See you!" }
+];
+      
+      let currentLineIndex = -1;
+        let loopMode = 'none';
+        let player;
+        
+        // 录音相关全局变量
+        let mediaRecorder;
+        let audioChunks = [];
+        let userAudioBlobs = {}; // 存储每句的录音数据
+        let currentRecordingIndex = -1;
+
+        // 加载 YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 'playsinline': 1, 'controls': 1 },
+                events: { 'onReady': onPlayerReady }
+            });
+        }
+
+        function onPlayerReady(event) {
+            renderSubtitles();
+            setInterval(monitorPlayback, 100);
+            
+            const lastRead = localStorage.getItem(`last-read-${pageId}`);
+            if (lastRead !== null) {
+                const targetLine = document.getElementById(`line-${lastRead}`);
+                if (targetLine) {
+                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetLine.classList.add('active');
+                }
+            }
+        }
+
+        function renderSubtitles() {
+            const container = document.getElementById('subtitle-container');
+            subtitleData.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = 'shadow-line';
+                div.id = `line-${index}`;
+                
+                // HTML 结构：左侧文本，右侧按钮组
+                div.innerHTML = `
+                    <div class="text-content">
+                        <div class="ja-text">${line.ja}</div>
+                        <div class="en-text" id="en-${index}">${line.en}</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn record-btn" id="record-btn-${index}" onclick="toggleRecord(event, ${index})" title="Hold or Click to Record">🎙️</button>
+                        <button class="action-btn play-btn" id="play-btn-${index}" onclick="playUserRecord(event, ${index})" style="display:none;" title="Play your recording">▶️</button>
+                    </div>
+                `;
+                
+                div.onclick = (e) => {
+                    // 如果点击的是按钮，不触发视频跳转
+                    if (e.target.closest('.action-btn')) return;
+                    currentLineIndex = index;
+                    player.seekTo(line.start, true);
+                    player.playVideo();
+                    localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                // 双击：紧急暂停 (极客新增)
+                div.ondblclick = (e) => {
+                    if (e.target.closest('.action-btn')) return;
+                    player.pauseVideo();
+                };
+                container.appendChild(div);
+            });
+        }
+      
+        // 全局控制字幕显示/隐藏逻辑
+        function toggleSubtitles(lang) {
+            const container = document.getElementById('subtitle-container');
+            const checkbox = document.getElementById(`toggle-${lang}`);
+            
+            if (checkbox.checked) {
+                container.classList.remove(`hide-${lang}`);
+            } else {
+                container.classList.add(`hide-${lang}`);
+            }
+        }   
+        // 功能 2：录音系统逻辑
+        async function toggleRecord(event, index) {
+            event.stopPropagation();
+            const recordBtn = document.getElementById(`record-btn-${index}`);
+            const playBtn = document.getElementById(`play-btn-${index}`);
+
+            if (currentRecordingIndex === index) {
+                // 停止录音
+                mediaRecorder.stop();
+                recordBtn.classList.remove('recording');
+                currentRecordingIndex = -1;
+                return;
+            }
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    userAudioBlobs[index] = URL.createObjectURL(audioBlob);
+                    playBtn.style.display = 'block'; // 显示播放按钮
+                    playBtn.classList.add('has-audio');
+                    
+                    // 释放麦克风轨道资源
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+                currentRecordingIndex = index;
+                recordBtn.classList.add('recording');
+                
+                // 自动暂停原声音频，以免录进去
+                player.pauseVideo();
+
+            } catch (err) {
+                alert("Permission denied or microphone not found. Please allow microphone access.");
+                console.error(err);
+            }
+        }
+
+        // 功能 3：播放用户的录音
+        function playUserRecord(event, index) {
+            event.stopPropagation();
+            if (userAudioBlobs[index]) {
+                player.pauseVideo(); // 暂停 YouTube
+                const audio = new Audio(userAudioBlobs[index]);
+                audio.play();
+            }
+        }
+
+        function monitorPlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); 
+
+            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+            
+            if (activeIndex !== -1) {
+                currentLineIndex = activeIndex;
+                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                if (activeElement) {
+                    activeElement.classList.add('active');
+                    if (playerState === 1) {
+                        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
