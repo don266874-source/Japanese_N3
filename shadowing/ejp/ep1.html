@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================================================= -->
+    <!-- 1. [ 核心配置区 ]：SEO 流量拦截网（每期必改） -->
+    <!-- ======================================================= -->
+    <title>Ep1: はじめての |  EASY JAPANESE Japanese Podcast for beginners Shadowing Tool & Transcript</title>
+    <meta name="description" content="Interactive transcript and single-line looping tool for EASY JAPANESE Japanese Podcast for beginners Episode 1 (はじめて). Master duration counters and practice perfect pronunciation.">
+    <link rel="canonical" href="https://shadowgeek.net/shadowing/ejp/ep1.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="The Shadowing Geek">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://shadowgeek.net/shadowing/ejp/ep1.html">
+    <meta property="og:title" content="Ep1: はじめて | EASY JAPANESE Japanese Podcast for beginners Shadowing Tool & Transcript">
+    <meta property="og:description" content="Interactive transcript and single-line looping tool for  EASY JAPANESE Japanese Podcast for beginners Episode 1 (はじめての収録 EASY JAPANESE Japanese Podcast for beginners). Master duration counters and practice perfect pronunciation.">
+    <meta property="og:image" content="https://shadowgeek.net/images/og-default.webp">
+    <meta property="article:published_time" content="2026-07-11T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-07-11T00:00:00+08:00">
+    <meta property="article:author" content="Felix">
+    <meta property="article:section" content="Shadowing Lab">
+    <meta property="article:tag" content="Teppei">
+    <meta property="article:tag" content="shadowing">
+    <meta property="article:tag" content="time expressions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ep1: はじめて | EASY JAPANESE Japanese Podcast for beginners Shadowing Tool">
+    <meta name="twitter:description" content="Interactive transcript and single-line looping tool for EASY JAPANESE Japanese Podcast for beginners Episode 1. はじめて.">
+    <meta name="twitter:image" content="https://shadowgeek.net/images/og-default.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ep1: はじめての収録 EASY JAPANESE Japanese Podcast for beginners |  EASY JAPANESE Japanese Podcast for beginners Shadowing Tool & Transcript",
+      "description": "Interactive transcript and single-line looping tool for  EASY JAPANESE Japanese Podcast for beginners Episode 1 (はじめての収録 EASY JAPANESE Japanese Podcast for beginners). Master duration counters and practice perfect pronunciation.",
+      "image": "https://shadowgeek.net/images/og-default.webp",
+      "datePublished": "2026-07-11",
+      "dateModified": "2026-07-11",
+      "author": {"@type": "Person", "name": "Felix", "url": "https://shadowgeek.net/about.html"},
+      "publisher": {"@type": "Organization", "name": "The Shadowing Geek", "logo": {"@type": "ImageObject", "url": "https://shadowgeek.net/images/og-default.webp"}},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://shadowgeek.net/shadowing/ejp/ep1.html"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shadowgeek.net/"},
+        {"@type": "ListItem", "position": 2, "name": "Shadowing Lab", "item": "https://shadowgeek.net/shadowing/"},
+        {"@type": "ListItem", "position": 3, "name": "Ep1: Calling an Izakaya to Make a Reservation", "item": "https://shadowgeek.net/shadowing/ejp/ep1.html"}
+      ]
+    }
+    </script>
+<style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #111; margin-bottom: 5px; font-size: 1.8rem; letter-spacing: -0.5px;}
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 0; margin-bottom: 20px;}
+        
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; transition: background 0.2s;}
+        nav a:hover { background: #f0f6ff; text-decoration: none; }
+        nav a.current { background: #f0f6ff; color: #111; }
+        
+        .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
+        
+        .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
+        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        
+        /* 改造跟读行布局：支持左右分栏 */
+        .shadow-line { display: flex; justify-content: space-between; align-items: center; padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        .shadow-line:hover { background: #f6f8fa; }
+        .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+        
+        .text-content { flex-grow: 1; padding-right: 15px; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; transition: opacity 0.3s; }
+        .en-text.hidden { opacity: 0; user-select: none; }
+        
+        /* 交互按钮组 */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+
+        .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
+        .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
+        .grammar-item { margin-bottom: 15px; }
+        .grammar-title { color: #0066cc; font-weight: bold; }
+        footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+    
+        /* 录音隐私提示条 */
+        .privacy-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #f6f8fa;
+            color: #57606a;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px dashed #d0d7de;
+        }
+        .privacy-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #57606a;
+        }
+        /* 交互操作提示条 */
+        .interaction-hint {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #034694;
+            background-color: #f0f6ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px dashed #b6d4fe;
+            font-weight: 500;
+        }
+    /* 全局字幕控制栏 */
+        .global-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #f9fbfc;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eaeaea;
+            font-size: 0.75rem;
+        }
+        .control-label {
+            font-weight: bold;
+            color: #333;
+        }
+        .toggle-group {
+            display: flex;
+            gap: 15px;
+        }
+        .toggle-group label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            user-select: none;
+        }
+
+        /* 全局隐藏逻辑（通过父级 Class 控制） */
+        #subtitle-container.hide-ja .ja-text { display: none; }
+        #subtitle-container.hide-en .en-text { display: none; }
+        
+        /* 优化后的操作按钮（去掉惊悚眼球） */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(207, 34, 46, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 全站闭环 Header 导航系统 -->
+    <header>
+        <p class="logo" style="color:#111;margin-bottom:5px;font-size:1.8rem;letter-spacing:-0.5px;font-weight:bold;">The Shadowing Geek</p>
+        <p class="subtitle">A fellow learner's interactive tools for shadowing real-world audio, decoding native speed, and mastering JLPT grammar.</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shadowing/">🎧 Shadowing Lab</a>
+            <a href="/posts/">📚 Grammar Notes</a>
+            <a href="/about.html">About Me</a>
+        </nav>
+    </header>
+    
+   <main>
+    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
+    <h1>EASY JAPANESE Japanese Podcast (Beginner) - Ep1: はじめて</h1>
+    
+    <!-- 注入新灵魂的 Learner's Note -->
+    <div class="learners-note">
+        <strong>Felix's Learner Note:</strong>
+<p>That is exactly what this first episode of the "EASY JAPANESE" podcast gives you. The host opens the show by walking you through the genuine reason the podcast exists: listeners were already learning Japanese from his regular-content YouTube and podcast channels, so he made this dedicated easy-Japanese channel. He's not performing "your teacher voice." He's talking to you like a person who happens to be speaking Japanese — because that is what actual spoken Japanese sounds like when there is no class to teach.</p>
+<p>What makes this episode unusually good as a first shadowing target is the density of connective tissue. On every other line, you hear the host stall, hedge, reframe, and self-correct the way a real speaker does — not the way a textbook voice actor reads a dialogue. 「そうですね」「まあ」「あの」「っていうか」「なんていうんでしょう」 are not interruptions; they are the shape of thinking out loud in Japanese. If you have only ever shadowed scripted audio, this episode will recalibrate your ear. And the core vocabulary is deliberately modest — the host even jokes about 「維持していく」 being a hard phrase, then immediately rephrases it as 「キープしていく」「そのまま」 in real time, modeling the exact repair skill that separates a textbook reader from a floor holder.</p>
+<p>There are three structural rhythms to isolate while shadowing. First, the explanatory ～んですけれど / んですけど chain — this is the podcast host's bread-and-butter sentence ender, and if you can't produce it on reflex, you can't hold a casual conversation. Second, the effort form ～ようにしています / ように思っています — "I try to," "I'm making an effort to" — the speaker uses this four times in the first five minutes alone to describe what he is trying to do: keep it simple, avoid English, post daily, use natural language. Third, the ～みたいな pivot — "like a diary," "like that feeling" — used three times in succession near the end when he describes the show's format. Each of these is N4 or easier, but stacked at natural speed, they are the exact cadence that self-learners drop first. Shadow this episode until the rhythm sticks.</p>
+
+</div>   
+ 
+
+    <div class="audio-player">
+        <div class="yt-container">
+            <div id="youtube-player"></div>
+    </div>
+
+ <div class="global-controls">
+            <span class="control-label">Display:</span>
+            <div class="toggle-group">
+                <label>
+                    <input type="checkbox" id="toggle-ja" checked onchange="toggleSubtitles('ja')">
+                    Japanese
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-en" checked onchange="toggleSubtitles('en')">
+                    English
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-badge">
+            <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            <span><strong>Privacy First:</strong> Your mic audio is processed locally on your device. We never upload or save your voice. Recordings vanish when you close the tab.</span>
+     </div>
+    <div class="interaction-hint">
+        💡 <strong>Pro Tip:</strong> Click any sentence to jump and play. Double-click to pause the audio.
+    </div>
+
+    <div id="subtitle-container"></div>
+
+
+
+    <div class="grammar-section">
+        <h2>📚 Grammar Breakdown</h2>
+        <!-- ==================== HTML 语法解析区域 ==================== -->
+    <div class="grammar-item">
+    <span class="grammar-title">1. ～んですけれど / ～んですけど（説明・接続）</span><br>
+    <strong>Meaning:</strong> "You see / because." Short form of のですけれど — explanatory ん + けれど (but). Used as a sentence-ending or mid-sentence connective that softens statements and adds a "the situation is..." feel without explicitly asserting a conclusion.<br>
+    <strong>In Text:</strong> 冬なので結構寒いんですけれども (It's winter so it's cold, but...) / 10年ぐらい前ですかね…なかったんですけれども (About 10 years ago — they didn't exist back then, but...) / そういうチャンネルは結構あるんですが (There are channels like that, but...) / やっていきたいなと思っているんですけれども (I want to keep going). Also used 20+ times as なんですけれども / という事なんですけれども.<br>
+    <strong>Note:</strong> N4. This episode is a textbook case for ～んですけれど mastery. In real speech, the れど part is rarely pronounced fully — it slurs into んですけど, んですけれど, or even just んです. The function is not "but"; it's "I'm giving you a reason and trailing off so you fill in the rest." Self-learners who learn only 〜から ("because") or 〜が ("but") sound clipped when they should sound open. The んですけれど form keeps the statement open — the conclusion is shared, not announced. Shadow the んですけれど at the end of explanation lines; this is the most common sentence-ending pattern in spoken Japanese that textbooks never call a grammar point.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">2. ～ようにしています / ように思っています（努力・習慣・意図）</span><br>
+    <strong>Meaning:</strong> "I make an effort to ~ / I think (I will) ~." Verb dictionary form + ように + しています / 思っています — describes a habitual practice, a deliberate effort, or an intention one is consciously maintaining.<br>
+    <strong>In Text:</strong> 難しいことは言わないように (I try not to say difficult things) / できるだけ簡単に — 毎日投稿できるようにしています (I try to post every day) / 日記みたいな感じでお送りしたいなと思っているので (I'd like to deliver it in a diary-like feel) / みんなさんのお役に立てればいいなという風に思っています (I think I hope it'll be helpful to you) / という風に思っています (I think of it this way).<br>
+    <strong>Note:</strong> N4 (form) / N3 (implication of sustained effort). This grammar appears five times in this episode alone. ようにしています signals "I have a rule I follow," which is exactly how the host describes everything he tries to do with this podcast — keep it simple, avoid English, post daily, be natural. Compare: 難しいことは言わません ("I don't say hard things" — flat statement) vs. 難しいことは言わないようにしています ("I try not to say hard things" — effort, not perfection). Self-learners who only know 〜つもりです ("I intend to") miss the nuance of sustained effort; those who pick up ようにしています sound like a person describing a practice, not a transcript.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">3. ～みたいな（例示・ふわっとした比較）</span><br>
+    <strong>Meaning:</strong> "Like / sort of ~." Noun + みたいな — soft comparison, less formal than 〜のよう. Used to describe something without committing to exact similarity.<br>
+    <strong>In Text:</strong> 日記みたいな感じですね (It's sort of like a diary) / みたいな、なんかそういうナレーションが (Like that, that kind of narration) / 今日は私は何を食べましたみたいなね (Like "what I ate today").<br>
+    <strong>Note:</strong> N4. Compare みたい (casual, spoken) vs 〜ようだ (written) vs 〜らしい (hearsay). What makes this episode a good shadowing target for みたいな is that the host uses it 2-3 times in succession at the end while explaining the show's format — 日記みたいな感じですね → とか 〜みたいな → みたいなね. This repetition within one thought is how real speakers use みたいな to feel out a comparison before committing. Self-learners who only know 〜ようだ from textbooks rarely pick up the softer みたいな form; those who do sound more natural in casual register immediately. Shadow the 日記みたいな感じ chain as a unit.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">4. ～ということで / ということで（〜で／だから）</span><br>
+    <strong>Meaning:</strong> "And so / for that reason / accordingly." ～という + こと + で — a flow word that signals "OK, based on what I just said, here we go." It's not strictly causal (だから) and it's not strictly sequential (それから); it's more like "with that understood, let's move forward."<br>
+    <strong>In Text:</strong> ということで始まりました (And so we began) / ということで早速、第1回目の収録をしていきたいなと思います (So right away, I'd like to get into today's first recording) / 英語で調べたりとか — そういうことで (Look things up in English — that kind of thing) / という風に思っています (I think in this way).<br>
+    <strong>Note:</strong> N3 (as flow word) / N2 (as discourse management). This is the glue word of unscripted Japanese, and this episode uses it more often than だから or それから combined. Self-learners hear ということで but don't recognize it as grammar — they hear it as a wordy filler. It isn't. It serves an actual speech-management function: "reset." After the 〜んですけれど explanation trail, ということで tilts the mic back toward action — "OK, that was the explanation; now let's go." Without it, self-learners who try to start a new topic sound abrupt. Shadow ということで as a unit; it's the most useful topic-transition tool in spoken Japanese that no one teaches as a grammar point.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">5. ～たり〜たりします（例示的列挙）</span><br>
+    <strong>Meaning:</strong> "Do things like ~ and ~." Verb た-form + り repeated, ending with します — lists representative actions rather than an exhaustive sequence. Like "among other things, I did A and B."<br>
+    <strong>In Text:</strong> 英語を勉強したりとか スペイン語を勉強したりとか (I studied English, and studied Spanish) / あの、YouTube とか あのPodcast、まあそういうのはまだ無かったですけれども (Um YouTube or, well, podcasts — well, those didn't exist yet) / リクエストいただければ それはまた嬉しいな (If you'd be willing to request).<br>
+    <strong>Note:</strong> N4. The repetition of たり in this episode is clunky in text but entirely natural in speech — the first 「英語を勉強したりとか」frames it as "studying English and such," then the second 「スペイン語を勉強したりとか」extends the list with the same rhythm. The とか after each たり is what keeps it casual — without it, たり sounds like a textbook list-pop example; with it, it's a spoken recount. Self-learners often overuse て-form chaining and underuse たり; those who mix both start sounding like narrators rather than actors. Shadow 「英語を勉強したりとか」and 「なんかそういうのは」 as a unit; they are the rhythm of self-reflection in spoken Japanese.
+</div>
+
+    </div>
+    
+   </main>
+    <footer>
+        <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // ==========================================
+        // 核心配置区：以后每次只需要修改这三个变量！
+        // ==========================================
+        const ytVideoId = "3nXxZJETn3k"; // 请替换为 EP4 的 YouTube 视频 ID
+        const pageId = "ejp-ep1"; 
+
+const subtitleData = [
+    { start: 3.12, end: 4.54, ja: "皆さんこんにちは", en: "Hello everyone" },
+    { start: 4.54, end: 6.85, ja: "EASY JAPANESE へようこそ", en: "Welcome to EASY JAPANESE" },
+    { start: 6.85, end: 8.12, ja: "この番組では", en: "On this show" },
+    { start: 8.12, end: 10.53, ja: "毎日の出来事や旬なトピックを", en: "everyday events and seasonal topics" },
+    { start: 10.53, end: 15.14, ja: "少しだけゆっくり簡単な日本語でお送りします", en: "we deliver in just a little bit slower, simpler Japanese" },
+    { start: 15.14, end: 17.24, ja: "もっと自然な会話を覚えたい", en: "If you want to learn more natural conversation" },
+    { start: 17.24, end: 20.84, ja: "でも映画やテレビでは難しすぎるという方に", en: "but find movies and TV too hard" },
+    { start: 20.84, end: 23.39, ja: "台本なし編集なしの", en: "unscripted, unedited" },
+    { start: 23.39, end: 26.34, ja: "より自然な日本語をお届けします", en: "we deliver more natural Japanese to you" },
+    { start: 26.34, end: 29.83, ja: "Podcast、YouTubeにチャンネルがありますので", en: "We have podcast and YouTube channels, so" },
+    { start: 29.83, end: 31.88, ja: "お好きな方でお楽しみください", en: "please enjoy on whichever you like" },
+    { start: 31.88, end: 38.81, ja: "では今日もよろしくお願いします", en: "Well then, thank you as always for being here today" },
+    { start: 38.81, end: 39.31, ja: "はい", en: "Yes" },
+    { start: 39.31, end: 40.62, ja: "ということで始まりました", en: "And so we begin" },
+    { start: 40.62, end: 42.32, ja: "EASY JAPANESE", en: "EASY JAPANESE" },
+    { start: 42.32, end: 47.02, ja: "記念すべき第1回目の収録になります", en: "This will be the memorable first recording" },
+    { start: 47.02, end: 55.50, ja: "今日は2021年1月26日火曜日ですね", en: "Today is Tuesday, January 26, 2021" },
+    { start: 55.50, end: 59.04, ja: "今日は結構天気が良いです", en: "It's quite nice out today" },
+    { start: 59.04, end: 62.61, ja: "冬なので結構寒いんですけれども", en: "It's winter so it's quite cold, but" },
+    { start: 62.61, end: 66.08, ja: "割とね、今日は春っぽい陽気で", en: "Surprisingly, today has a spring-like warmth" },
+    { start: 66.08, end: 71.27, ja: "気温も、そうですね5度ぐらいはあるんじゃないでしょうか", en: "Temperature-wise, let's see, it's probably around 5 degrees, I'd guess" },
+    { start: 71.27, end: 72.57, ja: "ということで", en: "So" },
+    { start: 72.57, end: 77.69, ja: "早速、第1回目の収録をしていきたいなと思います", en: "Right away, I'd like to get into today's first recording" },
+    { start: 77.69, end: 79.42, ja: "第1回目は", en: "For episode one" },
+    { start: 79.42, end: 86.16, ja: "なんでこういう収録を始めたのかというお話をしたいなと思っています", en: "I'd like to talk about why I started doing this kind of recording" },
+    { start: 86.16, end: 87.23, ja: "実はですね", en: "The thing is" },
+    { start: 87.23, end: 88.64, ja: "実はですね", en: "The thing is" },
+    { start: 88.64, end: 91.98, ja: "僕はこの EASY JAPANESE の他にも", en: "Apart from EASY JAPANESE," },
+    { start: 91.98, end: 95.39, ja: "Podcast とか YouTube とか", en: "I also have podcast and YouTube" },
+    { start: 95.39, end: 98.79, ja: "チャンネルを持っているんですけれども", en: "channels, but" },
+    { start: 98.79, end: 103.37, ja: "その中で聞いていただいたり観ていただいているお客さんの中で", en: "among the people listening and watching on those channels" },
+    { start: 103.37, end: 107.56, ja: "結構ね外国人の方が多かったんですよ", en: "there were actually quite a lot of foreigners" },
+    { start: 107.56, end: 112.78, ja: "全部基本的には日本語で発信をしているんですけれども", en: "I broadcast everything basically in Japanese, but" },
+    { start: 112.78, end: 116.22, ja: "聞いて頂いている方に結構外国の方が多くて", en: "a lot of my listeners are actually non-Japanese, and" },
+    { start: 116.22, end: 121.86, ja: "その中の方からコメントを頂いたりすることがあるんですけれども", en: "sometimes I get comments from some of those people, and" },
+    { start: 121.86, end: 125.75, ja: "「日本語の勉強のために聴いてます」と", en: "they say things like 'I listen to study Japanese'" },
+    { start: 125.75, end: 129.22, ja: "そういう方がいらっしゃいまして", en: "and there are folks like that, so" },
+    { start: 129.22, end: 132.49, ja: "僕の中では結構びっくりしたんですけれども", en: "to me, I was actually quite surprised" },
+    { start: 132.49, end: 136.01, ja: "あぁ、そういう方もいらっしゃるんだなということで", en: "like oh, there are people like that, so" },
+    { start: 136.01, end: 139.30, ja: "すごく勉強になりまして", en: "I learned a lot from that, and" },
+    { start: 139.30, end: 141.42, ja: "逆に、僕も", en: "Likewise, I too" },
+    { start: 141.42, end: 142.48, ja: "なんだろうな", en: "Let's see" },
+    { start: 142.48, end: 144.59, ja: "英語を勉強したりとか", en: "study English and" },
+    { start: 144.59, end: 149.30, ja: "スペイン語を勉強したりとかっていうことが昔あったんですけれども", en: "I studied Spanish and such a long time ago" },
+    { start: 149.30, end: 150.98, ja: "そういう時に", en: "Back then" },
+    { start: 150.98, end: 152.13, ja: "何だろうな", en: "What was it now" },
+    { start: 152.13, end: 153.35, ja: "YouTube とか", en: "YouTube and" },
+    { start: 153.35, end: 154.63, ja: "あのPodcast", er: "um, podcasts" },
+    { start: 154.63, end: 156.94, ja: "まあそういうのはまだ無かったですけれども", en: "well those didn't really exist yet" },
+    { start: 156.94, end: 159.96, ja: "10年ぐらい前ですかね", en: "about 10 years ago, I guess" },
+    { start: 159.96, end: 161.68, ja: "その頃はなかったんですけれども", en: "they didn't exist back then" },
+    { start: 161.68, end: 164.27, ja: "今でもですね", en: "But even now" },
+    { start: 164.27, end: 166.04, ja: "結構勉強したりとかなんか調べたりするときは", en: "when I study or research things" },
+    { start: 166.04, end: 168.90, ja: "英語で調べたりとか", en: "I look things up in English, or" },
+    { start: 168.90, end: 170.37, ja: "そういうことでリスニング力とか", en: "and so my listening skills and" },
+    { start: 170.37, end: 174.17, ja: "英語の力ですね", en: "my English ability, basically" },
+    { start: 174.17, end: 175.98, ja: "スペイン語の力とかを", en: "my Spanish ability" },
+    { start: 175.98, end: 177.45, ja: "維持していく", en: "to maintain them" },
+    { start: 177.45, end: 178.99, ja: "維持するっていうのは", en: "to maintain them means" },
+    { start: 178.99, end: 180.65, ja: "まあ、なんだろうな", en: "well, what was it" },
+    { start: 180.65, end: 182.43, ja: "キープしていくというかね", en: "keeping them up, or" },
+    { start: 182.43, end: 184.98, ja: "そのまま、こう", en: "just keeping them as they are" },
+    { start: 184.98, end: 188.54, ja: "難しいですねこれ", en: "that's a tricky one" },
+    { start: 188.54, end: 192.14, ja: "あのそういうちょっと難しい言葉が出てきたら", en: "When a slightly tricky word like that comes up" },
+    { start: 192.14, end: 194.16, ja: "簡単な言葉に置き換えて", en: "I substitute it with a simpler word" },
+    { start: 194.16, end: 199.43, ja: "日本語で基本的にはやっていきたいなと思っているんですけれども", en: "and generally I want to keep going in Japanese" },
+    { start: 199.43, end: 203.26, ja: "まあ今何と言っても初めての収録になるので", en: "Well anyway, it's the first recording after all" },
+    { start: 203.26, end: 205.79, ja: "ちょっとダメなところがあったらね", en: "if there are any bad parts" },
+    { start: 205.79, end: 210.66, ja: "コメントとかいただけたらいいかなという風に思っているんですけれども", en: "I'd be happy if you'd leave a comment" },
+    { start: 210.66, end: 212.35, ja: "そうですね", en: "That's right" },
+    { start: 212.35, end: 216.15, ja: "まあ自分の YouTube、Podcast を", en: "Well, my own YouTube and podcast channels" },
+    { start: 216.15, end: 219.24, ja: "日本語の勉強のために聴いてるよっていう方が", en: "there were actually quite a lot of people listening to study Japanese, and" },
+    { start: 219.24, end: 221.49, ja: "結構いらっしゃったので", en: "there were actually quite a lot, so" },
+    { start: 221.49, end: 222.20, ja: "逆にね", en: "Kind of the reverse of that," },
+    { start: 222.20, end: 226.63, ja: "こういう専用のそういうチャンネルをつくってみてはどうですかという事で", en: "They said why don't you try making a dedicated channel for that, and" },
+    { start: 226.63, end: 231.60, ja: "始めたのがこの EASY JAPANESE というチャンネルになります", en: "that's what started this EASY JAPANESE channel" },
+    { start: 231.60, end: 237.12, ja: "結構あの日本語の言葉の表現とか", en: "There are quite a few channels that teach Japanese" },
+    { start: 237.12, end: 239.99, ja: "フレーズを教えたりとか", en: "words and phrases directly, or" },
+    { start: 239.99, end: 243.68, ja: "英語で喋って日本語で喋ってみたいな", en: "speak in English then try it in Japanese, like that" },
+    { start: 243.68, end: 246.36, ja: "そういうチャンネルは結構あるんですが", en: "channels like that, but" },
+    { start: 246.36, end: 247.47, ja: "全部日本語", en: "All Japanese" },
+    { start: 247.47, end: 250.16, ja: "基本的には全部日本語ですね", en: "Basically all Japanese" },
+    { start: 250.16, end: 252.75, ja: "で完結する", en: "and self-contained" },
+    { start: 252.75, end: 256.27, ja: "完結するというのは最初から最後までずっと日本語", en: "Self-contained means Japanese from start to finish" },
+    { start: 256.27, end: 259.38, ja: "英語を使わないっていうことなんですけれども", en: "Not using English" },
+    { start: 259.38, end: 264.49, ja: "そういうチャンネルが意外とないなと思いまして", en: "I realized there aren't many channels like that" },
+    { start: 264.49, end: 269.06, ja: "普段のねこういう日常会話とか", en: "Everyday conversational speech, like this" },
+    { start: 269.06, end: 270.84, ja: "あとはこうやって喋る時に", en: "and also when just talking like this" },
+    { start: 270.84, end: 274.24, ja: "「えーっと」とか「うーん」とか「あー」とか", en: "Words like 'well,' 'let's see,' 'er'" },
+    { start: 274.24, end: 277.12, ja: "そういう、そういうことですよね", en: "That kind of thing, you know" },
+    { start: 277.12, end: 278.36, ja: "つなぎのフレーズ", en: "connecting phrases" },
+    { start: 278.36, end: 280.81, ja: "英語で言うところの Well とか", en: "What would be 'well' in English" },
+    { start: 280.81, end: 282.44, ja: "Let me see とか", en: "or 'let me see'" },
+    { start: 282.44, end: 284.59, ja: "そういう事になるんですけれども", en: "That's what they become" },
+    { start: 284.59, end: 286.72, ja: "そういう表現も意外と", en: "Those kinds of expressions are also surprisingly" },
+    { start: 286.72, end: 287.58, ja: "何だろうな", en: "What was it" },
+    { start: 287.58, end: 288.38, ja: "何だろうな", en: "What was it" },
+    { start: 288.38, end: 291.09, ja: "教科書とかだと省略されてしまって", en: "they get left out of textbooks" },
+    { start: 291.09, end: 293.26, ja: "すごくきれいな人が", en: "so you get a really clean voice" },
+    { start: 293.26, end: 294.19, ja: "なんて言うんでしょう", en: "how should I put it" },
+    { start: 294.19, end: 297.65, ja: "きれいというのは声が、喋り方がきれいな人が", en: "a clean voice and speaking style, like" },
+    { start: 297.65, end: 298.38, ja: "例えば", en: "for example" },
+    { start: 298.38, end: 301.45, ja: "「おはようございます、田中先生」", en: "'Good morning, Tanaka-sensei'" },
+    { start: 301.45, end: 305.55, ja: "みたいな、なんかそういうナレーションがすごく固いというか", en: "The kind of narration that's really stiff" },
+    { start: 305.55, end: 309.83, ja: "そういうのばっかりだなという風に思うので", en: "I feel like that's all you get" },
+    { start: 309.83, end: 313.37, ja: "結構日本語の勉強をされている方とか", en: "For people who've been studying Japanese" },
+    { start: 313.37, end: 318.45, ja: "より自然でナチュラルな表現をされたい方っていうのは", en: "who want to learn more natural, natural expressions" },
+    { start: 318.45, end: 319.67, ja: "こうしてね", en: "they do things like this:" },
+    { start: 319.67, end: 323.03, ja: "YouTube とか Podcast を聴いている方が", en: "they listen to YouTube and podcasts" },
+    { start: 323.03, end: 326.65, ja: "多いんじゃないかなという風に思います", en: "I think there are quite a lot of them, actually" },
+    { start: 326.65, end: 329.17, ja: "僕も実際に YouTube とか", en: "I also actually watch YouTube, and" },
+    { start: 329.17, end: 331.03, ja: "映画とか", en: "movies, and" },
+    { start: 331.03, end: 332.31, ja: "まあテレビとかね", en: "TV too" },
+    { start: 332.31, end: 336.16, ja: "を、スペイン語とか英語とかで聴くことによって", en: "in Spanish and English" },
+    { start: 336.16, end: 339.02, ja: "その言葉の独特な表現とか", en: "the unique expressions of that language, and" },
+    { start: 339.02, end: 340.91, ja: "あとはスラングとか", en: "and the slang" },
+    { start: 340.91, end: 344.62, ja: "そういうのをね覚えたりしてたってことがあるので", en: "I've learned things like that by listening" },
+    { start: 344.62, end: 345.34, ja: "こうやってね", en: "So like this" },
+    { start: 345.34, end: 348.84, ja: "「EASY JAPANESE 簡単な日本語」ということで", en: "With 'EASY JAPANESE, simple Japanese'" },
+    { start: 348.84, end: 350.25, ja: "発信することで", en: "I'm putting it out there" },
+    { start: 350.25, end: 355.80, ja: "皆さんのお役に立てればいいなという風に思っています", en: "hopefully it'll be helpful to you" },
+    { start: 355.80, end: 359.67, ja: "あんまりね難しいことは言わないように", en: "I try not to say anything too difficult" },
+    { start: 359.67, end: 361.21, ja: "できるだけ簡単に", en: "Make it as simple as possible" },
+    { start: 361.21, end: 366.23, ja: "いつもことを紹介したいなという風に思っています", en: "I want to introduce things as I always do" },
+    { start: 366.23, end: 369.83, ja: "まあ本当に初めてのことになるので", en: "Well, this is truly my first time, so" },
+    { start: 369.83, end: 373.47, ja: "どんなかたちでこれが進んでいくのかわかりませんが", en: "I don't know how this will go forward, but" },
+    { start: 373.47, end: 375.42, ja: "できるだけ毎日", en: "as much as possible every day" },
+    { start: 375.42, end: 376.44, ja: "繰り返してね", en: "repeating it" },
+    { start: 376.44, end: 377.36, ja: "繰り返してね", en: "repeating it" },
+    { start: 377.36, end: 383.07, ja: "毎日毎日投稿できればいいなという風に考えています", en: "I'd like to post every single day" },
+    { start: 383.07, end: 387.55, ja: "このチャンネルは YouTube と Podcast でね", en: "This channel is on YouTube and podcast" },
+    { start: 387.55, end: 389.43, ja: "配信をしようと思っているので", en: "I'm planning to distribute on both" },
+    { start: 389.43, end: 393.49, ja: "それぞれフォローとかねチャンネル登録をしていただいて", en: "so please follow and subscribe on each" },
+    { start: 393.49, end: 396.93, ja: "あとはまあ YouTube の方ではコメントとかもできるので", en: "And on YouTube you can also leave comments, so" },
+    { start: 396.93, end: 400.65, ja: "そこで質問だとか意見とかね", en: "questions, opinions" },
+    { start: 400.65, end: 402.65, ja: "リクエストいただければ", en: "if you'd be willing to request them" },
+    { start: 402.65, end: 407.96, ja: "それはまた嬉しいなという風に思っています", en: "that would make me happy" },
+    { start: 407.96, end: 409.39, ja: "今日はですね", en: "Today" },
+    { start: 409.39, end: 410.21, ja: "今から", en: "I'm just about to" },
+    { start: 410.21, end: 414.87, ja: "ご飯を作ろうかなと思っているんですけれども", en: "make some food" },
+    { start: 414.87, end: 418.12, ja: "野菜がたくさんあるので", en: "I have lots of vegetables" },
+    { start: 418.12, end: 421.93, ja: "味噌汁とご飯をつくって", en: "I'll make miso soup and rice" },
+    { start: 421.93, end: 425.93, ja: "日本の食事をしようかなと思っています", en: "have a Japanese meal" },
+    { start: 425.93, end: 429.82, ja: "皆さんは今日は何を食べましたか？", en: "What did everyone eat today?" },
+    { start: 429.82, end: 433.09, ja: "もしくはこれから何を食べますか？", en: "Or what are you going to eat next?" },
+    { start: 433.09, end: 437.10, ja: "簡単な日本語でもいいので", en: "Even simple Japanese is fine" },
+    { start: 437.10, end: 439.81, ja: "今日は私は何を食べましたみたいなね", en: "like what I ate today" },
+    { start: 439.81, end: 444.14, ja: "ことを練習できればいいかなという風に思っていますけれども", en: "I hope you can practice that" },
+    { start: 444.14, end: 445.14, ja: "僕は", en: "As for me" },
+    { start: 445.14, end: 446.47, ja: "今日は今から", en: "today I'm about to" },
+    { start: 446.47, end: 451.43, ja: "お昼ごはんに味噌汁とご飯", en: "make miso soup and rice for lunch" },
+    { start: 451.43, end: 453.54, ja: "あとは焼き魚ですね", en: "and grilled fish too" },
+    { start: 453.54, end: 458.47, ja: "を作って食べようかなと思っています", en: "I think I'll make and eat" },
+    { start: 458.47, end: 461.49, ja: "まあ第一回目の放送なので", en: "Well, it's the first episode, so" },
+    { start: 461.49, end: 462.71, ja: "ちょっと短めでね", en: "keeping it a little short" },
+    { start: 462.71, end: 464.78, ja: "こういうことをやりますよという形で", en: "in the form of 'this is what we do here'" },
+    { start: 464.78, end: 466.62, ja: "お送りするんですけれども", en: "I'm broadcasting" },
+    { start: 466.62, end: 470.37, ja: "基本的には日記みたいな感じですね", en: "basically like a diary" },
+    { start: 470.37, end: 472.70, ja: "でお送りしたいなと思っているので", en: "that's what I'd like to put out" },
+    { start: 472.70, end: 477.27, ja: "皆さん、これからもどうぞよろしくお願い致します", en: "Everyone, thank you again from here on" },
+    { start: 477.27, end: 479.83, ja: "今日も最後まで聴いていただいて", en: "Thank you for listening to the end today" },
+    { start: 479.83, end: 481.99, ja: "ありがとうございました", en: "as well" },
+    { start: 481.99, end: 484.19, ja: "この番組は毎日の出来事や旬なトピックを", en: "This show broadcasts everyday events and seasonal topics" },
+    { start: 484.19, end: 488.51, ja: "少しだけゆっくり簡単な日本語でお送りしています", en: "in just a little bit slower, simpler Japanese" },
+    { start: 488.51, end: 491.55, ja: "Podcast、YouTube で配信していますので", en: "We distribute on podcast and YouTube" },
+    { start: 491.55, end: 495.68, ja: "フォロー、チャンネル登録をよろしくお願い致します", en: "Please follow and subscribe" },
+    { start: 495.68, end: 496.69, ja: "それではまた", en: "Well then, see you again" },
+    { start: 496.69, end: 499.24, ja: "次回の EASY JAPANESE でお会いしましょう", en: "Let's meet again at the next EASY JAPANESE" },
+    { start: 499.24, end: 501.36, ja: "ではでは", en: "Well then, bye" }
+];
+
+        // ==========================================
+
+      
+      let currentLineIndex = -1;
+        let loopMode = 'none';
+        let player;
+        
+        // 录音相关全局变量
+        let mediaRecorder;
+        let audioChunks = [];
+        let userAudioBlobs = {}; // 存储每句的录音数据
+        let currentRecordingIndex = -1;
+
+        // 加载 YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 'playsinline': 1, 'controls': 1 },
+                events: { 'onReady': onPlayerReady }
+            });
+        }
+
+        function onPlayerReady(event) {
+            renderSubtitles();
+            setInterval(monitorPlayback, 100);
+            
+            const lastRead = localStorage.getItem(`last-read-${pageId}`);
+            if (lastRead !== null) {
+                const targetLine = document.getElementById(`line-${lastRead}`);
+                if (targetLine) {
+                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetLine.classList.add('active');
+                }
+            }
+        }
+
+        function renderSubtitles() {
+            const container = document.getElementById('subtitle-container');
+            subtitleData.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = 'shadow-line';
+                div.id = `line-${index}`;
+                
+                // HTML 结构：左侧文本，右侧按钮组
+                div.innerHTML = `
+                    <div class="text-content">
+                        <div class="ja-text">${line.ja}</div>
+                        <div class="en-text" id="en-${index}">${line.en}</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn record-btn" id="record-btn-${index}" onclick="toggleRecord(event, ${index})" title="Hold or Click to Record">🎙️</button>
+                        <button class="action-btn play-btn" id="play-btn-${index}" onclick="playUserRecord(event, ${index})" style="display:none;" title="Play your recording">▶️</button>
+                    </div>
+                `;
+                
+                div.onclick = (e) => {
+                    // 如果点击的是按钮，不触发视频跳转
+                    if (e.target.closest('.action-btn')) return;
+                    currentLineIndex = index;
+                    player.seekTo(line.start, true);
+                    player.playVideo();
+                    localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                // 双击：紧急暂停 (极客新增)
+                div.ondblclick = (e) => {
+                    if (e.target.closest('.action-btn')) return;
+                    player.pauseVideo();
+                };
+                container.appendChild(div);
+            });
+        }
+      
+        // 全局控制字幕显示/隐藏逻辑
+        function toggleSubtitles(lang) {
+            const container = document.getElementById('subtitle-container');
+            const checkbox = document.getElementById(`toggle-${lang}`);
+            
+            if (checkbox.checked) {
+                container.classList.remove(`hide-${lang}`);
+            } else {
+                container.classList.add(`hide-${lang}`);
+            }
+        }   
+        // 功能 2：录音系统逻辑
+        async function toggleRecord(event, index) {
+            event.stopPropagation();
+            const recordBtn = document.getElementById(`record-btn-${index}`);
+            const playBtn = document.getElementById(`play-btn-${index}`);
+
+            if (currentRecordingIndex === index) {
+                // 停止录音
+                mediaRecorder.stop();
+                recordBtn.classList.remove('recording');
+                currentRecordingIndex = -1;
+                return;
+            }
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    userAudioBlobs[index] = URL.createObjectURL(audioBlob);
+                    playBtn.style.display = 'block'; // 显示播放按钮
+                    playBtn.classList.add('has-audio');
+                    
+                    // 释放麦克风轨道资源
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+                currentRecordingIndex = index;
+                recordBtn.classList.add('recording');
+                
+                // 自动暂停原声音频，以免录进去
+                player.pauseVideo();
+
+            } catch (err) {
+                alert("Permission denied or microphone not found. Please allow microphone access.");
+                console.error(err);
+            }
+        }
+
+        // 功能 3：播放用户的录音
+        function playUserRecord(event, index) {
+            event.stopPropagation();
+            if (userAudioBlobs[index]) {
+                player.pauseVideo(); // 暂停 YouTube
+                const audio = new Audio(userAudioBlobs[index]);
+                audio.play();
+            }
+        }
+
+        function monitorPlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); 
+
+            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+            
+            if (activeIndex !== -1) {
+                currentLineIndex = activeIndex;
+                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                if (activeElement) {
+                    activeElement.classList.add('active');
+                    if (playerState === 1) {
+                        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

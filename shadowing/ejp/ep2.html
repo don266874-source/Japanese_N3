@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================================================= -->
+    <!-- 1. [ 核心配置区 ]：SEO 流量拦截网（每期必改） -->
+    <!-- ======================================================= -->
+    <title>Ep2: 僕が住んでいる町をご紹介します | easy Japanese Podcast for beginners Shadowing Tool & Transcript</title>
+    <meta name="description" content="Interactive transcript and single-line looping tool for EASY JAPANESE Japanese Podcast for beginners Episode 2 (僕が住んでいる町をご紹介します). Master duration counters and practice perfect pronunciation.">
+    <link rel="canonical" href="https://shadowgeek.net/shadowing/ejp/ep2.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="The Shadowing Geek">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://shadowgeek.net/shadowing/ejp/ep2.html">
+    <meta property="og:title" content="Ep2: 僕が住んでいる町をご紹介します | easy Japanese Podcast for beginners Shadowing Tool & Transcript">
+    <meta property="og:description" content="Interactive transcript and single-line looping tool for  EASY Japanese Podcast for beginners Episode 2 (僕が住んでいる町をご紹介します). Master duration counters and practice perfect pronunciation.">
+    <meta property="og:image" content="https://shadowgeek.net/images/og-default.webp">
+    <meta property="article:published_time" content="2026-07-11T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-07-11T00:00:00+08:00">
+    <meta property="article:author" content="Felix">
+    <meta property="article:section" content="Shadowing Lab">
+    <meta property="article:tag" content="Teppei">
+    <meta property="article:tag" content="shadowing">
+    <meta property="article:tag" content="time expressions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ep2: 僕が住んでいる町をご紹介します | EASY Japanese Podcast for beginners Shadowing Tool">
+    <meta name="twitter:description" content="Interactive transcript and single-line looping tool for EASY Japanese Podcast for beginners Episode 2. 僕が住んでいる町をご紹介します.">
+    <meta name="twitter:image" content="https://shadowgeek.net/images/og-default.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ep2: 僕が住んでいる町をご紹介します |  EASY Japanese Podcast for beginners Shadowing Tool & Transcript",
+      "description": "Interactive transcript and single-line looping tool for  EASY Japanese Podcast for beginners Episode 2 (僕が住んでいる町をご紹介します). Master duration counters and practice perfect pronunciation.",
+      "image": "https://shadowgeek.net/images/og-default.webp",
+      "datePublished": "2026-07-11",
+      "dateModified": "2026-07-11",
+      "author": {"@type": "Person", "name": "Felix", "url": "https://shadowgeek.net/about.html"},
+      "publisher": {"@type": "Organization", "name": "The Shadowing Geek", "logo": {"@type": "ImageObject", "url": "https://shadowgeek.net/images/og-default.webp"}},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://shadowgeek.net/shadowing/ejp/ep2.html"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shadowgeek.net/"},
+        {"@type": "ListItem", "position": 2, "name": "Shadowing Lab", "item": "https://shadowgeek.net/shadowing/"},
+        {"@type": "ListItem", "position": 3, "name": "Ep1: Calling an Izakaya to Make a Reservation", "item": "https://shadowgeek.net/shadowing/ejp/ep2.html"}
+      ]
+    }
+    </script>
+<style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #111; margin-bottom: 5px; font-size: 1.8rem; letter-spacing: -0.5px;}
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 0; margin-bottom: 20px;}
+        
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; transition: background 0.2s;}
+        nav a:hover { background: #f0f6ff; text-decoration: none; }
+        nav a.current { background: #f0f6ff; color: #111; }
+        
+        .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
+        
+        .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
+        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        
+        /* 改造跟读行布局：支持左右分栏 */
+        .shadow-line { display: flex; justify-content: space-between; align-items: center; padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        .shadow-line:hover { background: #f6f8fa; }
+        .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+        
+        .text-content { flex-grow: 1; padding-right: 15px; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; transition: opacity 0.3s; }
+        .en-text.hidden { opacity: 0; user-select: none; }
+        
+        /* 交互按钮组 */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+
+        .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
+        .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
+        .grammar-item { margin-bottom: 15px; }
+        .grammar-title { color: #0066cc; font-weight: bold; }
+        footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+    
+        /* 录音隐私提示条 */
+        .privacy-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #f6f8fa;
+            color: #57606a;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px dashed #d0d7de;
+        }
+        .privacy-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #57606a;
+        }
+        /* 交互操作提示条 */
+        .interaction-hint {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #034694;
+            background-color: #f0f6ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px dashed #b6d4fe;
+            font-weight: 500;
+        }
+    /* 全局字幕控制栏 */
+        .global-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #f9fbfc;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eaeaea;
+            font-size: 0.75rem;
+        }
+        .control-label {
+            font-weight: bold;
+            color: #333;
+        }
+        .toggle-group {
+            display: flex;
+            gap: 15px;
+        }
+        .toggle-group label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            user-select: none;
+        }
+
+        /* 全局隐藏逻辑（通过父级 Class 控制） */
+        #subtitle-container.hide-ja .ja-text { display: none; }
+        #subtitle-container.hide-en .en-text { display: none; }
+        
+        /* 优化后的操作按钮（去掉惊悚眼球） */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(207, 34, 46, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 全站闭环 Header 导航系统 -->
+    <header>
+        <p class="logo" style="color:#111;margin-bottom:5px;font-size:1.8rem;letter-spacing:-0.5px;font-weight:bold;">The Shadowing Geek</p>
+        <p class="subtitle">A fellow learner's interactive tools for shadowing real-world audio, decoding native speed, and mastering JLPT grammar.</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shadowing/">🎧 Shadowing Lab</a>
+            <a href="/posts/">📚 Grammar Notes</a>
+            <a href="/about.html">About Me</a>
+        </nav>
+    </header>
+    
+   <main>
+    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
+    <h1>Easy Japanese Podcast - Ep2: 僕が住んでいる町をご紹介します</h1>
+    
+    <!-- 注入新灵魂的 Learner's Note -->
+    <div class="learners-note">
+        <strong>Felix's Learner Note:</strong>
+
+<p>The grammar skeleton is deliberately simple, but the density of real-speech cadence makes it unusually productive for shadowing. The host uses 〜に住んでいます as his anchor throughout — he asks it, answers it, rephrases it, and then pivots from it. He uses 〜ぐらい five times to soften numbers without sounding vague. He uses 〜とか four times to describe activities with casual approximation. He defines the 中山道 with 〜というのは because the concept is foreign to his audience. And he finishes a six-line sentence chain with 〜ながら stacking two simultaneous actions together — an N4 structure that even N3 learners hesitate on. None of these are advanced; none of them are the kind of thing self-learners can skip. They are the base layer of how Japanese speakers actually describe where they live.</p>
+<p>There are three things to shadow-pull. First, the 「どこ / どんな / どのぐらい」 interrogation trio: どのぐらい寒いか (how cold), どこが魅力的 (what appeals), どんな場所 (what kind of place) — three interrogatives that frame every place-description in Japanese. Second, the tourism-before-and-after pivot: 「結構…たくさん来られた」「ほとんど無くなってしまった」 — the same place described with and without foreigners, the host's tone shift the only thing marking the difference; no new vocabulary required. Third, the unscripted repair segment 「なんて言うんだろう、何て言うんだろう」 — the host stumbling over how to describe his own podcast format mid-sentence, a 30-second hesitation chain that is pure gold for learners who need to see how someone handles not finding the right word, live, without a script.</p>
+
+
+</div>   
+ 
+
+    <div class="audio-player">
+        <div class="yt-container">
+            <div id="youtube-player"></div>
+    </div>
+
+ <div class="global-controls">
+            <span class="control-label">Display:</span>
+            <div class="toggle-group">
+                <label>
+                    <input type="checkbox" id="toggle-ja" checked onchange="toggleSubtitles('ja')">
+                    Japanese
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-en" checked onchange="toggleSubtitles('en')">
+                    English
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-badge">
+            <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            <span><strong>Privacy First:</strong> Your mic audio is processed locally on your device. We never upload or save your voice. Recordings vanish when you close the tab.</span>
+     </div>
+    <div class="interaction-hint">
+        💡 <strong>Pro Tip:</strong> Click any sentence to jump and play. Double-click to pause the audio.
+    </div>
+
+    <div id="subtitle-container"></div>
+
+
+
+    <div class="grammar-section">
+        <h2>📚 Grammar Breakdown</h2>
+        <!-- ==================== HTML 语法解析区域 ==================== -->
+<div class="grammar-item">
+    <span class="grammar-title">1. ～に住んでいます（居住の動詞）</span><br>
+    <strong>Meaning:</strong> "I live in ~." Place + に + 住んでいます — the verb 住む (to live/reside) in te-iru form for ongoing state.<br>
+    <strong>In Text:</j> 長野県に住んでいます (I live in Nagano prefecture); 道沿いの街に住んでいます (I live in a town along the road); どんな所に住んでいるんでしょうか (What kind of place do you live in?); 僕が住んでいる場所 (the place I live); どこに住んでいますか (where do you live?). The structure appears 11 times in this episode — it is the axis around which the entire episode rotates.<br>
+    <strong>Note:</strong> N5. Self-learners often say 「東京にいます」 ("I'm in Tokyo") when they want to talk about where they live — but that tells the listener you are physically in Tokyo right now, not that your life is there. 住んでいます is the only correct verb for residence. A common mistake is using the particle で instead of に: 「東京で住んでいます」 is wrong; the location of residence always takes に. Even N3 learners sometimes slip on this when speaking fast. Shadow 〜に住んでいます as a fixed block; the に must be automatic, not chosen on the fly.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">2. ～ぐらい（おおよその数量）</span><br>
+    <strong>Meaning:</strong> "About / approximately." Number + ぐらい — softens an exact figure into an estimate. Softer than 约 / ほど and more common in spoken Japanese.<br>
+    <strong>In Text:</strong> 4度ぐらいですね (around 4 degrees); 80カ国ぐらいですかね (about 80 countries); どれぐらいの長さをしたらいいのか (how long should it be?); 数年前までであれば (up until a few years ago); 大体80カ国ぐらい (roughly 80 countries).<br>
+    <strong>Note:</strong> N4. The trap with ぐらい is placement — it follows the number/word it modifies, never precedes it. 「4度ぐらい」 correct; 「ぐらい4度」 wrong. Self-learners also tend to use ぐらい only with numbers; but in this episode, ぐらい also modifies temporal phrases: どれぐらいの長さ (how much length / how long). Compare: どのぐらい (how much — same word, different kanji), どれぐらい (which-gurai / how much when all options are present). The host uses どのぐらい and どれぐらい interchangeably — in normal speech they are functionally identical. Shadow 「4度ぐらい」, 「80カ国ぐらい」, and 「どれぐらい」 as a single unit; if you hesitate on ぐrai in real conversation, the sentence stalls.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">3. ～とか（例示的並列）</span><br>
+    <strong>Meaning:</strong> "Things like ~ / ~ and such." Noun or verb short form + とか + noun/verb + とか — lists items casually as representative examples, not an exhaustive list.<br>
+    <strong>In Text:</strong> スキーとかスノーボードを楽しむ方がたくさん来られる (people come to enjoy things like skiing and snowboarding); 登山とかキャンプとか (climbing and camping and such); 地元の学生さんとかお年寄りとか (local students, elderly people and so on); 山を見たりとか (looking at the mountains and so on); 映画をダウンロードしたりとか (downloading movies and such).<br>
+    <strong>Note:</strong> N4. とか is softer than や (which is also "and/but") and more casual than など ("et cetera"). It appears in one of two patterns: 「AとかBとか」 (noun listing) or 「〜とか〜とかする」 (verb listing). Both are casual spoken register. The difference from たり is subtle: たり implies "among other things I did A and B," while とか implies "A, B, that's the sort of thing." Self-learners who know たり from textbooks often overuse it and neglect とか. This episode uses both — shadow them side by side (スキーとかスノーボード vs 映画をダウンロードしたりとか) to feel the register difference: とか is the speaker naming examples; たり is the speaker listing actions.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">4. ～というのは（定義・話題の取り立て）</span><br>
+    <strong>Meaning:</strong> "The thing called ~ / the one known as ~." Noun + という + は — introduces a new concept, defines it, or lifts a topic into focus for explanation.<br>
+    <strong>In Text:</strong> 「中山道」という昔の道 (an old road called the Nakasendo); 「中山道」という道沿いの街 (a town along a road called the Nakasendo); 分析が集まってきて (analytics come in) — not present, but the pattern is visible in 「分析が集まってきて」 where the explanatory んです／という pattern is the working core. Also implicit in how the host prefaces each new concept: 「…ということで」「…ということです」.<br>
+    <strong>Note:</strong> N4 (as a discourse tool). Self-learners encounter という in textbooks as a quotation marker ("he said that…") and never fully internalize its definition role. In speech, というのは is the speaker's way of saying "let me explain this to you" — it flags that a definition is coming. The host uses it in this episode to explain the Nakasendo to listeners who have never heard of it. Without it, the sentence becomes 「中山道の昔の道」 which sounds like the listener already knows the word. With というのは, the speaker is saying "you may not know this word, let me define it." Shadow 「〜という道」 and 「〜という所」 as a fixed prefix before any unfamiliar concept you introduce.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">5. ～ながら（同時動作）</span><br>
+    <strong>Meaning:</strong> "While doing ~." Verb stem (連用形) + ながら — marks two actions happening simultaneously in the same subject. Always the SAME subject for both clauses.<br>
+    <strong>In Text:</strong> 考えながら頭を使いながらお話をしているので (I'm talking while thinking and while using my head); このPodcastも何回か投稿をしていくと (after posting a few times) — not the canonical form, but see 「今日も最後まで聴いていただいてありがとうございました」 for parallel action in polite form. Also implicitly visible: 「散歩したりとかしたいな」.<br>
+    <strong>Note:</strong> N4. ながら has two pros: it sounds natural in writing and casual speech; it traps self-learners in two ways. First, the subject restriction — both clauses must share the same speaker/agent. 「雨が降りながら散歩しました」 is WRONG (the rain doesn't walk). Second, the stem form — 食べながら (while eating), not 食べてから. The host's 「考えながら頭を使いながら」 is a double-ながら chain: two simultaneous adverbial actions feeding into the same main verb. Native speakers do this without thinking. Self-learners who have to pause at ながら to "form it correctly" lose the flow of the sentence. Shadow all while-doing actions as 〜ながら stem-form; the hesitation costs more than the grammar itself.
+</div>
+
+    </div>
+    
+   </main>
+    <footer>
+        <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // ==========================================
+        // 核心配置区：以后每次只需要修改这三个变量！
+        // ==========================================
+        const ytVideoId = "ZGvwLYZ11B8"; // 请替换为 EP4 的 YouTube 视频 ID
+        const pageId = "ejp-ep2"; 
+
+const subtitleData = [
+    { start: 1.33, end: 2.39, ja: "みなさんこんにちは", en: "Hello everyone" },
+    { start: 2.39, end: 4.02, ja: "EASY JAPANESE へようこそ", en: "Welcome to EASY JAPANESE" },
+    { start: 4.02, end: 5.79, ja: "この番組では", en: "On this show" },
+    { start: 5.89, end: 8.89, ja: "毎日の出来事や、旬なトピックを", en: "everyday events and seasonal topics" },
+    { start: 8.89, end: 12.45, ja: "少しだけゆっくり、簡単な日本語でお送りします", en: "we deliver in just a little bit slower, simpler Japanese" },
+    { start: 12.65, end: 15.52, ja: "もっと自然な会話を覚えたい", en: "If you want to learn more natural conversation" },
+    { start: 15.35, end: 19.25, ja: "でも、映画やテレビでは難しすぎるという方に", en: "but find movies and TV too hard" },
+    { start: 19.45, end: 21.62, ja: "台本なし、編集なしの", en: "unscripted, unedited" },
+    { start: 21.62, end: 24.76, ja: "より自然な日本語をお届けします", en: "we deliver more natural Japanese to you" },
+    { start: 24.76, end: 27.99, ja: "Podcast、YouTube にチャンネルがありますので", en: "We have podcast and YouTube channels, so" },
+    { start: 27.99, end: 29.90, ja: "お好きな方でお楽しみください", en: "please enjoy whichever one you prefer" },
+    { start: 30.75, end: 33.54, ja: "では今日もよろしくお願いします", en: "Well then, thank you as always for today" },
+    { start: 37.12, end: 37.62, ja: "はい", en: "Yes" },
+    { start: 37.62, end: 43.04, ja: "ということで、今日は1月27日水曜日です", en: "And so — today is Wednesday, January 27th" },
+    { start: 43.96, end: 46.77, ja: "天気はおおむね晴れ", en: "The weather is mostly sunny" },
+    { start: 46.77, end: 48.60, ja: "朝はちょっと曇ってたんですが", en: "It was a bit cloudy this morning, but" },
+    { start: 48.60, end: 49.64, ja: "徐々に晴れてきて", en: "it cleared up gradually" },
+    { start: 49.64, end: 51.87, ja: "今日は暖かくなりそうです", en: "and today it looks like it'll be warm" },
+    { start: 52.61, end: 54.05, ja: "まあ、暖かいといってもですね", en: "Well, when I say warm…" },
+    { start: 54.05, end: 57.22, ja: "今気温は大体4度ぐらいですね", en: "Right now the temperature is around four degrees" },
+    { start: 58.34, end: 61.01, ja: "いつもに比べれば暖かいんですけれども", en: "It's warm compared to usual, but" },
+    { start: 61.91, end: 67.10, ja: "冬なので、それなりには寒いかなっていうところですね", en: "it is winter after all, so it's still pretty cold, you know" },
+    { start: 67.84, end: 72.06, ja: "昨日、第1回目の投稿をしたんですけれども", en: "Yesterday I posted episode one, and" },
+    { start: 72.82, end: 76.66, ja: "ちょっとね、知り合いの方からメッセージをいただいたりして", en: "I got some messages from friends and people I know" },
+    { start: 76.66, end: 80.46, ja: "さっそく聞いたよーとかってね、言っていただいたんですけれども", en: "telling me they went and listened right away" },
+    { start: 81.14, end: 85.51, ja: "少ししゃべるのが速いんじゃないかなということを言われたので", en: "A few people said I might be talking a bit too fast, so" },
+    { start: 85.51, end: 89.07, ja: "出来るだけもう少しゆっくり喋って", en: "I'll try to speak a little bit more slowly and" },
+    { start: 89.07, end: 92.53, ja: "聞き取りやすいようにしたいなと思っています", en: "make it easier for you to follow along" },
+    { start: 92.53, end: 94.80, ja: "このあたりは聞いてる方の", en: "This sort of thing depends on the listener's" },
+    { start: 94.80, end: 98.63, ja: "日本語のレベルにもよるところがあるかなと思いますので", en: "level of Japanese, I think" },
+    { start: 99.13, end: 101.18, ja: "もし希望とかあれば", en: "If you have any requests" },
+    { start: 101.18, end: 104.66, ja: "コメントとかをいただければ嬉しいなと思っています", en: "I'd be happy if you'd leave a comment" },
+    { start: 105.47, end: 109.04, ja: "Podcast の方はコメントができないかもしれないんですが", en: "You may not be able to comment on the podcast, but" },
+    { start: 109.04, end: 112.43, ja: "YouTube チャンネルの方はコメントを受け付けておりますので", en: "on the YouTube channel we do accept comments" },
+    { start: 112.43, end: 113.95, ja: "よろしくお願いします", en: "Thank you" },
+    { start: 115.10, end: 115.60, ja: "はい", en: "Yes" },
+    { start: 116.06, end: 120.84, ja: "ということで、今日は第2回目になるんですけれども", en: "So then, today is episode two" },
+    { start: 120.90, end: 126.71, ja: "今、僕が住んでいる場所の紹介のしたいなと思っています", en: "and I'd like to introduce where I currently live" },
+    { start: 127.39, end: 130.20, ja: "今、僕が住んでいる所はですね", en: "Where I currently live" },
+    { start: 130.33, end: 133.26, ja: "日本の真ん中にある", en: "is in the middle of Japan —" },
+    { start: 133.26, end: 136.23, ja: "長野県という所ですね", en: "a place called Nagano prefecture" },
+    { start: 136.51, end: 140.84, ja: "山がたくさんあって、冬には雪が降って", en: "lots of mountains, snow in winter" },
+    { start: 141.25, end: 146.35, ja: "スキーとかスノーボードを楽しむ方がたくさん来られる", en: "lots of people come to enjoy skiing and snowboarding" },
+    { start: 146.35, end: 148.11, ja: "そんな街です", en: "It's that kind of town" },
+    { start: 148.21, end: 150.27, ja: "そして夏には", en: "And in summer" },
+    { start: 150.31, end: 153.32, ja: "まあ、結構ねやっぱり涼しいので", en: "well, it's actually quite cool" },
+    { start: 153.50, end: 157.69, ja: "日本の中ではかなり涼しい場所になりますので", en: "and becomes one of the cooler places in Japan" },
+    { start: 158.11, end: 161.06, ja: "登山とかね、キャンプとか", en: "mountain climbing, camping" },
+    { start: 161.06, end: 165.20, ja: "そういうまだ夏のね、アクティビティも有名で", en: "those kinds of summer activities are also popular" },
+    { start: 165.77, end: 170.52, ja: "割と観光の方がね、たくさん来られるような場所になります", en: "it gets quite a lot of tourists" },
+    { start: 171.18, end: 175.00, ja: "そして、今僕が住んでいる場所はですね", en: "Now, the place I currently live" },
+    { start: 175.65, end: 179.24, ja: "「中山道」という昔のね、道", en: "is on an old road called the Nakasendo" },
+    { start: 180.11, end: 185.51, ja: "昔、大名行列だとかそういうね方々がこう使った", en: "used long ago by daimyo processions and others" },
+    { start: 185.51, end: 187.93, ja: "古いあの街道があるんですけれども", en: "There's this old highway, and" },
+    { start: 187.93, end: 195.45, ja: "そのうちの一つの「中山道」という道沿いの街に住んでいます", en: "I live in a town along one of them, the Nakasendo" },
+    { start: 196.41, end: 202.72, ja: "なので、結構ね歴史的な建物だったりとか", en: "So there are quite a few historical buildings and" },
+    { start: 202.72, end: 205.58, ja: "古い町並とかが見られたりして", en: "old town streetscapes you can see" },
+    { start: 205.97, end: 210.11, ja: "結構、外国のお客さんも沢山来られてますね", en: "and quite a lot of foreign visitors come" },
+    { start: 210.50, end: 213.89, ja: "最近はコロナウイルスの関係で", en: "Lately, because of the coronavirus" },
+    { start: 213.89, end: 217.78, ja: "外国人のお客さんが来るっていうことを見かけることは", en: "you almost never see" },
+    { start: 217.78, end: 219.91, ja: "ほぼ無くなってしまったんですが", en: "foreign visitors anymore" },
+    { start: 221.00, end: 226.64, ja: "今までね、数年前までであればかなり多くの方が歩いていて", en: "Until a few years ago there were quite a lot of them walking around" },
+    { start: 227.45, end: 228.76, ja: "結構田舎なので", en: "It's quite rural, so" },
+    { start: 228.76, end: 235.00, ja: "地元の方よりも外国人の方の方が多いぐらいの時も結構ありますね", en: "there were quite a few times when there were more foreigners than locals" },
+    { start: 236.68, end: 238.91, ja: "電車が通ってるんですけれども", en: "There are trains, but" },
+    { start: 238.91, end: 241.08, ja: "あんまり電車が来ないので", en: "they don't come very often, so" },
+    { start: 241.61, end: 246.47, ja: "結構ね、そもそも電車に乗る人が少ないっていうのもあるんですが", en: "there aren't that many people riding them in the first place" },
+    { start: 246.73, end: 250.76, ja: "なので、電車の中を半分観光客の外国の方", en: "So the train was half foreign tourists" },
+    { start: 250.76, end: 254.46, ja: "そして半分は地元の学生さんとか", en: "and half local students" },
+    { start: 254.57, end: 255.74, ja: "お年寄りとか", en: "or elderly people" },
+    { start: 255.74, end: 260.18, ja: "そういう時が結構多いなという風に思っています", en: "those times were pretty common, I think" },
+    { start: 263.60, end: 264.55, ja: "そうですね", en: "That's right" },
+    { start: 264.55, end: 266.80, ja: "長野県は結構", en: "Nagano prefecture is" },
+    { start: 267.46, end: 268.67, ja: "そうだな", en: "Let me think" },
+    { start: 268.67, end: 274.53, ja: "東京とか京都とか大阪あとは広島とかですかね", en: "Tokyo, Kyoto, Osaka, Hiroshima, that sort of thing" },
+    { start: 274.53, end: 278.63, ja: "日本に来られる外国の方は結構もちろん", en: "Foreign visitors to Japan tend of course to go" },
+    { start: 278.63, end: 283.99, ja: "最初は東京、京都あたりに行かれるんじゃないかなと思うんですが", en: "first towards Tokyo or Kyoto" },
+    { start: 283.99, end: 287.30, ja: "この僕が住んでいる長野県も", en: "This Nagano prefecture where I live" },
+    { start: 287.30, end: 292.21, ja: "割と最近は観光客が増えてきていて", en: "has actually been getting more tourists lately" },
+    { start: 292.73, end: 294.89, ja: "まあその理由というのも", en: "I think the reason for that" },
+    { start: 295.26, end: 299.18, ja: "まあいろんな場所があるとは思うんですが", en: "is — well, there are all sorts of places, but" },
+    { start: 299.85, end: 301.22, ja: "一番こう", en: "first and foremost" },
+    { start: 302.31, end: 303.86, ja: "田舎っぽいというかね", en: "it's got this countryside feel, you know" },
+    { start: 303.86, end: 309.74, ja: "あの、東京からも関西からもアクセスがよくて", en: "easy access from both Tokyo and Kansai" },
+    { start: 309.74, end: 313.94, ja: "かつ田舎っていうことで、結構古い日本", en: "and yet rural — quite old Japan" },
+    { start: 313.94, end: 318.01, ja: "昔ながらの日本がそのまま楽しめるということで", en: "the Japan of old you can enjoy just as it is" },
+    { start: 318.01, end: 320.10, ja: "人気なようです", en: "it seems to be popular for that" },
+    { start: 320.45, end: 324.45, ja: "皆さんは日本に来られたことがありますでしょうか", en: "Have any of you been to Japan?" },
+    { start: 326.08, end: 331.07, ja: "僕はですね、結構いろんなところを旅行したことがあって", en: "I've traveled quite a lot of places" },
+    { start: 331.62, end: 335.65, ja: "今までにだいたい80カ国ぐらいですかね", en: "up to now about 80 countries" },
+    { start: 335.65, end: 338.64, ja: "外国に色々行った事があるんですけれども", en: "I've been to various foreign countries" },
+    { start: 339.85, end: 342.95, ja: "やっぱりね、言葉を勉強することで", en: "sure enough, by learning the language" },
+    { start: 343.67, end: 346.44, ja: "その現地の地元の方々とね", en: "you can communicate with" },
+    { start: 346.44, end: 348.93, ja: "コミュニケーションすることができるので", en: "local people there" },
+    { start: 349.52, end: 351.11, ja: "英語以外にも", en: "besides English" },
+    { start: 352.03, end: 357.65, ja: "現地のね、例えばスペイン語とかイタリア語、ドイツ語", en: "local languages — for example Spanish, Italian, German" },
+    { start: 357.65, end: 359.14, ja: "アラビア語とかね", en: "Arabic and so on" },
+    { start: 359.14, end: 361.19, ja: "そういう、もちろんその", en: "those kinds of things — of course" },
+    { start: 361.34, end: 363.39, ja: "喋れるわけではないんですよね", en: "I can't speak them" },
+    { start: 363.39, end: 367.55, ja: "完全に喋れるっていうわけではないんですけれども", en: "I can't speak them completely" },
+    { start: 367.55, end: 371.88, ja: "日常の挨拶、おはようございます、こんにちは", en: "everyday greetings — good morning, hello" },
+    { start: 371.88, end: 373.23, ja: "元気ですか、とか", en: "how are you, that sort of thing" },
+    { start: 373.23, end: 376.12, ja: "あとはこれはいくらですか、とかね", en: "or how much is this" },
+    { start: 376.23, end: 381.81, ja: "買い物したりとか、ここはどこですか、とか", en: "shopping, where is this place" },
+    { start: 382.13, end: 384.77, ja: "これは何ていうものですか、とかね", en: "what is this thing called" },
+    { start: 384.77, end: 388.33, ja: "そういう質問を覚えたりして", en: "I learned those kinds of questions" },
+    { start: 389.37, end: 391.66, ja: "旅を楽しんでいました", en: "and enjoyed my travels" },
+    { start: 392.55, end: 397.89, ja: "日本もね、旅される方はよく言われるんですけれども", en: "Japan too — travelers often say this" },
+    { start: 398.56, end: 402.39, ja: "意外といろんな国がね、世界にある中で", en: "surprisingly, among the many countries in the world" },
+    { start: 402.71, end: 405.64, ja: "日本人の特に田舎の方に行くと", en: "when you go to rural Japan" },
+    { start: 405.86, end: 407.85, ja: "英語が全然通じないと", en: "English doesn't get you anywhere at all" },
+    { start: 408.88, end: 412.41, ja: "で、その英語が通じないということ自体が", en: "and the fact that English doesn't work" },
+    { start: 413.05, end: 415.38, ja: "結構珍しくなってきているということで", en: "has actually become unusual" },
+    { start: 416.19, end: 419.71, ja: "東南アジアとかアフリカとか", en: "in Southeast Asia, Africa" },
+    { start: 420.19, end: 424.60, ja: "行ってもね、結構英語は意外と通じるって言うことがある中で", en: "you'd be surprised how well English works there" },
+    { start: 425.00, end: 427.66, ja: "日本は全く英語が通じない", en: "Japan is a place where English just doesn't" },
+    { start: 427.66, end: 429.69, ja: "さらにその", en: "On top of that" },
+    { start: 429.69, end: 435.00, ja: "言葉もね、看板とかに書いてあるような文字とかもやっぱりあの", en: "the written characters on signs and such" },
+    { start: 435.00, end: 442.04, ja: "特に欧米系の方には馴染みのないものだと思うので", en: "are unfamiliar especially to Western people" },
+    { start: 442.04, end: 445.38, ja: "かなりこう不思議な感じがするというか", en: "so they feel quite mysterious, I think" },
+    { start: 445.38, end: 448.83, ja: "それが楽しくて日本に来てるよっていうような方もね", en: "some people enjoy that and come to Japan because of it" },
+    { start: 448.83, end: 450.52, ja: "いらっしゃるみたいですね", en: "I've heard" },
+    { start: 451.59, end: 456.17, ja: "なので、そういう話を聞くとすごく楽しいなって思いますし", en: "So when I hear stories like that I'm really happy" },
+    { start: 457.28, end: 458.90, ja: "あのまあ同時にね", en: "At the same time" },
+    { start: 458.90, end: 460.47, ja: "そんな中でちょっとでもね", en: "in that context" },
+    { start: 460.47, end: 464.37, ja: "日本語がしゃべれる外国人の方がいたりすると", en: "when there are foreigners who can speak even a little Japanese" },
+    { start: 464.37, end: 468.69, ja: "やっぱり地元の方々はコミュニケーションが取れて", en: "the locals can connect with them" },
+    { start: 468.69, end: 470.61, ja: "嬉しいと思いますし", en: "I think they're happy" },
+    { start: 471.35, end: 476.54, ja: "まあ旅をする側もね、色んな方との接点が広がると思うので", en: "and travelers get to meet a wider range of people" },
+    { start: 476.54, end: 478.61, ja: "是非日本語をね", en: "So by all means" },
+    { start: 478.61, end: 481.83, ja: "覚えていただけたら嬉しいなと思うんですけれども", en: "I'd be glad if you'd learn Japanese" },
+    { start: 482.57, end: 483.07, ja: "はい", en: "Yes" },
+    { start: 483.07, end: 484.52, ja: "まぁそんな感じですね", en: "Well, that's about it" },
+    { start: 486.09, end: 489.91, ja: "僕が住んでいる所がそんなような所になるんですけれども", en: "So that's the kind of place I live in" },
+    { start: 490.52, end: 493.62, ja: "皆さんはどんな所に住んでいるんでしょうか", en: "What kind of place do you live in?" },
+    { start: 495.00, end: 496.39, ja: "結構ね", en: "Quite" },
+    { start: 496.39, end: 498.33, ja: "このPodcastも", en: "This podcast" },
+    { start: 499.15, end: 500.46, ja: "何回かね", en: "After posting" },
+    { start: 500.46, end: 502.14, ja: "投稿をしていくと", en: "a few more episodes" },
+    { start: 503.21, end: 505.87, ja: "分析が集まってきて", en: "the analytics will come together and" },
+    { start: 505.87, end: 507.52, ja: "どこのどんな人がね", en: "where and who" },
+    { start: 507.52, end: 511.13, ja: "聞いていただいているのかっていうのが出てくるんですけれども", en: "is listening will become apparent" },
+    { start: 511.13, end: 512.33, ja: "まだちょっとね", en: "Still, it's only" },
+    { start: 512.33, end: 514.39, ja: "昨日1本あげただけなので", en: "one upload from yesterday" },
+    { start: 514.87, end: 518.69, ja: "なかなか難しいかなと思うんですけれども", en: "so it's hard to say yet" },
+    { start: 518.69, end: 519.65, ja: "徐々にね", en: "Little by little" },
+    { start: 519.65, end: 524.35, ja: "どこのどんな方が聞いて頂いてるのかなってことが分かってきたら", en: "once I know who's listening from where" },
+    { start: 524.35, end: 526.12, ja: "それに合わせた内容もね", en: "content that matches that" },
+    { start: 526.12, end: 530.13, ja: "発信していければいいかなという風に思っているんですけれども", en: "I'd love to put that out" },
+    { start: 531.11, end: 531.88, ja: "はい", en: "Yes" },
+    { start: 533.23, end: 536.22, ja: "皆さん、今日は今から何をしますか", en: "What are you all going to do today?" },
+    { start: 537.31, end: 538.30, ja: "僕はですね", en: "As for me" },
+    { start: 538.30, end: 541.28, ja: "今からちょっと外に行ってですね", en: "I'm going outside for a bit" },
+    { start: 541.28, end: 544.74, ja: "散歩をして、買い物をして", en: "take a walk, do some shopping" },
+    { start: 545.87, end: 549.58, ja: "ちょっとドライブしたいなと思っています", en: "and go for a bit of a drive" },
+    { start: 550.34, end: 552.51, ja: "先ほども言ったんですけれども", en: "As I mentioned before" },
+    { start: 553.30, end: 555.70, ja: "今日は割と天気が良くて", en: "today's actually quite nice" },
+    { start: 556.27, end: 557.23, ja: "あの", en: "um" },
+    { start: 557.23, end: 558.68, ja: "暖かい", en: "it's warm" },
+    { start: 558.92, end: 560.66, ja: "割と暖かいので", en: "quite warm, so" },
+    { start: 561.03, end: 563.56, ja: "ちょっとね、気分転換に", en: "as a change of pace" },
+    { start: 563.56, end: 565.28, ja: "ドライブして", en: "I'll drive" },
+    { start: 566.02, end: 568.65, ja: "ちょっとね、山を見たりとか", en: "take in the mountains" },
+    { start: 569.02, end: 572.49, ja: "散歩したりとかしたいなという風に思っています", en: "and walk around" },
+    { start: 573.82, end: 574.60, ja: "はい", en: "Yes" },
+    { start: 574.60, end: 579.96, ja: "まだね2回目なので、どんな内容を話して", en: "It's only the second episode, so what kind of content to talk about" },
+    { start: 579.96, end: 582.60, ja: "どれぐらいの長さをしたらいいのかっていうのはちょっとね", en: "and how long it should be" },
+    { start: 582.60, end: 586.72, ja: "慣れていないようなところがあるんですけれども", en: "I'm not quite used to it yet" },
+    { start: 586.72, end: 589.41, ja: "今日ここまでということで", en: "For today, this is it" },
+    { start: 589.41, end: 592.65, ja: "まぁこんな感じでね、日記みたいな形で", en: "In this kind of diary-like form" },
+    { start: 592.65, end: 595.69, ja: "今日は何月何日何曜日です", en: "today is what month, what day, what day of the week" },
+    { start: 595.69, end: 598.32, ja: "天気はどんな感じです", en: "what the weather is like" },
+    { start: 598.32, end: 601.13, ja: "ということと、ちょっとしたお話と", en: "that sort of thing and a short chat" },
+    { start: 601.13, end: 603.49, ja: "今日はこれから何をします", en: "what I'm going to do today" },
+    { start: 603.49, end: 604.38, ja: "というようなね", en: "that kind of thing" },
+    { start: 604.38, end: 609.53, ja: "お話をしたいなと思っていて", en: "I'd like to talk about" },
+    { start: 609.53, end: 611.37, ja: "できるだけ日常の会話を", en: "as much as possible daily conversation" },
+    { start: 611.37, end: 613.95, ja: "皆さんに聴いていただければいいかなという風に思っています", en: "I hope you'll listen" },
+    { start: 615.00, end: 615.76, ja: "あのまあ", en: "Umm" },
+    { start: 615.76, end: 618.36, ja: "何だろうな", en: "What now" },
+    { start: 618.36, end: 620.70, ja: "台本がなくてあの", en: "Without a script" },
+    { start: 620.70, end: 624.79, ja: "台本を読むんじゃなくて、今こうやってね", en: "not reading a script, but right now like this" },
+    { start: 624.79, end: 628.07, ja: "考えながら頭を使いながらお話をしているので", en: "thinking and using my head while talking" },
+    { start: 628.07, end: 630.62, ja: "その何て言うんだろうな、今言った", en: "the — what was it — I was just thinking" },
+    { start: 630.62, end: 634.08, ja: "何だろうとか、何て言うんだろう", en: "what was it, what was I trying to say" },
+    { start: 634.08, end: 636.23, ja: "というような感じのつなぎのフレーズも", en: "those kinds of connecting phrases too" },
+    { start: 636.23, end: 639.95, ja: "使えるように意識してね", en: "I'm trying so that you can use them" },
+    { start: 639.95, end: 642.75, ja: "皆さんが自然と振る舞えるように", en: "so that you naturally can handle them" },
+    { start: 642.75, end: 644.22, ja: "なればいいなという風に思っています", en: "I hope they become second nature" },
+    { start: 644.22, end: 647.02, ja: "ということで", en: "And so" },
+    { start: 647.02, end: 650.53, ja: "今日もどうもありがとうございました", en: "Thank you very much for today too" },
+    { start: 650.53, end: 652.80, ja: "今日も最後まで聴いていただいて", en: "Thank you for listening to the end today" },
+    { start: 652.80, end: 654.24, ja: "ありがとうございました", en: "as well" },
+    { start: 655.00, end: 658.88, ja: "この番組は毎日の出来事や旬なトピックを", en: "This show broadcasts everyday events and seasonal topics" },
+    { start: 658.88, end: 663.15, ja: "少しだけゆっくり簡単な日本語でお送りしています", en: "in just a little bit slower, simpler Japanese" },
+    { start: 663.69, end: 666.43, ja: "Podcast、YouTube で配信していますので", en: "We distribute on podcast and YouTube" },
+    { start: 666.43, end: 670.17, ja: "フォロー、チャンネル登録をよろしくお願い致します", en: "Please follow and subscribe" },
+    { start: 670.71, end: 671.74, ja: "それではまた", en: "Well then, see you again" },
+    { start: 671.74, end: 674.29, ja: "次回の EASY JAPANESE でお会いしましょう", en: "Let's meet again at the next EASY JAPANESE" },
+    { start: 674.47, end: 675.68, ja: "ではでは", en: "Well then, bye" }
+];
+
+        // ==========================================
+
+      
+      let currentLineIndex = -1;
+        let loopMode = 'none';
+        let player;
+        
+        // 录音相关全局变量
+        let mediaRecorder;
+        let audioChunks = [];
+        let userAudioBlobs = {}; // 存储每句的录音数据
+        let currentRecordingIndex = -1;
+
+        // 加载 YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 'playsinline': 1, 'controls': 1 },
+                events: { 'onReady': onPlayerReady }
+            });
+        }
+
+        function onPlayerReady(event) {
+            renderSubtitles();
+            setInterval(monitorPlayback, 100);
+            
+            const lastRead = localStorage.getItem(`last-read-${pageId}`);
+            if (lastRead !== null) {
+                const targetLine = document.getElementById(`line-${lastRead}`);
+                if (targetLine) {
+                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetLine.classList.add('active');
+                }
+            }
+        }
+
+        function renderSubtitles() {
+            const container = document.getElementById('subtitle-container');
+            subtitleData.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = 'shadow-line';
+                div.id = `line-${index}`;
+                
+                // HTML 结构：左侧文本，右侧按钮组
+                div.innerHTML = `
+                    <div class="text-content">
+                        <div class="ja-text">${line.ja}</div>
+                        <div class="en-text" id="en-${index}">${line.en}</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn record-btn" id="record-btn-${index}" onclick="toggleRecord(event, ${index})" title="Hold or Click to Record">🎙️</button>
+                        <button class="action-btn play-btn" id="play-btn-${index}" onclick="playUserRecord(event, ${index})" style="display:none;" title="Play your recording">▶️</button>
+                    </div>
+                `;
+                
+                div.onclick = (e) => {
+                    // 如果点击的是按钮，不触发视频跳转
+                    if (e.target.closest('.action-btn')) return;
+                    currentLineIndex = index;
+                    player.seekTo(line.start, true);
+                    player.playVideo();
+                    localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                // 双击：紧急暂停 (极客新增)
+                div.ondblclick = (e) => {
+                    if (e.target.closest('.action-btn')) return;
+                    player.pauseVideo();
+                };
+                container.appendChild(div);
+            });
+        }
+      
+        // 全局控制字幕显示/隐藏逻辑
+        function toggleSubtitles(lang) {
+            const container = document.getElementById('subtitle-container');
+            const checkbox = document.getElementById(`toggle-${lang}`);
+            
+            if (checkbox.checked) {
+                container.classList.remove(`hide-${lang}`);
+            } else {
+                container.classList.add(`hide-${lang}`);
+            }
+        }   
+        // 功能 2：录音系统逻辑
+        async function toggleRecord(event, index) {
+            event.stopPropagation();
+            const recordBtn = document.getElementById(`record-btn-${index}`);
+            const playBtn = document.getElementById(`play-btn-${index}`);
+
+            if (currentRecordingIndex === index) {
+                // 停止录音
+                mediaRecorder.stop();
+                recordBtn.classList.remove('recording');
+                currentRecordingIndex = -1;
+                return;
+            }
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    userAudioBlobs[index] = URL.createObjectURL(audioBlob);
+                    playBtn.style.display = 'block'; // 显示播放按钮
+                    playBtn.classList.add('has-audio');
+                    
+                    // 释放麦克风轨道资源
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+                currentRecordingIndex = index;
+                recordBtn.classList.add('recording');
+                
+                // 自动暂停原声音频，以免录进去
+                player.pauseVideo();
+
+            } catch (err) {
+                alert("Permission denied or microphone not found. Please allow microphone access.");
+                console.error(err);
+            }
+        }
+
+        // 功能 3：播放用户的录音
+        function playUserRecord(event, index) {
+            event.stopPropagation();
+            if (userAudioBlobs[index]) {
+                player.pauseVideo(); // 暂停 YouTube
+                const audio = new Audio(userAudioBlobs[index]);
+                audio.play();
+            }
+        }
+
+        function monitorPlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); 
+
+            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+            
+            if (activeIndex !== -1) {
+                currentLineIndex = activeIndex;
+                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                if (activeElement) {
+                    activeElement.classList.add('active');
+                    if (playerState === 1) {
+                        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
