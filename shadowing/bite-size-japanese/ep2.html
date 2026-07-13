@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================================================= -->
+    <!-- 1. [ 核心配置区 ]：SEO 流量拦截网（每期必改） -->
+    <!-- ======================================================= -->
+    <title>Ep2: I came back to Kyoto! | Bite Size Japanese Intermediate Shadowing Tool & Transcript</title>
+    <meta name="description" content="Interactive transcript and single-line looping tool for Bite Size Japanese Podcast Episode 2 (I came back to Kyoto!). Master duration counters and practice perfect pronunciation.">
+    <link rel="canonical" href="https://shadowgeek.net/shadowing/bite-size-japanese/ep2.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="The Shadowing Geek">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://shadowgeek.net/shadowing/bite-size-japanese/ep2.html">
+    <meta property="og:title" content="Ep2: I came back to Kyoto! | Bite Size Japanese Podcast Shadowing Tool & Transcript">
+    <meta property="og:description" content="Interactive transcript and single-line looping tool for Bite Size Japanese Podcast Episode 2 (I came back to Kyoto! Bite Size Japanese Podcast for Intermediate). Master duration counters and practice perfect pronunciation.">
+    <meta property="og:image" content="https://shadowgeek.net/images/og-default.webp">
+    <meta property="article:published_time" content="2026-07-11T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-07-11T00:00:00+08:00">
+    <meta property="article:author" content="Felix">
+    <meta property="article:section" content="Shadowing Lab">
+    <meta property="article:tag" content="Teppei">
+    <meta property="article:tag" content="shadowing">
+    <meta property="article:tag" content="time expressions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ep2: I came back to Kyoto! | Bite Size Japanese Podcast Shadowing Tool">
+    <meta name="twitter:description" content="Interactive transcript and single-line looping tool for Bite Size Japanese Podcast Episode 2. I came back to Kyoto!.">
+    <meta name="twitter:image" content="https://shadowgeek.net/images/og-default.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ep2: I came back to Kyoto! Bite Size Japanese Podcast for Intermediate |  Bite Size Japanese Podcast for Intermediate Shadowing Tool & Transcript",
+      "description": "Interactive transcript and single-line looping tool for  Bite Size Japanese Podcast for beginners Episode 1 (I came back to Kyoto! Bite Size Japanese Podcast for Intermediate). Master duration counters and practice perfect pronunciation.",
+      "image": "https://shadowgeek.net/images/og-default.webp",
+      "datePublished": "2026-07-11",
+      "dateModified": "2026-07-11",
+      "author": {"@type": "Person", "name": "Felix", "url": "https://shadowgeek.net/about.html"},
+      "publisher": {"@type": "Organization", "name": "The Shadowing Geek", "logo": {"@type": "ImageObject", "url": "https://shadowgeek.net/images/og-default.webp"}},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://shadowgeek.net/shadowing/bite-size-japanese/ep2.html"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shadowgeek.net/"},
+        {"@type": "ListItem", "position": 2, "name": "Shadowing Lab", "item": "https://shadowgeek.net/shadowing/"},
+        {"@type": "ListItem", "position": 3, "name": "Ep2: Calling an Izakaya to Make a Reservation", "item": "https://shadowgeek.net/shadowing/bite-size-japanese/ep2.html"}
+      ]
+    }
+    </script>
+<style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #111; margin-bottom: 5px; font-size: 1.8rem; letter-spacing: -0.5px;}
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 0; margin-bottom: 20px;}
+        
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; transition: background 0.2s;}
+        nav a:hover { background: #f0f6ff; text-decoration: none; }
+        nav a.current { background: #f0f6ff; color: #111; }
+        
+        .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
+        
+        .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
+        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        
+        /* 改造跟读行布局：支持左右分栏 */
+        .shadow-line { display: flex; justify-content: space-between; align-items: center; padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        .shadow-line:hover { background: #f6f8fa; }
+        .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+        
+        .text-content { flex-grow: 1; padding-right: 15px; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; transition: opacity 0.3s; }
+        .en-text.hidden { opacity: 0; user-select: none; }
+        
+        /* 交互按钮组 */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+
+        .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
+        .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
+        .grammar-item { margin-bottom: 15px; }
+        .grammar-title { color: #0066cc; font-weight: bold; }
+        footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+    
+        /* 录音隐私提示条 */
+        .privacy-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #f6f8fa;
+            color: #57606a;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px dashed #d0d7de;
+        }
+        .privacy-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #57606a;
+        }
+        /* 交互操作提示条 */
+        .interaction-hint {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #034694;
+            background-color: #f0f6ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px dashed #b6d4fe;
+            font-weight: 500;
+        }
+    /* 全局字幕控制栏 */
+        .global-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #f9fbfc;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eaeaea;
+            font-size: 0.75rem;
+        }
+        .control-label {
+            font-weight: bold;
+            color: #333;
+        }
+        .toggle-group {
+            display: flex;
+            gap: 15px;
+        }
+        .toggle-group label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            user-select: none;
+        }
+
+        /* 全局隐藏逻辑（通过父级 Class 控制） */
+        #subtitle-container.hide-ja .ja-text { display: none; }
+        #subtitle-container.hide-en .en-text { display: none; }
+        
+        /* 优化后的操作按钮（去掉惊悚眼球） */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(207, 34, 46, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 全站闭环 Header 导航系统 -->
+    <header>
+        <p class="logo" style="color:#111;margin-bottom:5px;font-size:1.8rem;letter-spacing:-0.5px;font-weight:bold;">The Shadowing Geek</p>
+        <p class="subtitle">A fellow learner's interactive tools for shadowing real-world audio, decoding native speed, and mastering JLPT grammar.</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shadowing/">🎧 Shadowing Lab</a>
+            <a href="/posts/">📚 Grammar Notes</a>
+            <a href="/about.html">About Me</a>
+        </nav>
+    </header>
+    
+   <main>
+    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
+    <h1>Bite Size Japanese Podcast (Intermediate) - Ep2: I came back to Kyoto</h1>
+    
+    <!-- 注入新灵魂的 Learner's Note -->
+    <div class="learners-note">
+        <strong>Felix's Learner Note:</strong>
+
+        <p>The grammar density in this episode is unexpectedly high. Layla hooks the listeners right from the start by sharing a relatable truth—that intermediate and advanced learners are tired of using textbooks—instantly drawing everyone into her perspective. She then spends the next five minutes unfolding a narrative about a "failed trip." The five core structures she uses form the absolute backbone of spoken travel Japanese:〜てしまう / 〜ちゃう (Te-shimau / Chau): Expresses regret or accidental actions (e.g., 調べないで行っちゃった — going there without doing any research beforehand).〜し (Shi): Used for listing multiple reasons (e.g., わからないし、使いたくないし、したくないし — because I don't know, and I don't want to use it, and I don't want to do it).〜ていない / 〜てない (Te-inai / Tenai): Indicates an ongoing state of incompletion (e.g., 全然わかってない、まだ慣れてない — not understanding at all, not used to it yet).〜とか (Toka): Used for casual enumeration or giving examples (e.g., 秋は紅葉とか、オレンジとか赤とか — in autumn, things like autumn leaves, or orange, or red).〜じゃないかな (Janai ka na): A soft, polite way to make a suggestion (e.g., 田舎おすすめじゃないかな — I think the countryside might be a good recommendation)</p>
+
+        <p>Three Rhythms for Shadowing Practice:The "Intermediate Learner's Confession" Section(もう教科書は使いたくないよね？楽しい勉強がしたいですよね？)This section uses the cadence of rhetorical questions. It is designed to deliver an empathetic tone, signaling a shared feeling of "You feel this way too, right?"The "Mount Hiei Failure" Section(何もリサーチ、検索とか調べないで行っちゃったから、まじでね、何にも見れなかった)This features the conversational rhythm of a causal chain. Each short phrase is punctuated by natural pauses, making it ideal material for shadowing practice.The "Countryside Recommendation" Section(観光客とか誰もいないけど、もうめっちゃ綺麗、本当におすすめ)This showcases the spoken rhythm of stacking adjectives. It perfectly captures the authentic nuance of how native Japanese speakers genuinely recommend a place they love.</p>
+</div>   
+ 
+
+    <div class="audio-player">
+        <div class="yt-container">
+            <div id="youtube-player"></div>
+    </div>
+
+ <div class="global-controls">
+            <span class="control-label">Display:</span>
+            <div class="toggle-group">
+                <label>
+                    <input type="checkbox" id="toggle-ja" checked onchange="toggleSubtitles('ja')">
+                    Japanese
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-en" checked onchange="toggleSubtitles('en')">
+                    English
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-badge">
+            <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            <span><strong>Privacy First:</strong> Your mic audio is processed locally on your device. We never upload or save your voice. Recordings vanish when you close the tab.</span>
+     </div>
+    <div class="interaction-hint">
+        💡 <strong>Pro Tip:</strong> Click any sentence to jump and play. Double-click to pause the audio.
+    </div>
+
+    <div id="subtitle-container"></div>
+
+
+
+    <div class="grammar-section">
+        <h2>📚 Grammar Breakdown</h2>
+        <!-- ==================== HTML 语法解析区域 ==================== -->
+  <div class="grammar-item">
+    <span class="grammar-title">1. 〜てしまう / 〜ちゃう（不可逆・残念な結果）</span><br>
+    <strong>Meaning:</strong> "End up doing ~ / did ~ (with regret or accident)." Verb て-form + しまう — marks completion, often with a tone of "I did it, and now it's done, and I'd rather not have." In casual speech てしまう → ちゃう.<br>
+    <strong>In Text:</strong> 調べないで行っちゃったから (I went without looking anything up, and that was a mistake); 何も見れなかった (I couldn't see anything); 交通費に4000円から5000円使いました (I ended up spending 4000-5000 yen on transportation); 高かった (it was expensive).<br>
+    <strong>Note:</strong> N4. 〜てしまう is the emotional core of this episode. Layla's entire Mt. Hiei story is a てしまう chain: didn't research → went → couldn't see anything → spent a lot → it was expensive. Each てしまう is a small regret that compounds into a big travel failure. Self-learners learn てしまう from textbooks as "doing something completely" (e.g., 食べてしまいました = "ate it all up") but the dominant use in this episode is the "unwanted result" frame. Shadow the 調べないで行っちゃったから chain as a unit; it's how Japanese speakers narrate a cascade of small mistakes.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">2. 〜し（理由・情報の並列）</span><br>
+    <strong>Meaning:</strong> "And / besides / what's more." Verb/い-adjective short form + し, repeated — lists multiple reasons or pieces of information without specifying which is the main one. The implication is "and there are other reasons too."<br>
+    <strong>In Text:</strong> 教科書を使いたくないし (I don't want to use textbooks, and); そんなに気にしたくないし (I don't want to worry about that so much, and); やっぱりたくさん話す練習が楽しい (as expected, lots of speaking practice is fun); 全然わかってないし (I don't understand at all, and); 古い家も多いし (there are many old houses, and).<br>
+    <strong>Note:</strong> N4. 〜し is the most natural way to list reasons in spoken Japanese. Unlike 〜から (because) or 〜ので (since), 〜し doesn't force you to pick a single cause — it lets you pile up multiple reasons, each one adding weight. Self-learners who only know 〜から often sound like they're making a single-point argument when they want to express a general feeling. Shadow the 教科書を使いたくないし、〜気にしたくないし、〜話す練習が楽しい chain; it's how Japanese speakers build a case without being argumentative.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">3. 〜ていない / 〜てない（未完了の状態）</span><br>
+    <strong>Meaning:</strong> "Have not yet done / still not doing." Verb ていない form — marks an action that has not been completed or a state that has not been achieved. The ない ending makes it negative, the ている form makes it a state.<br>
+    <strong>In Text:</strong> 全然わかってないし (I don't understand at all); まだ慣れてないところがあったりして (there are still places I'm not used to yet); 何も見れなかった (I couldn't see anything); 何もリサーチ、検索とか調べないで行っちゃった (I went without doing any research or searching).<br>
+    <strong>Note:</strong> N4. 〜ていない is the standard "haven't done yet" form, but in casual speech it often contracts to 〜てない. The difference between 〜ない (don't do) and 〜ていない (haven't done yet) is crucial: 〜ない is a general statement ("I don't eat meat"), 〜ていない is a state that implies you might do it later ("I haven't eaten yet"). Layla uses 〜てない to describe her English ability: 全然わかってない = "I still don't understand" (implying she's still learning). Shadow the 全然わかってないし chain; it's how Japanese speakers describe ongoing gaps in ability.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">4. 〜とか（緩やかな列挙）</span><br>
+    <strong>Meaning:</strong> "Things like ~ / ~ and such." Noun or verb short form + とか + noun/verb + とか — lists items casually as representative examples, not an exhaustive list. Softer than や and more casual than など.<br>
+    <strong>In Text:</strong> 秋は紅葉とか (autumn is autumn leaves and such); 黄色とかオレンジとか赤とか茶色になって (turn yellow, orange, red, brown); 京都とか東京とかだけじゃなくて (not just Kyoto or Tokyo); 観光客とか誰もいないけど (there are no tourists or anyone); 200年前に、とか100年前に住んでいた (living 200 years ago, or 100 years ago).<br>
+    <strong>Note:</strong> N4. とか is the single most common listing device in spoken Japanese, and this episode uses it in two distinct patterns: noun listing (紅葉とか、黄色とか) and temporal listing (200年前とか、100年前とか). The difference from たり is subtle: たり implies "among other things I did A and B," while とか implies "A, B, that's the sort of thing." Self-learners who know たり from textbooks often overuse it and neglect とか. Shadow the 秋は紅葉とか、黄色とかオレンジとか chain; it's how Japanese speakers describe colors, seasons, and categories without sounding like a textbook.
+</div>
+
+<br>
+
+<div class="grammar-item">
+    <span class="grammar-title">5. 〜じゃないかな（柔らかい提案・推測）</span><br>
+    <strong>Meaning:</strong> "I wonder if ~ / probably ~ / might be ~." A soft-assertion hedge that states an opinion while leaving room for the listener's view. The かな adds a wondering tone, the じゃない makes it a negative question (softer than a direct assertion).<br>
+    <strong>In Text:</strong> 私はオススメしないかな (I might not recommend it); 比叡山は本当におすすめかな (Mt. Hiei is really recommended, I wonder); 田舎おすすめですよ (the countryside is recommended); そんな気がします (I have that feeling).<br>
+    <strong>Note:</strong> N4. じゃないかな is the most important soft-assertion pattern that self-learners under-use because they are trained to speak in positive/declarative forms. Compare: きっと〜です ("certainly is") → 〜じゃないですか ("isn't it?") → 〜じゃないかな ("I wonder?"). The じゃないかな form is safest for cultural contexts because it makes no claims about facts, only about guesses. Layla uses it to recommend and de-recommend: オススメしないかな = "I might not recommend it" (but you can decide for yourself). Shadow the オススメしないかな chain; it's how Japanese speakers make recommendations without sounding pushy.
+</div>
+
+    </div>
+    
+   </main>
+    <footer>
+        <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // ==========================================
+        // 核心配置区：以后每次只需要修改这三个变量！
+        // ==========================================
+        const ytVideoId = "qHG9Pzau2yk"; // 请替换为 EP4 的 YouTube 视频 ID
+        const pageId = "bsj-ep2"; 
+p
+const subtitleData = [
+    { start: 0.00, end: 3.48, ja: "皆さんこんにちは！レイラです。", en: "Hello everyone! I'm Layla." },
+    { start: 3.48, end: 7.30, ja: "今日もききに来てくれてありがとうございます。", en: "Thank you for coming to listen again today." },
+    { start: 7.30, end: 12.35, ja: "えっと、今日は、何について話すっけ...", en: "Um, today, what was I going to talk about..." },
+    { start: 12.35, end: 17.03, ja: "そうそう！先週、京都に帰りました。", en: "That's right! Last week, I went back to Kyoto." },
+    { start: 17.03, end: 18.30, ja: "二日だけね。", en: "Just two days." },
+    { start: 18.30, end: 22.10, ja: "京都に2回目のワクチンのために", en: "To Kyoto for my second vaccine" },
+    { start: 22.10, end: 23.34, ja: "帰りました。", en: "I went back." },
+    { start: 23.34, end: 25.23, ja: "で、その時の話を", en: "And, about that time" },
+    { start: 25.23, end: 28.11, ja: "ちょっとしようかなと思います。", en: "I'd like to talk a little." },
+    { start: 28.11, end: 33.33, ja: "皆さんは、日本語の勉強どんな感じですか？", en: "How is everyone's Japanese study going?" },
+    { start: 33.33, end: 38.61, ja: "毎日少しずつ勉強できていますか？やっぱりね", en: "Are you able to study a little every day? As expected" },
+    { start: 38.61, end: 41.23, ja: "言語、言葉の勉強は", en: "Language, studying words" },
+    { start: 41.23, end: 44.97, ja: "毎日続けることが大切ですよね。", en: "continuing every day is important, isn't it?" },
+    { start: 44.97, end: 46.52, ja: "なんか、私も本当は", en: "Somehow, I also really" },
+    { start: 46.52, end: 51.95, ja: "もっと英語を勉強しないとダメだと思うけど、", en: "should study more English, but" },
+    { start: 51.95, end: 52.76, ja: "やっぱりなんか...", en: "as expected, somehow..." },
+    { start: 52.76, end: 58.98, ja: "やっぱり皆さんとか、私の英語みたいに", en: "as expected, like you all, like my English" },
+    { start: 58.98, end: 61.81, ja: "ちょっとなんかintermediateとか", en: "a bit, like intermediate" },
+    { start: 61.81, end: 64.16, ja: "ちょっとアドバンスになると", en: "a bit advanced" },
+    { start: 64.16, end: 67.13, ja: "もう教科書は使いたくないよね？", en: "you don't want to use textbooks anymore, do you?" },
+    { start: 67.13, end: 69.56, ja: "教科書を使いたくないし、", en: "I don't want to use textbooks" },
+    { start: 69.56, end: 71.87, ja: "なんかまあ、細かい", en: "somehow, well, small" },
+    { start: 71.87, end: 74.31, ja: "小さな間違いとか", en: "small mistakes and" },
+    { start: 74.31, end: 76.54, ja: "文法とか、もうなんか", en: "grammar and, somehow" },
+    { start: 76.54, end: 79.81, ja: "そんなに気にしたくないし、", en: "I don't want to worry about that so much" },
+    { start: 79.81, end: 82.51, ja: "やっぱりたくさん話す練習", en: "as expected, lots of speaking practice" },
+    { start: 82.51, end: 86.45, ja: "楽しい！楽しい勉強がしたいですよね？", en: "is fun! You want to study in a fun way, don't you?" },
+    { start: 86.45, end: 88.78, ja: "でも、なんか楽しい", en: "But, somehow, if you only do" },
+    { start: 88.78, end: 91.16, ja: "勉強ばっかりしてたら", en: "fun study all the time" },
+    { start: 91.16, end: 93.85, ja: "やっぱり私はまだ、例えば", en: "as expected, I still, for example" },
+    { start: 93.85, end: 100.73, ja: "aとか、theとか、in、at、for 、of とか", en: "a, the, in, at, for, of and such" },
+    { start: 100.73, end: 105.60, ja: "withとかの使い方が全然わかってないし、", en: "I don't understand how to use with and such at all" },
+    { start: 105.60, end: 108.86, ja: "やっぱり....", en: "as expected..." },
+    { start: 108.86, end: 114.35, ja: "やっぱり、長くね、長ーい道ですね", en: "as expected, it's a long, lo-ong road" },
+    { start: 114.35, end: 117.41, ja: "長い道。言葉は本当に", en: "A long road. Words really" },
+    { start: 117.41, end: 121.41, ja: "言葉の勉強は長い道です。", en: "Studying words is a long road." },
+    { start: 121.41, end: 127.01, ja: "これからも少しずつね。頑張っていきましょうね", en: "From now on too, little by little. Let's do our best" },
+    { start: 127.01, end: 127.67, ja: "そうそうそう", en: "That's right, that's right" },
+    { start: 127.67, end: 131.41, ja: "podcastに私のpodcastに", en: "To the podcast, to my podcast" },
+    { start: 131.41, end: 135.13, ja: "これからビデオができます。", en: "from now on video will be available." },
+    { start: 135.13, end: 139.58, ja: "このpodcastのyoutubeチャンネルを作りました。", en: "I made a YouTube channel for this podcast." },
+    { start: 139.58, end: 143.83, ja: "ま、だから、私が話している時に", en: "Well, so, when I'm talking" },
+    { start: 143.83, end: 149.48, ja: "じまくサブタイトルを読みたい人は", en: "people who want to read subtitles" },
+    { start: 149.48, end: 153.96, ja: "ぜひyoutubeでこのビデオを見て下さい。", en: "please watch this video on YouTube." },
+    { start: 153.96, end: 158.61, ja: "私の話している顔も見ることができます。", en: "You can also see my face as I talk." },
+    { start: 158.61, end: 164.62, ja: "もしもね、もしもし見たかったらぜひ見てみてください。", en: "If you, if you want to watch, please do." },
+    { start: 164.62, end: 166.26, ja: "見なくてもいいけどね、", en: "You don't have to watch, though" },
+    { start: 166.26, end: 169.60, ja: "うん。はい。で、実は先週", en: "Yeah. Yes. And, actually, last week" },
+    { start: 169.60, end: 172.63, ja: "京都に帰りました。", en: "I went back to Kyoto." },
+    { start: 172.63, end: 175.32, ja: "2回目のワクチンのために", en: "For my second vaccine" },
+    { start: 175.32, end: 177.93, ja: "京都に帰りました。", en: "I went back to Kyoto." },
+    { start: 177.93, end: 181.96, ja: "その時は、えっとね、土曜日じゃなかった", en: "At that time, um, it wasn't Saturday" },
+    { start: 181.96, end: 188.01, ja: "日曜日の朝早く、５時に起きて", en: "Sunday morning, early, I woke up at 5" },
+    { start: 188.01, end: 189.66, ja: "岡山に行って、", en: "went to Okayama" },
+    { start: 189.66, end: 193.10, ja: "岡山駅から京都まで", en: "from Okayama station to Kyoto" },
+    { start: 193.10, end: 196.83, ja: "新幹線で帰りました。", en: "I went back by shinkansen." },
+    { start: 196.83, end: 198.37, ja: "結構ね、近い。", en: "It's quite close." },
+    { start: 198.37, end: 202.15, ja: "岡山駅から京都まで", en: "From Okayama station to Kyoto" },
+    { start: 202.15, end: 204.06, ja: "一時間？5０分？", en: "One hour? 50 minutes?" },
+    { start: 204.06, end: 207.71, ja: "50分くらい！１時間もかからない", en: "About 50 minutes! Less than an hour" },
+    { start: 207.71, end: 212.46, ja: "50分くらいですごく近くて", en: "About 50 minutes, really close" },
+    { start: 212.46, end: 214.71, ja: "日曜日の朝、家出て", en: "Sunday morning, left the house" },
+    { start: 214.71, end: 218.12, ja: "日曜日の11時に", en: "Sunday at 11am" },
+    { start: 218.12, end: 222.11, ja: "ワクチンの場所に行って、ワクチンして", en: "went to the vaccine place, got the vaccine" },
+    { start: 222.11, end: 225.42, ja: "その後は、大学の友達が", en: "After that, my university friend" },
+    { start: 225.42, end: 228.54, ja: "京都に来ていたので、", en: "had come to Kyoto, so" },
+    { start: 228.54, end: 233.45, ja: "京都の比叡山（ひえいざん）、聞いたことありますか？", en: "Kyoto's Mt. Hiei, have you heard of it?" },
+    { start: 233.45, end: 237.22, ja: "すごく有名な山なんだけど、", en: "It's a really famous mountain, but" },
+    { start: 237.22, end: 239.21, ja: "比叡山（ひえいざん）に行きました。", en: "I went to Mt. Hiei." },
+    { start: 239.21, end: 244.45, ja: "でもね、これが失敗したの。", en: "But, this was a failure." },
+    { start: 244.45, end: 248.02, ja: "何もリサーチ、検索とか", en: "No research, searching or" },
+    { start: 248.02, end: 253.30, ja: "調べないで行っちゃったから", en: "I went without looking anything up" },
+    { start: 253.30, end: 258.06, ja: "まじでね、何にも見れなかった。", en: "Seriously, I couldn't see anything." },
+    { start: 258.06, end: 260.39, ja: "「比叡山 Hieizan」って、ちょっと良かったら", en: "Mt. Hiei, if you don't mind" },
+    { start: 260.39, end: 263.67, ja: "googleで検索してください", en: "please search on Google" },
+    { start: 263.67, end: 268.80, ja: "めっちゃ有名な観光地です。", en: "It's a super famous tourist spot." },
+    { start: 268.80, end: 270.12, ja: "多分、多分というか", en: "Probably, or rather" },
+    { start: 270.12, end: 274.10, ja: "まあ、私もずっと前にテレビで見たんだけど", en: "well, I saw it on TV a long time ago" },
+    { start: 274.10, end: 275.96, ja: "比叡山って大きな山", en: "Mt. Hiei is a big mountain" },
+    { start: 275.96, end: 278.57, ja: "比叡山の山は山。", en: "Mt. Hiei's mountain is a mountain." },
+    { start: 278.57, end: 279.40, ja: "比叡山っていう", en: "A so-called Mt. Hiei" },
+    { start: 279.40, end: 283.55, ja: "すごく大きな山に、お坊さん", en: "On a really big mountain, monks" },
+    { start: 283.55, end: 287.58, ja: "priests、お坊さんがたくさん住んでいて", en: "priests, many monks live" },
+    { start: 287.58, end: 290.02, ja: "修行（しゅぎょう）しています。", en: "and do training (shuugyou)." },
+    { start: 290.02, end: 292.69, ja: "修行（しゅぎょう）は英語で何て言うかな？", en: "What do you call shuugyou in English?" },
+    { start: 292.69, end: 294.89, ja: "その...毎日だから", en: "That... because it's every day" },
+    { start: 294.89, end: 297.07, ja: "お坊さんが住んでいて毎日", en: "monks live there and every day" },
+    { start: 297.07, end: 300.37, ja: "トレーニングしていますね・", en: "they're training." },
+    { start: 300.37, end: 303.79, ja: "トレーニングしてるし", en: "They're training and" },
+    { start: 303.79, end: 306.73, ja: "たくさん神社とか", en: "lots of shrines and" },
+    { start: 306.73, end: 312.01, ja: "多分、お寺とか建物があります。", en: "probably temples and buildings." },
+    { start: 312.01, end: 316.94, ja: "で、山の中にちょんちょんちょんちょんちょんて", en: "And in the mountain, scattered here and there" },
+    { start: 316.94, end: 320.98, ja: "バラバラにあるから", en: "they're spread out, so" },
+    { start: 320.98, end: 327.31, ja: "その... たくさんお寺とか神社が見たかったら", en: "that... if you want to see lots of temples and shrines" },
+    { start: 327.31, end: 330.38, ja: "たくさん歩くとか", en: "walk a lot or" },
+    { start: 330.38, end: 335.78, ja: "バスを使って移動（いどう）しないといけない", en: "you have to use buses to move around" },
+    { start: 335.78, end: 339.70, ja: "たくさんパスとかを使って見ないといけない。", en: "you have to use lots of buses to see." },
+    { start: 339.70, end: 343.62, ja: "だから、比叡山を見たかったら", en: "So, if you want to see Mt. Hiei" },
+    { start: 343.62, end: 347.44, ja: "多分、1日、朝から夜まで", en: "probably one day, from morning to night" },
+    { start: 347.44, end: 351.29, ja: "しっかり時間をとって", en: "secure a solid block of time" },
+    { start: 351.29, end: 354.65, ja: "しっかり時間を...なんだろうな", en: "solid time... what should I say" },
+    { start: 354.65, end: 356.15, ja: "余裕（よゆう）を持って！", en: "with room to spare!" },
+    { start: 356.15, end: 363.34, ja: "余裕をもって、比叡山に行くといいです！", en: "with room to spare, you should go to Mt. Hiei!" },
+    { start: 363.34, end: 368.87, ja: "私は午後から行ったから", en: "I went from the afternoon" },
+    { start: 368.87, end: 375.35, ja: "で、私の友達は5時に東京に行く", en: "and my friend had a ticket" },
+    { start: 375.35, end: 379.52, ja: "新幹線のチケットを買っていたから、", en: "for the shinkansen to Tokyo at 5, so" },
+    { start: 379.52, end: 383.14, ja: "午後の１時からご５時までしか", en: "from 1pm to 5pm only" },
+    { start: 383.14, end: 387.25, ja: "時間がなくて、何も見れなかった", en: "there was no time, I couldn't see anything" },
+    { start: 387.25, end: 391.44, ja: "本当に比叡山の一番上", en: "Really, to the very top of Mt. Hiei" },
+    { start: 391.44, end: 394.54, ja: "山の上に行くまでに、", en: "to get to the top of the mountain" },
+    { start: 394.54, end: 398.02, ja: "１時間半ぐらいかかってて、でも", en: "it took about an hour and a half, but" },
+    { start: 398.02, end: 401.74, ja: "ロープウェイ！", en: "The ropeway!" },
+    { start: 401.74, end: 408.32, ja: "山を登るmachine、ロープウェイ使ったけど", en: "the machine to climb the mountain, I used the ropeway" },
+    { start: 408.32, end: 410.11, ja: "それでもすっごくたくさん", en: "even so, there were so many" },
+    { start: 410.11, end: 417.11, ja: "人がいたから、めっちゃ時間かかったかな。", en: "people, it took a ton of time." },
+    { start: 417.11, end: 418.95, ja: "しかも、ロープウェイが高くて", en: "And the ropeway was expensive" },
+    { start: 418.95, end: 422.14, ja: "下から上に行くまで", en: "from the bottom to the top" },
+    { start: 422.14, end: 426.10, ja: "1000円。で帰りも1000円。そう、だから", en: "1000 yen. And the return too, 1000 yen. So" },
+    { start: 426.10, end: 432.03, ja: "本当にその日曜日は、もう、なんだろう", en: "Really that Sunday, I was, what should I say" },
+    { start: 432.03, end: 443.12, ja: "交通費。交通費は transportation fee?", en: "Transportation fee. Transportation fee is transportation fee?" },
+    { start: 443.12, end: 452.28, ja: "交通費に4000円から5000円使いました。", en: "I spent 4000 to 5000 yen on transportation." },
+    { start: 452.28, end: 452.79, ja: "高かった。", en: "It was expensive." },
+    { start: 452.79, end: 456.00, ja: "で、何も見えなかった。", en: "And I couldn't see anything." },
+    { start: 456.00, end: 459.95, ja: "だから、皆さんが次、京都に行って", en: "So, next time you go to Kyoto" },
+    { start: 459.95, end: 465.06, ja: "比叡山を見たいと思ったら、", en: "if you want to see Mt. Hiei" },
+    { start: 465.06, end: 468.26, ja: "多分、朝、８時とか", en: "probably, in the morning, 8am or" },
+    { start: 468.26, end: 473.06, ja: "9時から夕方の5時、６時とかに", en: "from 9am to evening 5pm or 6pm" },
+    { start: 473.06, end: 478.22, ja: "しっかり時間を持って、余裕（よゆう）を持って", en: "secure solid time, with room to spare" },
+    { start: 478.22, end: 479.99, ja: "そしてお金も必要ね！", en: "and you need money too!" },
+    { start: 479.99, end: 484.67, ja: "お金を持って、観光に行ってください！", en: "Take money and go sightseeing!" },
+    { start: 484.67, end: 487.82, ja: "私みたいに失敗しないでください。", en: "Please don't fail like me." },
+    { start: 487.82, end: 492.38, ja: "ま、でも、比叡山は本当におすすめかな。", en: "Well, but, Mt. Hiei is really recommended." },
+    { start: 492.38, end: 495.65, ja: "山の中にあるから", en: "Because it's in the mountains" },
+    { start: 495.65, end: 501.17, ja: "他の京都の街の中にある神社とか", en: "unlike other Kyoto shrines in the city" },
+    { start: 501.17, end: 506.88, ja: "お寺の観光とは少し違うね。", en: "temple tourism is a bit different." },
+    { start: 506.88, end: 511.12, ja: "そんな感じかな〜だから、おすすめで", en: "That kind of feeling, so it's recommended" },
+    { start: 511.12, end: 514.46, ja: "やっぱり秋は秋は紅葉（こうよう）", en: "as expected, autumn is autumn, autumn leaves" },
+    { start: 514.46, end: 517.93, ja: "紅葉は、赤い葉っぱとか", en: "Autumn leaves are red leaves and" },
+    { start: 517.93, end: 522.63, ja: "黄色い葉っぱ、茶色い葉っぱのことです。", en: "yellow leaves, brown leaves." },
+    { start: 522.63, end: 525.09, ja: "だから、日本の秋は", en: "So, Japanese autumn" },
+    { start: 525.09, end: 529.73, ja: "本当に、山とか木が黄色とか", en: "really, mountains and trees turn yellow" },
+    { start: 529.73, end: 533.94, ja: "オレンジとか赤とか茶色になって、", en: "orange, red, brown" },
+    { start: 533.94, end: 535.29, ja: "すごく綺麗。", en: "really beautiful." },
+    { start: 535.29, end: 543.14, ja: "でも、だから、観光客お客さんがとても多いです。", en: "But, so, there are very many tourists." },
+    { start: 543.14, end: 546.23, ja: "だから、まあ比叡山に行く時とか", en: "So, when going to Mt. Hiei" },
+    { start: 546.23, end: 553.80, ja: "京都に行く時は、紅葉の時はおすすめだけど", en: "when going to Kyoto, autumn leaves season is recommended, but" },
+    { start: 553.80, end: 558.04, ja: "でもちょっと人が多すぎるから、", en: "but there are too many people" },
+    { start: 558.04, end: 561.24, ja: "私はオススメしないかな。", en: "I might not recommend it." },
+    { start: 561.24, end: 563.83, ja: "紅葉が見たかったら、", en: "If you want to see autumn leaves" },
+    { start: 563.83, end: 567.39, ja: "京都とか大きな観光地じゃなくて、", en: "not Kyoto or big tourist spots" },
+    { start: 567.39, end: 571.89, ja: "普通の田舎に行ったらいいと思います。", en: "I think you should go to normal countryside." },
+    { start: 571.89, end: 574.59, ja: "田舎に行ったら山があるからね。", en: "If you go to the countryside there are mountains." },
+    { start: 574.59, end: 576.74, ja: "例えば、私が今住んでる", en: "For example, where I live now" },
+    { start: 576.74, end: 581.97, ja: "これは岡山県の田舎なんですけど、", en: "this is the countryside of Okayama prefecture" },
+    { start: 581.97, end: 585.42, ja: "ここはめっちゃ綺麗ね今。", en: "it's super beautiful now." },
+    { start: 585.42, end: 592.70, ja: "本当に。観光客とか誰もいないけど、", en: "Really. There are no tourists or anyone" },
+    { start: 592.70, end: 595.46, ja: "もうめっちゃ綺麗、本当におすすめ", en: "it's already super beautiful, really recommended" },
+    { start: 595.46, end: 600.92, ja: "今日も朝のyoutubeライブが終わった後に", en: "Today too, after the morning YouTube live ended" },
+    { start: 600.92, end: 605.28, ja: "ちょっと散歩に行ったんですけど、", en: "I went for a little walk" },
+    { start: 605.28, end: 609.28, ja: "感動する。綺麗ですっごく感動する。", en: "I'm moved. It's beautiful, I'm so moved." },
+    { start: 609.28, end: 613.92, ja: "やっぱり、あと、古い家も多いから", en: "As expected, and, there are many old houses" },
+    { start: 613.92, end: 618.66, ja: "多いし、大きな建物がないから、なんか", en: "many, and no big buildings, somehow" },
+    { start: 618.66, end: 623.27, ja: "200年前に、とか100年前に住んでいた", en: "200 years ago, or 100 years ago" },
+    { start: 623.27, end: 628.51, ja: "日本人の気持ちが", en: "the feelings of Japanese people" },
+    { start: 628.51, end: 632.74, ja: "なんか分かる気がします。", en: "I somehow feel like I understand." },
+    { start: 632.74, end: 634.34, ja: "そんな気がします！", en: "I have that feeling!" },
+    { start: 634.34, end: 635.78, ja: "だから、ちょっとタイムトラベルした", en: "So, it's a bit like time traveling" },
+    { start: 635.78, end: 638.72, ja: "気分になりますね。", en: "it becomes that kind of feeling." },
+    { start: 638.72, end: 641.31, ja: "本当に、だからおすすめ。", en: "Really, so it's recommended." },
+    { start: 641.31, end: 643.05, ja: "田舎おすすめですよ。", en: "The countryside is recommended." },
+    { start: 643.05, end: 644.83, ja: "日本の田舎、ぜひ", en: "Japanese countryside, please" },
+    { start: 644.83, end: 647.10, ja: "日本に来た時は、", en: "when you come to Japan" },
+    { start: 647.10, end: 651.69, ja: "京都とか東京とかだけじゃなくて、", en: "not just Kyoto or Tokyo" },
+    { start: 651.69, end: 655.36, ja: "なんか、もうちょっと田舎に", en: "somehow, a bit more to the countryside" },
+    { start: 655.36, end: 658.81, ja: "ぜひ遊びに行ってください。", en: "please go visit." },
+    { start: 658.81, end: 661.22, ja: "とてもお勧めです！", en: "Highly recommended!" },
+    { start: 661.22, end: 662.84, ja: "はい、今日はなんかぺちゃぺちゃこんな", en: "Yes, today I talked a lot like this" },
+    { start: 662.84, end: 665.44, ja: "感じで喋っちゃったんだけど、", en: "kind of feeling, but" },
+    { start: 665.44, end: 668.17, ja: "今日こんな感じで終わろうと思います。", en: "I think I'll end today like this." },
+    { start: 668.17, end: 671.18, ja: "はい。ぜひ、これからビデオができたので", en: "Yes. Please, video will be available from now on" },
+    { start: 671.18, end: 674.88, ja: "ビデオもチェックしてみてください。", en: "please check out the video too." },
+    { start: 674.88, end: 679.47, ja: "はい。で、もし何か話してほしいこととか", en: "Yes. And, if there's something you want me to talk about" },
+    { start: 679.47, end: 682.28, ja: "まあ、ちょっと早すぎ", en: "well, a bit too fast" },
+    { start: 682.28, end: 686.37, ja: "しゃべるの早すぎて思ったら", en: "if you think I'm talking too fast" },
+    { start: 686.37, end: 688.11, ja: "コメントにyoutubeの", en: "in the comments, on YouTube" },
+    { start: 688.11, end: 693.30, ja: "このビデオの下のコメントに書いてください。", en: "please write in the comments below this video." },
+    { start: 693.30, end: 694.88, ja: "よろしくお願いします！", en: "Thank you!" },
+    { start: 694.88, end: 696.06, ja: "じゃあ、今日はこんな感じで", en: "Well then, today like this" },
+    { start: 696.06, end: 698.68, ja: "今日も最後まで聞いてくれてありがとう。", en: "thank you for listening to the end today." },
+    { start: 698.68, end: 703.23, ja: "お仕事とか勉強、頑張ってください！", en: "Do your best with work and study!" },
+    { start: 703.23, end: 704.16, ja: "じゃあね！", en: "See you!" },
+    { start: 704.16, end: 707.23, ja: "バイバイ！", en: "Bye!" }
+];
+
+        // ==========================================
+
+      
+      let currentLineIndex = -1;
+        let loopMode = 'none';
+        let player;
+        
+        // 录音相关全局变量
+        let mediaRecorder;
+        let audioChunks = [];
+        let userAudioBlobs = {}; // 存储每句的录音数据
+        let currentRecordingIndex = -1;
+
+        // 加载 YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 'playsinline': 1, 'controls': 1 },
+                events: { 'onReady': onPlayerReady }
+            });
+        }
+
+        function onPlayerReady(event) {
+            renderSubtitles();
+            setInterval(monitorPlayback, 100);
+            
+            const lastRead = localStorage.getItem(`last-read-${pageId}`);
+            if (lastRead !== null) {
+                const targetLine = document.getElementById(`line-${lastRead}`);
+                if (targetLine) {
+                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetLine.classList.add('active');
+                }
+            }
+        }
+
+        function renderSubtitles() {
+            const container = document.getElementById('subtitle-container');
+            subtitleData.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = 'shadow-line';
+                div.id = `line-${index}`;
+                
+                // HTML 结构：左侧文本，右侧按钮组
+                div.innerHTML = `
+                    <div class="text-content">
+                        <div class="ja-text">${line.ja}</div>
+                        <div class="en-text" id="en-${index}">${line.en}</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn record-btn" id="record-btn-${index}" onclick="toggleRecord(event, ${index})" title="Hold or Click to Record">🎙️</button>
+                        <button class="action-btn play-btn" id="play-btn-${index}" onclick="playUserRecord(event, ${index})" style="display:none;" title="Play your recording">▶️</button>
+                    </div>
+                `;
+                
+                div.onclick = (e) => {
+                    // 如果点击的是按钮，不触发视频跳转
+                    if (e.target.closest('.action-btn')) return;
+                    currentLineIndex = index;
+                    player.seekTo(line.start, true);
+                    player.playVideo();
+                    localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                // 双击：紧急暂停 (极客新增)
+                div.ondblclick = (e) => {
+                    if (e.target.closest('.action-btn')) return;
+                    player.pauseVideo();
+                };
+                container.appendChild(div);
+            });
+        }
+      
+        // 全局控制字幕显示/隐藏逻辑
+        function toggleSubtitles(lang) {
+            const container = document.getElementById('subtitle-container');
+            const checkbox = document.getElementById(`toggle-${lang}`);
+            
+            if (checkbox.checked) {
+                container.classList.remove(`hide-${lang}`);
+            } else {
+                container.classList.add(`hide-${lang}`);
+            }
+        }   
+        // 功能 2：录音系统逻辑
+        async function toggleRecord(event, index) {
+            event.stopPropagation();
+            const recordBtn = document.getElementById(`record-btn-${index}`);
+            const playBtn = document.getElementById(`play-btn-${index}`);
+
+            if (currentRecordingIndex === index) {
+                // 停止录音
+                mediaRecorder.stop();
+                recordBtn.classList.remove('recording');
+                currentRecordingIndex = -1;
+                return;
+            }
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    userAudioBlobs[index] = URL.createObjectURL(audioBlob);
+                    playBtn.style.display = 'block'; // 显示播放按钮
+                    playBtn.classList.add('has-audio');
+                    
+                    // 释放麦克风轨道资源
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+                currentRecordingIndex = index;
+                recordBtn.classList.add('recording');
+                
+                // 自动暂停原声音频，以免录进去
+                player.pauseVideo();
+
+            } catch (err) {
+                alert("Permission denied or microphone not found. Please allow microphone access.");
+                console.error(err);
+            }
+        }
+
+        // 功能 3：播放用户的录音
+        function playUserRecord(event, index) {
+            event.stopPropagation();
+            if (userAudioBlobs[index]) {
+                player.pauseVideo(); // 暂停 YouTube
+                const audio = new Audio(userAudioBlobs[index]);
+                audio.play();
+            }
+        }
+
+        function monitorPlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); 
+
+            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+            
+            if (activeIndex !== -1) {
+                currentLineIndex = activeIndex;
+                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                if (activeElement) {
+                    activeElement.classList.add('active');
+                    if (playerState === 1) {
+                        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
