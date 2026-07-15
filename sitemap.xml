@@ -138,13 +138,19 @@
     </url>
     <url>
         <loc>https://shadowgeek.net/shadowing/bite-size-japanese/ep3.html</loc>
-        <lastmod>2026-07-13</lastmod>
+        <lastmod>2026-07-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://shadowgeek.net/shadowing/bite-size-japanese/ep4.html</loc>
-        <lastmod>2026-07-13</lastmod>
+        <lastmod>2026-07-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shadowgeek.net/shadowing/bite-size-japanese/ep5.html</loc>
+        <lastmod>2026-07-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
