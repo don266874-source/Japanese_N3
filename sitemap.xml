@@ -38,63 +38,63 @@
     </url>
 
     <url>
-        <loc>https://shadowgeek.net/shadowing/teppei-ep1.html</loc>
+        <loc>https://shadowgeek.net/shadowing/teppei/ep1.html</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://shadowgeek.net/shadowing/teppei-ep2.html</loc>
+        <loc>https://shadowgeek.net/shadowing/teppei/ep2.html</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://shadowgeek.net/shadowing/teppei-ep3.html</loc>
+        <loc>https://shadowgeek.net/shadowing/teppei/ep3.html</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://shadowgeek.net/shadowing/teppei-ep4.html</loc>
+        <loc>https://shadowgeek.net/shadowing/teppei/ep4.html</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://shadowgeek.net/shadowing/teppei-ep5.html</loc>
+        <loc>https://shadowgeek.net/shadowing/teppei/ep5.html</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://shadowgeek.net/shadowing/teppei-ep6.html</loc>
+        <loc>https://shadowgeek.net/shadowing/teppei/ep6.html</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://shadowgeek.net/shadowing/nij-ep1.html</loc>
+        <loc>https://shadowgeek.net/shadowing/nij/ep1.html</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://shadowgeek.net/shadowing/nij-ep2.html</loc>
+        <loc>https://shadowgeek.net/shadowing/nij/ep2.html</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://shadowgeek.net/shadowing/nij-ep3.html</loc>
+        <loc>https://shadowgeek.net/shadowing/nij/ep3.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://shadowgeek.net/shadowing/nij-ep4.html</loc>
+        <loc>https://shadowgeek.net/shadowing/nij/ep4.html</loc>
         <lastmod>2026-07-12</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -163,6 +163,18 @@
     <url>
         <loc>https://shadowgeek.net/shadowing/bite-size-japanese/ep7.html</loc>
         <lastmod>2026-07-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shadowgeek.net/shadowing/bite-size-japanese/ep8.html</loc>
+        <lastmod>2026-07-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shadowgeek.net/shadowing/bite-size-japanese/ep9.html</loc>
+        <lastmod>2026-07-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
