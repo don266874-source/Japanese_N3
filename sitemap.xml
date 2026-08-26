@@ -80,6 +80,12 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://shadowgeek.net/shadowing/teppei/ep8.html</loc>
+        <lastmod>2026-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
     <url>
         <loc>https://shadowgeek.net/shadowing/nij/ep1.html</loc>
