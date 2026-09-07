@@ -161,6 +161,30 @@
 .inline-story-link:hover {
     color: #0052a3 !important;
 }
+
+summary {
+  cursor: pointer;
+  list-style-position: inside; /* 确保三角与文本间距紧凑 */
+}
+
+.series-title {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #2e7d32; /* 你的绿色系 */
+  user-select: none; /* 防止频繁点击时意外全选文字 */
+}
+
+.badge-new {
+  background-color: #c6c84e;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
     </style>
 </head>
 <body>
@@ -199,64 +223,77 @@
         <p>Drop the boring textbooks. Here is my growing collection of real-world Japanese audio, pre-sliced with dual-language transcripts for intense shadowing practice.</p>
 
         <!-- 核心主力：Teppei 专区 -->
-        <h3>🎙️ Nihongo con Teppei (Beginner Series)</h3>
-        <ul class="resource-list">
-            <li>
-                <a href="/shadowing/teppei/ep1.html">Ep1: 元気ですか？(How are you?)</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep2.html">Ep2: どのくらい勉強していますか？(How much are you studying?)</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep3.html">Ep3: どこに住んでいますか？(Where do you live?)</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep4.html">Ep4: 何時ですか？(What time is it?)</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep5.html">Ep5: ひらがな、カタカナ、漢字について</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep6.html">Ep6: 学校に行っていますか？</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep7.html">Ep7: 日本語の勉強は好きですか？</a>
-                <span class="date-badge">Added: Aug 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep8.html">Ep8: 音楽のジャンルについて</a>
-                <span class="date-badge">Added: Aug 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep9.html">Ep9: 食べ物について</a>
-                <span class="date-badge">Added: Aug 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep10.html">Ep10: お酒は好きですか？</a>
-                <span class="date-badge">Added: Aug 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep11.html">Ep11: コーヒーは好きですか</a>
-                <span class="date-badge">Added: Aug 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep12.html">Ep12: 読書について</a>
-                <span class="date-badge">Added: Sep 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/teppei/ep13.html">Ep13: 漫画は好きですか？</a>
-                <span class="date-badge">Added: Sep 2026</span>
-            </li>
-            <!-- 明天更新第2期，就直接在这里加一行 -->
-        </ul>
-        <h3>🎙️ EASY JAPANESE PODCAST (Beginner Series)</h3>
-        <ul class="resource-list">
+         <details>
+            <summary>
+            <span class="series-title">🎙️ Nihongo con Teppei (Beginner Series)</span>
+            <span class="badge-new">NEW: Ep14</span>
+            </summary>
+      
+            <ul class="resource-list">
+                <li>
+                    <a href="/shadowing/teppei/ep1.html">Ep1: 元気ですか？(How are you?)</a>
+                    <span class="date-badge">Added: July 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep2.html">Ep2: どのくらい勉強していますか？(How much are you studying?)</a>
+                    <span class="date-badge">Added: July 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep3.html">Ep3: どこに住んでいますか？(Where do you live?)</a>
+                    <span class="date-badge">Added: July 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep4.html">Ep4: 何時ですか？(What time is it?)</a>
+                    <span class="date-badge">Added: July 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep5.html">Ep5: ひらがな、カタカナ、漢字について</a>
+                    <span class="date-badge">Added: July 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep6.html">Ep6: 学校に行っていますか？</a>
+                    <span class="date-badge">Added: July 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep7.html">Ep7: 日本語の勉強は好きですか？</a>
+                    <span class="date-badge">Added: Aug 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep8.html">Ep8: 音楽のジャンルについて</a>
+                    <span class="date-badge">Added: Aug 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep9.html">Ep9: 食べ物について</a>
+                    <span class="date-badge">Added: Aug 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep10.html">Ep10: お酒は好きですか？</a>
+                    <span class="date-badge">Added: Aug 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep11.html">Ep11: コーヒーは好きですか</a>
+                    <span class="date-badge">Added: Aug 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep12.html">Ep12: 読書について</a>
+                    <span class="date-badge">Added: Sep 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep13.html">Ep13: 漫画は好きですか？</a>
+                    <span class="date-badge">Added: Sep 2026</span>
+                </li>
+                <li>
+                    <a href="/shadowing/teppei/ep14.html">Ep14: スタジオジブリについて！</a>
+                    <span class="date-badge">Added: Sep 2026</span>
+                </li>
+                <!-- 明天更新第2期，就直接在这里加一行 -->
+            </ul>
+        </details>
+         <details><summary><span class="series-title">🎙️ EASY JAPANESE PODCAST (Beginner Series)</span>
+            <span class="badge-new">NEW: Ep5</span>
+        </summary>
+       
+            <ul class="resource-list">
             <li>
                 <a href="/shadowing/ejp/ep1.html">Ep1: はじめて</a>
                 <span class="date-badge">Added: July 2026</span>
@@ -274,10 +311,18 @@
                 <a href="/shadowing/ejp/ep4.html">Ep4: 日本語の勉強のやり方</a>
                 <span class="date-badge">Added: July 2026</span>
             </li>
+            <li>
+                <a href="/shadowing/ejp/ep5.html">Ep5: What is "INAKA"?｜田舎って何？</a>
+                <span class="date-badge">Added: Sep 2026</span>
+            </li>
             
             <!-- 明天更新第2期，就直接在这里加一行 -->
-        </ul>
-        <h3>🎙️ Natural Japanese (Beginner Series)</h3>
+            </ul>
+        </details>
+         <details><summary><span class="series-title">🎙️ Natural Japanese (Beginner Series)</span>
+        <span class="badge-new">NEW: Ep4</span>
+        </summary>
+        
         <ul class="resource-list">
             <li>
                 <a href="/shadowing/nij/ep1.html">Ep1: Calling an Izakaya to Make a Reservation</a>
@@ -297,8 +342,11 @@
             </li>
             <!-- 明天更新第2期，就直接在这里加一行 -->
         </ul>
-      
-         <h3>🎙️ Bite Size Japanese (Intermediate Series)</h3>
+       </details>
+        <details> <summary><span class="series-title">🎙️ Bite Size Japanese (Intermediate Series)</span>
+            <span class="badge-new">NEW: Ep13</span>
+        </summary>
+       
         <ul class="resource-list">
             <li>
                 <a href="/shadowing/bite-size-japanese/ep1.html">Ep1: 日本語ポッドキャスト</a>
@@ -361,6 +409,7 @@
             
             <!-- 明天更新第2期，就直接在这里加一行 -->
         </ul>
+        </details>
         <!-- 分类 1：xx专区 -->
        
         <!-- 分类 2：xx专区 -->
