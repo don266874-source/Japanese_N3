@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================================================= -->
+    <!-- 1. [ 核心配置区 ]：SEO 流量拦截网（每期必改） -->
+    <!-- ======================================================= -->
+    <title>Ep6: 今日何食べた？ | easy Japanese Podcast for beginners Shadowing Tool & Transcript</title>
+    <meta name="description" content="Interactive transcript and single-line looping tool for EASY JAPANESE Japanese Podcast for beginners Episode 6 (今日何食べた？). Master duration counters and practice perfect pronunciation.">
+    <link rel="canonical" href="https://shadowgeek.net/shadowing/ejp/ep6.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="The Shadowing Geek">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://shadowgeek.net/shadowing/ejp/ep6.html">
+    <meta property="og:title" content="Ep6: 今日何食べた？ | easy Japanese Podcast for beginners Shadowing Tool & Transcript">
+    <meta property="og:description" content="Interactive transcript and single-line looping tool for  EASY Japanese Podcast for beginners Episode 6 (今日何食べた？). Master duration counters and practice perfect pronunciation.">
+    <meta property="og:image" content="https://shadowgeek.net/images/og-default.webp">
+    <meta property="article:published_time" content="2026-07-13T00:00:00+08:00">
+    <meta property="article:modified_time" content="2026-07-13T00:00:00+08:00">
+    <meta property="article:author" content="Felix">
+    <meta property="article:section" content="Shadowing Lab">
+    <meta property="article:tag" content="Teppei">
+    <meta property="article:tag" content="shadowing">
+    <meta property="article:tag" content="time expressions">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ep6: 今日何食べた？ | EASY Japanese Podcast for beginners Shadowing Tool">
+    <meta name="twitter:description" content="Interactive transcript and single-line looping tool for EASY Japanese Podcast for beginners Episode 6 (今日何食べた？). Master duration counters and practice perfect pronunciation.">
+    <meta name="twitter:image" content="https://shadowgeek.net/images/og-default.webp">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ep6: 今日何食べた？ |  EASY Japanese Podcast for beginners Shadowing Tool & Transcript",
+      "description": "Interactive transcript and single-line looping tool for  EASY Japanese Podcast for beginners Episode 6 (今日何食べた？). Master duration counters and practice perfect pronunciation.",
+      "image": "https://shadowgeek.net/images/og-default.webp",
+      "datePublished": "2026-07-13",
+      "dateModified": "2026-07-13",
+      "author": {"@type": "Person", "name": "Felix", "url": "https://shadowgeek.net/about.html"},
+      "publisher": {"@type": "Organization", "name": "The Shadowing Geek", "logo": {"@type": "ImageObject", "url": "https://shadowgeek.net/images/og-default.webp"}},
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://shadowgeek.net/shadowing/ejp/ep6.html"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://shadowgeek.net/"},
+        {"@type": "ListItem", "position": 2, "name": "Shadowing Lab", "item": "https://shadowgeek.net/shadowing/"},
+        {"@type": "ListItem", "position": 3, "name": "Ep6: 今日何食べた？", "item": "https://shadowgeek.net/shadowing/ejp/ep6.html"}
+      ]
+    }
+    </script>
+<style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { border-bottom: 2px solid #eaeaea; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #111; margin-bottom: 5px; font-size: 1.8rem; letter-spacing: -0.5px;}
+        .subtitle { font-size: 1.1rem; color: #555; margin-top: 0; margin-bottom: 20px;}
+        
+        nav a { margin-right: 15px; color: #0066cc; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 5px 10px; border-radius: 4px; transition: background 0.2s;}
+        nav a:hover { background: #f0f6ff; text-decoration: none; }
+        nav a.current { background: #f0f6ff; color: #111; }
+        
+        .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
+        
+        .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
+        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        
+        /* 改造跟读行布局：支持左右分栏 */
+        .shadow-line { display: flex; justify-content: space-between; align-items: center; padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
+        .shadow-line:hover { background: #f6f8fa; }
+        .shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+        
+        .text-content { flex-grow: 1; padding-right: 15px; }
+        .ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px;}
+        .en-text { font-size: 0.95rem; color: #666; transition: opacity 0.3s; }
+        .en-text.hidden { opacity: 0; user-select: none; }
+        
+        /* 交互按钮组 */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+
+        .grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea;}
+        .grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px;}
+        .grammar-item { margin-bottom: 15px; }
+        .grammar-title { color: #0066cc; font-weight: bold; }
+        footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
+    
+        /* 录音隐私提示条 */
+        .privacy-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #f6f8fa;
+            color: #57606a;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px dashed #d0d7de;
+        }
+        .privacy-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #57606a;
+        }
+        /* 交互操作提示条 */
+        .interaction-hint {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #034694;
+            background-color: #f0f6ff;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px dashed #b6d4fe;
+            font-weight: 500;
+        }
+    /* 全局字幕控制栏 */
+        .global-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #f9fbfc;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eaeaea;
+            font-size: 0.75rem;
+        }
+        .control-label {
+            font-weight: bold;
+            color: #333;
+        }
+        .toggle-group {
+            display: flex;
+            gap: 15px;
+        }
+        .toggle-group label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            user-select: none;
+        }
+
+        /* 全局隐藏逻辑（通过父级 Class 控制） */
+        #subtitle-container.hide-ja .ja-text { display: none; }
+        #subtitle-container.hide-en .en-text { display: none; }
+        
+        /* 优化后的操作按钮（去掉惊悚眼球） */
+        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
+        .action-btn:hover { background: #e1e4e8; }
+        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
+        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(207, 34, 46, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 全站闭环 Header 导航系统 -->
+    <header>
+        <p class="logo" style="color:#111;margin-bottom:5px;font-size:1.8rem;letter-spacing:-0.5px;font-weight:bold;">The Shadowing Geek</p>
+        <p class="subtitle">A fellow learner's interactive tools for shadowing real-world audio, decoding native speed, and mastering JLPT grammar.</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/shadowing/">🎧 Shadowing Lab</a>
+            <a href="/posts/">📚 Grammar Notes</a>
+            <a href="/about.html">About Me</a>
+        </nav>
+    </header>
+    
+   <main>
+    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
+    <h1>Easy Japanese Podcast - Ep6: 今日何食べた？</h1>
+    
+    <!-- 注入新灵魂的 Learner's Note -->
+    <div class="learners-note">
+        <strong>Felix's Learner Note:</strong>
+
+<p>Easy Japanese episode 6 breaks its usual format: for the first time, the host welcomes a guest — Eiichiro Nagaya, a fellow podcaster from Gifu Prefecture, right in the middle of Japan. The topic is the most universal small talk there is: 今日何食べた？ (What did you eat today?). The guest had a soy-patty hamburger his mother bought him; the host cooked himself the chicken version of 酢豚 (subuta) — sweet and sour chicken — and comparing the two dinners kicks off a conversation packed with beginner vocabulary.</p>
+<p>From there the episode becomes a learner's goldmine. You'll collect the core food adjectives — 甘い (sweet), 苦い (bitter), 辛い (spicy) — and untangle one of the trickiest false friends for English speakers: Japanese splits "hot" into 暑い／熱い (temperature) and 辛い (spicy), while English uses one word for all of it (plus "hot" as in attractive). The hosts then dig into katakana loanwords: why bread is パン (not from English "bread"), why パスタ means spaghetti in Japan, and why canned tuna is called シーチキン ("sea chicken") even though ツナ is the adopted English word — plus a detour into ブイヨン (bouillon, from French) and 香辛料 vs. 調味料.</p>
+<p>The episode closes with study advice every learner should hear: anime Japanese (Naruto's だってばよ, for example) isn't how real people talk, but Ghibli films use natural everyday dialogue — watch those instead, and let repetition do its work. For shadowing, this episode is ideal: two voices trading turns, natural fillers and reactions like たしかに and なるほどね, and the definitional pattern 〜っていうのは repeated dozens of times.</p>
+
+
+    </div>   
+ 
+
+    <div class="audio-player">
+        <div class="yt-container">
+            <div id="youtube-player"></div>
+    </div>
+
+ <div class="global-controls">
+            <span class="control-label">Display:</span>
+            <div class="toggle-group">
+                <label>
+                    <input type="checkbox" id="toggle-ja" checked onchange="toggleSubtitles('ja')">
+                    Japanese
+                </label>
+                <label>
+                    <input type="checkbox" id="toggle-en" checked onchange="toggleSubtitles('en')">
+                    English
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-badge">
+            <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            <span><strong>Privacy First:</strong> Your mic audio is processed locally on your device. We never upload or save your voice. Recordings vanish when you close the tab.</span>
+     </div>
+    <div class="interaction-hint">
+        💡 <strong>Pro Tip:</strong> Click any sentence to jump and play. Double-click to pause the audio.
+    </div>
+
+            <div id="subtitle-container"></div>
+
+<div class="grammar-item">
+<span class="grammar-title">1. 〜っていうのは（定義・話題提示）</span><br>
+<strong>Meaning: </strong>"X" means... / Speaking of X (topic + definition)<br>
+<strong>In Text: </strong>回ったところっていうのは…意味ですね / 兼ねてっていうのは…みたいな感じですね / おかかっていうのは鰹節なんですけど.<br>
+<strong>Note:</strong> This is the episode's signature pattern — the hosts define almost every new word with 〜っていうのは, the casual spoken form of 〜というのは. It flags "here comes an explanation," making it the single most useful listening cue in natural Japanese podcasts. Shadow every instance; it trains you to both ask for and give definitions conversationally. (N4)
+</div>
+
+<div class="grammar-item">
+<span class="grammar-title">2. 〜とか（例示）</span><br>
+<strong>Meaning: </strong>...and so on / such as (casual listing)<br>
+<strong>In Text: </strong>可愛いとか、美味しいとか、あったかいとか / ハーブとか、ブラックペッパーとか / 昆布とか、おかかとか.<br>
+<strong>Note:</strong> とか lets you name examples without committing to a complete list — the casual counterpart of や and softer than a bare と. The hosts stack it constantly while rattling off adjectives and foods, so this episode doubles as an とか drill. It's often doubled (AとかBとか) for a natural rhythm. (N5)
+</div>
+
+<div class="grammar-item">
+<span class="grammar-title">3. 〜たところ（ちょうど今〜したばかり）</span><br>
+<strong>Meaning: </strong>Just (did) / have just now...<br>
+<strong>In Text: </strong>今7時を回ったところです (it's just past seven now).<br>
+<strong>Note:</strong> Verb (past) + ところ pins an action to the exact moment of completion — "just barely past." The host uses it in the opening time check, and then immediately defines it with っていうのは, giving you a two-for-one grammar demo. Compare 〜ているところ (in the middle of) and 〜るところ (about to). (N4)
+</div>
+
+<div class="grammar-item">
+<span class="grammar-title">4. 〜がち（傾向・マイナス評価）</span><br>
+<strong>Meaning: </strong>Tends to... / is liable to... (often negative)<br>
+<strong>In Text: </strong>英語は「暑い」って言われがちなんですけど (English tends to get used for "hot"...).<br>
+<strong>Note:</strong> Attach がち to a verb stem or noun to describe a recurring tendency — usually with a slightly critical nuance, like 忘れがち (forgetful) or 太りがち (prone to gaining weight). Here it nails how English speakers habitually default to one word for "hot." A high-frequency N3 pattern that instantly makes your speech sound native. (N3)
+</div>
+
+<div class="grammar-item">
+<span class="grammar-title">5. 〜を兼ねて（兼用）</span><br>
+<strong>Meaning: </strong>Also serving as / doubling as<br>
+<strong>In Text: </strong>練習も兼ねてやってみようかなと思うので (we'll try it while also using it as practice).<br>
+<strong>Note:</strong> Noun + を兼ねて expresses doing one thing that simultaneously fulfills another purpose — one action, two birds. The host coins it here and then immediately defines it (兼ねてっていうのは練習も一緒にっていう意味ですね), a perfect natural-comprehension demo. Common in phrases like 買い物を兼ねて散歩する. (N3)
+</div>
+
+
+
+            </div>
+    
+   </main>
+    <footer>
+        <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // ==========================================
+        // 核心配置区：以后每次只需要修改这三个变量！
+        // ==========================================
+        const ytVideoId = "F_-S4XvZAo0"; // 请替换为 EP5 的 YouTube 视频 ID
+        const pageId = "ejp-ep6"; 
+
+const subtitleData = [
+    { start: 2.71, end: 29.98, ja: "みなさん、こんにちは。Easy Japanese へようこそ。この番組では、毎日の出来事や旬なトピックを少しだけゆっくり、簡単な日本語でお送りします。もっと自然な会話を覚えたい、でも映画やテレビでは難しすぎるという方に、台本なし・編集なしの、より自然な日本語をお届けします。", en: "Hello everyone, and welcome to Easy Japanese. On this show we deliver everyday events and timely topics in slightly slower, simple Japanese. If you want more natural conversation but movies and TV are too hard, this script-free, edit-free Japanese is for you." },
+    { start: 29.98, end: 41.02, ja: "Podcast と YouTube にチャンネルがありますので、お好きな方でお楽しみください。今日もよろしくお願いします。", en: "We have channels on both podcast and YouTube, so enjoy whichever you like. Thanks again for today." },
+    { start: 46.53, end: 62.23, ja: "はい、ということで、今日は1月29日金曜日の夜。今7時を回ったところです。「回ったところ」っていうのは、少しだけ過ぎたところ、っていう意味ですね。", en: "All right, so today is Friday night, January 29th. It's just past seven o'clock. \"Mawatta tokoro\" means it's just barely past — a little bit after." },
+    { start: 62.23, end: 84.07, ja: "今日も2回目の録音をしているんですけれども、ちょっといつもと違って、いつもは僕が一人で喋ってるんですが、今日はゲストをお迎えして、2人でお話をしようかなと思っています。ということで、よろしくお願いします。", en: "We're recording take two today, and it's a bit different from usual — normally I talk alone, but today I've invited a guest and we'll have a two-person conversation. So, welcome!" },
+    { start: 84.26, end: 87.83, ja: "はい、よろしくお願いします。", en: "Yes, pleased to be here." },
+    { start: 87.83, end: 103.36, ja: "2人でね、お話をするのは、ちょっと初めてのことになるんですが、練習も兼ねて。「兼ねて」っていうのは「練習も一緒に」みたいな感じですね。やってみようかなと思うので。", en: "This is our first time talking as a pair, and we're doing it as practice too. \"Kanete\" means doing double duty — practice and the real thing at once. So let's give it a try." },
+    { start: 103.36, end: 109.89, ja: "まず、そうだな、お名前と、住んでるところを教えてください。", en: "First off, um... could you tell us your name and where you live?" },
+    { start: 109.96, end: 135.63, ja: "皆さん、はじめまして。長屋栄一郎です。今、住んでいるところは、日本の真ん中の岐阜県というところです。今日は皆さんといろいろと話せることを楽しみにしています。よろしくお願いします。", en: "Hello everyone, nice to meet you. I'm Eiichiro Nagaya. I live in Gifu Prefecture, right in the middle of Japan. I'm looking forward to chatting with you all today. Pleasure to be here." },
+    { start: 135.63, end: 147.32, ja: "はいっ。ということで、いつもね、あの、他のポッドキャストとかをやったりしているんですが、ゆっくりお話するのは結構難しいですよね。", en: "Great. So, you know, I do other podcasts and things, but speaking slowly is actually pretty hard, isn't it?" },
+    { start: 147.32, end: 157.58, ja: "そうですね。こう、自分で頭で考えて、ゆっくりと話すのは、すごい難しいです。", en: "It really is. Thinking it through in your head and then speaking slowly is super difficult." },
+    { start: 157.58, end: 165.80, ja: "ちょうど聞いてくれている皆さんが、あのね、日本語のレベルに合えばいいんですけれども。", en: "Ideally it matches the Japanese level of everyone listening." },
+    { start: 165.80, end: 177.54, ja: "今日は、まあ簡単なお話ということで、ごはんのお話をしたいなって思うんですけれども、今日、何食べました？", en: "Today's topic is something easy — food. So: what did you eat today?" },
+    { start: 177.54, end: 182.55, ja: "今日は、ハンバーガーを食べました。", en: "Today I had a hamburger." },
+    { start: 182.55, end: 186.41, ja: "全然日本っぽくないですね。あっはぁ。", en: "Ha, that's not Japanese at all!" },
+    { start: 186.41, end: 202.57, ja: "あの、大豆パテのハンバーガーを食べました。あの、ソイパティっていう、大豆の、お肉の代わりのそういうもの、っていうことですよね。", en: "Well, it was a soy-patty hamburger. A \"soy patty\" — the mystery soy thing that replaces the meat, right?" },
+    { start: 202.57, end: 204.77, ja: "はい、そうです。", en: "Yes, exactly." },
+    { start: 204.77, end: 207.24, ja: "自分で作ったんですか。", en: "Did you make it yourself?" },
+    { start: 207.24, end: 213.59, ja: "いえ、あの、自分のお母さんが買ってきてくれました。", en: "No — my mom bought it for me." },
+    { start: 213.59, end: 216.06, ja: "あ、なるほどね。", en: "Ah, I see." },
+    { start: 216.06, end: 228.55, ja: "はい、僕は今日は……中華みたいな感じですね。中華料理、中国の料理みたいな感じのものを作りました。", en: "As for me, today I made something Chinese — Chinese-style, like Chinese food." },
+    { start: 228.55, end: 239.64, ja: "えっと、鶏肉の……えっと、酢豚みたいな。酢豚ってわかりますかね。あの。", en: "It was chicken... like subuta. Do you know subuta? Uh..." },
+    { start: 239.64, end: 244.14, ja: "そうだな、結構ここのリスナーさんはアメリカの方が多いんですけど。", en: "Hmm, a lot of listeners here are from the US, though." },
+    { start: 244.14, end: 252.84, ja: "えっと、スイートアンドサワーポークみたいな感じですね。あ、酢豚ですね。それのチキンバージョンだから、スイートアンドサワーチキンみたいな感じです。", en: "It's like sweet and sour pork — oh, that's subuta! So mine was the chicken version: sweet and sour chicken." },
+    { start: 253.44, end: 263.21, ja: "酢豚（すぶた）かな。日本語だと「酢豚」って書いて「すぶた」って言うんですけど。", en: "\"Subuta,\" then. In Japanese it's written 酢豚 and read \"subuta.\"" },
+    { start: 263.21, end: 271.02, ja: "なので、まあまあ、そんな料理を自分で作って食べました。", en: "So anyway, I made that dish myself and ate it." },
+    { start: 271.16, end: 274.28, ja: "結構ね、おいしかったですね、あの。", en: "It was pretty tasty, actually." },
+    { start: 274.28, end: 282.82, ja: "ご飯を食べた時に、あの、まあ「美味しい」とか、なんかこう感想ってあるじゃないですか。", en: "When you eat a meal, you have those little reactions, like \"oishii,\" right?" },
+    { start: 282.82, end: 293.17, ja: "ありますね。えっと、だから……形容詞っていうのは、英語で言うと、えっと、adjective かな。", en: "We do! So... keiyoshi — \"adjectives\" in English, I guess." },
+    { start: 293.17, end: 300.91, ja: "そうですね。「形容詞」っていうのは、まだ難しいかもしれないんですけど、「可愛い」とか。", en: "Right. \"Keiyoshi\" might still be a hard word, but like \"kawaii\"..." },
+    { start: 300.91, end: 318.58, ja: "「美味しい」とか「あったかい」とか、そういう言葉なんですけど。えーっと、ご飯を食べた時によく使う言葉を、皆さんの、なんかこう、単語が増えるように教えてください。", en: "...or \"oishii,\" \"attakai\" — words like that. Now, please teach us the words you often use when eating, so everyone's vocabulary can grow." },
+    { start: 318.58, end: 329.80, ja: "はい。ご飯を食べる時に使う形容詞は、何があるかな。例えば。", en: "Sure! Food adjectives... what have we got? For example..." },
+    { start: 329.80, end: 345.87, ja: "「甘い」とか、あとは「苦い」っていう言葉だったりとか、あとは「辛い」といった、その味を表す言葉をよく使うと思います。", en: "\"Amai\" (sweet), or \"nigai\" (bitter), and \"karai\" (spicy) — words that describe taste are used a lot." },
+    { start: 345.87, end: 357.12, ja: "あの、「辛い」って言うのは結構、僕は、日本語と例えば英語とかの違いで面白いって思うんですけれども。", en: "Now, \"karai\" — I find it one of the most interesting differences between Japanese and English." },
+    { start: 357.12, end: 366.28, ja: "えっと、英語だと「暑い」っていうのと「辛い」っていうのは、同じ言葉として使われますよね。", en: "In English, \"hot\" (temperature) and \"karai\" (spicy) are the same word, right?" },
+    { start: 366.28, end: 389.28, ja: "うーん、そうですね。「暑い」っていうのは、えーっと、例えば、何だろう、夏に暑い、気温が暑いとか、あとは水がお湯になったら「熱い」、温度が熱いっていうのがありますよね。うん。", en: "True. \"Atsui\" for heat — like hot summer weather, hot temperatures — and when water boils it's \"atsui\" too: temperature-hot. Right." },
+    { start: 389.28, end: 403.08, ja: "あとは、あの、何だろうな……「厚い」っていうの。「薄い・厚い」っていうのと「熱い」っていうのがあるんですけど、ちょっとややこしいな。", en: "And then there's... \"atsui\" again — \"thick\" (vs. \"thin\") sounds identical to \"hot.\" Same sound, different words. It gets confusing." },
+    { start: 403.08, end: 414.50, ja: "英語で言うところの hot っていう暑さがあって、えっと、temperature みたいな話もややこしいですけど、「暑い」っていうのがあるんですけど。", en: "There's the \"hot\" of temperature — the whole temperature thing is confusing too — but Japanese does have \"atsui\"..." },
+    { start: 415.23, end: 425.73, ja: "hot っていうので、英語は「暑い」って言われがちなんですけど、日本語は「からい」っていうのは別にあるんですね。", en: "English leans on \"hot\" for everything, but Japanese has a separate word: \"karai.\"" },
+    { start: 425.73, end: 432.25, ja: "スパイスが熱い、じゃなくて、スパイシーは「辛い」っていう表現になりますよね。", en: "So it's not \"spice is hot\" — spicy things are \"karai.\"" },
+    { start: 432.25, end: 437.58, ja: "うーん、結構、僕、面白いなって思うんですけど、そこが。", en: "I just find that really interesting." },
+    { start: 438.52, end: 455.63, ja: "英語の hot は、温度が熱いっていうのもあるし、あとは、食べ物が辛いっていうのもあるし、あとはかっこいいとかかわいいとか、そういう hot な使い方も。", en: "English \"hot\" covers temperature-hot, spicy-hot, and even \"hot\" as in attractive or cute." },
+    { start: 459.65, end: 477.48, ja: "なので、英語の中では hot という一つの言葉で、いろいろと、えっと、意味があるんですけど、日本語の「辛い」は、もう「辛い」だけですね。", en: "So in English, one word — hot — carries all these meanings, but Japanese \"karai\" means only spicy. That's it." },
+    { start: 477.48, end: 487.58, ja: "あの……「確かに」って、僕、今言ったんですけど、「たしかに」っていうのは、よく僕は使う言葉なんです。", en: "Oh — I just said \"tashika ni\" a moment ago. That's a word I use all the time." },
+    { start: 487.58, end: 495.15, ja: "あの、誰かなんか言った時に「確かに」って言いたい……えっと、それは何なんだろうな。", en: "You say it when someone says something... hmm, what is it exactly?" },
+    { start: 495.15, end: 504.64, ja: "英語で説明しちゃうと、英語がわからない人には難しくなっちゃうんですけど、「確かに」っていうのは、なんか「そうそう」みたいなことですね。", en: "Explaining it in English gets complicated for non-English speakers, but \"tashika ni\" is basically like \"exactly\" or \"so true.\"" },
+    { start: 504.64, end: 512.04, ja: "自分もそう思うというか、あー、そうですね、意見が一緒だったときに、っていう感じですね。", en: "It's when you think so too — when your opinions match." },
+    { start: 512.04, end: 524.51, ja: "あの、日本語でも「あつい」っていうのは、あの、何だろうな、「今人気がある」みたいな感じでも使えますよね。", en: "And in Japanese, \"atsui\" can also mean... what's the word — \"currently popular.\"" },
+    { start: 524.51, end: 538.47, ja: "うーん、そうですね。例えば、えっと、サッカーとか野球が今アツイ、みたいな、今流行っているとか。", en: "Right! Like \"soccer and baseball are atsui right now\" — meaning trendy, in fashion." },
+    { start: 538.47, end: 545.09, ja: "「流行っている」も結構難しい言葉ですよね。流行っている……今は、そうでしょうね。", en: "\"Hayatteru\" (trending) is a pretty advanced word itself. Trending... yes, it certainly is now." },
+    { start: 545.09, end: 553.61, ja: "「人気がある」とか。まあ popular ってのはすでに日本語だったりもするんで、カタカナの言葉ですけど、ポピュラーですよね。", en: "Or \"ninki ga aru\" (popular). And \"popular\" is already basically Japanese — a katakana word: \"popuraa.\"" },
+    { start: 555.85, end: 567.55, ja: "日本語の中にたくさん英語が混じっているので、使えるのもあるけど、少し意味が違うときもあるので、気をつけないといけないですよ。うん。", en: "Japanese is full of mixed-in English, so some of it works — but sometimes the meaning shifts, so watch out. Yeah." },
+    { start: 568.62, end: 578.53, ja: "カタカナになってしまってる言葉と、まだ英語のままのものもあるし、そこが使い分け、結構難しくて。", en: "There are words that became katakana and words that stayed pure English, and telling them apart — which to use when — is pretty tricky." },
+    { start: 580.82, end: 585.86, ja: "spicy なんて言うのは、あの、「スパイシー」っていうのになりますよね。", en: "Like \"spicy\" — that becomes \"supaishii\" in Japanese." },
+    { start: 585.86, end: 599.95, ja: "スパイスがスパイシーになって、えっと、ちょっとねぇ。「スパイシー」というのは、hot ともまたちょっと違う意味なんですよね、日本語だと。", en: "Spice became \"supaishii,\" and... hmm. \"Supaishii\" means something slightly different from \"hot\" in Japanese." },
+    { start: 599.95, end: 613.39, ja: "そうですね。spice だとたぶん、いろいろなものが混ざった、というか、例えばハーブとか、うん、ブラックペッパーとか、色々な香辛料。", en: "Right. \"Spice\" implies a blend of things — herbs, black pepper, various spices." },
+    { start: 613.39, end: 629.32, ja: "香辛料って言うんですけど。香辛料は料理に使う調味料。調味料は、なんていうかな、例えばお酢とか、えっと、例えば醤油とか、そういったものなんですけど。", en: "\"Koshinryo\" — spices. Spices are seasonings used in cooking. Seasonings are things like vinegar, or soy sauce." },
+    { start: 629.74, end: 636.99, ja: "あ、意味が少し違いますね。ん。「香辛料」っていうのは、えっと。", en: "Oh, the meanings differ a bit. So \"koshinryo\" is..." },
+    { start: 636.99, end: 647.09, ja: "「香り」の「香」、「辛い」の「辛」、あと「料（りょう）」っていうのは、その、調味料とかの「料」ですよね。", en: "The \"ko\" is the \"ko\" of kaori (fragrance), the \"shin\" is from karai (spicy), and \"ryo\" is the \"ryo\" of seasonings." },
+    { start: 647.09, end: 656.74, ja: "まあ、そういう材料の「料」っていうか。これ、日本人でも難しいんです。「料」ってなんだ、って言われたら難しいな。", en: "The \"ryo\" of ingredients, kind of. Even Japanese people struggle — if you asked \"what's ryo?\", it's a tough one." },
+    { start: 656.74, end: 672.06, ja: "「料」ってなんだって。あぁ、難しいですね。「具材」みたいなことかな。具材というか、そういうことですよね、入れるものみたいな感じですよね。その「部材」というか「具材」というかなんですけど。", en: "\"What's ryo?\"... yeah, hard. Maybe like \"guzai\" — ingredients? The stuff you put in. Components, ingredients, something like that." },
+    { start: 672.06, end: 679.30, ja: "なので、あの、香りが出るものは、スパイスっていう感じですよね。", en: "So things that give off fragrance — that's what counts as spice." },
+    { start: 679.30, end: 696.10, ja: "ん。あの、そうですね、日本語でも、まぁ英語でもそうなんですけど、特にたぶん唐辛子的なもの、唐辛子の辛さとかの、hot な辛さってのは、ちょっとスパイシーではないですよね。", en: "Right, in both Japanese and English — chili-pepper heat, that hot burn, isn't quite \"spicy.\"" },
+    { start: 696.10, end: 709.02, ja: "日本語に訳すとちょっと違うというか、どっちかっていうと、胡椒とか、えっと、何だろうな、あとはー。", en: "Translating it into Japanese doesn't quite fit... more like pepper, maybe? What else..." },
+    { start: 709.02, end: 720.24, ja: "ウコン、ウコンってのは日本語かな。ウコンは……ターメリックですよね、英語だと。あぁ、そうですね。", en: "Ukon — is that Japanese? Ukon is turmeric in English. Ah, right." },
+    { start: 720.24, end: 733.44, ja: "なので結構、日本人でも、日本語なのか英語なのか、カタカナなのか、もしくは英語じゃないものも、例えば。", en: "So even for Japanese people, what's Japanese, what's English, what's katakana — or not English at all. For example..." },
+    { start: 733.44, end: 749.51, ja: "ブイヨンとか。うーん、ブイヨンっていうのは、あの、スープとか作る時の、あの、えっと、四角いやつ。あれブイヨンで、フランス語ですよね、たぶん。", en: "\"Buiyon\" (bouillon)! That's the little cube you use making soup — bouillon. That's French, probably." },
+    { start: 749.51, end: 759.70, ja: "stock、そのストックとかじゃないですかね、チキンストックとか、そういうブイヨンとか、あ、そうそう、キューブとかなんですけど。", en: "Like \"stock\" — chicken stock? Or bouillon — oh right, the cubes." },
+    { start: 759.70, end: 773.32, ja: "日本はフランス語もドイツ語もオランダ語も英語も全部まとめてカタカナにしちゃうので、日本人はもともとの言葉が何語なのか知らないで使っていること、結構あるんですよね。", en: "Japan folds French, German, Dutch, and English all into katakana together, so Japanese people often use words with no idea what language they came from." },
+    { start: 773.32, end: 779.58, ja: "すごくあります。パンはパンって言いますもんね。ブレッドじゃなくてパン。", en: "All the time! Bread is \"pan\" — not \"bread,\" pan." },
+    { start: 780.02, end: 785.92, ja: "すごく混ざってますよね。「パン」の日本語ってないですからね。", en: "It's really mixed. There's no native Japanese word for \"pan.\"" },
+    { start: 786.35, end: 799.45, ja: "あ、小麦餅みたいなことだな……いや、これ言わないですからね。小麦餅とかは言わないんですけど、まぁ、パンはパンなんです。不思議ですね。", en: "Like \"mugimochi\" (wheat mochi)?... no, nobody says that. Nobody calls bread mugimochi — bread is just pan. Mysterious, isn't it?" },
+    { start: 799.45, end: 809.49, ja: "「パスタ」っていうのは、あの、元々「穀物」みたいな意味ですよね。", en: "And \"pasta\" originally means something like \"grain,\" right?" },
+    { start: 809.49, end: 823.73, ja: "例えば、あの、お米とか。えっ、お米もパスタの中に入るんですよね、もともと。あ、多分、多分ですけど。", en: "Like rice, for example. Wait — rice counts as pasta originally? I... think so? Maybe." },
+    { start: 823.73, end: 834.86, ja: "日本は「パスタ」って言ったら、あの、スパゲッティのイメージ。スパゲッティーニなのかな、イタリア語だと。「スパゲッティ」のイメージの人も多いんじゃないかな。", en: "In Japan, \"pasta\" evokes spaghetti — spaghetti, in Italian. Most people picture spaghetti, don't they?" },
+    { start: 834.86, end: 854.18, ja: "もちろんスパゲッティって言う人もいますけど、割とあの、若い方はあんまりスパゲッティって言わないかも。元々は「スパゲッティ」って言って、あの、太さによってね、あの、形とかによって、ペンネとか、あの、色々な種類がね。", en: "Some people do say \"spaghetti,\" but younger people mostly don't. Originally it was all \"spaghetti,\" with different thicknesses and shapes — penne and so on, tons of varieties." },
+    { start: 854.18, end: 861.86, ja: "イタリアの、色々な種類があるんですけど。麺……もう、めちゃくちゃに混ざっちゃってますね、日本でカタカナになって。", en: "All those Italian varieties... noodles... it's all jumbled together in Japanese katakana." },
+    { start: 861.98, end: 872.04, ja: "そうですね。そういう、なんかパンみたいな、日本語のないカタカナになっちゃってる日本語ってありますか。", en: "Right. So — are there other words like \"pan,\" katakana words with no Japanese equivalent?" },
+    { start: 876.66, end: 885.66, ja: "難しいですね。シーチキンとか。", en: "Tough one... \"shiichikin,\" maybe?" },
+    { start: 885.66, end: 898.55, ja: "あの、確かに、シーチキンっていうのは、なんとなく英語みたいな感じなんですけど、基本はマグロかカツオの缶詰なんですよね。", en: "\"Shiichikin\" sounds sort of English — \"sea chicken\" — but it's basically canned tuna or bonito." },
+    { start: 898.55, end: 910.59, ja: "でもシーチキンって言ったり。日本語にしたら、なんか、ツナみたいな感じなんですけど、「ツナ」っていうのはマグロの英語ですよね、もともと。", en: "But people say \"shiichikin.\" If you Japanified it, it'd be like \"tsuna\" — which is the English word for maguro (tuna), originally." },
+    { start: 910.59, end: 916.92, ja: "だから、「ツナ」って言ったら、もう日本語みたいな感じで使いますよね。", en: "So \"tsuna\" gets used as if it were Japanese." },
+    { start: 916.92, end: 924.18, ja: "ん。本当にそうですね。英語だとツナ（tuna）なんですけど。", en: "Yeah, truly. In English it's \"tuna.\"" },
+    { start: 924.18, end: 935.16, ja: "でも、その「マグロの缶詰」っていう人はあんまりいないかな。マグロの缶詰、言わないですね。", en: "But hardly anyone says \"maguro no kandzume\" (canned tuna). Nobody says that." },
+    { start: 935.16, end: 942.67, ja: "まあ確かに、「マグロの缶詰」って、もし言うとしたら、あの。", en: "Though if you did say \"maguro no kandzume,\" it'd be for..." },
+    { start: 942.67, end: 947.71, ja: "味が付いた煮物みたいな感じになるんだな。", en: "...something seasoned, like a simmered dish." },
+    { start: 947.71, end: 962.91, ja: "あの、白いシーチキンっていう、白い缶詰なんですけど、もっと醤油とか、それこそスパイスとかが入って、なんか煮物みたいなのがもしあったら、「マグロの缶詰」みたいな感じかな。", en: "The white can called shiichikin is plain — but if there were one with soy sauce and spices, all simmered up, that you'd maybe call \"maguro no kandzume.\"" },
+    { start: 962.91, end: 971.08, ja: "うーむ。味がついているのは、「マグロの缶詰」って、確かに言いますね。うん。", en: "Hmm. For the seasoned kind, people do say \"maguro no kandzume.\" True." },
+    { start: 971.08, end: 983.11, ja: "結構ね、あの、僕、この日本語の podcast を始めてから、結構ね、日本語って難しいなって感じてます。", en: "You know, since starting this Japanese podcast, I keep realizing how hard Japanese really is." },
+    { start: 983.11, end: 990.80, ja: "日本語、難しいですよね。うん。どこからが日本語なのかがわかりにくいっていうか。", en: "Japanese IS hard. It's hard to tell where Japanese ends." },
+    { start: 991.44, end: 1001.56, ja: "でも、今、この Easy Japanese は、自然な表現を、自然な喋り方を、皆さんにお伝えしたいって考えているので。", en: "But Easy Japanese is all about sharing natural expressions and natural speech with you." },
+    { start: 1001.56, end: 1013.43, ja: "例えば、みんな、例えば「シーチキン」とか「ツナ」とかって呼んでるのに、「マグロの缶詰」って言い方をする必要はないなぁと思っていて。", en: "Everyone calls it \"shiichikin\" or \"tsuna,\" so there's no need to say \"maguro no kandzume.\"" },
+    { start: 1013.43, end: 1023.52, ja: "なので、いつも僕らがしゃべっている自然な日本語だと、やっぱりシーチキンかな。そうですね、うん。", en: "So in the natural Japanese we actually speak, it's \"shiichikin.\" Agreed." },
+    { start: 1023.52, end: 1029.10, ja: "シーチキンが一番、みんなが使う言葉だと思います。うーん。", en: "\"Shiichikin\" is what everyone uses, I think. Yeah." },
+    { start: 1029.10, end: 1036.26, ja: "まあ、おにぎりでもね、「シーチキンマヨネーズ」とか「ツナマヨネーズ」っていうのもありますけど。", en: "Even in onigiri, there's \"shiichikin mayo\" — or \"tsuna mayo.\"" },
+    { start: 1036.26, end: 1047.11, ja: "あの、それが一番人気のおにぎりっていうくらいですからね。そうですね、みんな大好きですね。", en: "That's like the most popular onigiri filling there is. Everyone loves it." },
+    { start: 1047.11, end: 1058.82, ja: "おにぎりって言えば、やっぱりその、もともとはお塩とか梅干しが、あの、もともとですよね、たぶん。", en: "Speaking of onigiri, originally it was plain salt or umeboshi — the original fillings, right?" },
+    { start: 1058.82, end: 1073.27, ja: "うーん、そうですね。あとは昆布とか、「おかか」とかですね。「おかか」っていうのは鰹節なんですけど、なぜか「おかか」って言いますよね。", en: "Also kombu, or \"okaka.\" \"Okaka\" is katsuobushi (bonito flakes) — but for some reason everyone calls it \"okaka.\"" },
+    { start: 1073.27, end: 1078.54, ja: "ん。「鰹節」っていう言い方もしますね。うん。", en: "People do say \"katsuobushi\" too. Yeah." },
+    { start: 1078.64, end: 1084.14, ja: "なので、意外とその、なんていうかな、呼ばれ方が変わるものって多いですね。", en: "So there are actually a lot of foods whose names shift depending on how they're used." },
+    { start: 1088.97, end: 1096.42, ja: "うん。使う物によって、少し言い方を変えたりしますね。", en: "Right — the wording changes slightly depending on the use." },
+    { start: 1096.65, end: 1113.43, ja: "でも、あの、日本人は別に意識してなくて。「意識してない」っていうのは、考えてもいない、でも、その使い方がわかるじゃないですか。", en: "But Japanese people aren't conscious of it — not thinking about it at all — yet they still know which form to use, right?" },
+    { start: 1113.43, end: 1115.08, ja: "そうですね。", en: "Exactly." },
+    { start: 1115.08, end: 1136.35, ja: "もし日本語を勉強している方が、こういうのを聞いていたとしたら、やっぱり、どういうのがこう、勉強するためのコツかな、勉強するためのポイントというか、だと思いますか。", en: "If a Japanese learner were listening to this — what would you say is the trick, the key point, for studying?" },
+    { start: 1138.01, end: 1152.38, ja: "いろいろな方法があるとは思うんですけど、すごく、日本語を勉強している人で、アニメが好きな人が多いと思うんですけど。", en: "There are lots of methods, I'm sure. So many Japanese learners love anime..." },
+    { start: 1152.38, end: 1161.50, ja: "アニメの中の日本語は、少し間違っているというか、難しい。", en: "But the Japanese inside anime is a little off, you could say — a bit unusual." },
+    { start: 1161.50, end: 1171.16, ja: "例えば、ナルトの「だってばよ」は、皆、言わない。そういうことね。はい。", en: "Like Naruto's \"dattebayo\" — nobody says that. Exactly. Yes." },
+    { start: 1171.16, end: 1184.84, ja: "なので、ん、僕は、ジブリがいいかなと思います。やっぱり、その、見るのがいいんじゃないかということでね。", en: "So I'd recommend Ghibli. Watching Ghibli, I think, is the way to go." },
+    { start: 1184.84, end: 1195.63, ja: "まあ、そうですね。そういう表現にやっぱり慣れ……「慣れる」って言うのは、その、何回も何回も聞いて、あの。", en: "Right. Getting used to those expressions... \"getting used to\" means hearing them over and over and..." },
+    { start: 1195.63, end: 1202.51, ja: "自然な言い方を覚えるということですよね。それがいいんじゃないかなと思いますね。", en: "...internalizing natural phrasing. I think that's the best way." },
+    { start: 1202.51, end: 1221.30, ja: "だから、僕らも、この podcast をする時、出来るだけ自然に……まぁ、ちょっとゆっくりしゃべりながら自然に、って結構難しいんですけど、出来るだけ自然に、そういう会話ができればいいな、っていう感じで。", en: "That's what we aim for in this podcast too — speaking as naturally as possible. Slowly, but naturally. It's hard, but that's the goal." },
+    { start: 1221.35, end: 1231.70, ja: "思ってますけどね。はい、今、だいたい20分くらいなんですけど。そう、ゆっくりね、話すのが難しいんですけど。難しいですね。", en: "That's the hope, anyway. We're at about twenty minutes now. Speaking slowly really is hard. It is." },
+    { start: 1231.70, end: 1244.39, ja: "なので、まぁ、今、1回20分ぐらいなんで、一旦ここで終わろうかなと思うんですけど。初めての、この2人で喋ってみたのは、皆さんどうでしたでしょうか。", en: "Since we're at twenty minutes, let's wrap up here. So — how was our first-ever two-person conversation, everyone?" },
+    { start: 1244.39, end: 1250.56, ja: "ちょっと感想とかもね、いただければ嬉しいんですけれども。今日は。", en: "We'd love to hear your thoughts on today's episode." },
+    { start: 1250.56, end: 1264.28, ja: "初めて2人で話をしてみて、食べ物のお話と、日本語の形容詞、あと、カタカナのお話を、ちょっとしましたね。", en: "For our first talk together, we covered food, Japanese adjectives, and a bit about katakana words." },
+    { start: 1264.28, end: 1271.87, ja: "ということで、これは次回も続くかもしれないので、またよろしくお願いします。ありがとうございます。", en: "This might continue next time, so stay tuned. Thank you!" },
+    { start: 1271.87, end: 1274.92, ja: "ありがとうございます。", en: "Thank you!" },
+    { start: 1276.90, end: 1291.53, ja: "今日も最後まで聴いていただいて、ありがとうございました。この番組は、毎日の出来事や旬なトピックを、少しだけゆっくり、簡単な日本語でお送りしています。", en: "Thank you for listening all the way to the end. This show delivers everyday events and timely topics in slightly slower, simple Japanese." },
+    { start: 1291.53, end: 1303.83, ja: "Podcast、YouTube のフォロー、チャンネル登録をお願いします。それではまた次回の Easy Japanese でお会いしましょう。ではでは。", en: "Please follow the podcast and subscribe on YouTube. See you next time on Easy Japanese. Bye for now!" }
+];
+
+
+let currentLineIndex = -1;
+        let loopMode = 'none';
+        let player;
+        
+        // 录音相关全局变量
+        let mediaRecorder;
+        let audioChunks = [];
+        let userAudioBlobs = {}; // 存储每句的录音数据
+        let currentRecordingIndex = -1;
+
+        // 加载 YouTube Iframe API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 'playsinline': 1, 'controls': 1 },
+                events: { 'onReady': onPlayerReady }
+            });
+        }
+
+        function onPlayerReady(event) {
+            renderSubtitles();
+            setInterval(monitorPlayback, 100);
+            
+            const lastRead = localStorage.getItem(`last-read-${pageId}`);
+            if (lastRead !== null) {
+                const targetLine = document.getElementById(`line-${lastRead}`);
+                if (targetLine) {
+                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    targetLine.classList.add('active');
+                }
+            }
+        }
+
+        function renderSubtitles() {
+            const container = document.getElementById('subtitle-container');
+            subtitleData.forEach((line, index) => {
+                const div = document.createElement('div');
+                div.className = 'shadow-line';
+                div.id = `line-${index}`;
+                
+                // HTML 结构：左侧文本，右侧按钮组
+                div.innerHTML = `
+                    <div class="text-content">
+                        <div class="ja-text">${line.ja}</div>
+                        <div class="en-text" id="en-${index}">${line.en}</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn record-btn" id="record-btn-${index}" onclick="toggleRecord(event, ${index})" title="Hold or Click to Record">🎙️</button>
+                        <button class="action-btn play-btn" id="play-btn-${index}" onclick="playUserRecord(event, ${index})" style="display:none;" title="Play your recording">▶️</button>
+                    </div>
+                `;
+                
+                div.onclick = (e) => {
+                    // 如果点击的是按钮，不触发视频跳转
+                    if (e.target.closest('.action-btn')) return;
+                    currentLineIndex = index;
+                    player.seekTo(line.start, true);
+                    player.playVideo();
+                    localStorage.setItem(`last-read-${pageId}`, index);
+                };
+                // 双击：紧急暂停 (极客新增)
+                div.ondblclick = (e) => {
+                    if (e.target.closest('.action-btn')) return;
+                    player.pauseVideo();
+                };
+                container.appendChild(div);
+            });
+        }
+      
+        // 全局控制字幕显示/隐藏逻辑
+        function toggleSubtitles(lang) {
+            const container = document.getElementById('subtitle-container');
+            const checkbox = document.getElementById(`toggle-${lang}`);
+            
+            if (checkbox.checked) {
+                container.classList.remove(`hide-${lang}`);
+            } else {
+                container.classList.add(`hide-${lang}`);
+            }
+        }   
+        // 功能 2：录音系统逻辑
+        async function toggleRecord(event, index) {
+            event.stopPropagation();
+            const recordBtn = document.getElementById(`record-btn-${index}`);
+            const playBtn = document.getElementById(`play-btn-${index}`);
+
+            if (currentRecordingIndex === index) {
+                // 停止录音
+                mediaRecorder.stop();
+                recordBtn.classList.remove('recording');
+                currentRecordingIndex = -1;
+                return;
+            }
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+
+                mediaRecorder.ondataavailable = e => {
+                    if (e.data.size > 0) audioChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    userAudioBlobs[index] = URL.createObjectURL(audioBlob);
+                    playBtn.style.display = 'block'; // 显示播放按钮
+                    playBtn.classList.add('has-audio');
+                    
+                    // 释放麦克风轨道资源
+                    stream.getTracks().forEach(track => track.stop());
+                };
+
+                mediaRecorder.start();
+                currentRecordingIndex = index;
+                recordBtn.classList.add('recording');
+                
+                // 自动暂停原声音频，以免录进去
+                player.pauseVideo();
+
+            } catch (err) {
+                alert("Permission denied or microphone not found. Please allow microphone access.");
+                console.error(err);
+            }
+        }
+
+        // 功能 3：播放用户的录音
+        function playUserRecord(event, index) {
+            event.stopPropagation();
+            if (userAudioBlobs[index]) {
+                player.pauseVideo(); // 暂停 YouTube
+                const audio = new Audio(userAudioBlobs[index]);
+                audio.play();
+            }
+        }
+
+        function monitorPlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); 
+
+            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+            
+            if (activeIndex !== -1) {
+                currentLineIndex = activeIndex;
+                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+                const activeElement = document.getElementById(`line-${activeIndex}`);
+                if (activeElement) {
+                    activeElement.classList.add('active');
+                    if (playerState === 1) {
+                        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

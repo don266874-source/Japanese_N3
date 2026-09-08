@@ -122,6 +122,12 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://shadowgeek.net/shadowing/teppei/ep15.html</loc>
+        <lastmod>2026-09-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
     <url>
         <loc>https://shadowgeek.net/shadowing/nij/ep1.html</loc>
@@ -175,6 +181,12 @@
     <url>
         <loc>https://shadowgeek.net/shadowing/ejp/ep5.html</loc>
         <lastmod>2026-09-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shadowgeek.net/shadowing/ejp/ep6.html</loc>
+        <lastmod>2026-09-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
