@@ -71,7 +71,7 @@
         .learners-note { background: #f9fbfc; padding: 15px; border-left: 4px solid #3fb950; border-radius: 4px; margin-bottom: 30px; font-size: 0.95rem; color: #333;}
         
         .audio-player { position: sticky; top: 0; background: #fff; padding: 10px 0; border-bottom: 1px solid #eaeaea; margin-bottom: 20px; z-index: 100; }
-        .yt-container { width: 100%; height: 90px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
+        .yt-container { width: 100%; min-height: 80px; overflow: hidden; border-radius: 8px; margin-bottom: 10px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;}
         
         /* 改造跟读行布局：支持左右分栏 */
         .shadow-line { display: flex; justify-content: space-between; align-items: center; padding: 12px; margin: 8px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;}
@@ -160,13 +160,6 @@
         #subtitle-container.hide-ja .ja-text { display: none; }
         #subtitle-container.hide-en .en-text { display: none; }
         
-        /* 优化后的操作按钮（去掉惊悚眼球） */
-        .action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
-        .action-btn { background: #f6f8fa; border: 1px solid #d0d7de; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 1rem; transition: 0.2s; display: flex; align-items: center; justify-content: center;}
-        .action-btn:hover { background: #e1e4e8; }
-        .action-btn.recording { background: #ffeef0; border-color: #ff8182; color: #cf222e; animation: pulse 1.5s infinite; }
-        .action-btn.has-audio { background: #dcffe4; border-color: #34d058; }
-        
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }
             70% { box-shadow: 0 0 0 6px rgba(207, 34, 46, 0); }
@@ -188,27 +181,21 @@
     </header>
     
    <main>
-    <!-- 翻新后的 H1 标题：直接带上期数和主题，利于 Google 截流 -->
     <h1>Nihongo con Teppei (Beginner) - Ep16: 温泉について</h1>
     
-    <!-- 注入新灵魂的 Learner's Note -->
     <div class="learners-note">
         <strong>Felix's Learner Note:</strong>
-
-<p>Episode 16 of Nihongo con Teppei, the daily Japanese podcast for beginners, is a slow, friendly tour of 温泉 (onsen) — Japanese hot springs. Teppei starts from his own roots: his family comes from Oita Prefecture (大分県) in Kyushu, one of Japan's most famous hot-spring regions, home to both Beppu (別府) and Yufuin (由布院). Along the way he explains exactly what makes something an onsen: warm water that comes gushing up from underground — ボボボボ — which Japanese calls お湯 (oyu), and a bath that nature provides all by itself, 温泉が湧く (the spring wells up).</p>
-<p>The real vocabulary payoff comes in the second half, where Teppei compares a 旅館 (ryokan, a traditional Japanese inn) with an ordinary hotel. A ryokan is smaller — fewer rooms, fewer staff, a smaller business — but that is precisely why the hospitality is better: with fewer guests, the staff can ケアする (take care of) each one, and the food is often tastier than hotel fare. He also introduces 和室 (washitsu), the tatami-mat room that gives a ryokan its distinct feel, plus 温泉街 (onsen-gai), the hot-spring town that grows up around the water. Hotels have 沢山の宿泊客 — crowds of overnight guests — while a ryokan stays quiet, so you can ゆっくりする, truly slow down.</p>
-<p>For shadowing practice, this episode is a definition machine: Teppei constantly teaches words by defining them — 温泉というのは自然の風呂です (an onsen is a natural bath), 温かい水のことをお湯と言います (warm water is called oyu). You will drill the topic marker 〜について (about ~), the definition frames 〜というのは and 〜ことを〜と言う, the reason-listing 〜し, the causal 〜ので, and the N3 pattern 〜による (it depends on ~). By the end you can explain what an onsen is, where Beppu and Yufuin are, and why a ryokan beats a hotel — all in natural beginner Japanese.</p>
-
-
-</div>   
+        <p>Episode 16 of Nihongo con Teppei, the daily Japanese podcast for beginners, is a slow, friendly tour of 温泉 (onsen) — Japanese hot springs. Teppei starts from his own roots: his family comes from Oita Prefecture (大分県) in Kyushu, one of Japan's most famous hot-spring regions, home to both Beppu (別府) and Yufuin (由布院). Along the way he explains exactly what makes something an onsen: warm water that comes gushing up from underground — ボボボボ — which Japanese calls お湯 (oyu), and a bath that nature provides all by itself, 温泉が湧く (the spring wells up).</p>
+        <p>The real vocabulary payoff comes in the second half, where Teppei compares a 旅館 (ryokan, a traditional Japanese inn) with an ordinary hotel. A ryokan is smaller — fewer rooms, fewer staff, a smaller business — but that is precisely why the hospitality is better: with fewer guests, the staff can ケアする (take care of) each one, and the food is often tastier than hotel fare. He also introduces 和室 (washitsu), the tatami-mat room that gives a ryokan its distinct feel, plus 温泉街 (onsen-gai), the hot-spring town that grows up around the water. Hotels have 沢山の宿泊客 — crowds of overnight guests — while a ryokan stays quiet, so you can ゆっくりする, truly slow down.</p>
+        <p>For shadowing practice, this episode is a definition machine: Teppei constantly teaches words by defining them — 温泉というのは自然の風呂です (an onsen is a natural bath), 温かい水のことをお湯と言います (warm water is called oyu). You will drill the topic marker 〜について (about ~), the definition frames 〜というのは and 〜ことを〜と言う, the reason-listing 〜し, the causal 〜ので, and the N3 pattern 〜による (it depends on ~). By the end you can explain what an onsen is, where Beppu and Yufuin are, and why a ryokan beats a hotel — all in natural beginner Japanese.</p>
+    </div>   
  
-
     <div class="audio-player">
         <div class="yt-container">
             <div id="youtube-player"></div>
-    </div>
+        </div>
 
- <div class="global-controls">
+        <div class="global-controls">
             <span class="control-label">Display:</span>
             <div class="toggle-group">
                 <label>
@@ -233,124 +220,99 @@
 
     <div id="subtitle-container"></div>
 
-
-
     <div class="grammar-section">
         <h2>📚 Grammar Breakdown</h2>
-        <!-- ==================== HTML 语法解析区域 ==================== -->
-<div class="grammar-item">
-<span class="grammar-title">1. 〜というのは／〜を〜と言う（定義フレーム）</span><br>
-<strong>Meaning: </strong>X means ~ / X is what we call ~ / we say ~ for ~<br>
-<strong>In Text: </strong>温泉というのは自然のお風呂です (an onsen is a natural bath), 亡くなるというのは死んだということですね ("naku naru" means to have died), 温かい水のことをお湯と言います (we call warm water "oyu").<br>
-<strong>Note:</strong> 〜というのは introduces a term you are about to define — "X, that is to say...". Its cousin 〜ことを〜と言う flips the frame: "we say [word] for [thing]." Teppei uses both constantly because his whole podcast is built on defining words for beginners. These frames let you explain any unknown word without switching to English — an essential survival skill for monolingual immersion.<br>
-</div>
+        <div class="grammar-item">
+            <span class="grammar-title">1. 〜というのは／〜を〜と言う（定義フレーム）</span><br>
+            <strong>Meaning: </strong>X means ~ / X is what we call ~ / we say ~ for ~<br>
+            <strong>In Text: </strong>温泉というのは自然のお風呂です (an onsen is a natural bath), 亡くなるというのは死んだということですね ("naku naru" means to have died), 温かい水のことをお湯と言います (we call warm water "oyu").<br>
+            <strong>Note:</strong> 〜というのは introduces a term you are about to define — "X, that is to say...". Its cousin 〜ことを〜と言う flips the frame: "we say [word] for [thing]." Teppei uses both constantly because his whole podcast is built on defining words for beginners. These frames let you explain any unknown word without switching to English — an essential survival skill for monolingual immersion.<br>
+        </div>
 
-<div class="grammar-item">
-<span class="grammar-title">2. 〜し（理由の列挙）</span><br>
-<strong>Meaning: </strong>And what's more ~ / ~, and ~ (listing reasons)<br>
-<strong>In Text: </strong>おばあちゃんが元気だし、お姉さんもいるしね (Grandma's healthy, and my sister's there too, so...).<br>
-<strong>Note:</strong> 〜し attaches to the plain form and lists facts that all point toward the same conclusion — softer and more conversational than 〜から. The final しね often trails off, leaving the conclusion implied ("...so they're doing fine over there"). Use it to stack reasons naturally: 安いし、美味しいし、近いし (it's cheap, tasty, and close). A small word that instantly makes your reasoning sound native.<br>
-</div>
+        <div class="grammar-item">
+            <span class="grammar-title">2. 〜し（理由の列挙）</span><br>
+            <strong>Meaning: </strong>And what's more ~ / ~, and ~ (listing reasons)<br>
+            <strong>In Text: </strong>おばあちゃんが元気だし、お姉さんもいるしね (Grandma's healthy, and my sister's there too, so...).<br>
+            <strong>Note:</strong> 〜し attaches to the plain form and lists facts that all point toward the same conclusion — softer and more conversational than 〜から. The final しね often trails off, leaving the conclusion implied ("...so they're doing fine over there"). Use it to stack reasons naturally: 安いし、美味しいし、近いし (it's cheap, tasty, and close). A small word that instantly makes your reasoning sound native.<br>
+        </div>
 
-
-<div class="grammar-item">
-<span class="grammar-title">3. 〜による／〜によって違う（N3・依存）</span><br>
-<strong>Meaning: </strong>It depends on ~ / it varies according to ~<br>
-<strong>In Text: </strong>まあ、もちろんそれも旅館によるんですよね (well, of course that also depends on the ryokan).<br>
-<strong>Note:</strong> 〜による cuts off a generalization: "that depends on X." The full pattern 〜によって違う (it differs depending on ~) is its cousin — 人によって違う (it varies from person to person). N3-level but extremely common in real conversation, especially when you want to hedge instead of overgeneralizing — exactly what Teppei does after praising ryokan food and atmosphere. Add 〜によるんですよね to your toolkit for that nuanced, native-sounding "well, it depends."<br>
-</div>
-
+        <div class="grammar-item">
+            <span class="grammar-title">3. 〜による／〜によって違う（N3・依存）</span><br>
+            <strong>Meaning: </strong>It depends on ~ / it varies according to ~<br>
+            <strong>In Text: </strong>まあ、もちろんそれも旅館によるんですよね (well, of course that also depends on the ryokan).<br>
+            <strong>Note:</strong> 〜による cuts off a generalization: "that depends on X." The full pattern 〜によって違う (it differs depending on ~) is its cousin — 人によって違う (it varies from person to person). N3-level but extremely common in real conversation, especially when you want to hedge instead of overgeneralizing — exactly what Teppei does after praising ryokan food and atmosphere. Add 〜によるんですよね to your toolkit for that nuanced, native-sounding "well, it depends."<br>
+        </div>
     </div>
     
    </main>
     <footer>
         <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
     </footer>
+
     <script>
         // ==========================================
-        // 核心配置区：以后每次只需要修改这三个变量！
+        // 核心配置区
         // ==========================================
-        const ytVideoId = "XGpFdJn_e4E"; // 请替换为 EP16 的 YouTube 视频 ID
+        const ytVideoId = "XGpFdJn_e4E"; 
         const pageId = "teppei/ep16";
 
+        const subtitleData = [
+            { start: 1.83, end: 6.60, ja: "日本語コンテッペイ。", en: "Nihongo con Teppei." },
+            { start: 6.60, end: 14.39, ja: "日本語学習者の皆さんをいつも応援するポッドキャスト。", en: "The podcast that always supports everyone learning Japanese." },
+            { start: 14.39, end: 19.72, ja: "今日は温泉について。", en: "Today: all about onsen — hot springs." },
+            { start: 25.08, end: 31.89, ja: "はい、皆さんこんにちは。日本語コンテッペイの時間ですね。皆さん元気ですか。", en: "Yes, hello everyone! It's time for Nihongo con Teppei. How are you all doing?" },
+            { start: 31.89, end: 38.98, ja: "僕は元気ですよ。ちょっ、元気ですよね。僕は元気ですよ。", en: "I'm doing great. Wait, I'm doing great, right? Yeah, I'm doing fine." },
+            { start: 38.98, end: 44.38, ja: "皆さん元気ですか。えーっと、前回ですね、確か", en: "How are you all? Um, last time, if I remember right," },
+            { start: 44.38, end: 49.57, ja: "九州について話しましたね。僕の出身ですね、出身地。", en: "we talked about Kyushu. That's where I'm from — my home region." },
+            { start: 49.57, end: 55.87, ja: "僕のお父さんお母さんが住んでますね。あとおじいちゃん、実は亡くなって", en: "My father and mother live there. And my grandfather — he actually passed away," },
+            { start: 55.87, end: 56.59, ja: "しまいました。", en: "unfortunately." },
+            { start: 56.59, end: 61.33, ja: "亡くなるというのは、死んでしまった、死んだということですね。少し前、", en: "\"Naku naru\" means to pass away — to have died. A little while ago —" },
+            { start: 61.33, end: 64.37, ja: "もう結構前か。結構前になりますね。おじいちゃんは亡くなっています。", en: "well, quite a while ago now, actually. It's been quite some time. My grandfather is gone." },
+            { start: 64.37, end: 69.26, ja: "おばあちゃんは元気ですね。おばあちゃんが元気だし、お姉さんもいるしね。", en: "My grandmother is doing well. Grandma's healthy, and I have an older sister too, you know." },
+            { start: 69.26, end: 73.89, ja: "あとは、甥っ子、お姉さんの子供だったり、", en: "And then my nephew — my sister's kid —" },
+            { start: 73.89, end: 80.82, ja: "親戚、色々な人が、カズンとかね、いとことかね、住んでます。", en: "relatives, all kinds of people: cousins, you know, and the like all live there." },
+            { start: 80.82, end: 87.63, ja: "で、僕の出身の大分県には有名な温泉がありますね。温泉、", en: "And in Oita Prefecture, where I'm from, there are famous hot springs. Onsen —" },
+            { start: 87.63, end: 90.93, ja: "hot spring ね。温泉があります。", en: "hot spring, that is. That's where the hot springs are." },
+            { start: 90.93, end: 95.54, ja: "別府、そして由布院。別府、", en: "Beppu, and Yufuin. Beppu —" },
+            { start: 95.54, end: 100.10, ja: "由布院ね。この2つの町が大分にはあります。", en: "and Yufuin. Those two towns are in Oita." },
+            { start: 100.10, end: 105.02, ja: "で、温泉がたくさん出ますね。温泉が出るって言いますね。", en: "And the hot springs gush out all over. We say onsen ga deru — the hot spring comes out." },
+            { start: 105.02, end: 112.25, ja: "水が地下からボボボボってね。水がね、温かい、お湯ですね。", en: "The water comes up from underground, bubbling away. And that water is warm — hot water, in other words." },
+            { start: 112.25, end: 115.53, ja: "お湯。温かい水のことをお湯と言います。", en: "Oyu. We call warm water oyu — hot water." },
+            { start: 115.53, end: 120.26, ja: "お湯が出てくるんですね。そしてそこで、まあ、あの、", en: "The hot water comes welling up. And there, well, um," },
+            { start: 120.26, end: 124.86, ja: "入る。そこに入って、お風呂ですよね。お風呂。", en: "you get in. You get in there — it's a bath. A bath." },
+            { start: 124.86, end: 129.75, ja: "で、温泉。温泉というのは自然のお風呂です。自然に出てくるお風呂。", en: "So: onsen. An onsen is a natural bath — a bath that comes out of the earth by itself." },
+            { start: 129.75, end: 136.02, ja: "湧く。湧くって言いますね、温泉が湧く。湧くっていうのは出てくるということですね。", en: "Waku. We say waku — onsen ga waku, the hot spring wells up. \"Waku\" means to come gushing out." },
+            { start: 136.02, end: 141.57, ja: "で、温泉、温泉街。温泉のある街のことを温泉街と言います。", en: "So: onsen, onsen-gai — hot spring town. A town with hot springs is called an onsen town." },
+            { start: 141.57, end: 144.78, ja: "そして温泉街にはたくさんの旅館があります。", en: "And hot spring towns are full of ryokan — traditional Japanese inns." },
+            { start: 144.78, end: 151.32, ja: "旅館はね、まあホテルみたいなもんですけど、ちょっと違う。ホテルは普通、", en: "A ryokan is, well, something like a hotel — but a little different. Hotels are usually," },
+            { start: 151.32, end: 155.89, ja: "まあ大きいビルですよね。大きいビルで、ベッドもあるし、", en: "big buildings, right? Big buildings, with beds and everything," },
+            { start: 155.89, end: 159.61, ja: "普通はベッドかなぁ、ホテルの場合は。", en: "usually beds, I suppose, in the case of hotels." },
+            { start: 159.61, end: 165.85, ja: "うーん、ベッドじゃない。和室もありますよね。和室というのは、普通の、あの、日本の畳の", en: "Hmm, but not only beds — there are Japanese-style rooms too. Washitsu means, like, the ordinary Japanese tatami" },
+            { start: 165.85, end: 168.01, ja: "部屋ですね。のことを和室と言います。", en: "rooms. That's what we call washitsu." },
+            { start: 168.01, end: 175.91, ja: "で、旅館はちょっと普通のホテルと違って部屋が少ないです。旅館は部屋がそこまで多くない。", en: "Now, a ryokan is a bit different from a regular hotel: it has fewer rooms. A ryokan doesn't have all that many rooms." },
+            { start: 175.91, end: 183.53, ja: "そしてスタッフもそんなにたくさんいない。なので、なんか小さいですよね、そのビジネスのサイズとしては小さいです。", en: "And the staff isn't that big either. So they're kind of small — small in terms of business size, that is." },
+            { start: 183.53, end: 186.25, ja: "だけど、そのホスピタリティですよね。", en: "But that's exactly where the hospitality comes in." },
+            { start: 186.25, end: 198.91, ja: "これがやっぱり、お客さんが少ない、部屋が少ないので、もっとね、ケアができる。そして旅館の方が食べ物が、レストランよりも、ホテルよりも美味しいことが", en: "With fewer guests and fewer rooms, they can really take care of you. And the food at a ryokan is often tastier than what hotels serve — better than restaurants, even." },
+            { start: 198.91, end: 200.95, ja: "多いですよね。", en: "That's often the case, you know." },
+            { start: 200.95, end: 208.06, ja: "あとは、デモ、雰囲気ですよね、雰囲気です。ホテルはたくさんのお客さんがいますね。たくさんの宿泊客", en: "And then, well, it's the atmosphere. Hotels have tons of guests — huge numbers of overnight guests." },
+            { start: 208.06, end: 215.68, ja: "がいるけど、旅館は少ないのでもっともっとゆっくりできる、ゆっくりできるかもしれない。", en: "— while a ryokan has fewer, so you can relax that much more. You can probably really take it easy." },
+            { start: 215.68, end: 223.16, ja: "まあ、もちろんそれも旅館によるんですよね。でも、いい旅館が多いですね。", en: "Though of course that depends on the ryokan. Still, there are a lot of good ones out there." },
+            { start: 223.16, end: 232.09, ja: "温泉いいですね。温泉は本当に大好き、僕大好きです。それではまた皆さん、バイバーイ。", en: "Onsen — wonderful, isn't it? I really love hot springs, I absolutely love them. See you all next time — bye bye!" }
+        ];
 
-const subtitleData = [
-    { start: 1.83, end: 6.60, ja: "日本語コンテッペイ。", en: "Nihongo con Teppei." },
-    { start: 6.60, end: 14.39, ja: "日本語学習者の皆さんをいつも応援するポッドキャスト。", en: "The podcast that always supports everyone learning Japanese." },
-    { start: 14.39, end: 19.72, ja: "今日は温泉について。", en: "Today: all about onsen — hot springs." },
-    { start: 25.08, end: 31.89, ja: "はい、皆さんこんにちは。日本語コンテッペイの時間ですね。皆さん元気ですか。", en: "Yes, hello everyone! It's time for Nihongo con Teppei. How are you all doing?" },
-    { start: 31.89, end: 38.98, ja: "僕は元気ですよ。ちょっ、元気ですよね。僕は元気ですよ。", en: "I'm doing great. Wait, I'm doing great, right? Yeah, I'm doing fine." },
-    { start: 38.98, end: 44.38, ja: "皆さん元気ですか。えーっと、前回ですね、確か", en: "How are you all? Um, last time, if I remember right," },
-    { start: 44.38, end: 49.57, ja: "九州について話しましたね。僕の出身ですね、出身地。", en: "we talked about Kyushu. That's where I'm from — my home region." },
-    { start: 49.57, end: 55.87, ja: "僕のお父さんお母さんが住んでますね。あとおじいちゃん、実は亡くなって", en: "My father and mother live there. And my grandfather — he actually passed away," },
-    { start: 55.87, end: 56.59, ja: "しまいました。", en: "unfortunately." },
-    { start: 56.59, end: 61.33, ja: "亡くなるというのは、死んでしまった、死んだということですね。少し前、", en: "\"Naku naru\" means to pass away — to have died. A little while ago —" },
-    { start: 61.33, end: 64.37, ja: "もう結構前か。結構前になりますね。おじいちゃんは亡くなっています。", en: "well, quite a while ago now, actually. It's been quite some time. My grandfather is gone." },
-    { start: 64.37, end: 69.26, ja: "おばあちゃんは元気ですね。おばあちゃんが元気だし、お姉さんもいるしね。", en: "My grandmother is doing well. Grandma's healthy, and I have an older sister too, you know." },
-    { start: 69.26, end: 73.89, ja: "あとは、甥っ子、お姉さんの子供だったり、", en: "And then my nephew — my sister's kid —" },
-    { start: 73.89, end: 80.82, ja: "親戚、色々な人が、カズンとかね、いとことかね、住んでます。", en: "relatives, all kinds of people: cousins, you know, and the like all live there." },
-    { start: 80.82, end: 87.63, ja: "で、僕の出身の大分県には有名な温泉がありますね。温泉、", en: "And in Oita Prefecture, where I'm from, there are famous hot springs. Onsen —" },
-    { start: 87.63, end: 90.93, ja: "hot spring ね。温泉があります。", en: "hot spring, that is. That's where the hot springs are." },
-    { start: 90.93, end: 95.54, ja: "別府、そして由布院。別府、", en: "Beppu, and Yufuin. Beppu —" },
-    { start: 95.54, end: 100.10, ja: "由布院ね。この2つの町が大分にはあります。", en: "and Yufuin. Those two towns are in Oita." },
-    { start: 100.10, end: 105.02, ja: "で、温泉がたくさん出ますね。温泉が出るって言いますね。", en: "And the hot springs gush out all over. We say onsen ga deru — the hot spring comes out." },
-    { start: 105.02, end: 112.25, ja: "水が地下からボボボボってね。水がね、温かい、お湯ですね。", en: "The water comes up from underground, bubbling away. And that water is warm — hot water, in other words." },
-    { start: 112.25, end: 115.53, ja: "お湯。温かい水のことをお湯と言います。", en: "Oyu. We call warm water oyu — hot water." },
-    { start: 115.53, end: 120.26, ja: "お湯が出てくるんですね。そしてそこで、まあ、あの、", en: "The hot water comes welling up. And there, well, um," },
-    { start: 120.26, end: 124.86, ja: "入る。そこに入って、お風呂ですよね。お風呂。", en: "you get in. You get in there — it's a bath. A bath." },
-    { start: 124.86, end: 129.75, ja: "で、温泉。温泉というのは自然のお風呂です。自然に出てくるお風呂。", en: "So: onsen. An onsen is a natural bath — a bath that comes out of the earth by itself." },
-    { start: 129.75, end: 136.02, ja: "湧く。湧くって言いますね、温泉が湧く。湧くっていうのは出てくるということですね。", en: "Waku. We say waku — onsen ga waku, the hot spring wells up. \"Waku\" means to come gushing out." },
-    { start: 136.02, end: 141.57, ja: "で、温泉、温泉街。温泉のある街のことを温泉街と言います。", en: "So: onsen, onsen-gai — hot spring town. A town with hot springs is called an onsen town." },
-    { start: 141.57, end: 144.78, ja: "そして温泉街にはたくさんの旅館があります。", en: "And hot spring towns are full of ryokan — traditional Japanese inns." },
-    { start: 144.78, end: 151.32, ja: "旅館はね、まあホテルみたいなもんですけど、ちょっと違う。ホテルは普通、", en: "A ryokan is, well, something like a hotel — but a little different. Hotels are usually," },
-    { start: 151.32, end: 155.89, ja: "まあ大きいビルですよね。大きいビルで、ベッドもあるし、", en: "big buildings, right? Big buildings, with beds and everything," },
-    { start: 155.89, end: 159.61, ja: "普通はベッドかなぁ、ホテルの場合は。", en: "usually beds, I suppose, in the case of hotels." },
-    { start: 159.61, end: 165.85, ja: "うーん、ベッドじゃない。和室もありますよね。和室というのは、普通の、あの、日本の畳の", en: "Hmm, but not only beds — there are Japanese-style rooms too. Washitsu means, like, the ordinary Japanese tatami" },
-    { start: 165.85, end: 168.01, ja: "部屋ですね。のことを和室と言います。", en: "rooms. That's what we call washitsu." },
-    { start: 168.01, end: 175.91, ja: "で、旅館はちょっと普通のホテルと違って部屋が少ないです。旅館は部屋がそこまで多くない。", en: "Now, a ryokan is a bit different from a regular hotel: it has fewer rooms. A ryokan doesn't have all that many rooms." },
-    { start: 175.91, end: 183.53, ja: "そしてスタッフもそんなにたくさんいない。なので、なんか小さいですよね、そのビジネスのサイズとしては小さいです。", en: "And the staff isn't that big either. So they're kind of small — small in terms of business size, that is." },
-    { start: 183.53, end: 186.25, ja: "だけど、そのホスピタリティですよね。", en: "But that's exactly where the hospitality comes in." },
-    { start: 186.25, end: 198.91, ja: "これがやっぱり、お客さんが少ない、部屋が少ないので、もっとね、ケアができる。そして旅館の方が食べ物が、レストランよりも、ホテルよりも美味しいことが", en: "With fewer guests and fewer rooms, they can really take care of you. And the food at a ryokan is often tastier than what hotels serve — better than restaurants, even." },
-    { start: 198.91, end: 200.95, ja: "多いですよね。", en: "That's often the case, you know." },
-    { start: 200.95, end: 208.06, ja: "あとは、でも、雰囲気ですよね、雰囲気です。ホテルはたくさんのお客さんがいますね。たくさんの宿泊客", en: "And then, well, it's the atmosphere. Hotels have tons of guests — huge numbers of overnight guests." },
-    { start: 208.06, end: 215.68, ja: "がいるけど、旅館は少ないのでもっともっとゆっくりできる、ゆっくりできるかもしれない。", en: "— while a ryokan has fewer, so you can relax that much more. You can probably really take it easy." },
-    { start: 215.68, end: 223.16, ja: "まあ、もちろんそれも旅館によるんですよね。でも、いい旅館が多いですね。", en: "Though of course that depends on the ryokan. Still, there are a lot of good ones out there." },
-    { start: 223.16, end: 232.09, ja: "温泉いいですね。温泉は本当に大好き、僕大好きです。それではまた皆さん、バイバーイ。", en: "Onsen — wonderful, isn't it? I really love hot springs, I absolutely love them. See you all next time — bye bye!" }
-];
-
-        // ==========================================
-
-      
-      let currentLineIndex = -1;
-        let loopMode = 'none';
+        let currentLineIndex = -1;
         let player;
         
-        // 录音相关全局变量
         let mediaRecorder;
         let audioChunks = [];
-        let userAudioBlobs = {}; // 存储每句的录音数据
+        let userAudioBlobs = {}; 
         let currentRecordingIndex = -1;
 
-        // 加载 YouTube Iframe API
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('youtube-player', {
-                height: '80',
-                width: '100%',
-                videoId: ytVideoId,
-                playerVars: { 'playsinline': 1, 'controls': 1 },
-                events: { 'onReady': onPlayerReady }
-            });
-        }
-
-        function onPlayerReady(event) {
+        // 页面初始化：不论 YouTube 是否卡住，DOM 载入后先渲染字幕与绑定 DOM
+        document.addEventListener('DOMContentLoaded', () => {
             renderSubtitles();
-            setInterval(monitorPlayback, 100);
-            
+
+            // 恢复历史滑动位置
             const lastRead = localStorage.getItem(`last-read-${pageId}`);
             if (lastRead !== null) {
                 const targetLine = document.getElementById(`line-${lastRead}`);
@@ -359,16 +321,46 @@ const subtitleData = [
                     targetLine.classList.add('active');
                 }
             }
+
+            // 监听国内原生音频模式的进度更新
+            const localAudio = document.getElementById('local-player');
+            if (localAudio) {
+                localAudio.addEventListener('timeupdate', monitorLocalAudioPlayback);
+            }
+        });
+
+        // 加载 YouTube Iframe API（海外/代理模式使用）
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            // 如果容器内没有被 Worker 换成 <audio>，才初始化 YouTube
+            if (document.getElementById('youtube-player')) {
+                player = new YT.Player('youtube-player', {
+                    height: '80',
+                    width: '100%',
+                    videoId: ytVideoId,
+                    playerVars: { 'playsinline': 1, 'controls': 1 },
+                    events: { 'onReady': onPlayerReady }
+                });
+            }
+        }
+
+        function onPlayerReady(event) {
+            setInterval(monitorYouTubePlayback, 100);
         }
 
         function renderSubtitles() {
             const container = document.getElementById('subtitle-container');
+            container.innerHTML = ''; // 清空重新渲染
+            
             subtitleData.forEach((line, index) => {
                 const div = document.createElement('div');
                 div.className = 'shadow-line';
                 div.id = `line-${index}`;
                 
-                // HTML 结构：左侧文本，右侧按钮组
                 div.innerHTML = `
                     <div class="text-content">
                         <div class="ja-text">${line.ja}</div>
@@ -380,24 +372,39 @@ const subtitleData = [
                     </div>
                 `;
                 
+                // 单击：跳转播放（双模兼容）
                 div.onclick = (e) => {
-                    // 如果点击的是按钮，不触发视频跳转
                     if (e.target.closest('.action-btn')) return;
                     currentLineIndex = index;
-                    player.seekTo(line.start, true);
-                    player.playVideo();
+                    
+                    const localAudio = document.getElementById('local-player');
+                    if (localAudio) {
+                        localAudio.currentTime = line.start;
+                        localAudio.play();
+                    } else if (player && typeof player.seekTo === 'function') {
+                        player.seekTo(line.start, true);
+                        player.playVideo();
+                    }
+                    
                     localStorage.setItem(`last-read-${pageId}`, index);
                 };
-                // 双击：紧急暂停 (极客新增)
+
+                // 双击：暂停（双模兼容）
                 div.ondblclick = (e) => {
                     if (e.target.closest('.action-btn')) return;
-                    player.pauseVideo();
+                    
+                    const localAudio = document.getElementById('local-player');
+                    if (localAudio) {
+                        localAudio.pause();
+                    } else if (player && typeof player.pauseVideo === 'function') {
+                        player.pauseVideo();
+                    }
                 };
+
                 container.appendChild(div);
             });
         }
       
-        // 全局控制字幕显示/隐藏逻辑
         function toggleSubtitles(lang) {
             const container = document.getElementById('subtitle-container');
             const checkbox = document.getElementById(`toggle-${lang}`);
@@ -408,14 +415,13 @@ const subtitleData = [
                 container.classList.add(`hide-${lang}`);
             }
         }   
-        // 功能 2：录音系统逻辑
+
         async function toggleRecord(event, index) {
             event.stopPropagation();
             const recordBtn = document.getElementById(`record-btn-${index}`);
             const playBtn = document.getElementById(`play-btn-${index}`);
 
             if (currentRecordingIndex === index) {
-                // 停止录音
                 mediaRecorder.stop();
                 recordBtn.classList.remove('recording');
                 currentRecordingIndex = -1;
@@ -434,19 +440,19 @@ const subtitleData = [
                 mediaRecorder.onstop = () => {
                     const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
                     userAudioBlobs[index] = URL.createObjectURL(audioBlob);
-                    playBtn.style.display = 'block'; // 显示播放按钮
+                    playBtn.style.display = 'block';
                     playBtn.classList.add('has-audio');
-                    
-                    // 释放麦克风轨道资源
                     stream.getTracks().forEach(track => track.stop());
                 };
 
                 mediaRecorder.start();
                 currentRecordingIndex = index;
                 recordBtn.classList.add('recording');
-                
-                // 自动暂停原声音频，以免录进去
-                player.pauseVideo();
+
+                // 录音时暂停播放器（双模兼容）
+                const localAudio = document.getElementById('local-player');
+                if (localAudio) localAudio.pause();
+                if (player && typeof player.pauseVideo === 'function') player.pauseVideo();
 
             } catch (err) {
                 alert("Permission denied or microphone not found. Please allow microphone access.");
@@ -454,34 +460,49 @@ const subtitleData = [
             }
         }
 
-        // 功能 3：播放用户的录音
         function playUserRecord(event, index) {
             event.stopPropagation();
             if (userAudioBlobs[index]) {
-                player.pauseVideo(); // 暂停 YouTube
+                const localAudio = document.getElementById('local-player');
+                if (localAudio) localAudio.pause();
+                if (player && typeof player.pauseVideo === 'function') player.pauseVideo();
+
                 const audio = new Audio(userAudioBlobs[index]);
                 audio.play();
             }
         }
 
-        function monitorPlayback() {
-            if (!player || typeof player.getCurrentTime !== 'function') return;
-            const currentTime = player.getCurrentTime();
-            const playerState = player.getPlayerState(); 
-
+        // 判定高亮行的公共逻辑
+        function updateActiveLine(currentTime, isPlaying) {
             let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
             
-            if (activeIndex !== -1) {
+            if (activeIndex !== -1 && activeIndex !== currentLineIndex) {
                 currentLineIndex = activeIndex;
                 document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
                 const activeElement = document.getElementById(`line-${activeIndex}`);
                 if (activeElement) {
                     activeElement.classList.add('active');
-                    if (playerState === 1) {
+                    if (isPlaying) {
                         activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }
                 }
             }
+        }
+
+        // 监控模式 A：国内原生 Audio
+        function monitorLocalAudioPlayback() {
+            const localAudio = document.getElementById('local-player');
+            if (localAudio) {
+                updateActiveLine(localAudio.currentTime, !localAudio.paused);
+            }
+        }
+
+        // 监控模式 B：海外 YouTube Player
+        function monitorYouTubePlayback() {
+            if (!player || typeof player.getCurrentTime !== 'function') return;
+            const currentTime = player.getCurrentTime();
+            const playerState = player.getPlayerState(); 
+            updateActiveLine(currentTime, playerState === 1);
         }
     </script>
 </body>
