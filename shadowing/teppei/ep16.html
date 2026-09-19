@@ -250,6 +250,23 @@
     </footer>
 
     <script>
+
+        const localAudio = document.getElementById('local-player');
+    if (localAudio) {
+        localAudio.onerror = function() {
+            const err = localAudio.error;
+            let msg = "未知错误";
+            if (err) {
+                switch (err.code) {
+                    case 1: msg = "取回过程被中断 (MEDIA_ERR_ABORTED)"; break;
+                    case 2: msg = "网络错误，音频下载失败 (MEDIA_ERR_NETWORK)"; break;
+                    case 3: msg = "音频解码失败/格式不受支持 (MEDIA_ERR_DECODE)"; break;
+                    case 4: msg = "音频文件不存在 (404) 或格式不支持 (MEDIA_ERR_SRC_NOT_SUPPORTED)"; break;
+                }
+            }
+            alert("音频加载错误代码: " + err.code + "\n原因: " + msg + "\n当前请求路径: " + localAudio.src);
+        };
+    }
         // ==========================================
         // 核心配置区
         // ==========================================
