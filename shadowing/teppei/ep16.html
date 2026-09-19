@@ -300,210 +300,229 @@
             { start: 223.16, end: 232.09, ja: "温泉いいですね。温泉は本当に大好き、僕大好きです。それではまた皆さん、バイバーイ。", en: "Onsen — wonderful, isn't it? I really love hot springs, I absolutely love them. See you all next time — bye bye!" }
         ];
 
-        let currentLineIndex = -1;
-        let player;
-        
-        let mediaRecorder;
-        let audioChunks = [];
-        let userAudioBlobs = {}; 
-        let currentRecordingIndex = -1;
+     
+    let currentLineIndex = -1;
+    let player = null;
+    let isYouTubeActive = false;
+    
+    let mediaRecorder;
+    let audioChunks = [];
+    let userAudioBlobs = {}; 
+    let currentRecordingIndex = -1;
 
-        // 页面初始化：不论 YouTube 是否卡住，DOM 载入后先渲染字幕与绑定 DOM
-        document.addEventListener('DOMContentLoaded', () => {
-            renderSubtitles();
+    document.addEventListener('DOMContentLoaded', () => {
+        renderSubtitles();
 
-            // 恢复历史滑动位置
-            const lastRead = localStorage.getItem(`last-read-${pageId}`);
-            if (lastRead !== null) {
-                const targetLine = document.getElementById(`line-${lastRead}`);
-                if (targetLine) {
-                    targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    targetLine.classList.add('active');
-                }
+        const lastRead = localStorage.getItem(`last-read-${pageId}`);
+        if (lastRead !== null) {
+            const targetLine = document.getElementById(`line-${lastRead}`);
+            if (targetLine) {
+                targetLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                targetLine.classList.add('active');
             }
+        }
 
-            // 监听国内原生音频模式的进度更新
-            const localAudio = document.getElementById('local-player');
-            if (localAudio) {
-                localAudio.addEventListener('timeupdate', monitorLocalAudioPlayback);
-            }
-        });
+        // 监听本地音频控件更新进度
+        const localAudio = document.getElementById('local-player');
+        if (localAudio) {
+            localAudio.addEventListener('timeupdate', monitorLocalAudioPlayback);
+        }
+    });
 
-        // 加载 YouTube Iframe API（海外/代理模式使用）
+    // 动态防止 YouTube API 加载失败卡死页面
+    try {
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
+        // 如果网络加载失败（国内环境），捕获错误防止阻塞主线程
+        tag.onerror = function() {
+            console.warn("YouTube API failed to load, falling back to local audio.");
+        };
         var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        function onYouTubeIframeAPIReady() {
-            // 如果容器内没有被 Worker 换成 <audio>，才初始化 YouTube
-            if (document.getElementById('youtube-player')) {
-                player = new YT.Player('youtube-player', {
-                    height: '80',
-                    width: '100%',
-                    videoId: ytVideoId,
-                    playerVars: { 'playsinline': 1, 'controls': 1 },
-                    events: { 'onReady': onPlayerReady }
-                });
-            }
+        if (firstScriptTag && firstScriptTag.parentNode) {
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         }
+    } catch (e) {
+        console.warn("YouTube API init error:", e);
+    }
 
-        function onPlayerReady(event) {
-            setInterval(monitorYouTubePlayback, 100);
+    function onYouTubeIframeAPIReady() {
+        const ytDiv = document.getElementById('youtube-player');
+        const localAudio = document.getElementById('local-player');
+        
+        // 只有当存在 youtube-player 容器时才初始化
+        if (!ytDiv) return;
+
+        try {
+            player = new YT.Player('youtube-player', {
+                height: '80',
+                width: '100%',
+                videoId: ytVideoId,
+                playerVars: { 'playsinline': 1, 'controls': 1 },
+                events: { 
+                    'onReady': (e) => {
+                        isYouTubeActive = true;
+                        if (localAudio) localAudio.style.display = 'none';
+                        if (ytDiv) ytDiv.style.display = 'block';
+                        setInterval(monitorYouTubePlayback, 100);
+                    }
+                }
+            });
+        } catch(err) {
+            console.warn("YouTube Player mount failed:", err);
         }
+    }
 
-        function renderSubtitles() {
-            const container = document.getElementById('subtitle-container');
-            container.innerHTML = ''; // 清空重新渲染
-            
-            subtitleData.forEach((line, index) => {
-                const div = document.createElement('div');
-                div.className = 'shadow-line';
-                div.id = `line-${index}`;
-                
-                div.innerHTML = `
-                    <div class="text-content">
-                        <div class="ja-text">${line.ja}</div>
-                        <div class="en-text" id="en-${index}">${line.en}</div>
-                    </div>
-                    <div class="action-buttons">
-                        <button class="action-btn record-btn" id="record-btn-${index}" onclick="toggleRecord(event, ${index})" title="Hold or Click to Record">🎙️</button>
-                        <button class="action-btn play-btn" id="play-btn-${index}" onclick="playUserRecord(event, ${index})" style="display:none;" title="Play your recording">▶️</button>
-                    </div>
-                `;
-                
-                // 单击：跳转播放（双模兼容）
-                div.onclick = (e) => {
-                    if (e.target.closest('.action-btn')) return;
-                    currentLineIndex = index;
-                    
-                    const localAudio = document.getElementById('local-player');
-                    if (localAudio) {
-                        localAudio.currentTime = line.start;
-                        localAudio.play();
-                    } else if (player && typeof player.seekTo === 'function') {
-                        player.seekTo(line.start, true);
-                        player.playVideo();
-                    }
-                    
-                    localStorage.setItem(`last-read-${pageId}`, index);
-                };
-
-                // 双击：暂停（双模兼容）
-                div.ondblclick = (e) => {
-                    if (e.target.closest('.action-btn')) return;
-                    
-                    const localAudio = document.getElementById('local-player');
-                    if (localAudio) {
-                        localAudio.pause();
-                    } else if (player && typeof player.pauseVideo === 'function') {
-                        player.pauseVideo();
-                    }
-                };
-
-                container.appendChild(div);
+    // 播放指定句子逻辑：优先调原生 audio，YouTube 只作为外网备选
+    function playSentence(start) {
+        const localAudio = document.getElementById('local-player');
+        
+        if (isYouTubeActive && player && typeof player.seekTo === 'function') {
+            player.seekTo(start, true);
+            player.playVideo();
+        } else if (localAudio) {
+            localAudio.currentTime = start;
+            localAudio.play().catch(err => {
+                console.log("Autoplay check:", err);
             });
         }
-      
-        function toggleSubtitles(lang) {
-            const container = document.getElementById('subtitle-container');
-            const checkbox = document.getElementById(`toggle-${lang}`);
-            
-            if (checkbox.checked) {
-                container.classList.remove(`hide-${lang}`);
-            } else {
-                container.classList.add(`hide-${lang}`);
-            }
-        }   
+    }
 
-        async function toggleRecord(event, index) {
-            event.stopPropagation();
-            const recordBtn = document.getElementById(`record-btn-${index}`);
-            const playBtn = document.getElementById(`play-btn-${index}`);
-
-            if (currentRecordingIndex === index) {
-                mediaRecorder.stop();
-                recordBtn.classList.remove('recording');
-                currentRecordingIndex = -1;
-                return;
-            }
-
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                mediaRecorder = new MediaRecorder(stream);
-                audioChunks = [];
-
-                mediaRecorder.ondataavailable = e => {
-                    if (e.data.size > 0) audioChunks.push(e.data);
-                };
-
-                mediaRecorder.onstop = () => {
-                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
-                    userAudioBlobs[index] = URL.createObjectURL(audioBlob);
-                    playBtn.style.display = 'block';
-                    playBtn.classList.add('has-audio');
-                    stream.getTracks().forEach(track => track.stop());
-                };
-
-                mediaRecorder.start();
-                currentRecordingIndex = index;
-                recordBtn.classList.add('recording');
-
-                // 录音时暂停播放器（双模兼容）
-                const localAudio = document.getElementById('local-player');
-                if (localAudio) localAudio.pause();
-                if (player && typeof player.pauseVideo === 'function') player.pauseVideo();
-
-            } catch (err) {
-                alert("Permission denied or microphone not found. Please allow microphone access.");
-                console.error(err);
-            }
+    function pauseAudio() {
+        const localAudio = document.getElementById('local-player');
+        if (isYouTubeActive && player && typeof player.pauseVideo === 'function') {
+            player.pauseVideo();
+        } else if (localAudio) {
+            localAudio.pause();
         }
+    }
 
-        function playUserRecord(event, index) {
-            event.stopPropagation();
-            if (userAudioBlobs[index]) {
-                const localAudio = document.getElementById('local-player');
-                if (localAudio) localAudio.pause();
-                if (player && typeof player.pauseVideo === 'function') player.pauseVideo();
-
-                const audio = new Audio(userAudioBlobs[index]);
-                audio.play();
-            }
-        }
-
-        // 判定高亮行的公共逻辑
-        function updateActiveLine(currentTime, isPlaying) {
-            let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+    function renderSubtitles() {
+        const container = document.getElementById('subtitle-container');
+        if (!container) return;
+        container.innerHTML = '';
+        
+        subtitleData.forEach((line, index) => {
+            const div = document.createElement('div');
+            div.className = 'shadow-line';
+            div.id = `line-${index}`;
             
-            if (activeIndex !== -1 && activeIndex !== currentLineIndex) {
-                currentLineIndex = activeIndex;
-                document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
-                const activeElement = document.getElementById(`line-${activeIndex}`);
-                if (activeElement) {
-                    activeElement.classList.add('active');
-                    if (isPlaying) {
-                        activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    }
+            div.innerHTML = `
+                <div class="text-content">
+                    <div class="ja-text">${line.ja}</div>
+                    <div class="en-text" id="en-${index}">${line.en}</div>
+                </div>
+                <div class="action-buttons">
+                    <button class="action-btn record-btn" id="record-btn-${index}" onclick="toggleRecord(event, ${index})" title="Hold or Click to Record">🎙️</button>
+                    <button class="action-btn play-btn" id="play-btn-${index}" onclick="playUserRecord(event, ${index})" style="display:none;" title="Play your recording">▶️</button>
+                </div>
+            `;
+            
+            div.onclick = (e) => {
+                if (e.target.closest('.action-btn')) return;
+                currentLineIndex = index;
+                playSentence(line.start);
+                localStorage.setItem(`last-read-${pageId}`, index);
+            };
+
+            div.ondblclick = (e) => {
+                if (e.target.closest('.action-btn')) return;
+                pauseAudio();
+            };
+
+            container.appendChild(div);
+        });
+    }
+
+    function monitorLocalAudioPlayback() {
+        const localAudio = document.getElementById('local-player');
+        if (localAudio && !isYouTubeActive) {
+            updateActiveLine(localAudio.currentTime, !localAudio.paused);
+        }
+    }
+
+    function monitorYouTubePlayback() {
+        if (!player || typeof player.getCurrentTime !== 'function') return;
+        const currentTime = player.getCurrentTime();
+        const playerState = player.getPlayerState(); 
+        updateActiveLine(currentTime, playerState === 1);
+    }
+
+    function updateActiveLine(currentTime, isPlaying) {
+        let activeIndex = subtitleData.findIndex(line => currentTime >= line.start && currentTime <= line.end);
+        
+        if (activeIndex !== -1 && activeIndex !== currentLineIndex) {
+            currentLineIndex = activeIndex;
+            document.querySelectorAll('.shadow-line').forEach(el => el.classList.remove('active'));
+            const activeElement = document.getElementById(`line-${activeIndex}`);
+            if (activeElement) {
+                activeElement.classList.add('active');
+                if (isPlaying) {
+                    activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
             }
         }
+    }
 
-        // 监控模式 A：国内原生 Audio
-        function monitorLocalAudioPlayback() {
-            const localAudio = document.getElementById('local-player');
-            if (localAudio) {
-                updateActiveLine(localAudio.currentTime, !localAudio.paused);
-            }
+    function toggleSubtitles(lang) {
+        const container = document.getElementById('subtitle-container');
+        const checkbox = document.getElementById(`toggle-${lang}`);
+        if (!container || !checkbox) return;
+        if (checkbox.checked) {
+            container.classList.remove(`hide-${lang}`);
+        } else {
+            container.classList.add(`hide-${lang}`);
+        }
+    }   
+
+    async function toggleRecord(event, index) {
+        event.stopPropagation();
+        const recordBtn = document.getElementById(`record-btn-${index}`);
+        const playBtn = document.getElementById(`play-btn-${index}`);
+
+        if (currentRecordingIndex === index) {
+            mediaRecorder.stop();
+            recordBtn.classList.remove('recording');
+            currentRecordingIndex = -1;
+            return;
         }
 
-        // 监控模式 B：海外 YouTube Player
-        function monitorYouTubePlayback() {
-            if (!player || typeof player.getCurrentTime !== 'function') return;
-            const currentTime = player.getCurrentTime();
-            const playerState = player.getPlayerState(); 
-            updateActiveLine(currentTime, playerState === 1);
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+            audioChunks = [];
+
+            mediaRecorder.ondataavailable = e => {
+                if (e.data.size > 0) audioChunks.push(e.data);
+            };
+
+            mediaRecorder.onstop = () => {
+                const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                userAudioBlobs[index] = URL.createObjectURL(audioBlob);
+                playBtn.style.display = 'block';
+                playBtn.classList.add('has-audio');
+                stream.getTracks().forEach(track => track.stop());
+            };
+
+            mediaRecorder.start();
+            currentRecordingIndex = index;
+            recordBtn.classList.add('recording');
+
+            pauseAudio();
+
+        } catch (err) {
+            alert("Permission denied or microphone not found.");
+            console.error(err);
         }
+    }
+
+    function playUserRecord(event, index) {
+        event.stopPropagation();
+        if (userAudioBlobs[index]) {
+            pauseAudio();
+            const audio = new Audio(userAudioBlobs[index]);
+            audio.play();
+        }
+    }
     </script>
 </body>
 </html>
