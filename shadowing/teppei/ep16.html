@@ -389,20 +389,35 @@
         }
     }
 
-    // 播放指定句子逻辑：优先调原生 audio，YouTube 只作为外网备选
-    function playSentence(start) {
-        const localAudio = document.getElementById('local-player');
+  function playSentence(start) {
+    const localAudio = document.getElementById('local-player');
+    
+    // 如果存在 YouTube 且激活了 YouTube 模式
+    if (isYouTubeActive && player && typeof player.seekTo === 'function') {
+        player.seekTo(start, true);
+        player.playVideo();
+        return;
+    }
+    
+    // 本地音频模式
+    if (localAudio) {
+        // 如果音频处于 HAVE_NOTHING 状态，先 load()
+        if (localAudio.readyState === 0) {
+            localAudio.load();
+        }
         
-        if (isYouTubeActive && player && typeof player.seekTo === 'function') {
-            player.seekTo(start, true);
-            player.playVideo();
-        } else if (localAudio) {
-            localAudio.currentTime = start;
-            localAudio.play().catch(err => {
-                console.log("Autoplay check:", err);
+        // 强行跳转时间点
+        localAudio.currentTime = parseFloat(start);
+        
+        // 播放音频
+        const playPromise = localAudio.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log("Auto-play was prevented or interrupted:", error);
             });
         }
     }
+}
 
     function pauseAudio() {
         const localAudio = document.getElementById('local-player');
