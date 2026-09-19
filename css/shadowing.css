@@ -1,0 +1,250 @@
+/* /css/shadowing.css - 跟读实验室公共样式表 */
+
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+header { 
+    border-bottom: 2px solid #eaeaea; 
+    padding-bottom: 20px; 
+    margin-bottom: 30px; 
+}
+
+.logo { 
+    color: #111; 
+    margin-bottom: 5px; 
+    font-size: 1.8rem; 
+    letter-spacing: -0.5px; 
+    font-weight: bold; 
+}
+
+.subtitle { 
+    font-size: 1.05rem; 
+    color: #555; 
+    margin-top: 0; 
+    margin-bottom: 20px; 
+}
+
+nav a { 
+    margin-right: 15px; 
+    color: #0066cc; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 0.95rem; 
+    padding: 5px 10px; 
+    border-radius: 4px; 
+    transition: background 0.2s; 
+}
+
+nav a:hover { 
+    background: #f0f6ff; 
+    text-decoration: none; 
+}
+
+.learners-note { 
+    background: #f9fbfc; 
+    padding: 15px; 
+    border-left: 4px solid #3fb950; 
+    border-radius: 4px; 
+    margin-bottom: 30px; 
+    font-size: 0.95rem; 
+    color: #333; 
+}
+
+.audio-player { 
+    position: sticky; 
+    top: 0; 
+    background: #fff; 
+    padding: 10px 0; 
+    border-bottom: 1px solid #eaeaea; 
+    margin-bottom: 20px; 
+    z-index: 100; 
+}
+
+.yt-container { 
+    width: 100%; 
+    height: 90px; 
+    overflow: hidden; 
+    border-radius: 8px; 
+    margin-bottom: 10px; 
+    background: #f0f0f0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.shadow-line { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 12px; 
+    margin: 8px 0; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    transition: background 0.2s; 
+    border-left: 3px solid transparent; 
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE10+ */
+    user-select: none;         /* Standard */
+}
+
+.shadow-line:hover { background: #f6f8fa; }
+.shadow-line.active { background: #ddf4ff; border-left: 3px solid #0066cc; }
+
+.text-content { flex-grow: 1; padding-right: 15px; }
+.ja-text { font-size: 1.2rem; font-weight: bold; color: #111; margin-bottom: 4px; }
+.zh-text { font-size: 0.95rem; color: #666; transition: opacity 0.3s; }
+
+.action-buttons { display: flex; gap: 8px; flex-shrink: 0; }
+/* 按钮基础样式优化 */
+/* 按钮基础样式优化 */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* 图标样式 */
+.icon-mic {
+    width: 18px;
+    height: 18px;
+    fill: #475569; /* 优雅的深灰蓝，非纯黑/纯灰 */
+    transition: fill 0.2s ease;
+}
+
+/* 录音激活状态（可根据状态 toggle 类名） */
+.action-btn.recording {
+    background-color: #fef2f2;
+    border-color: #fca5a5;
+    animation: pulse 1.5s infinite;
+}
+
+.action-btn.recording .icon-mic {
+    fill: #dc2626; /* 录音中变红 */
+}
+
+.grammar-section { margin-top: 50px; background: #f9fbfc; padding: 20px; border-radius: 8px; border: 1px solid #eaeaea; }
+.grammar-section h2 { color: #111; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+.grammar-item { margin-bottom: 15px; }
+.grammar-title { color: #0066cc; font-weight: bold; }
+
+footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center; }
+
+
+
+/* 1. 顶部控制栏：收紧上下间距，改用微卡片效果 */
+.global-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 12px;
+    font-size: 0.875rem;
+    color: #475569;
+}
+
+.control-label {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.toggle-group {
+    display: flex;
+    gap: 16px;
+}
+
+.toggle-group label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+    font-weight: 500;
+}
+
+/* 复选框微美化 */
+.toggle-group input[type="checkbox"] {
+    accent-color: #0066cc;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+/* 2. 隐私提示框：去除虚线框，改用淡灰质感卡片 */
+.privacy-badge {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+/* 规整 SVG 图标对齐与大小 */
+.privacy-badge svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    fill: #64748b;
+}
+
+.privacy-badge strong {
+    color: #334155;
+}
+
+/* 3. 操作提示框（Pro Tip）：使用品牌蓝轻量级淡调，去掉虚线框 */
+.interaction-hint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f0f7ff;
+    border: 1px solid #cce3fe;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    font-size: 0.875rem;
+    color: #1e40af;
+    line-height: 1.4;
+}
+
+.interaction-hint strong {
+    color: #1d4ed8;
+}
+
+
+#subtitle-container.hide-ja .ja-text { display: none; }
+#subtitle-container.hide-zh .zh-text { display: none; }
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(207, 34, 46, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0); }
+}

@@ -64,12 +64,6 @@
         h2 { font-size: 1.5rem; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; margin-top: 40px;}
         h3 { color: #3fb950; font-size: 1.2rem; margin-top: 25px; margin-bottom: 10px;}
         
-        .resource-list { list-style: none; padding: 0; margin: 0; }
-        .resource-list li { margin-bottom: 12px; padding-left: 20px; position: relative; }
-        .resource-list li::before { content: "🎧"; position: absolute; left: 0; top: 2px; font-size: 0.9rem;}
-        .resource-list a { color: #111; text-decoration: none; font-weight: 500; font-size: 1.1rem; transition: color 0.2s;}
-        .resource-list a:hover { color: #0066cc; }
-        .date-badge { font-size: 0.8rem; color: #888; margin-left: 10px; font-weight: normal;}
          footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; font-size: 0.9rem; color: #666; text-align: center;}
 /* ====== Shadowing Lab 顶部指南区专属样式 ====== */
 .lab-guides-section {
@@ -185,6 +179,186 @@ summary {
   vertical-align: middle;
   text-transform: uppercase;
 }
+
+/* =========================================================
+   针对 <details> / <summary> 折叠列表的美化与响应式适配
+   ========================================================= */
+
+/* 1. 外层折叠容器卡片化 */
+details {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+details:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+details[open] {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 2. 标题栏 <summary> 布局（解决移动端截断的核心） */
+summary {
+    display: flex;
+    align-items: flex-start; /* 多行时顶端对齐，避免垂直拉伸 */
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #1e293b;
+    user-select: none;
+    list-style: none;
+}
+
+/* 移除 Chrome / Firefox 的默认黑三角 */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* 3. 标题文字区域 */
+.series-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #1e293b;
+    flex: 1; /* 自动撑满左侧空间 */
+    min-width: 0;
+}
+
+/* 4. NEW 标签美化（去掉土黄色，改用精致小胶囊） */
+.badge-new {
+   font-size: 0.7rem;
+    font-weight: 600;
+    color: #15803d;
+    background-color: #dcfce7;
+    border: 1px solid #bbf7d0;
+    padding: 2px 8px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0; /* 绝对禁止被挤压或换行 */
+    margin-top: 1px;
+}
+
+/* =========================================================
+   展开后的单集列表（Playlist 风格重构）
+   ========================================================= */
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.resource-list li {
+    border-bottom: 1px solid #edf2f7;
+}
+
+.resource-list li:last-child {
+    border-bottom: none;
+}
+
+/* 核心：将每个单集改成整行 Flex 布局，单行显示 */
+.resource-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px 10px 20px; /* 适当收紧上下间距 */
+    color: #334155; /* 使用深灰蓝，替代刺眼的纯蓝色 */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.15s ease;
+}
+
+/* 鼠标悬停效果：文字变蓝、背景微亮 */
+.resource-list a:hover {
+    background-color: #f1f5f9;
+    color: #0284c7;
+    text-decoration: none;
+}
+
+/* 单集标题容器：限制左侧区域 */
+.ep-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0; /* 允许在窄屏下省略号超长文字 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 用扁平化播放小图标替代 Emoji 🎧 */
+.ep-icon {
+    width: 14px;
+    height: 14px;
+    fill: #94a3b8;
+    flex-shrink: 0;
+    transition: fill 0.15s ease;
+}
+
+.resource-list a:hover .ep-icon {
+    fill: #0284c7; /* Hover 时图标变亮 */
+}
+
+/* 日期标签：居右、单行显示 */
+.date-badge {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    font-weight: normal;
+    white-space: nowrap; /* 关键：强行不换行 */
+    flex-shrink: 0;
+}
+
+/* 移动端适配：屏幕太窄时降低字体尺寸 */
+@media (max-width: 640px) {
+    summary {
+        padding: 12px 14px;
+    }
+     .series-title {
+        font-size: 0.95rem;
+    }
+    .resource-list a {
+        padding: 10px 12px;
+    }
+    
+    .ep-title {
+        font-size: 0.85rem;
+    }
+
+    .date-badge {
+        font-size: 0.72rem;
+    }
+}
+
+
+.arrow {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-top: 3px; /* 居中对齐首行文字 */
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+/* 展开时箭头旋转 90 度向下 */
+details[open] .arrow {
+    transform: rotate(90deg);
+}
     </style>
 </head>
 <body>
@@ -200,7 +374,9 @@ summary {
         </nav>
     </header>
 
-    <main>
+   
+
+<main>
 <!-- ================= 黄金位置：跟读技能指南快选区（全量升级版） ================= -->
      <section class="lab-guides-section">
         <div class="lab-guides-badge">🔥 NEW TO SHADOWING? START HERE FIRST</div>
@@ -222,230 +398,451 @@ summary {
         <h1>🎧 Shadowing Lab: Audio Library</h1>
         <p>Drop the boring textbooks. Here is my growing collection of real-world Japanese audio, pre-sliced with dual-language transcripts for intense shadowing practice.</p>
 
-        <!-- 核心主力：Teppei 专区 -->
-         <details>
+        <!-- 1. Teppei 专区 -->
+        <details>
             <summary>
-            <span class="series-title">🎙️ Nihongo con Teppei (Beginner Series)</span>
-            <span class="badge-new">NEW: Ep18</span>
+                <span class="series-title"><span class="arrow">❯</span> Nihongo con Teppei (Beginner Series)</span>
+                <span class="badge-new"></span>
             </summary>
       
             <ul class="resource-list">
-                <li>
-                    <a href="/shadowing/teppei/ep1.html">Ep1: 元気ですか？(How are you?)</a>
-                    <span class="date-badge">Added: July 2026</span>
+               <li>
+                    <a href="/shadowing/teppei/ep1.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep1: 元気ですか？ (How are you?)</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep2.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep2: どのくらい勉強していますか？</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep3.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep3: どこに住んでいますか？</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep4.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep4: 何時ですか？</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep5.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep5: ひらがな、カタカナ、漢字について</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep6.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep6: 学校に行っていますか？</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep7.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep7: 日本語の勉強は好きですか？</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep8.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep8: 音楽のジャンルについて</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep9.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep9: 食べ物について</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep10.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep10: お酒は好きですか？</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep11.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep11: コーヒーは好きですか？</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep12.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep12: 読書について</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep13.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep13: 漫画は好きですか？</span>
+                    </div>
+                    <span class="date-badge">Sep 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep14.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep14: スタジオジブリについて！</span>
+                    </div>
+                    <span class="date-badge">Sep 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep15.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep15: 天気について</span>
+                    </div>
+                    <span class="date-badge">Sep 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep16.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep16: 温泉について</span>
+                    </div>
+                    <span class="date-badge">Sep 2026</span>
+                    </a>
+                </li>
+               <li>
+                    <a href="/shadowing/teppei/ep17.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep17: 家族ボキャブラリーについて</span>
+                    </div>
+                    <span class="date-badge">Sep 2026</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="/shadowing/teppei/ep2.html">Ep2: どのくらい勉強していますか？(How much are you studying?)</a>
-                    <span class="date-badge">Added: July 2026</span>
+                    <a href="/shadowing/teppei/ep18.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep18: 日本語以外の言葉を話しますか？</span>
+                    </div>
+                    <span class="date-badge">Sep 2026</span>
+                    </a> <!-- 修复：补上了 </a> 闭合标签 -->
                 </li>
-                <li>
-                    <a href="/shadowing/teppei/ep3.html">Ep3: どこに住んでいますか？(Where do you live?)</a>
-                    <span class="date-badge">Added: July 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep4.html">Ep4: 何時ですか？(What time is it?)</a>
-                    <span class="date-badge">Added: July 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep5.html">Ep5: ひらがな、カタカナ、漢字について</a>
-                    <span class="date-badge">Added: July 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep6.html">Ep6: 学校に行っていますか？</a>
-                    <span class="date-badge">Added: July 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep7.html">Ep7: 日本語の勉強は好きですか？</a>
-                    <span class="date-badge">Added: Aug 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep8.html">Ep8: 音楽のジャンルについて</a>
-                    <span class="date-badge">Added: Aug 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep9.html">Ep9: 食べ物について</a>
-                    <span class="date-badge">Added: Aug 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep10.html">Ep10: お酒は好きですか？</a>
-                    <span class="date-badge">Added: Aug 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep11.html">Ep11: コーヒーは好きですか</a>
-                    <span class="date-badge">Added: Aug 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep12.html">Ep12: 読書について</a>
-                    <span class="date-badge">Added: Sep 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep13.html">Ep13: 漫画は好きですか？</a>
-                    <span class="date-badge">Added: Sep 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep14.html">Ep14: スタジオジブリについて！</a>
-                    <span class="date-badge">Added: Sep 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep15.html">Ep15: 天気について</a>
-                    <span class="date-badge">Added: Sep 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep16.html">Ep16: 温泉について</a>
-                    <span class="date-badge">Added: Sep 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep17.html">Ep17: 家族ボキャブラリーについて</a>
-                    <span class="date-badge">Added: Sep 2026</span>
-                </li>
-                <li>
-                    <a href="/shadowing/teppei/ep18.html">Ep18: 日本語以外の言葉を話しますか？</a>
-                    <span class="date-badge">Added: Sep 2026</span>
-                </li>
-
-
-
-                <!-- 明天更新第2期，就直接在这里加一行 -->
             </ul>
         </details>
-         <details><summary><span class="series-title">🎙️ EASY JAPANESE PODCAST (Beginner Series)</span>
-            <span class="badge-new">NEW: Ep6</span>
-        </summary>
+        
+        <!-- 2. EASY JAPANESE PODCAST 专区 -->
+        <details>
+            <summary>
+                <span class="series-title"><span class="arrow">❯</span> EASY JAPANESE PODCAST (Beginner Series)</span>
+                <span class="badge-new">NEW: Ep6</span>
+            </summary>
        
             <ul class="resource-list">
-            <li>
-                <a href="/shadowing/ejp/ep1.html">Ep1: はじめて</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/ejp/ep2.html">Ep2: 僕が住んでいる町をご紹介します</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/ejp/ep3.html">Ep3: 今日はとても寒いです</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            
-            <li>
-                <a href="/shadowing/ejp/ep4.html">Ep4: 日本語の勉強のやり方</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/ejp/ep5.html">Ep5: What is "INAKA"?｜田舎って何？</a>
-                <span class="date-badge">Added: Sep 2026</span>
-            </li>
-            
-            <li>
-                <a href="/shadowing/ejp/ep6.html">Ep6: 今日何食べた？</a>
-                <span class="date-badge">Added: Sep 2026</span>
-            </li>
-            
-            <!-- 明天更新第2期，就直接在这里加一行 -->
+                <li>
+                    <a href="/shadowing/ejp/ep1.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep1: はじめて</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/ejp/ep2.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep2: 僕が住んでいる町をご紹介します</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/ejp/ep3.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep3: 今日はとても寒いです</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/ejp/ep4.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep4: 日本語の勉強のやり方</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/ejp/ep5.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep5: What is "INAKA"?｜田舎って何？</span>
+                    </div>
+                    <span class="date-badge">Sep 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/ejp/ep6.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep6: 今日何食べた？</span>
+                    </div>
+                    <span class="date-badge">Sep 2026</span>
+                    </a>
+                </li>
             </ul>
         </details>
-         <details><summary><span class="series-title">🎙️ Natural Japanese (Beginner Series)</span>
-        <span class="badge-new">NEW: Ep4</span>
-        </summary>
-        
-        <ul class="resource-list">
-            <li>
-                <a href="/shadowing/nij/ep1.html">Ep1: Calling an Izakaya to Make a Reservation</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/nij/ep2.html">Ep2: Unboxing New Earphones</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/nij/ep3.html">Ep3: Curry(カレー)🍛</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/nij/ep4.html">Ep4: Conversation at the Hospital</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <!-- 明天更新第2期，就直接在这里加一行 -->
-        </ul>
+
+        <!-- 3. Natural Japanese 专区 -->
+        <details>
+            <summary>
+                <span class="series-title"><span class="arrow">❯</span> Natural Japanese (Beginner Series)</span>
+                <span class="badge-new">NEW: Ep4</span>
+            </summary>
+            
+            <ul class="resource-list">
+                <li>
+                    <a href="/shadowing/nij/ep1.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep1: Calling an Izakaya to Make a Reservation</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/nij/ep2.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep2: Unboxing New Earphones</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/nij/ep3.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep3: Curry(カレー)🍛</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/nij/ep4.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep4: Conversation at the Hospital</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+            </ul>
        </details>
-        <details> <summary><span class="series-title">🎙️ Bite Size Japanese (Intermediate Series)</span>
-            <span class="badge-new">NEW: Ep14</span>
-        </summary>
-       
-        <ul class="resource-list">
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep1.html">Ep1: 日本語ポッドキャスト</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep2.html">Ep2: I came back to Kyoto</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep3.html">Ep3: How I met my British boyfriend</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep4.html">Ep4: 遠距離恋愛のコツ</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep5.html">Ep5: 日本のクリスマスの思い出</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep6.html">Ep6: 2021年に失敗したこと</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep7.html">Ep7: 日本にはオーブンがない？</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep8.html">Ep8: Looking back on 2021 with Ken sensei</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep9.html">Ep9: 私のお正月の過ごしの仕方</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep10.html">Ep10: 私の2022年の5つの目標</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep11.html">Ep11: 4 Keypoints for language learners</a>
-                <span class="date-badge">Added: July 2026</span>
-            </li>
-            
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep12.html">Ep12: How I Became 5 Times More Productive</a>
-                <span class="date-badge">Added: Aug 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep13.html">Ep13: うさぎ島のひみつ</a>
-                <span class="date-badge">Added: Aug 2026</span>
-            </li>
-            <li>
-                <a href="/shadowing/bite-size-japanese/ep14.html">Ep14: タピオカ作りにハマった</a>
-                <span class="date-badge">Added: Aug 2026</span>
-            </li>
-            
-            <!-- 明天更新第2期，就直接在这里加一行 -->
-        </ul>
+
+        <!-- 4. Bite Size Japanese 专区 -->
+        <details> 
+            <summary>
+                <span class="series-title"><span class="arrow">❯</span> Bite Size Japanese (Intermediate Series)</span>
+                <span class="badge-new">NEW: Ep14</span>
+            </summary>
+        
+            <ul class="resource-list">
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep1.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep1: 日本語ポッドキャスト</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep2.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep2: I came back to Kyoto</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep3.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep3: How I met my British boyfriend</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep4.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep4: 遠距離恋愛のコツ</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep5.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep5: 日本のクリスマスの思い出</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep6.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep6: 2021年に失敗したこと</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep7.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep7: 日本にはオーブンがない？</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep8.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep8: Looking back on 2021 with Ken sensei</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep9.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep9: 私のお正月の過ごしの仕方</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep10.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep10: 私の2022年の5つの目標</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep11.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep11: 4 Keypoints for language learners</span>
+                    </div>
+                    <span class="date-badge">July 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep12.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep12: How I Became 5 Times More Productive</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep13.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep13: うさぎ島のひみつ</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/bite-size-japanese/ep14.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep14: タピオカ作りにハマった</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+            </ul>
         </details>
-        <!-- 分类 1：xx专区 -->
-       
-        <!-- 分类 2：xx专区 -->
-      
-       
     </main>
+
+
+
+
       <footer>
         <p>&copy; 2026 The Shadowing Geek. All rights reserved. <a href="/privacy.html" style="color: #8b949e; text-decoration: none; margin-left: 15px;">Privacy Policy</a></p>
     </footer>
+
+
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            // 遍历页面上所有的 details 折叠框
+            document.querySelectorAll("details").forEach(function(details) {
+            // 查找当前 details 内部所有的 li
+            const items = details.querySelectorAll(".resource-list li");
+            const badge = details.querySelector(".badge-new");
+            
+            if (items.length > 0 && badge) {
+                // 自动把 NEW 标签的内容替换为当前 li 的总数量
+                badge.textContent = "NEW: EP" + items.length;
+            }
+        });
+    });
+</script>
 </body>
 </html>

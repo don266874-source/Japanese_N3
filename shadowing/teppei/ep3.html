@@ -308,7 +308,9 @@
         // ==========================================
         const ytVideoId = "3UzJKnssuEM"; // 请替换为 EP2 的 YouTube 视频 ID
         const pageId = "teppei/ep3"; 
-        const subtitleData = [
+        
+        
+    const subtitleData = [
     { start: 1.28, end: 6.56, ja: "日本語鉄平", en: "Nihongo con Teppei." },
     { start: 6.58, end: 14.59, ja: "日本語学習者の皆さんをいつも応援するpodcast", en: "The podcast that always cheers on everyone studying Japanese." },
     { start: 14.63, end: 19.69, ja: "今日はどこに住んでいますか", en: "Today — where do you live?" },
@@ -368,13 +370,16 @@
     { start: 215.71, end: 220.08, ja: "今日は皆さんがどこに住んでいるか聞いてみました", en: "Today I tried asking where you all live." },
     { start: 220.08, end: 228.29, ja: "それではまた明日チャオチャオまたねーまたねバイバイバイバイバイバイさようなら", en: "Well then — see you tomorrow! Ciao ciao, see you, bye-bye-bye-bye-bye-bye, goodbye." }
 ];
-        // ==========================================
+     
 
-        let currentLineIndex = -1;
+   // ==========================================
+
+      
+      let currentLineIndex = -1;
         let loopMode = 'none';
         let player;
-
-           // 录音相关全局变量
+        
+        // 录音相关全局变量
         let mediaRecorder;
         let audioChunks = [];
         let userAudioBlobs = {}; // 存储每句的录音数据
