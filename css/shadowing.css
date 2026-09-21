@@ -242,6 +242,7 @@ footer { margin-top: 50px; border-top: 1px solid #eaeaea; padding-top: 20px; fon
 
 #subtitle-container.hide-ja .ja-text { display: none; }
 #subtitle-container.hide-zh .zh-text { display: none; }
+#subtitle-container.hide-en .en-text { display: none; }
 
 @keyframes pulse {
     0% { box-shadow: 0 0 0 0 rgba(207, 34, 46, 0.4); }

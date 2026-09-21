@@ -819,6 +819,66 @@ details[open] .arrow {
                 </li>
             </ul>
         </details>
+
+
+        <!-- 5. Learn Japanese with Noriko 专区 -->
+        <details> 
+            <summary>
+                <span class="series-title"><span class="arrow">❯</span> Learn Japanese with Noriko (Intermediate level or above Series)</span>
+                <span class="badge-new"></span>
+            </summary>
+        
+            <ul class="resource-list">
+                <li>
+                    <a href="/shadowing/noriko/ep1.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep1: Season 2 スタート！</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shadowing/noriko/ep3.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span class="norikoep3">Ep3: What's Your Everyday Pleasure?</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+              
+
+
+            </ul>
+        </details>
+
+        <!-- 6. Learn Japanese with Noriko 专区 -->
+        <details> 
+            <summary>
+                <span class="series-title"><span class="arrow">❯</span> Haru no Nihongo (Intermediate level or above Series)</span>
+                <span class="badge-new"></span>
+            </summary>
+        
+            <ul class="resource-list">
+                <li>
+                    <a href="/shadowing/haru/ep1.html">
+                    <div class="ep-title">
+                        <svg class="ep-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        <span>Ep1: 初めて警察のお世話になった話</span>
+                    </div>
+                    <span class="date-badge">Aug 2026</span>
+                    </a>
+                </li>
+              
+
+
+            </ul>
+        </details>
+
+
+
+
     </main>
 
 
@@ -836,9 +896,12 @@ details[open] .arrow {
             // 查找当前 details 内部所有的 li
             const items = details.querySelectorAll(".resource-list li");
             const badge = details.querySelector(".badge-new");
+            const norikoep3 = details.querySelector(".norikoep3");
+            console.log("norikoep3 " + norikoep3);
             
-            if (items.length > 0 && badge) {
+            if (items.length > 0 && badge || (norikoep3 && norikoep3.length > 0)) {
                 // 自动把 NEW 标签的内容替换为当前 li 的总数量
+                norikoep3 ? badge.textContent = "NEW: Ep"  + (items.length+1):
                 badge.textContent = "NEW: EP" + items.length;
             }
         });

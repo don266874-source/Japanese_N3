@@ -293,6 +293,26 @@
         <priority>0.8</priority>
     </url>
 
+
+    <url>
+        <loc>https://shadowgeek.net/shadowing/haru/ep1.html</loc>
+        <lastmod>2026-09-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shadowgeek.net/shadowing/noriko/ep1.html</loc>
+        <lastmod>2026-09-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://shadowgeek.net/shadowing/noriko/ep3.html</loc>
+        <lastmod>2026-09-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <url>
         <loc>https://shadowgeek.net/posts/n3-plateau-trap.html</loc>
         <lastmod>2026-07-09</lastmod>
